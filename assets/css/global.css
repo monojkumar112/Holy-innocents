@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+/*===== VARIABLES CSS =====*/
+
+:root {
+  /*========== Colors ==========*/
+  --primary-color: #B28744;
+  --secoundary-color: #B28744;
+  --black-color: #000000;
+  --white-color: #ffffff;
+  --body-color: #ffffff;
+  --primary-font: "Open Sans", sans-serif;
+  --body-font: "Open Sans", sans-serif;
+
+  --sec-title-font: 25px;
+  --p-font: 16px;
+  --m-title: 25px;
+  --l-title: 36px;
+  --p-font-height: 24px;
+  --lp-font-height: 50px;
+  /*========== Font weight ==========*/
+  --font-medium: 400;
+  --font-semi-bold: 600;
+}
+
+/*========== BASE ==========*/
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+div#__next {
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--white-color);
+  color: #11142d;
+  font-size: var(--p-font);
+  font-weight: 400;
+  font-family: var(--body-font);
+  line-height: var(--p-font-height);
+  overflow-x: hidden;
+}
+
+img {
+  vertical-align: middle;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover {
+  text-decoration: none;
+  color: var(--main-color);
+}
+
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+/* ============================GENERAL STYLE END======= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+span,
+label {
+  margin: 0;
+}
+
+.cpb-0 {
+  padding: 0 !important;
+}
+
+.ovh {
+  overflow: hidden;
+}
+
+table.table {
+  white-space: nowrap;
+}
+
+/* ===================custom button============ */
+
+.custom-btn {
+  width: fit-content;
+  padding: 10px 30px;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  color: var(--white-color);
+  font-size: 20px;
+  transition: 0.3s;
+  background: var(--secoundary-color);
+  border: 1px solid var(--primary-color);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.custom-btn:hover {
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  background: transparent
+}
+
+.custom-btn-alt {
+  width: fit-content;
+  padding: 10px 30px;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  color: var(--primary-color);
+  font-size: 20px;
+  transition: 0.3s;
+  background: transparent;
+  display: flex;
+  border: 1px solid var(--primary-color);
+  align-items: center;
+  gap: 10px;
+}
+
+.custom-btn-alt:hover {
+  color: var(--white-color);
+  border-color: var(--primary-color);
+  background: var(--secoundary-color);
+
+}
+
+.section-title {
+  color: var(--primary-color);
+  font-size: 70px;
+  font-weight: 700;
+  line-height: normal;
+}
