@@ -500,8 +500,21 @@ section.minitries {
     border-color: #5898A6;
 }
 
+.charity-item .learn-more-btn:hover {
+    color: #5898A6;
+    background: transparent;
+    border-color: #5898A6;
+}
+
 .youth-item .learn-more-btn {
     background: #5F56A7;
+    border-color: #5F56A7;
+    color: var(--white-color);
+}
+
+.youth-item .learn-more-btn:hover {
+    color: #5F56A7;
+    background: transparent;
     border-color: #5F56A7;
 }
 
@@ -813,4 +826,9 @@ ul.contact-us-list li {
 
 ul.contact-us-list li p {
     padding-bottom: 20px;
+}
+
+.parish-img img {
+    width: 100%;
+    border-radius: 20px;
 }
