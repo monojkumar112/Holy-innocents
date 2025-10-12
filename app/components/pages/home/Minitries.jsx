@@ -3,7 +3,7 @@ import React from "react";
 const Minitries = () => {
   return (
     <>
-      <section className="minitries">
+      <section className="minitries cpb-6">
         <div className="container">
           <div className="minitries-header">
             <h2 className="section-title">Our Ministries – Get Involved</h2>

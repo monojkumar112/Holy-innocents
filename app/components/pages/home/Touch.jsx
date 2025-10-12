@@ -3,7 +3,7 @@ import React from "react";
 const Touch = () => {
   return (
     <>
-      <section className="touch">
+      <section className="touch cpy-6">
         <div className="container">
           <div className="touch-wrapper">
             <div className="touch-content">

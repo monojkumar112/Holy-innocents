@@ -18,7 +18,7 @@ const ContactUs = () => {
           </div>
           <div className="contact-us-content">
             <div className="row">
-              <div className="col-md-3">
+              <div className="col-lg-3">
                 <ul className="contact-us-list">
                   <li>
                     <div className="contact-us-social">
@@ -51,7 +51,7 @@ const ContactUs = () => {
                   </li>
                 </ul>
               </div>
-              <div className="col-md-9">
+              <div className="col-lg-9">
                 <div className="contact-us-form">
                   <form action="#">
                     <div className="row">

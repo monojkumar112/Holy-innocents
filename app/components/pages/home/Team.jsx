@@ -1,10 +1,12 @@
 import React from "react";
+import { FaRegEnvelope } from "react-icons/fa";
+import { FaPhoneAlt } from "react-icons/fa";
 
 const Team = () => {
   return (
     <>
       {/* <!-- ================== Our Team ================ --> */}
-      <section className="team">
+      <section className="team cpy-6">
         <div className="container">
           <div className="team-section-title">
             <h2 className="section-title">Our Leadership Team</h2>
@@ -30,7 +32,7 @@ const Team = () => {
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          <i className="fas fa-envelope"></i>
+                          <FaRegEnvelope />
                           <span>father.michael@holyinnocents.org</span>
                         </a>
                       </li>
@@ -40,7 +42,7 @@ const Team = () => {
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          <i className="fas fa-phone"></i>
+                          <FaPhoneAlt />
                           <span>(555) 123-4567</span>
                         </a>
                       </li>
@@ -63,7 +65,7 @@ const Team = () => {
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          <i className="fas fa-envelope"></i>
+                          <FaRegEnvelope />
                           <span>father.michael@holyinnocents.org</span>
                         </a>
                       </li>
@@ -73,7 +75,7 @@ const Team = () => {
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          <i className="fas fa-phone"></i>
+                          <FaPhoneAlt />
                           <span>(555) 123-4567</span>
                         </a>
                       </li>
@@ -96,7 +98,7 @@ const Team = () => {
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          <i className="fas fa-envelope"></i>
+                          <FaRegEnvelope />
                           <span>father.michael@holyinnocents.org</span>
                         </a>
                       </li>
@@ -106,7 +108,7 @@ const Team = () => {
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          <i className="fas fa-phone"></i>
+                          <FaPhoneAlt />
                           <span>(555) 123-4567</span>
                         </a>
                       </li>
@@ -115,7 +117,7 @@ const Team = () => {
                 </div>
               </div>
             </div>
-            <div className="d-flex mt-5 justify-content-center">
+            <div className="d-flex see-more-btn justify-content-center">
               <a href="#" className="custom-btn-alt">
                 See More
               </a>

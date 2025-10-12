@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <>
       {/* <!-- ================= HEADER START ================= --> */}
-      <nav className="navbar navbar-expand-lg">
+      <nav className="navbar navbar-expand-xl">
         <div className="container">
           {/* <!-- Brand Logo --> */}
           <a className="navbar-brand" href="/">
@@ -291,6 +291,16 @@ const Header = () => {
               <li className="nav-item">
                 <a className="nav-link active" href="/">
                   Reflection
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link active" href="/">
+                  formation
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link active" href="/">
+                  sacramental
                 </a>
               </li>
 

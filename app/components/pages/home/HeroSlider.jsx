@@ -13,12 +13,12 @@ const HeroSlider = () => {
   return (
     <section className="hero-section">
       <Swiper
-        modules={[Autoplay, EffectFade, Pagination]}
+        // modules={[Autoplay, EffectFade, Pagination]}
         loop={true}
-        autoplay={{
-          delay: 3000,
-          disableOnInteraction: false,
-        }}
+        // autoplay={{
+        //   delay: 3000,
+        //   disableOnInteraction: false,
+        // }}
         effect="fade"
         speed={1500}
         pagination={{ clickable: true }}

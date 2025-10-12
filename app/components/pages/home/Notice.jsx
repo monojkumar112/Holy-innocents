@@ -3,7 +3,7 @@ import React from "react";
 const Notice = () => {
   return (
     <>
-      <section className="notice">
+      <section className="notice cpy-6">
         <div className="container">
           <div className="row">
             <div className="col-md-6 col-lg-6">

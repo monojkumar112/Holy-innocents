@@ -15,6 +15,10 @@ section.hero-section {
     object-fit: cover;
 }
 
+.mass-event-contnet-item {
+    width: 80%;
+}
+
 .swiper-pagination-bullet {
     width: 8px !important;
     height: 8px !important;
@@ -112,9 +116,7 @@ section.hero-section {
 }
 
 /* ============ Team ========= */
-section.team {
-    padding: 100px 0;
-}
+
 
 .team-section-title {
     width: 60%;
@@ -185,9 +187,6 @@ ul.team-social-list li a {
 }
 
 /* event */
-section.mass-event {
-    padding-bottom: 100px;
-}
 
 .mass-event-left h1 {
     color: #3F3F3F;
@@ -338,9 +337,7 @@ section.mass-event {
 }
 
 /* notice */
-section.notice {
-    padding: 100px 0;
-}
+
 
 .notice-left {
     background: #B28744;
@@ -354,7 +351,7 @@ section.notice {
     color: var(--white-color);
     font-size: 40px;
     font-weight: 700;
-    line-height: 96px;
+    line-height: 150%;
     /* 240% */
     text-transform: uppercase;
 }
@@ -494,9 +491,7 @@ section.new-here {
     text-transform: capitalize;
 }
 
-section.minitries {
-    padding-bottom: 100px;
-}
+
 
 .youth-item {
     background: #EFECF8;
@@ -713,9 +708,6 @@ section.how-to-find {
     padding-bottom: 30px;
 }
 
-section.touch {
-    padding: 100px 0;
-}
 
 .touch-wrapper {
     width: 80%;
@@ -869,4 +861,8 @@ ul.contact-us-list li p {
 .evangelisation-img img {
     width: 100%;
     border-radius: 20px;
+}
+
+.see-more-btn {
+    margin-top: 40px;
 }
