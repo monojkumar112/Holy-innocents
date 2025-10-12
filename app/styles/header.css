@@ -1,0 +1,105 @@
+/* ================= NAVBAR ================= */
+.navbar {
+    padding: 12px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    background: #333333;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+        0 4px 6px -4px rgba(0, 0, 0, 0.1);
+    color: #fff;
+}
+
+.navbar-brand img {
+    height: 45px;
+}
+
+.navbar-nav {
+    gap: 10px;
+}
+
+.navbar-nav li a {
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: #fff !important;
+    transition: 0.3s;
+}
+
+.navbar-nav li a:hover,
+.navbar-nav li a:focus {
+    color: #B28744;
+}
+
+/* Dropdown Menu */
+.nav-item.dropdown.dropdown-mega .dropdown-menu {
+    width: 80%;
+    top: 76px;
+    left: 17%;
+    animation: fadeIn 0.3s ease-in-out;
+    border: none;
+}
+
+.menu-img-item {
+    border-radius: 0 4px 4px 0;
+    height: 100%;
+}
+
+.dropdown-toggle::after {
+    display: inline-block;
+    margin-left: 0.260em;
+    vertical-align: .300em;
+    content: "";
+    border-top: 0.4em solid;
+    border-right: 0.4em solid transparent;
+    border-bottom: 0;
+    border-left: .4em solid transparent;
+    position: relative;
+    bottom: -2px;
+    left: 3px;
+}
+
+.dropdown-items {
+    padding: 20px;
+}
+
+.dropdown-mega .dropdown-item {
+    padding: 0.4rem 1rem;
+    color: #333333 !important;
+}
+
+.dropdown-item:active {
+    background-color: #E9ECEF;
+}
+
+.dropdown-item
+
+/* Mobile Toggle (Hamburger) */
+.navbar-toggler {
+    border: none;
+    padding: 0;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.hamburger-toggle {
+    width: 50px;
+    height: 50px;
+    position: relative;
+}
+
+.hamburger span {
+    width: 100%;
+    height: 2px;
+    background: #333;
+    position: absolute;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav li .custom-btn:hover,
+.navbar-nav li .custom-btn:focus {
+    color: #fff;
+}
