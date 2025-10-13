@@ -1,7 +1,52 @@
+'use client';
 import Image from "next/image";
 import React from "react";
+import { useState } from "react";
 
 const Minitries = () => {
+
+  //get ministries from api
+  const [ministries, setMinistries] = useState([]);
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  const [nextPageUrl, setNextPageUrl] = useState(null);
+
+  const fetchMinistries = async (url) => {
+    const fetchUrl = url ?? `${baseUrl}/api/ministries`;
+    try {
+      const response = await fetch(fetchUrl);
+      if (!response.ok) throw new Error("Failed to fetch ministries");
+      const data = await response.json();
+
+      const newData = data?.ministries?.data || [];
+      setMinistries(prev => {
+        const isFirstPage = fetchUrl === `${baseUrl}/api/ministries`;
+        if (isFirstPage) {
+          // replace on first load to avoid duplicates from double-mounts
+          return newData;
+        }
+        // append but dedupe by id
+        const existingIds = new Set(prev.map(i => i.id));
+        const filtered = newData.filter(i => !existingIds.has(i.id));
+        return [...prev, ...filtered];
+      });
+
+      setNextPageUrl(data?.ministries?.next_page_url || null);
+    } catch (error) {
+      console.error("Error fetching ministries:", error);
+    }
+  };
+
+  React.useEffect(() => {
+    if (!baseUrl) return;
+    setMinistries([]); // reset before first load
+    fetchMinistries(); // load page 1
+  }, [baseUrl]);
+
+
+  console.log(ministries);
+
+
+
   return (
     <>
       <section className="minitries cpb-6">
@@ -15,72 +60,41 @@ const Minitries = () => {
           </div>
           <div className="minitries-wrapper">
             <div className="row">
-              <div className="col-md-6 col-lg-4">
-                <div className="minitries-item">
-                  <div className="minitries-img">
-                    <Image
-                      src={"/assets/images/icon/audio.svg"}
-                      width={60}
-                      height={60}
-                      alt="Audio"
-                    />
-                  </div>
-                  <div className="minitries-content">
-                    <h3>Choir Ministry</h3>
-                    <p>
-                      Nurturing the faith of our youngest members through
-                      engaging activities and teachings.
-                    </p>
-                    <a href="/about.html" className="custom-btn learn-more-btn">
-                      Get Involved
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-6 col-lg-4">
-                <div className="minitries-item youth-item">
-                  <div className="minitries-img">
-                    <Image
-                      src={"/assets/images/icon/star.svg"}
-                      width={60}
-                      height={60}
-                      alt="Audio"
-                    />
-                  </div>
-                  <div className="minitries-content">
-                    <h3>Youth Ministry</h3>
-                    <p>
-                      Nurturing the faith of our youngest members through
-                      engaging activities and teachings.
-                    </p>
-                    <a href="/about.html" className="custom-btn learn-more-btn">
-                      Get Involved
-                    </a>
+
+              {ministries.map((ministry) => (
+                <div className="col-md-6 col-lg-4 mb-3" key={ministry.id}>
+                  <div className="minitries-item" style={{ backgroundColor: ministry.color }}>
+                    <div className="minitries-img">
+                      <Image
+                        src={ministry.image_icon ? ministry.image_icon : ''}
+                        width={60}
+                        height={60}
+                        alt={ministry.name}
+                      />
+
+                    </div>
+                    <div className="minitries-content">
+                      <h3>{ministry.name}</h3>
+                      <p>{ministry.description}</p>
+                      <a href="/about.html" className="custom-btn learn-more-btn">
+                        Get Involved
+                      </a>
+                    </div>
                   </div>
                 </div>
+              ))}
+              <div className="mt-3 d-flex justify-content-center w-100 ">
+                {/* load more button */}
+                <button
+                  className="custom-btn load-more-btn btn-sm"
+                  onClick={() => fetchMinistries(nextPageUrl)}
+                  disabled={!nextPageUrl}
+                >
+                  {nextPageUrl ? "Load More" : "No More Ministries"}
+                </button>
+
               </div>
-              <div className="col-md-6 col-lg-4">
-                <div className="minitries-item charity-item">
-                  <div className="minitries-img">
-                    <Image
-                      src={"/assets/images/icon/ministry.svg"}
-                      width={60}
-                      height={60}
-                      alt="Audio"
-                    />
-                  </div>
-                  <div className="minitries-content">
-                    <h3>Charity Ministry</h3>
-                    <p>
-                      Nurturing the faith of our youngest members through
-                      engaging activities and teachings.
-                    </p>
-                    <a href="/about.html" className="custom-btn learn-more-btn">
-                      Get Involved
-                    </a>
-                  </div>
-                </div>
-              </div>
+
             </div>
           </div>
         </div>
