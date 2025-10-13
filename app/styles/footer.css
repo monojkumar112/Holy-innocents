@@ -21,14 +21,20 @@ footer.footer {
     font-weight: 500;
     line-height: normal;
     color: var(--white-color);
+    margin-bottom: 0;
 }
 
 .footer-quick-title {
     padding-bottom: 30px;
 }
 
+.footer-wrapper {
+    border-bottom: 1px solid var(--white-color);
+    margin-bottom: 30px;
+}
+
 ul.footer-link-list li {
-    padding-bottom: 10px;
+    padding-bottom: 20px;
 }
 
 ul.footer-link-list li a {
@@ -42,29 +48,12 @@ ul.footer-link-list li a {
 
 ul.footer-link-list li a:hover {
     color: var(--primary-color);
-}
-
-ul.footer-link-list li {
-    padding-bottom: 10px;
-}
-
-ul.footer-link-list li a {
-    color: #FFF;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    transition: 0.4s;
-}
-
-ul.footer-link-list li a:hover {
-    color: var(--primary-color);
+    transform: translateX(10px);
 }
 
 .footer-bottom {
-    padding-top: 60px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     color: var(--white-color);
     width: 90%;
@@ -77,6 +66,7 @@ ul.footer-link-list li a:hover {
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    margin-bottom: 0;
 }
 
 .footer-social-media ul {
@@ -85,6 +75,7 @@ ul.footer-link-list li a:hover {
     justify-content: center;
     gap: 20px;
     padding-top: 17px;
+    margin-bottom: 0;
 }
 
 .footer-social-media ul li a {

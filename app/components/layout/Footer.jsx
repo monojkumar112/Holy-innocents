@@ -13,7 +13,7 @@ const Footer = () => {
         <div className="container">
           <div className="footer-wrapper">
             <div className="row">
-              <div className="col-md-3">
+              <div className="col-lg-3">
                 <div className="footer-logo-wrapper">
                   <div className="footer-logo">
                     <a href="#" className="footer-img">
@@ -31,13 +31,13 @@ const Footer = () => {
                   </p>
                 </div>
               </div>
-              <div className="col-md-9">
+              <div className="col-lg-9">
                 <div className="footer-quick-link">
                   <div className="footer-quick-title">
                     <h3>Quick Links</h3>
                   </div>
                   <div className="row">
-                    <div className="col-md-4">
+                    <div className="col-lg-4">
                       <ul className="footer-link-list">
                         <li>
                           <Link href="#"> Diocese of Southwark </Link>
@@ -56,7 +56,7 @@ const Footer = () => {
                         </li>
                       </ul>
                     </div>
-                    <div className="col-md-4">
+                    <div className="col-lg-4">
                       <ul className="footer-link-list">
                         <li>
                           <Link href="#"> Our Sacraments </Link>
@@ -75,7 +75,7 @@ const Footer = () => {
                         </li>
                       </ul>
                     </div>
-                    <div className="col-md-4">
+                    <div className="col-lg-4">
                       <ul className="footer-link-list">
                         <li>
                           <Link href="#"> Parish Vision </Link>
