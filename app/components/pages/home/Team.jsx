@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import { FaRegEnvelope } from "react-icons/fa";
 import { FaPhoneAlt } from "react-icons/fa";
@@ -20,7 +21,12 @@ const Team = () => {
               <div className="col-md-6 col-lg-4">
                 <div className="team-item">
                   <div className="team-img">
-                    <img src="/assets/images/team-1.png" alt="" />
+                    <Image
+                      src={"/assets/images/team-1.png"}
+                      width={416}
+                      height={416}
+                      alt="Team Member"
+                    />
                   </div>
                   <div className="team-content">
                     <h3>Fr. John Smith</h3>
@@ -53,7 +59,12 @@ const Team = () => {
               <div className="col-md-6 col-lg-4">
                 <div className="team-item">
                   <div className="team-img">
-                    <img src="/assets/images/team-2.png" alt="" />
+                    <Image
+                      src={"/assets/images/team-2.png"}
+                      width={416}
+                      height={416}
+                      alt="Team Member"
+                    />
                   </div>
                   <div className="team-content">
                     <h3>Parish Priest - Fr Victor Vella</h3>
@@ -86,7 +97,12 @@ const Team = () => {
               <div className="col-md-6 col-lg-4">
                 <div className="team-item">
                   <div className="team-img">
-                    <img src="/assets/images/team-3.png" alt="" />
+                    <Image
+                      src={"/assets/images/team-3.png"}
+                      width={416}
+                      height={416}
+                      alt="Team Member"
+                    />
                   </div>
                   <div className="team-content">
                     <h3>Deacon Wayne Du Preez</h3>

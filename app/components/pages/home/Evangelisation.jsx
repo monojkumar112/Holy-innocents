@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -15,9 +16,9 @@ const Evangelisation = () => {
                 <h5>
                   At Holy Innocents’ we have embraced a specific form of
                   evangelisation known as the Parish Evangelisation Cell System
-                  (PECS). "the PECS  System is not about groups but is a way of
-                  life." Learn more about PECS at Holy Innocents’ contact Bob
-                  Skudder at robertskudder@sky.com
+                  (PECS). &quot;the PECS  System is not about groups but is a
+                  way of life.&quot; Learn more about PECS at Holy
+                  Innocents&apos; contact Bob Skudder at robertskudder@sky.com
                 </h5>
                 <p>
                   Then after that it could have the remaining text as below: 
@@ -37,7 +38,12 @@ const Evangelisation = () => {
             </div>
             <div className="col-md-3">
               <div className="evangelisation-img">
-                <img src="/assets/images/evangelisation.png" alt="" />
+                <Image
+                  src={"/assets/images/evangelisation.png"}
+                  width={308}
+                  height={708}
+                  alt="Evangelisation"
+                />
               </div>
             </div>
           </div>

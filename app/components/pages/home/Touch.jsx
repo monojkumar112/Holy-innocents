@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const Touch = () => {
@@ -25,7 +26,12 @@ const Touch = () => {
               </div>
             </div>
             <div className="touch-img">
-              <img src="/assets/images/tach.png" alt="" />
+              <Image
+                src={"/assets/images/tach.png"}
+                width={287}
+                height={215}
+                alt="Touch"
+              />
             </div>
           </div>
         </div>

@@ -4,6 +4,7 @@ import { FaFacebookF } from "react-icons/fa";
 import { RiTwitterXLine } from "react-icons/ri";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -16,7 +17,12 @@ const Footer = () => {
                 <div className="footer-logo-wrapper">
                   <div className="footer-logo">
                     <a href="#" className="footer-img">
-                      <img src="/assets/images/logo.png" alt="" />
+                      <Image
+                        src="/assets/images/logo.png"
+                        alt="logo"
+                        width={248}
+                        height={60}
+                      />
                     </a>
                   </div>
                   <p>

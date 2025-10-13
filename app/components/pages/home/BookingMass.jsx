@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const BookingMass = () => {
@@ -8,7 +9,12 @@ const BookingMass = () => {
           <div className="row align-items-center">
             <div className="col-md-6">
               <div className="booking-img">
-                <img src="/assets/images/mass.png" alt="" />
+                <Image
+                  src={"/assets/images/mass.png"}
+                  width={636}
+                  height={636}
+                  alt="Mass"
+                />
               </div>
             </div>
             <div className="col-md-6">

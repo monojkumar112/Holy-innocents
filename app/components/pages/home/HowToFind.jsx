@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const HowToFind = () => {
@@ -8,7 +9,12 @@ const HowToFind = () => {
           <div className="row">
             <div className="col-md-5">
               <div className="how-to-find-img">
-                <img src="/assets/images/map.png" alt="" />
+                <Image
+                  src={"/assets/images/map.png"}
+                  width={526}
+                  height={559}
+                  alt="Map"
+                />
               </div>
             </div>
 
@@ -20,7 +26,7 @@ const HowToFind = () => {
                   There is free parking available at the church, accessed via
                   Strickland Way, and unrestricted parking in Mitchell Road.
                   Outside of school hours, additional parking is available in
-                  the car park on Mitchell Road, outside Holy Innocents'
+                  the car park on Mitchell Road, outside Holy Innocents&apos;
                   Catholic School. There are designated parking spaces for the
                   disabled.
                 </p>

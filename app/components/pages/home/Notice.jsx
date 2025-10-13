@@ -22,7 +22,7 @@ const Notice = () => {
                     ​Statement concerning the Bill on assisted suicide here
                   </p>
                   <p>
-                    Zoom meetings for services, prayer times and children's
+                    Zoom meetings for services, prayer times and children&apos;s
                     rosary here 
                   </p>
                 </div>

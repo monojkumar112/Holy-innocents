@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const ParishCentre = () => {
@@ -25,7 +26,12 @@ const ParishCentre = () => {
             </div>
             <div className="col-md-6">
               <div className="parish-img">
-                <img src="/assets/images/parish.png" alt="" />
+                <Image
+                  src={"/assets/images/parish.png"}
+                  width={636}
+                  height={404}
+                  alt="Parish"
+                />
               </div>
             </div>
           </div>

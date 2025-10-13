@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const NewsLetter = () => {
@@ -22,7 +23,12 @@ const NewsLetter = () => {
               </div>
             </div>
             <div className="newsletter-right">
-              <img src="/assets/images/news.png" alt="" />
+              <Image
+                src={"/assets/images/news.png"}
+                width={290}
+                height={270}
+                alt="Newsletter"
+              />
             </div>
           </div>
         </div>

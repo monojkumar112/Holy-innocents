@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import { CiCalendar } from "react-icons/ci";
 import { IoMdTime } from "react-icons/io";
@@ -14,7 +15,7 @@ const MassEvent = () => {
                 <h1>Mass Times and​Upcoming Events</h1>
                 <p>
                   Join us for Mass, socials, events, courses, and more. Take a
-                  look at what's coming up.
+                  look at what&apos;s coming up.
                 </p>
                 <div className="mass-event-btn-group">
                   <a href="/about.html" className="custom-btn-alt mass-btn">
@@ -47,7 +48,12 @@ const MassEvent = () => {
                         </div>
                       </div>
                       <div className="mass-event-img">
-                        <img src="/assets/images/event-1.png" alt="" />
+                        <Image
+                          src={"/assets/images/event-1.png"}
+                          width={135}
+                          height={135}
+                          alt="Event"
+                        />
                       </div>
                     </div>
                   </li>
@@ -69,7 +75,12 @@ const MassEvent = () => {
                         </div>
                       </div>
                       <div className="mass-event-img">
-                        <img src="/assets/images/event-1.png" alt="" />
+                        <Image
+                          src={"/assets/images/event-1.png"}
+                          width={135}
+                          height={135}
+                          alt="Event"
+                        />
                       </div>
                     </div>
                   </li>
@@ -91,7 +102,12 @@ const MassEvent = () => {
                         </div>
                       </div>
                       <div className="mass-event-img">
-                        <img src="/assets/images/event-1.png" alt="" />
+                        <Image
+                          src={"/assets/images/event-1.png"}
+                          width={135}
+                          height={135}
+                          alt="Event"
+                        />
                       </div>
                     </div>
                   </li>
@@ -113,7 +129,12 @@ const MassEvent = () => {
                         </div>
                       </div>
                       <div className="mass-event-img">
-                        <img src="/assets/images/event-1.png" alt="" />
+                        <Image
+                          src={"/assets/images/event-1.png"}
+                          width={135}
+                          height={135}
+                          alt="Event"
+                        />
                       </div>
                     </div>
                   </li>

@@ -8,29 +8,31 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/pagination";
 import Link from "next/link";
+import Image from "next/image";
 
 const HeroSlider = () => {
   return (
     <section className="hero-section">
       <Swiper
-        // modules={[Autoplay, EffectFade, Pagination]}
+        modules={[Autoplay, EffectFade, Pagination]}
         loop={true}
-        // autoplay={{
-        //   delay: 3000,
-        //   disableOnInteraction: false,
-        // }}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
         effect="fade"
         speed={1500}
         pagination={{ clickable: true }}
         className="mySwiper"
       >
-        {/* Slide 1 */}
         <SwiperSlide>
           <div className="slider-item-con">
             <div className="sider-img">
-              <img
-                src="/assets/images/slider-1.png"
+              <Image
+                src={"/assets/images/slider-1.png"}
                 alt="Holy Innocents Church"
+                width={1920}
+                height={857}
               />
             </div>
             <div className="slider-content">
@@ -47,13 +49,14 @@ const HeroSlider = () => {
           </div>
         </SwiperSlide>
 
-        {/* Slide 2 */}
         <SwiperSlide>
           <div className="slider-item-con">
             <div className="sider-img">
-              <img
-                src="/assets/images/slider-2.png"
+              <Image
+                src={"/assets/images/slider-2.png"}
                 alt="Holy Innocents Church"
+                width={1920}
+                height={857}
               />
             </div>
             <div className="slider-content">

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const NewHere = () => {
@@ -8,7 +9,12 @@ const NewHere = () => {
           <div className="row align-items-center">
             <div className="col-md-6">
               <div className="new-image-left">
-                <img src="/assets/images/new-here.png" alt="" />
+                <Image
+                  src={"/assets/images/new-here.png"}
+                  width={636}
+                  height={636}
+                  alt="New Here"
+                />
               </div>
             </div>
             <div className="col-md-6">

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const Community = () => {
@@ -24,7 +25,12 @@ const Community = () => {
             </div>
             <div className="col-md-6">
               <div className="community-img">
-                <img src="/assets/images/joidn.png" alt="" />
+                <Image
+                  src={"/assets/images/joidn.png"}
+                  width={636}
+                  height={636}
+                  alt="Join"
+                />
               </div>
             </div>
           </div>

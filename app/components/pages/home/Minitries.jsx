@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const Minitries = () => {
@@ -17,7 +18,12 @@ const Minitries = () => {
               <div className="col-md-6 col-lg-4">
                 <div className="minitries-item">
                   <div className="minitries-img">
-                    <img src="/assets/images/icon/audio.svg" alt="" />
+                    <Image
+                      src={"/assets/images/icon/audio.svg"}
+                      width={60}
+                      height={60}
+                      alt="Audio"
+                    />
                   </div>
                   <div className="minitries-content">
                     <h3>Choir Ministry</h3>
@@ -34,7 +40,12 @@ const Minitries = () => {
               <div className="col-md-6 col-lg-4">
                 <div className="minitries-item youth-item">
                   <div className="minitries-img">
-                    <img src="/assets/images/icon/star.svg" alt="" />
+                    <Image
+                      src={"/assets/images/icon/star.svg"}
+                      width={60}
+                      height={60}
+                      alt="Audio"
+                    />
                   </div>
                   <div className="minitries-content">
                     <h3>Youth Ministry</h3>
@@ -51,7 +62,12 @@ const Minitries = () => {
               <div className="col-md-6 col-lg-4">
                 <div className="minitries-item charity-item">
                   <div className="minitries-img">
-                    <img src="/assets/images/icon/ministry.svg" alt="" />
+                    <Image
+                      src={"/assets/images/icon/ministry.svg"}
+                      width={60}
+                      height={60}
+                      alt="Audio"
+                    />
                   </div>
                   <div className="minitries-content">
                     <h3>Charity Ministry</h3>

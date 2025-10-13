@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const Header = () => {
@@ -8,10 +9,11 @@ const Header = () => {
         <div className="container">
           {/* <!-- Brand Logo --> */}
           <a className="navbar-brand" href="/">
-            <img
-              src="/assets/images/logo.png"
-              alt="brand-logo"
-              className="img-fluid"
+            <Image
+              src={"/assets/images/logo.png"}
+              alt="logo"
+              width={186}
+              height={45}
             />
           </a>
 
@@ -104,10 +106,17 @@ const Header = () => {
                         </div>
                       </div>
                       <div className="col-12 col-md-6 text-end pe-0">
-                        <img
+                        {/* <img
                           src="/assets/images/menu-img.png"
                           alt="menu-img"
                           className="img-fluid menu-img-item d-none d-md-block"
+                        /> */}
+                        <Image
+                          src="/assets/images/menu-img.png"
+                          alt="menu-img"
+                          className="img-fluid menu-img-item d-none d-md-block"
+                          width={557}
+                          height={367}
                         />
                       </div>
                     </div>
@@ -182,10 +191,12 @@ const Header = () => {
                         </div>
                       </div>
                       <div className="col-12 col-md-6 text-end pe-0">
-                        <img
+                        <Image
                           src="/assets/images/menu-img.png"
                           alt="menu-img"
-                          className="img-fluid d-none d-md-block"
+                          className="img-fluid menu-img-item d-none d-md-block"
+                          width={557}
+                          height={367}
                         />
                       </div>
                     </div>
@@ -252,7 +263,7 @@ const Header = () => {
                                 className="dropdown-item"
                                 target="_blank"
                               >
-                                Alpha at Holy Innocents'
+                                Alpha at Holy Innocents
                               </a>
                             </li>
                             <li>
@@ -277,10 +288,12 @@ const Header = () => {
                         </div>
                       </div>
                       <div className="col-12 col-md-6 text-end pe-0">
-                        <img
+                        <Image
                           src="/assets/images/menu-img.png"
                           alt="menu-img"
-                          className="img-fluid d-none d-md-block"
+                          className="img-fluid menu-img-item d-none d-md-block"
+                          width={557}
+                          height={367}
                         />
                       </div>
                     </div>
