@@ -90,10 +90,10 @@ const EvangelisationPage = () => {
                   parish focused on mission, rather than maintenance?
                 </p>
                 <p>
-                  He visited St Eustorgio's parish in Milan, the home of parish
-                  evangelisation cells in Europe. He was so impressed, he soon
-                  went back with a group of Holy Innocents’ parishioners. Like
-                  him, they were inspired by the Parish Evangelisation Cell
+                  He visited St Eustorgio&apos;s parish in Milan, the home of
+                  parish evangelisation cells in Europe. He was so impressed, he
+                  soon went back with a group of Holy Innocents’ parishioners.
+                  Like him, they were inspired by the Parish Evangelisation Cell
                   System and the impact it was clearly having on St Eustorgio’s.
                   So it was decided to explore the possibility of starting PECS
                   at Holy Innocents’.
@@ -145,11 +145,11 @@ const EvangelisationPage = () => {
                 </h2>
                 <p>
                   A parish evangelisation cell is a group of up to 12 people.
-                  Each cell meets fortnightly, normally in a member’s home, for
-                  about 90 minutes. The members pray and praise God together.
-                  They talk about praying for, serving and reaching out with the
-                  Gospel to their “oikos” – family, friends, neighbours, school
-                  friends, workmates.
+                  Each cell meets fortnightly, normally in a member&apos;s home,
+                  for about 90 minutes. The members pray and praise God
+                  together. They talk about praying for, serving and reaching
+                  out with the Gospel to their “oikos” – family, friends,
+                  neighbours, school friends, workmates.
                 </p>
                 <p>
                   They watch a video of scripture-based teaching from Father
@@ -320,12 +320,6 @@ const EvangelisationPage = () => {
                   without them. In a striking image, Father Victor talks of cell
                   members acting as “leaven” in the life of the parish.
                 </p>
-                <p>
-                  And some of our newer initiatives, such as Alpha, A Listening
-                  Ear and the Friday Club, might not have got off the ground
-                  without them. In a striking image, Father Victor talks of cell
-                  members acting as “leaven” in the life of the parish.
-                </p>
               </li>
               <li
                 className="section-content-list"
@@ -336,7 +330,7 @@ const EvangelisationPage = () => {
                 <p>
                   The Parish Evangelisation Cell System has been adopted by
                   parishes in various parts of the world. We send a group to an
-                  international conference about PECS at St Eustorgio's
+                  international conference about PECS at St Eustorgio&apos;s
                   parish in Milan each year.
                 </p>
                 <p>

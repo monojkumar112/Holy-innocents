@@ -19,16 +19,16 @@ const FellowshipSection = () => {
                 description of the early Christian church. As you might expect,
                 the first followers of Jesus were devoted to spiritual matters,
                 such as the teaching of the apostles and the prayers. But they
-                also devoted themselves to 'the communal life' – what we might
-                now call 'the fellowship'.
+                also devoted themselves to &apos;the communal life&apos; – what
+                we might now call &apos;the fellowship&apos;.
               </p>
               <p>
                 All that we do together contributes to our communal life, our
                 fellowship. We think of the Eucharist, for example, as the
-                source and summit of everything we do as a parish. On these 'Our
-                fellowship' pages, we look at those areas of activity which are
-                especially focused on keeping our community running smoothly and
-                developing our sense of togetherness:
+                source and summit of everything we do as a parish. On these
+                &apos;Our fellowship&apos; pages, we look at those areas of
+                activity which are especially focused on keeping our community
+                running smoothly and developing our sense of togetherness:
               </p>
               <div className="fellow-uplink-wrap">
                 <Link
