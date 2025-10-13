@@ -7,7 +7,11 @@ const Team = () => {
   return (
     <>
       {/* <!-- ================== Our Team ================ --> */}
-      <section className="team cpy-6">
+      <section
+        className="team cpy-6"
+        data-aos="fade-up"
+        data-aos-duration="3000"
+      >
         <div className="container">
           <div className="team-section-title">
             <h2 className="section-title">Our Leadership Team</h2>

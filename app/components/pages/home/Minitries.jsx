@@ -4,7 +4,11 @@ import React from "react";
 const Minitries = () => {
   return (
     <>
-      <section className="minitries cpb-6">
+      <section
+        className="minitries cpb-6"
+        data-aos="fade-up"
+        data-aos-duration="3000"
+      >
         <div className="container">
           <div className="minitries-header">
             <h2 className="section-title">Our Ministries – Get Involved</h2>

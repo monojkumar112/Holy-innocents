@@ -4,7 +4,11 @@ import React from "react";
 const HowToFind = () => {
   return (
     <>
-      <section className="how-to-find">
+      <section
+        className="how-to-find"
+        data-aos="fade-up"
+        data-aos-duration="3000"
+      >
         <div className="container">
           <div className="row">
             <div className="col-md-5">

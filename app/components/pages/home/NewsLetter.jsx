@@ -4,7 +4,11 @@ import React from "react";
 const NewsLetter = () => {
   return (
     <>
-      <section className="newsletter">
+      <section
+        className="newsletter"
+        data-aos="fade-up"
+        data-aos-duration="3000"
+      >
         <div className="container">
           <div className="newsletter-wrapper">
             <div className="newsletter-left">

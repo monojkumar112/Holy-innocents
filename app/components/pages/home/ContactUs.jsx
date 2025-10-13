@@ -5,7 +5,11 @@ import { MdOutlineMail } from "react-icons/md";
 const ContactUs = () => {
   return (
     <>
-      <section className="contact-us">
+      <section
+        className="contact-us"
+        data-aos="fade-up"
+        data-aos-duration="3000"
+      >
         <div className="container">
           <div className="contact-us-header">
             <h2 className="section-title" id="contact">

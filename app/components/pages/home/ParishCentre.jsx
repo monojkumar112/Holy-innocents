@@ -4,7 +4,11 @@ import React from "react";
 const ParishCentre = () => {
   return (
     <>
-      <section className="parish-centre">
+      <section
+        className="parish-centre"
+        data-aos="fade-up"
+        data-aos-duration="3000"
+      >
         <div className="container">
           <div className="row">
             <div className="col-md-6">

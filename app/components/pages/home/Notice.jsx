@@ -3,7 +3,11 @@ import React from "react";
 const Notice = () => {
   return (
     <>
-      <section className="notice cpy-6">
+      <section
+        className="notice cpy-6"
+        data-aos="fade-up"
+        data-aos-duration="3000"
+      >
         <div className="container">
           <div className="row">
             <div className="col-md-6 col-lg-6">
@@ -22,8 +26,8 @@ const Notice = () => {
                     ​Statement concerning the Bill on assisted suicide here
                   </p>
                   <p>
-                    Zoom meetings for services, prayer times and children&apos;s
-                    rosary here 
+                    Zoom meetings for services, prayer times and children&apos;
+                    s rosary here 
                   </p>
                 </div>
               </div>

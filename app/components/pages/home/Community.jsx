@@ -4,7 +4,11 @@ import React from "react";
 const Community = () => {
   return (
     <>
-      <section className="community cpb-6">
+      <section
+        className="community cpb-6"
+        data-aos="fade-up"
+        data-aos-duration="3000"
+      >
         <div className="container">
           <div className="row align-items-center">
             <div className="col-md-6">

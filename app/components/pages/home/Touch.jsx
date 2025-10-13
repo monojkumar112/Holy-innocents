@@ -4,7 +4,11 @@ import React from "react";
 const Touch = () => {
   return (
     <>
-      <section className="touch cpy-6">
+      <section
+        className="touch cpy-6"
+        data-aos="fade-up"
+        data-aos-duration="3000"
+      >
         <div className="container">
           <div className="touch-wrapper">
             <div className="touch-content">

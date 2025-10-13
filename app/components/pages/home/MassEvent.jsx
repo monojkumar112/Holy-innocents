@@ -7,7 +7,11 @@ import { LuMapPin } from "react-icons/lu";
 const MassEvent = () => {
   return (
     <>
-      <section className="mass-event cpt-6 cpb-6">
+      <section
+        className="mass-event cpt-6 cpb-6"
+        data-aos="fade-up"
+        data-aos-duration="2000"
+      >
         <div className="container">
           <div className="row">
             <div className="col-md-6 col-lg-5">

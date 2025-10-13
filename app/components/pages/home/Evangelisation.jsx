@@ -5,7 +5,11 @@ import React from "react";
 const Evangelisation = () => {
   return (
     <>
-      <section className="evangelisation cpb-6">
+      <section
+        className="evangelisation cpb-6"
+        data-aos="fade-up"
+        data-aos-duration="3000"
+      >
         <div className="container">
           <div className="row">
             <div className="col-md-9">

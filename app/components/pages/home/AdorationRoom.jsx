@@ -4,7 +4,11 @@ import React from "react";
 const AdorationRoom = () => {
   return (
     <>
-      <section className="adoration-room">
+      <section
+        className="adoration-room"
+        data-aos="fade-up"
+        data-aos-duration="3000"
+      >
         <div className="container">
           <div className="row">
             <div className="col-md-4">

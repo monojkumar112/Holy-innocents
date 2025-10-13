@@ -4,7 +4,7 @@ import React from "react";
 const NewHere = () => {
   return (
     <>
-      <section className="new-here">
+      <section className="new-here" data-aos="fade-up" data-aos-duration="3000">
         <div className="container">
           <div className="row align-items-center">
             <div className="col-md-6">
