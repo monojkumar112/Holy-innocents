@@ -2,6 +2,8 @@
 import Image from "next/image";
 import React from "react";
 import { useState } from "react";
+import InvolvedForm from './../../section/InvolvedForm';
+
 
 const Minitries = () => {
 
@@ -9,6 +11,9 @@ const Minitries = () => {
   const [ministries, setMinistries] = useState([]);
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
   const [nextPageUrl, setNextPageUrl] = useState(null);
+
+  // selected ministry id for the modal form
+  const [selectedMinistryId, setSelectedMinistryId] = useState(null);
 
   const fetchMinistries = async (url) => {
     const fetchUrl = url ?? `${baseUrl}/api/ministries`;
@@ -41,10 +46,6 @@ const Minitries = () => {
     setMinistries([]); // reset before first load
     fetchMinistries(); // load page 1
   }, [baseUrl]);
-
-
-  console.log(ministries);
-
 
 
   return (
@@ -80,9 +81,14 @@ const Minitries = () => {
                     <div className="minitries-content">
                       <h3>{ministry.name}</h3>
                       <p>{ministry.description}</p>
-                      <a href="/about.html" className="custom-btn learn-more-btn">
+                      <button
+                        onClick={() => setSelectedMinistryId(ministry.id)}
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleModal"
+                        className="custom-btn learn-more-btn"
+                      >
                         Get Involved
-                      </a>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -103,6 +109,9 @@ const Minitries = () => {
           </div>
         </div>
       </section>
+
+      {/* modal  */}
+      <InvolvedForm selectedMinistryId={selectedMinistryId} />
     </>
   );
 };
