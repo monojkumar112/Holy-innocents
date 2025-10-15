@@ -1,9 +1,50 @@
+"use client";
 import Image from "next/image";
-import React from "react";
+import React, { useState, useCallback } from "react";
 import { FaRegEnvelope } from "react-icons/fa";
 import { FaPhoneAlt } from "react-icons/fa";
 
 const Team = () => {
+  const [team, setTeam] = useState([]);
+  const [nextPageUrl, setNextPageUrl] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [loadingMore, setLoadingMore] = useState(false);
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  const fetchTeam = useCallback(async () => {
+    setLoading(true);
+    try {
+      const response = await fetch(`${baseUrl}/api/leadership-teams`);
+      const data = await response.json();
+      setTeam(data.data.data);
+      setNextPageUrl(data.data.next_page_url);
+    } catch (error) {
+      console.error('Error fetching team:', error);
+    } finally {
+      setLoading(false);
+    }
+  }, [baseUrl]);
+
+  const loadMore = useCallback(async () => {
+    if (!nextPageUrl || loadingMore) return;
+
+    setLoadingMore(true);
+    try {
+      const response = await fetch(nextPageUrl);
+      const data = await response.json();
+      setTeam(prevTeam => [...prevTeam, ...data.data.data]);
+      setNextPageUrl(data.data.next_page_url);
+    } catch (error) {
+      console.error('Error loading more team members:', error);
+    } finally {
+      setLoadingMore(false);
+    }
+  }, [nextPageUrl, loadingMore]);
+  React.useEffect(() => {
+    if (!baseUrl) return;
+    fetchTeam();
+  }, [baseUrl, fetchTeam]);
+
+  console.log("Team", team);
   return (
     <>
       {/* <!-- ================== Our Team ================ --> */}
@@ -21,46 +62,55 @@ const Team = () => {
             </p>
           </div>
           <div className="team-wrapper">
-            <div className="row">
-              <div className="col-md-6 col-lg-4">
-                <div className="team-item">
-                  <div className="team-img">
-                    <Image
-                      src={"/assets/images/team-1.png"}
-                      width={416}
-                      height={416}
-                      alt="Team Member"
-                    />
-                  </div>
-                  <div className="team-content">
-                    <h3>Fr. John Smith</h3>
-                    <p>CEO, Founder</p>
-                    <ul className="team-social-list">
-                      <li>
-                        <a
-                          href="https://www.linkedin.com/in/john-smith"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <FaRegEnvelope />
-                          <span>father.michael@holyinnocents.org</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="https://www.linkedin.com/in/john-smith"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <FaPhoneAlt />
-                          <span>(555) 123-4567</span>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
+            {loading ? (
+              <div className="d-flex justify-content-center">
+                <div className="spinner-border text-primary" role="status">
+                  <span className="visually-hidden">Loading...</span>
                 </div>
               </div>
-              <div className="col-md-6 col-lg-4">
+            ) : (
+              <div className="row">
+                {team.map((item) => (
+                  <div className="col-md-6 col-lg-4 mb-3" key={item.id}>
+                    <div className="team-item">
+                      <div className="team-img">
+                        <Image
+                          src={item.profile_image ? item.profile_image : "/assets/blank-profile.png"}
+                          width={416}
+                          height={416}
+                          alt="Team Member"
+                        />
+                      </div>
+                      <div className="team-content">
+                        <h3>{item.name ? item.name : "N/A"}</h3>
+                        <p>{item.role ? item.role : "N/A"}</p>
+                        <ul className="team-social-list">
+                          <li>
+                            <a
+                              href={item.email ? item.email : "#"}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <FaRegEnvelope />
+                              <span>{item.email ? item.email : "N/A"}</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href={item.phone ? item.phone : "#"}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <FaPhoneAlt />
+                              <span>{item.phone ? item.phone : "N/A"}</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+                {/* <div className="col-md-6 col-lg-4">
                 <div className="team-item">
                   <div className="team-img">
                     <Image
@@ -135,13 +185,24 @@ const Team = () => {
                     </ul>
                   </div>
                 </div>
+              </div> */}
               </div>
-            </div>
-            <div className="d-flex see-more-btn justify-content-center">
-              <a href="#" className="custom-btn-alt">
-                See More
-              </a>
-            </div>
+            )}
+            {nextPageUrl && (
+              <div className="d-flex see-more-btn justify-content-center">
+                <button
+                  onClick={loadMore}
+                  disabled={loadingMore}
+                  className="custom-btn load-more-btn btn-sm"
+                  style={{
+                    cursor: loadingMore ? 'not-allowed' : 'pointer',
+                    opacity: loadingMore ? 0.6 : 1
+                  }}
+                >
+                  {loadingMore ? 'Loading...' : 'See More'}
+                </button>
+              </div>
+            )}
           </div>
         </div>
       </section>
