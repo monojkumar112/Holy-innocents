@@ -1,8 +1,50 @@
-import React from "react";
+'use client';
+import React, { useState } from "react";
 import { IoIosCall } from "react-icons/io";
 import { MdOutlineMail } from "react-icons/md";
 
+
 const ContactUs = () => {
+  const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(e.target);
+    const data = Object.fromEntries(formData.entries());
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || '';
+    setLoading(true);
+    setMessage('');
+
+    fetch(`${baseUrl}/api/contact`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    })
+      .then(async (response) => {
+        const resData = await response.json();
+
+        if (response.ok) {
+          e.target.reset();
+          setMessage('✅ Message sent successfully! Our team will contact you very soon.');
+        } else if (response.status === 422) {
+          // Laravel validation errors
+          const errorMessages = Object.values(resData.errors).flat().join(' ');
+          setMessage(`⚠️ ${errorMessages}`);
+        } else {
+          setMessage('❌ Failed to send message. Please try again.');
+        }
+      })
+      .catch(() => {
+        setMessage('⚠️ Something went wrong.');
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  };
+
+
   return (
     <>
       <section
@@ -32,7 +74,7 @@ const ContactUs = () => {
                       <h5>Call To Us</h5>
                     </div>
                     <p>
-                      ​Natasha Wheeler, our Parish Secretary, works in the
+                      Natasha Wheeler, our Parish Secretary, works in the
                       Parish Office from 10.30 am to 3.30 pm on Mondays,
                       Wednesdays and Fridays.
                     </p>
@@ -57,50 +99,72 @@ const ContactUs = () => {
               </div>
               <div className="col-lg-9">
                 <div className="contact-us-form">
-                  <form action="#">
+                  <form action="#" onSubmit={handleSubmit}>
                     <div className="row">
                       <div className="col-md-6">
                         <input
                           type="text"
                           className="form-control"
+                          name="fname"
                           placeholder="First Name *"
+                          required
                         />
                       </div>
                       <div className="col-md-6">
                         <input
                           type="text"
                           className="form-control"
+                          name="lname"
                           placeholder="Last Name *"
+                          required
                         />
                       </div>
                       <div className="col-md-6">
                         <input
                           type="email"
                           className="form-control"
+                          name="email"
                           placeholder="Your Email"
+                          required
                         />
                       </div>
                       <div className="col-md-6">
                         <input
                           type="number"
                           className="form-control"
+                          name="phone"
                           placeholder="Your Phone *"
+                          required
                         />
                       </div>
                       <div className="col-md-12">
                         <textarea
-                          name=""
                           id=""
                           cols="30"
                           rows="5"
                           className="form-control"
+                          name="message"
                           placeholder="Your Message"
+                          required
                         ></textarea>
                       </div>
                       <div className="col-md-12">
-                        <button className="custom-btn learn-more-btn">
-                          Send Massage
+                        <button className="custom-btn learn-more-btn" type="submit" disabled={loading} >
+                          {loading ? (
+                            <>
+                              Sending...
+                              <div
+                                className="spinner-border spinner-border-sm ms-2"
+                                role="status"
+                              >
+                                <span className="visually-hidden">Loading...</span>
+                              </div>
+                            </>
+                          ) : (
+                            'Send Message'
+                          )}
                         </button>
+                        {message && <p className="mt-3">{message}</p>}
                       </div>
                     </div>
                   </form>
