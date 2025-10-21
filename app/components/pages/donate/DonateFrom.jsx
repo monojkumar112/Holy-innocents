@@ -1,23 +1,72 @@
-import Image from "next/image";
-import React from "react";
+'use client';
+import Image from 'next/image';
+import React, { useState } from 'react';
+
 
 const DonateFrom = () => {
+  const [form, setForm] = useState({
+    first_name: '',
+    last_name: '',
+    email: '',
+    phone: '',
+    address: '',
+    amount: '',
+  });
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleAmountClick = (value) => {
+    setForm({ ...form, amount: value.toString() });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!form.amount) return alert('Please enter or select an amount');
+    setLoading(true);
+
+    try {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/donate/checkout`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          first_name: form.first_name,
+          email: form.email,
+          phone: form.phone,
+          address: form.address,
+          amount: form.amount,
+        }),
+      });
+
+      const data = await res.json();
+
+      if (data?.url) {
+        window.location.href = data.url; // redirect to Stripe Checkout
+      } else {
+        alert('Something went wrong!');
+      }
+    } catch (err) {
+      console.error(err);
+      alert('Something went wrong!');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+
   return (
-    <section
-      className="donate-from cpb-6"
-      data-aos="fade-up"
-      data-aos-duration="3000"
-    >
+    <section className="donate-from cpb-6" data-aos="fade-up" data-aos-duration="3000">
       <div className="container">
         <div className="donate-from-wrapper">
           <div className="donate-header">
             <h2 className="donate-from-title">Donate</h2>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry.
-            </p>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
           </div>
-          <form action="#" className="donate-form">
+          <form onSubmit={handleSubmit} className="donate-form">
             <div className="donate-information">
               <h4>Your Details Information:</h4>
               <div className="row">
@@ -27,6 +76,8 @@ const DonateFrom = () => {
                     name="first_name"
                     placeholder="First Name *"
                     className="donate-input"
+                    onChange={handleChange}
+                    required
                   />
                 </div>
                 <div className="col-md-6">
@@ -35,6 +86,7 @@ const DonateFrom = () => {
                     name="last_name"
                     placeholder="Last Name *"
                     className="donate-input"
+                    onChange={handleChange}
                   />
                 </div>
                 <div className="col-md-6">
@@ -43,6 +95,8 @@ const DonateFrom = () => {
                     name="email"
                     placeholder="Your Email *"
                     className="donate-input"
+                    onChange={handleChange}
+                    required
                   />
                 </div>
                 <div className="col-md-6">
@@ -51,6 +105,8 @@ const DonateFrom = () => {
                     name="phone"
                     placeholder="Your Phone *"
                     className="donate-input"
+                    onChange={handleChange}
+                    required
                   />
                 </div>
                 <div className="col-md-6">
@@ -59,68 +115,43 @@ const DonateFrom = () => {
                     name="address"
                     placeholder="Your Address * "
                     className="donate-input"
+                    onChange={handleChange}
+                    required
                   />
-                </div>
-                <div className="col-12">
-                  <textarea
-                    name="message"
-                    placeholder="Your Message "
-                    className="donate-textarea"
-                  ></textarea>
                 </div>
               </div>
             </div>
+
             <div className="donate-information">
               <h4>Your Donation:</h4>
               <div className="row">
                 <div className="col-md-12">
                   <input
                     type="text"
-                    name="custom_amount"
+                    name="amount"
+                    value={form.amount}
                     placeholder="$20"
                     className="donate-input"
+                    onChange={handleChange}
                   />
                 </div>
                 <div className="choose-donation-wrap">
-                  <button className="select-amount-btn">$20</button>
-                  <button className="select-amount-btn">$50</button>
-                  <button className="select-amount-btn">$100</button>
-                  <button className="select-amount-btn">$200</button>
-                  <button className="select-amount-btn">Custom</button>
+                  {[20, 50, 100, 200].map((amt) => (
+                    <button
+                      key={amt}
+                      type="button"
+                      onClick={() => handleAmountClick(amt)}
+                      className={`select-amount-btn ${form.amount == amt ? 'active' : ''}`}
+                    >
+                      ${amt}
+                    </button>
+                  ))}
                 </div>
               </div>
             </div>
-            <div className="donate-information">
-              <div className="d-flex align-items-center justify-content-between gap-2">
-                <h4>Card information: </h4>
-                <Image
-                  src="/assets/images/visa.png"
-                  alt="About"
-                  width={74}
-                  height={13}
-                />
-              </div>
-              <div className="row">
-                <div className="col-md-6">
-                  <input
-                    type="number"
-                    name="card_number"
-                    placeholder="Card Number"
-                    className="donate-input"
-                  />
-                </div>
-                <div className="col-md-6">
-                  <input
-                    type="text"
-                    name="card_mm_yy"
-                    placeholder="MM/YY"
-                    className="donate-input"
-                  />
-                </div>
-              </div>
-            </div>
-            <button className="custom-btn" type="submit">
-              Donate Now
+
+            <button className="custom-btn" type="submit" disabled={loading}>
+              {loading ? 'Processing...' : 'Donate Now'}
             </button>
           </form>
         </div>
