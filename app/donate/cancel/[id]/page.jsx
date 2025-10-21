@@ -57,14 +57,14 @@ function Cancel() {
 
     if (!donation)
         return (
-            <div className="container text-center mt-5">
+            <div className="container text-center " style={{ marginTop: '120px' }}>
                 <div className="spinner-border text-success" role="status"></div>
                 <p className="mt-2 text-muted">Loading donation details...</p>
             </div>
         );
 
     return (
-        <div style={{ marginTop: '90px' }}>
+        <div style={{ marginTop: '120px' }}>
             <div id='printArea' className="container my-5 d-flex justify-content-center align-items-center">
                 <div className="card shadow-lg" style={{ maxWidth: '600px', width: '100%' }}>
                     <div className="card-header bg-danger text-white text-center py-3 rounded-top ">
