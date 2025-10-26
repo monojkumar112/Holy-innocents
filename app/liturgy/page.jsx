@@ -18,6 +18,7 @@ const FellowshipPage = () => {
     <>
       <Banner data={data} />
       <LiturgySection />
+
       <Team />
       <Community />
       <NewsLetter />
