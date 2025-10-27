@@ -143,11 +143,7 @@ const Header = () => {
                           </h6>
                           <ul className="pt-2 pt-md-3">
                             <li>
-                              <a
-                                href="#"
-                                className="dropdown-item"
-                                target="_blank"
-                              >
+                              <a href="/fellowship" className="dropdown-item">
                                 Fellowship
                               </a>
                             </li>
@@ -221,6 +217,11 @@ const Header = () => {
                             <strong>Liturgy</strong>
                           </h6>
                           <ul className="pt-2 pt-md-3">
+                            <li>
+                              <a href="/liturgy" className="dropdown-item">
+                                Liturgy
+                              </a>
+                            </li>
                             <li>
                               <a
                                 href="#"
@@ -302,12 +303,12 @@ const Header = () => {
               </li>
 
               <li className="nav-item">
-                <a className="nav-link active" href="/">
+                <a className="nav-link active" href="/reflection">
                   Reflection
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link active" href="/">
+                <a className="nav-link active" href="/prayer">
                   formation
                 </a>
               </li>

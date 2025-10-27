@@ -3,6 +3,7 @@ import BannerImage from "../components/pages/donate/BannerImage";
 import HowToFind from "../components/pages/home/HowToFind";
 import Community from "../components/pages/home/Community";
 import NewsLetter from "../components/pages/home/NewsLetter";
+import Image from "next/image";
 
 const ReflectionPage = () => {
   return (
@@ -11,17 +12,19 @@ const ReflectionPage = () => {
 
       <section className="cpt-6">
         <div className="container">
-          <h2 className="about-section-title reflection-title">liturgy</h2>
+          <h2 className="about-section-title reflection-title text-center">
+            A parishioner's gospel reflection
+          </h2>
           <div className="reflection-content">
             <div className="reflection-item">
               <div className="reflection-img">
                 <Image
-                  src="/assets/images/liturgy.png"
+                  src="/assets/images/other-image/parable-of-the-mustard-seed1.png"
                   alt="About"
                   width={200}
                   height={261}
                 />
-                <p>Parable of the mustard seed</p>
+                <p className="reflection-shot">Parable of the mustard seed</p>
               </div>
               <div className="reflection-text-content">
                 <p>5th October 2025: 27th Sunday of the Year (Cycle C)</p>

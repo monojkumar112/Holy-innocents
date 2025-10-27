@@ -1,16 +1,19 @@
+import Image from "next/image";
 import React from "react";
 
 const LiturgyContent = () => {
   return (
     <section className="liturgy-content cpt-6">
       <div className="container">
-        <h2 className="about-section-title">​What is 'liturgy'?</h2>
-        <h4>
-          Liturgy is the official, public worship of the Church. The Mass (or
-          Eucharist) is our most important liturgy. Some of the other well-known
-          forms of liturgy in the Catholic Church are baptisms, weddings and
-          funeral
-        </h4>
+        <div className="liturgy-header-item">
+          <h2 className="about-section-title">​What is 'liturgy'?</h2>
+          <h4>
+            Liturgy is the official, public worship of the Church. The Mass (or
+            Eucharist) is our most important liturgy. Some of the other
+            well-known forms of liturgy in the Catholic Church are baptisms,
+            weddings and funeral
+          </h4>
+        </div>
         <p>
           The Mass is a celebration of the whole community, not just the priest
           and our deacons. The same is true of our other liturgical services. So
@@ -85,7 +88,7 @@ const LiturgyContent = () => {
               <h2 className="section-title-2">Eucharistic ministers</h2>
               <div className="liturgy-section-item">
                 <Image
-                  src="/assets/images/liturgy-2.png"
+                  src="/assets/images/other-image/lari.png"
                   alt="About"
                   width={190}
                   height={127}
@@ -185,12 +188,14 @@ const LiturgyContent = () => {
                 </div>
                 <div className="liturgy-img-item">
                   <Image
-                    src="/assets/images/liturgy-3.png"
+                    src="/assets/images/other-image/st-cecilia-musician.png"
                     alt="About"
                     width={203}
                     height={259}
                   />
-                  <p>St. Cecilia holding a violin</p>
+                  <p className="liturgy-short-title">
+                    St. Cecilia holding a violin
+                  </p>
                 </div>
               </div>
               <p>
@@ -247,7 +252,7 @@ const LiturgyContent = () => {
               <div className="liturgy-item-list">
                 <div className="liturgy-img-item">
                   <Image
-                    src="/assets/images/other-image/readers.png.png"
+                    src="/assets/images/other-image/readers.png"
                     alt="About"
                     width={271}
                     height={180}
@@ -321,7 +326,7 @@ const LiturgyContent = () => {
                 </div>
                 <div className="liturgy-img-item">
                   <Image
-                    src="/assets/images/other-image/readers.png.png"
+                    src="/assets/images/other-image/welcome_orig 1.png"
                     alt="About"
                     width={255}
                     height={197}

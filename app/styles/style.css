@@ -1143,6 +1143,94 @@ h2.donate-from-title {
     background: #F5F5F5;
 }
 
+/* Photo upload styles for RegisterFrom */
+.churchsuite-upload {
+    margin-top: 10px;
+}
+
+.churchsuite-upload .upload-area {
+    width: 220px;
+    height: 220px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 2px dashed rgba(0, 0, 0, 0.08);
+    background: linear-gradient(180deg, #fff 0%, #fbfbfb 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 12px;
+    box-sizing: border-box;
+    position: relative;
+    cursor: pointer;
+    transition: border-color .12s ease, box-shadow .12s ease, transform .06s ease;
+}
+
+.churchsuite-upload.dragging .upload-area {
+    border-color: var(--primary-color, #5F56A7);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+}
+
+.upload-placeholder .upload-icon {
+    font-size: 34px;
+    color: gray;
+    margin-bottom: 8px;
+}
+
+.upload-placeholder .upload-text {
+    font-weight: 600;
+    color: #222;
+    font-size: 15px;
+}
+
+.upload-placeholder .upload-sub {
+    font-size: 12px;
+    color: #888;
+}
+
+.preview-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.preview-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.remove-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.photo-error {
+    color: #b00020;
+    margin-top: 8px;
+    font-size: 13px;
+}
+
+@media (max-width: 767px) {
+    .churchsuite-upload .upload-area {
+        width: 100%;
+        height: 180px;
+    }
+}
+
 textarea.donate-textarea {
     width: 100%;
     padding: 10px 20px;
@@ -1165,4 +1253,306 @@ textarea.donate-textarea {
     font-size: 20px;
     font-weight: 600;
     border-radius: 4px;
+}
+
+
+.checkboxes {
+    display: grid;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.checkboxes .checkbox {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-radius: 8px;
+    background: #fff;
+    cursor: pointer;
+    transition: box-shadow .12s ease, transform .06s ease;
+    user-select: none;
+}
+
+
+.checkboxes .checkbox input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    /* modern browsers */
+    accent-color: var(--primary-color, #5F56A7);
+}
+
+/* fallback custom checkbox look for older browsers */
+.checkboxes .checkbox input[type="checkbox"].no-accent {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    display: inline-block;
+    position: relative;
+}
+
+.checkboxes .checkbox .checkbox-label {
+    font-size: 16px;
+    color: #222;
+}
+
+
+
+/* small screens: single column */
+@media (max-width: 640px) {
+    .checkboxes {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.churchsuite-wrapper {
+    width: 80%;
+    margin: auto;
+    padding: 140px 0px 0px 0px;
+
+}
+
+.liturgy-header-item {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+.liturgy-header-item h2 {
+    color: var(--primary-color);
+}
+
+.liturgy-content {
+    width: 80%;
+    margin: auto
+}
+
+.liturgy-section-item {
+    display: flex;
+    gap: 15px;
+}
+
+.liturgy-section-item img {
+    max-width: 100%;
+    height: 127px;
+}
+
+.liturgy-content p {
+    padding-bottom: 25px;
+}
+
+.liturgy-header-item h4 {
+    font-size: 22px;
+    text-align: center;
+    line-height: 150%;
+}
+
+.churchsuite-header {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+    border-bottom: 1px solid #E0E0E0;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+}
+
+.learn-more-btn {
+    color: #fff;
+    border-color: #fff;
+}
+
+.churchsuite-header h3 {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 150%;
+}
+
+.churchsuite-header p {
+    line-height: 150%;
+}
+
+section.churchsuite-section {
+    /* background: var(--primary-color); */
+}
+
+.churchsuite-header h5 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.churchsuite-item {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.churchsuite-form {
+    max-width: 700px;
+    margin: auto;
+    padding: 40px 20px 40px 20px;
+    box-shadow: 0px 0px 20px #0000003d;
+    border-radius: 16px;
+}
+
+.checkbox-item {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 30% 68%;
+    margin-bottom: 19px;
+}
+
+.checkbox-inner {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkbox-inner input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    accent-color: var(--primary-color, #5F56A7);
+}
+
+.communication h4 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.communication p {
+    padding-bottom: 20px;
+}
+
+.churchsuite-form h4 {
+    font-size: 22px;
+    margin-bottom: 17px;
+    font-weight: 600;
+}
+
+.privacy-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    z-index: 9999;
+    padding: 20px;
+}
+
+.privacy-modal-overlay .privacy-modal {
+    width: 100%;
+    max-width: 780px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    max-height: 90vh;
+    overflow: auto;
+    padding: 20px;
+}
+
+.privacy-content-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.privacy-content-item h3 {
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 150%;
+}
+
+.checkbox-inner .checkbox-label {
+    padding-bottom: 0;
+}
+
+.checkbox-inner .checkbox-label span {
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+.submit-btn-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.liturgy-item-list {
+    display: flex;
+    gap: 20px;
+}
+
+.liturgy-img-item .liturgy-short-title {
+    font-size: 14px;
+    padding-bottom: 0;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.reflection-item {
+    display: flex;
+    gap: 20px;
+}
+
+.reflection-content {
+    width: 80%;
+    padding-top: 20px;
+    margin: auto;
+    padding-bottom: 50px;
+}
+
+.reflection-content p {
+    padding-bottom: 25px;
+}
+
+.reflection-shot {
+    padding-top: 10px;
+    padding-bottom: 0;
+    font-size: 14px;
+}
+
+.reflection-text-content p {
+    padding-bottom: 10px;
+}
+
+.what-a-section-wrapper {
+    padding: 50px 0;
+    background: var(--primary-color);
+    text-align: center;
+    color: var(--white-color);
+}
+
+.what-a-section {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.what-a-section h1 {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.what-a-section p {
+    font-size: 20px;
+}
+
+.prayer-content-wrapper {
+    width: 80%;
+    margin: auto;
+    padding-top: 60px;
 }

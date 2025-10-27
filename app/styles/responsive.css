@@ -186,7 +186,92 @@
     width: 100%;
   }
 
+  .reflection-content {
+    width: 100%;
+    padding-bottom: 30px;
+  }
 
+  .donate-banner {
+    min-height: 300px;
+    margin-top: 59px;
+  }
+
+  .reflection-img img {
+    max-width: 100%;
+    height: 100%;
+  }
+
+  .reflection-item {
+    flex-direction: column;
+  }
+
+  .liturgy-content {
+    width: 100%;
+  }
+
+  .liturgy-img-item {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .liturgy-item-list {
+    flex-direction: column;
+  }
+
+  .liturgy-header-item {
+    width: 100%;
+  }
+
+  .churchsuite-wrapper {
+    padding: 100px 0px 0px 0px;
+  }
+
+  .liturgy-section-item {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .liturgy-section-item img {
+    max-width: 100%;
+    height: 100%;
+  }
+
+  .churchsuite-header h3 {
+    font-size: 23px;
+  }
+
+  .churchsuite-header {
+    padding-bottom: 24px;
+    margin-bottom: 30px;
+  }
+
+  .churchsuite-form {
+    padding: 30px 15px 30px 15px;
+    box-shadow: 0px 0px 10px #0000003d;
+    border-radius: 10px;
+  }
+
+  .checkbox-item {
+    grid-template-columns: 100%;
+    gap: 5px;
+  }
+
+  .submit-btn-item {
+    margin-top: 30px;
+  }
+
+  .submit-btn-item button {
+    font-size: 16px;
+  }
+
+  .churchsuite-header h5 {
+    font-size: 18px;
+  }
+
+  .churchsuite-wrapper {
+    width: 100%;
+  }
 
   .slider-item-btn a {
     width: 120px;
@@ -422,7 +507,7 @@
   }
 
   h2.about-section-title {
-    font-size: 40px;
+    font-size: 32px;
     padding-bottom: 15px;
   }
 

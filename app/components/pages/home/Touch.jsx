@@ -18,7 +18,7 @@ const Touch = () => {
                 database ChurchSuite.
               </p>
               <div className="how-to-find-btn-group">
-                <a href="/#contact" className="custom-btn get-qucte-btn">
+                <a href="/churchsuite" className="custom-btn get-qucte-btn">
                   Register 
                 </a>
                 <a href="/#contact" className="custom-btn-alt get-qucte-btn">

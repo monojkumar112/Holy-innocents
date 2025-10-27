@@ -2,10 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const LiturgySection = () => {
+const PrayerSection = () => {
   return (
     <section
-      className="about-section cpt-6"
+      className="about-section cpt-6 cpb-6"
       data-aos="fade-up"
       data-aos-duration="3000"
     >
@@ -13,30 +13,42 @@ const LiturgySection = () => {
         <div className="row">
           <div className="col-lg-7">
             <div className="about-content">
-              <h2 className="about-section-title">liturgy</h2>
+              <h2 className="about-section-title">Our prayer</h2>
               <p>
-                The celebration of the Eucharist and other liturgical services
-                with reverence and joy is at the centre of our parish life.
+                Jesus wants His disciples to be people of prayer, always growing
+                in their faith. The Gospels show us that Jesus prayed often. He
+                encouraged His disciples to pray; and He devoted much of His
+                time to helping them develop their fledging faith.
               </p>
               <p>
-                We are fortunate to have Mass said at Holy Innocents’ almost
-                every day. Each weekend we have a vigil Mass on Saturday evening
-                (at 6 pm) and three Masses on Sunday (8 am, 10.30 am and 6 pm).
-                See the diary in our weekly newsletter for up-to-date Mass
-                times.
+                At Holy Innocents’, we try to follow Jesus’ example by being, in
+                the words of our Parish Vision, 'rooted in prayer', and by
+                learning how to become the disciples Jesus wants us to be.
               </p>
               <p>
-                You will find that each of our Masses has a distinct atmosphere,
-                from the quiet reverence of our weekday Masses and the
-                reflective calm of the Sunday 8 am Mass to the lively and joyful
-                bustle of our family Mass at 10.30 am on Sundays.
+                At Holy Innocents’, we try to follow Jesus’ example by being, in
+                the words of our Parish Vision, 'rooted in prayer', and by
+                learning how to become the disciples Jesus wants us to be.
               </p>
+              <ul>
+                <li>
+                  the opportunities for prayer and formation here at Holy
+                  Innocents described below on this page
+                </li>
+                <li>
+                  our sacramental formation (preparation) for children and
+                  adults
+                </li>
+                <li>
+                  the Parish Evangelisation Cells, which seek to help members to
+                  grow in their faith.
+                </li>
+              </ul>
               <p>
-                Our parish organist often leads singing at the 6 pm vigil Mass
-                on Saturday evening, with the Parish Choir on the fourth
-                Saturday of each month. Outside holiday times there is always
-                singing at our 6 pm Mass on Sunday, which might be described as
-                gently charismatic, as well as at the Sunday 10.30 am Mass.
+                ​In addition to these regular groups and events, throughout the
+                year there are many ways in which we can learn more about our
+                faith or come together for prayer. These are always
+                well-publicised in our weekly newsletter and on this website.
               </p>
             </div>
           </div>
@@ -56,4 +68,4 @@ const LiturgySection = () => {
   );
 };
 
-export default LiturgySection;
+export default PrayerSection;

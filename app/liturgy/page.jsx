@@ -4,6 +4,7 @@ import Team from "../components/pages/home/Team";
 import Community from "../components/pages/home/Community";
 import NewsLetter from "../components/pages/home/NewsLetter";
 import LiturgySection from "../components/section/LiturgySection";
+import LiturgyContent from "../components/section/LiturgyContent";
 
 const FellowshipPage = () => {
   const data = {
@@ -18,7 +19,7 @@ const FellowshipPage = () => {
     <>
       <Banner data={data} />
       <LiturgySection />
-
+      <LiturgyContent />
       <Team />
       <Community />
       <NewsLetter />
