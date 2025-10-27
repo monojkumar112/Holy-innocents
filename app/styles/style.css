@@ -899,9 +899,9 @@ section.section-content {
 }
 
 h2.section-title-2 {
-    font-size: 35px;
+    font-size: 30px;
     font-weight: 700;
-    padding-bottom: 25px;
+    padding-bottom: 15px;
     line-height: 150%;
     color: var(--primary-color);
     margin-bottom: 0;
@@ -1016,7 +1016,7 @@ section.banner {
 }
 
 h2.about-section-title {
-    font-size: 60px;
+    font-size: 40px;
     font-weight: 700;
     padding-bottom: 20px;
     margin-bottom: 0;
@@ -1555,4 +1555,23 @@ section.churchsuite-section {
     width: 80%;
     margin: auto;
     padding-top: 60px;
+}
+
+.sacramental-wrapper p {
+    text-align: start;
+    padding-bottom: 20px;
+    line-height: 160%;
+}
+
+.sacramental-wrapper .banner-text {
+    padding-bottom: 16px;
+}
+
+.sacramental-wrapper {
+    width: 80%;
+    margin: auto;
+}
+
+li.section-content-list p a {
+    color: var(--primary-color);
 }

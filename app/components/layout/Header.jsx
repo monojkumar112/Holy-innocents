@@ -313,19 +313,18 @@ const Header = () => {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link active" href="/">
+                <a className="nav-link active" href="/sacramental">
                   sacramental
                 </a>
               </li>
 
               <li className="nav-item">
-                <a className="nav-link active" href="/">
+                <a className="nav-link active" href="/#contact">
                   Contact
                 </a>
               </li>
               <li className="nav-item">
-                <a className="custom-btn" href="#" target="_blank">
-                  {" "}
+                <a className="custom-btn" href="/donate">
                   Donate{" "}
                 </a>
               </li>

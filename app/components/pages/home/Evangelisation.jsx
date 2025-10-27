@@ -35,7 +35,10 @@ const Evangelisation = () => {
                   Parish encourages and trains its members to be evangelisers…
                   It is a centre of constant missionary outreach – Pope Francis
                 </h5>
-                <Link href={"#"} className="custom-btn learn-more-btn">
+                <Link
+                  href={"/evangelisation"}
+                  className="custom-btn learn-more-btn"
+                >
                   Read More
                 </Link>
               </div>

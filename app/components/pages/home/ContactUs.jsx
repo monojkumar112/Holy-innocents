@@ -1,25 +1,24 @@
-'use client';
+"use client";
 import React, { useState } from "react";
 import { IoIosCall } from "react-icons/io";
 import { MdOutlineMail } from "react-icons/md";
 
-
 const ContactUs = () => {
   const [loading, setLoading] = useState(false);
-  const [message, setMessage] = useState('');
+  const [message, setMessage] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData.entries());
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || '';
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "";
     setLoading(true);
-    setMessage('');
+    setMessage("");
 
     fetch(`${baseUrl}/api/contact`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
     })
       .then(async (response) => {
@@ -27,28 +26,30 @@ const ContactUs = () => {
 
         if (response.ok) {
           e.target.reset();
-          setMessage('✅ Message sent successfully! Our team will contact you very soon.');
+          setMessage(
+            "✅ Message sent successfully! Our team will contact you very soon."
+          );
         } else if (response.status === 422) {
           // Laravel validation errors
-          const errorMessages = Object.values(resData.errors).flat().join(' ');
+          const errorMessages = Object.values(resData.errors).flat().join(" ");
           setMessage(`⚠️ ${errorMessages}`);
         } else {
-          setMessage('❌ Failed to send message. Please try again.');
+          setMessage("❌ Failed to send message. Please try again.");
         }
       })
       .catch(() => {
-        setMessage('⚠️ Something went wrong.');
+        setMessage("⚠️ Something went wrong.");
       })
       .finally(() => {
         setLoading(false);
       });
   };
 
-
   return (
     <>
       <section
         className="contact-us"
+        id="contact"
         data-aos="fade-up"
         data-aos-duration="3000"
       >
@@ -74,9 +75,9 @@ const ContactUs = () => {
                       <h5>Call To Us</h5>
                     </div>
                     <p>
-                      Natasha Wheeler, our Parish Secretary, works in the
-                      Parish Office from 10.30 am to 3.30 pm on Mondays,
-                      Wednesdays and Fridays.
+                      Natasha Wheeler, our Parish Secretary, works in the Parish
+                      Office from 10.30 am to 3.30 pm on Mondays, Wednesdays and
+                      Fridays.
                     </p>
                     <p>
                       <span className="address-text">Phone: </span> +01689
@@ -149,7 +150,11 @@ const ContactUs = () => {
                         ></textarea>
                       </div>
                       <div className="col-md-12">
-                        <button className="custom-btn learn-more-btn" type="submit" disabled={loading} >
+                        <button
+                          className="custom-btn learn-more-btn"
+                          type="submit"
+                          disabled={loading}
+                        >
                           {loading ? (
                             <>
                               Sending...
@@ -157,11 +162,13 @@ const ContactUs = () => {
                                 className="spinner-border spinner-border-sm ms-2"
                                 role="status"
                               >
-                                <span className="visually-hidden">Loading...</span>
+                                <span className="visually-hidden">
+                                  Loading...
+                                </span>
                               </div>
                             </>
                           ) : (
-                            'Send Message'
+                            "Send Message"
                           )}
                         </button>
                         {message && <p className="mt-3">{message}</p>}
