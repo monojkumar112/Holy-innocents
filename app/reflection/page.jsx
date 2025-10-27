@@ -13,7 +13,7 @@ const ReflectionPage = () => {
       <section className="cpt-6">
         <div className="container">
           <h2 className="about-section-title reflection-title text-center">
-            A parishioner's gospel reflection
+            A parishioner&apos;s gospel reflection
           </h2>
           <div className="reflection-content">
             <div className="reflection-item">
@@ -45,7 +45,7 @@ const ReflectionPage = () => {
                   even as big as a mustard seed they could tell a tree to get up
                   and plant itself in the sea. He then asks if a master would
                   thank a servant for doing his job. The implied answer is of
-                  course 'no'. 
+                  course &apos;no&apos;. 
                 </p>
               </div>
             </div>
@@ -62,9 +62,9 @@ const ReflectionPage = () => {
               has to be enough for us.
             </p>
             <p>
-              ​Disappointing perhaps but on balance it's probably just as well
-              we can't prove our holiness by moving trees around, it would be
-              very tempting to show off.
+              ​Disappointing perhaps but on balance it&apos;s probably just as
+              well we can&apos;t prove our holiness by moving trees around, it
+              would be very tempting to show off.
             </p>
             <div className="reflection-text-fild">
               <p>***********************************</p>

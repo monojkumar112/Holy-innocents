@@ -11,7 +11,6 @@ import Link from "next/link";
 import Image from "next/image";
 
 const HeroSlider = () => {
-
   const [carousels, setCarousels] = useState([]);
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
@@ -28,8 +27,6 @@ const HeroSlider = () => {
   useEffect(() => {
     fetchCarousels();
   }, [baseUrl]);
-
-  console.log('carousels', carousels);
 
   return (
     <section className="hero-section">
@@ -49,24 +46,26 @@ const HeroSlider = () => {
           <SwiperSlide key={carousel.id}>
             <div className="slider-item-con">
               <div className="sider-img">
-                {carousel.type === 'image' ? (
+                {carousel.type === "image" ? (
                   <Image
-                    src={carousel.image_path ?? ''}
+                    src={carousel.image_path ?? ""}
                     alt="Holy Innocents Church"
                     width={1920}
                     height={857}
                   />
-                ) : (
-                  carousel.video_embed ? (
-                    <div
-                      dangerouslySetInnerHTML={{ __html: carousel.video_embed }}
-                    />
-                  ) : null
-                )}
+                ) : carousel.video_embed ? (
+                  <div
+                    dangerouslySetInnerHTML={{ __html: carousel.video_embed }}
+                  />
+                ) : null}
               </div>
               <div className="slider-content">
-                <h1>{carousel.title ?? "Welcome Holy Innocents Catholic Church"}</h1>
-                <p className="text-white">{carousel.description ?? "Join us for worship and community."}</p>
+                <h1>
+                  {carousel.title ?? "Welcome Holy Innocents Catholic Church"}
+                </h1>
+                <p className="text-white">
+                  {carousel.description ?? "Join us for worship and community."}
+                </p>
                 <div className="slider-item-btn">
                   <Link href="#" className="custom-btn join-us-btn">
                     Join Us
@@ -79,9 +78,6 @@ const HeroSlider = () => {
             </div>
           </SwiperSlide>
         ))}
-
-
-
 
         {/* <SwiperSlide>
           <div className="slider-item-con">

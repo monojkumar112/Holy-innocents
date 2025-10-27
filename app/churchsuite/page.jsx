@@ -10,8 +10,8 @@ const ChurchsuitePage = () => {
             <div className="churchsuite-header">
               <h3>
                 We are really pleased you would like to register your details
-                with Holy Innocents'. Simply fill in the form below to provide
-                your details.
+                with Holy Innocents&apos;. Simply fill in the form below to
+                provide your details.
               </h3>
               <h5>​Communications between the Parish and yourself</h5>
               <p>

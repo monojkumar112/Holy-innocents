@@ -613,8 +613,8 @@ const RegisterFrom = () => {
               We take your privacy very seriously, these settings determine how
               the parish office and clergy can contact you. We do our best to
               ensure any communication you receive from us is relevant and
-              helpful. At any time you're able to choose which means we will
-              contact you - just opt-in to receive communication using the
+              helpful. At any time you&apos;re able to choose which means we
+              will contact you - just opt-in to receive communication using the
               options below.
             </p>
             <div className="checkbox-item">

@@ -6,7 +6,7 @@ const LiturgyContent = () => {
     <section className="liturgy-content cpt-6">
       <div className="container">
         <div className="liturgy-header-item">
-          <h2 className="about-section-title">​What is 'liturgy'?</h2>
+          <h2 className="about-section-title">​What is &apos;liturgy&apos;?</h2>
           <h4>
             Liturgy is the official, public worship of the Church. The Mass (or
             Eucharist) is our most important liturgy. Some of the other
@@ -140,8 +140,8 @@ const LiturgyContent = () => {
               <p>
                 Flower arrangements can be beautiful and uplifting. We are
                 blessed by the talents of those who arrange the flowers for us
-                at Holy Innocents', including those on the sanctuary around the
-                altar.
+                at Holy Innocents&apos;, including those on the sanctuary around
+                the altar.
               </p>
               <p>
                 They also arrange flowers for major seasons, such as Christmas

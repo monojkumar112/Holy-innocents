@@ -22,13 +22,15 @@ const PrayerSection = () => {
               </p>
               <p>
                 At Holy Innocents’, we try to follow Jesus’ example by being, in
-                the words of our Parish Vision, 'rooted in prayer', and by
-                learning how to become the disciples Jesus wants us to be.
+                the words of our Parish Vision, &apos;rooted in prayer&apos;,
+                and by learning how to become the disciples Jesus wants us to
+                be.
               </p>
               <p>
                 At Holy Innocents’, we try to follow Jesus’ example by being, in
-                the words of our Parish Vision, 'rooted in prayer', and by
-                learning how to become the disciples Jesus wants us to be.
+                the words of our Parish Vision, &apos;rooted in prayer&apos;,
+                and by learning how to become the disciples Jesus wants us to
+                be.
               </p>
               <ul>
                 <li>

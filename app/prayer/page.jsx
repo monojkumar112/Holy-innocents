@@ -5,7 +5,7 @@ import PrayerSection from "../components/section/PrayerSection";
 const PrayerPage = () => {
   const data = {
     title: "Our prayer and formation ",
-    description: `Our Christian communities must become genuine schools of prayer, where the meeting with Christ is expressed not just in imploring help but also in thanksgiving, praise, adoration, contemplation, ​listening and ardent devotion, ​until the heart truly 'falls in love' - Saint John Paul II `,
+    description: `Our Christian communities must become genuine schools of prayer,where the meeting with Christ is expressed not just in imploring helpbut also in thanksgiving, praise, adoration, contemplation,​listening and ardent devotion,​until the heart truly 'falls in love' - Saint John Paul II `,
   };
   return (
     <>
@@ -17,14 +17,14 @@ const PrayerPage = () => {
           <div className="what-a-section">
             <h1>What is formation?</h1>
             <p>
-              Jesus didn't just teach his disciples. Rather, he formed them -in
-              other words, he showed them how he wanted them to live by
+              Jesus didn&apos;t just teach his disciples. Rather, he formed them
+              -in other words, he showed them how he wanted them to live by
               teaching, challenging, encouraging and occasionally rebuking them.
             </p>
             <p>
               Above all, he showed them by the example of his own life. This is
-              why the Catholic Church believes that the 'formation' of every
-              Catholic - ​not just priests and deacons - is so important
+              why the Catholic Church believes that the &apos;formation&apos; of
+              every Catholic - ​not just priests and deacons - is so important
             </p>
           </div>
         </div>
@@ -43,11 +43,11 @@ const PrayerPage = () => {
                 <ul className="section-content-ul">
                   <li className="section-content-li">
                     hosted an ecumenical service to mark the 500th anniversary
-                    of the Reformation ("United in Mission")
+                    of the Reformation (&quot;United in Mission&quot;)
                   </li>
                   <li className="section-content-li">
-                    followed themes such as "Unity in Prayer" during Advent and
-                    "To be in His presence" during Lent
+                    followed themes such as &quot;Unity in Prayer&quot; during
+                    Advent and &quot;To be in His presence during Lent
                   </li>
                   <li className="section-content-li">
                     taken an Advent “Posada Journey”, with statues of Mary and
@@ -69,15 +69,15 @@ const PrayerPage = () => {
                     Pentecost
                   </li>
                   <li className="section-content-li">
-                    come together for special prayer events, including "If one
-                    member suffers, all suffer" - a prayer evening in response
-                    to Pope Francis' call for Catholics to take part in a
-                    penitential exercise of prayer and fasting in reparation for
-                    the child abuse scandal
+                    come together for special prayer events, including &quot;If
+                    one member suffers, all suffer&quot; - a prayer evening in
+                    response to Pope Francis&apos; call for Catholics to take
+                    part in a penitential exercise of prayer and fasting in
+                    reparation for the child abuse scandal
                   </li>
                   <li className="section-content-li">
-                    run "Freedom in Christ" and Youth Alpha courses, as well as
-                    regular adult Alpha courses
+                    run &quot;Freedom in Christ&quot; and Youth Alpha courses,
+                    as well as regular adult Alpha courses
                   </li>
                   <li className="section-content-li">
                     learnt from Father Victor and Father Barry Hughes, talking
@@ -130,10 +130,10 @@ const PrayerPage = () => {
               >
                 <h2 className="section-title-2">Lectio Divina</h2>
                 <p>
-                  Lectio Divina literally means "Divine Reading". It is an
-                  ancient form of praying and experiencing the presence of the
-                  Lord through listening to, pondering on and praying the Word
-                  of God. We hold a Lectio Divina evening each month in the
+                  Lectio Divina literally means &quot;Divine Reading&quot;.
+                  It is an ancient form of praying and experiencing the presence
+                  of the Lord through listening to, pondering on and praying the
+                  Word of God. We hold a Lectio Divina evening each month in the
                   Presbytery, advertised in advance in the weekly newsletter, to
                   which all are welcome.
                 </p>
@@ -153,12 +153,12 @@ const PrayerPage = () => {
                   grandchildren.
                 </p>
                 <p>
-                  ​We have two Holy Innocents' Mothers' Prayers groups. One
-                  meets twice a month on Wednesday mornings during term time;
-                  Check our weekly newsletter for details.  
+                  ​We have two Holy Innocents&apos; Mothers&apos; Prayers
+                  groups. One meets twice a month on Wednesday mornings during
+                  term time; Check our weekly newsletter for details.  
                 </p>
                 <p>
-                  The international headquarters of the Mothers' Prayers
+                  The international headquarters of the Mothers&apos; Prayers
                   movement is at Star House in Knockholt, within the boundaries
                   of the parish.
                 </p>
@@ -175,15 +175,16 @@ const PrayerPage = () => {
                 <h2 className="section-title-2">Prayer intentions</h2>
                 <p>
                   On our prayer intentions page you will find our Sunday bidding
-                  prayers, Pope Francis' monthly intentions, the Church's cycle
-                  of prayer intentions and personal prayer intentions requested
-                  by parishioners and friends.
+                  prayers, Pope Francis&apos; monthly intentions, the
+                  Church&apos;s cycle of prayer intentions and personal prayer
+                  intentions requested by parishioners and friends.
                 </p>
                 <p>
                   Please submit your prayer requests for inclusion on that page
-                  via email to Cecilia Skudder, our Web Editor, with 'prayer
-                  intention' in the subject heading. You can also leave prayer
-                  requests in the prayer bowl in the Adoration Room.
+                  via email to Cecilia Skudder, our Web Editor, with
+                  &apos;prayer intention&apos; in the subject heading. You can
+                  also leave prayer requests in the prayer bowl in the Adoration
+                  Room.
                 </p>
                 <p>
                   <strong>Contact</strong>    ​Louise Munro via the Parish
