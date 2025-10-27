@@ -29,13 +29,13 @@ const SacramentalPage = () => {
               sacraments. We are a sacramental people.
             </p>
             <p>
-              'A sacrament is an outward sign of inward grace'. That old
-              definition captures the two key elements of a sacrament – a sign
-              and the reality it symbolises, that reality being an outpouring of
-              God’s love for us. So in Baptism, for example, the sign is the
-              pouring of water and the reality is that we are washed free from
-              sin; in Confirmation, the anointing with oil symbolises the gifts
-              of the Holy Spirit.
+              &apos;A sacrament is an outward sign of inward grace&apos;. That
+              old definition captures the two key elements of a sacrament – a
+              sign and the reality it symbolises, that reality being an
+              outpouring of God’s love for us. So in Baptism, for example, the
+              sign is the pouring of water and the reality is that we are washed
+              free from sin; in Confirmation, the anointing with oil symbolises
+              the gifts of the Holy Spirit.
             </p>
             <p>
               On this page you can find out about the seven sacraments which
@@ -63,7 +63,8 @@ const SacramentalPage = () => {
                 </h2>
                 <p>
                   ​The Catholic Church calls Baptism, Confirmation and the
-                  Eucharist (Holy Communion) the 'sacraments of initiation'.
+                  Eucharist (Holy Communion) the &apos;sacraments of
+                  initiation&apos;.
                 </p>
                 <p>
                   These sacraments form a pathway into full and active
@@ -173,10 +174,10 @@ const SacramentalPage = () => {
                       Catholic parish.
                     </p>
                     <p>
-                      ​We have an enriching ‘whole family formation process' as
-                      part of our sacramental preparation which is fun and faith
-                      filled. Preparation for the sacraments of First
-                      Reconciliation and First Holy Communion is open to
+                      ​We have an enriching ‘whole family formation
+                      process&apos; as part of our sacramental preparation which
+                      is fun and faith filled. Preparation for the sacraments of
+                      First Reconciliation and First Holy Communion is open to
                       families with a child in Year 3 and above who worship at
                       Holy Innocents’.
                     </p>
@@ -239,9 +240,10 @@ const SacramentalPage = () => {
                 </p>
                 <p>
                   We invite young people thinking about receiving the Sacrament
-                  of Confirmation to attend Youth Alpha first, as the "gateway"
-                  to a Confirmation journey. This is open to all teenagers, from
-                  12 and 13 year olds in Year 9 up to age 19.
+                  of Confirmation to attend Youth Alpha first, as the
+                  &quot;gateway&quot; to a Confirmation journey. This is open to
+                  all teenagers, from 12 and 13 year olds in Year 9 up to age
+                  19.
                 </p>
                 <p>
                   Youth Alpha, which we run each year, offers a welcoming, fun
@@ -276,23 +278,23 @@ const SacramentalPage = () => {
                   Not only babies and children come to faith in Jesus Christ,
                   receive the sacraments of initiation, and become part of our
                   Catholic community – many adults do as well. We call the route
-                  that they take the 'Journey in Faith'.
+                  that they take the &apos;Journey in Faith&apos;.
                 </p>
                 <p>
                   You may have little or no faith background at all; you may
                   have been baptised into the Catholic Church but not received
                   the other sacraments of initiation; or you may come from
                   another Christian tradition. Journey in Faith (or to give it
-                  its formal name, the 'Rite of Christian Initiation of Adults')
-                  can help you to learn more about Jesus and what it means to be
-                  His disciple; and to explore the Catholic faith in a relaxed
-                  and informal atmosphere, without any commitment.
+                  its formal name, the &apos;Rite of Christian Initiation of
+                  Adults&apos;) can help you to learn more about Jesus and what
+                  it means to be His disciple; and to explore the Catholic faith
+                  in a relaxed and informal atmosphere, without any commitment.
                 </p>
                 <p>
                   Meetings take place weekly during school term time, usually on
                   a Monday evening from 8 pm to 9.15 pm. The meetings involve a
-                  small group of 'enquirers' and are led by Father Victor and
-                  other parishioners.
+                  small group of &apos;enquirers&apos; and are led by Father
+                  Victor and other parishioners.
                 </p>
                 <p>
                   <strong>Contact</strong> Father Victor
@@ -307,10 +309,10 @@ const SacramentalPage = () => {
 
                 <p>
                   The Catholic Church calls the Sacrament of Reconciliation
-                  (which is also referred to as 'Confession' or the 'Sacrament
-                  of Penance') and the Anointing of the Sick (which is also
-                  referred to as the 'Sacrament of the Sick') as 'sacraments of
-                  healing'.
+                  (which is also referred to as &apos;Confession&apos; or the
+                  &apos;Sacrament of Penance&apos;) and the Anointing of the
+                  Sick (which is also referred to as the &apos;Sacrament of the
+                  Sick&apos;) as &apos;sacraments of healing&apos;.
                 </p>
                 <p>
                   Through these sacraments, the Church continues the healing
@@ -328,10 +330,10 @@ const SacramentalPage = () => {
                 </p>
                 <p>
                   You might think this sounds daunting, but it really is not. As
-                  Pope Francis says, 'All should leave the confessional with
-                  happiness of heart, with a face radiant with hope even if,
-                  sometimes, — we know it — bathed by the tears of conversion
-                  and of the joy that stems from it.'
+                  Pope Francis says, &apos;All should leave the confessional
+                  with happiness of heart, with a face radiant with hope even
+                  if, sometimes, — we know it — bathed by the tears of
+                  conversion and of the joy that stems from it.&apos;
                 </p>
                 <p>The Sacrament of Reconciliation is available:</p>
                 <ul className="section-content-ul">
@@ -377,14 +379,14 @@ const SacramentalPage = () => {
                 <h2 className="section-title-2">The Anointing of the Sick</h2>
 
                 <p>
-                  The Anointing of the Sick (sometimes called the 'Sacrament of
-                  the Sick') brings spiritual comfort to those who are seriously
-                  ill and who may be in danger of death. The priest anoints the
-                  sick person with oil on the forehead and on the hands,
-                  signifying the strengthening grace of God, giving peace and
-                  courage. The priest also lays his hands on him or her as a
-                  sign of blessing, healing of the soul and (if that is God’s
-                  will) healing of the body.
+                  The Anointing of the Sick (sometimes called the
+                  &apos;Sacrament of the Sick&apos;) brings spiritual comfort to
+                  those who are seriously ill and who may be in danger of death.
+                  The priest anoints the sick person with oil on the forehead
+                  and on the hands, signifying the strengthening grace of God,
+                  giving peace and courage. The priest also lays his hands on
+                  him or her as a sign of blessing, healing of the soul and (if
+                  that is God’s will) healing of the body.
                 </p>
                 <p>
                   Please speak to Father Victor if you, or somebody else in our
@@ -404,11 +406,12 @@ const SacramentalPage = () => {
                 </p>
                 <p>
                   The Anointing of the Sick was formerly reserved for those who
-                  were dying, hence previous names such as 'Extreme Unction' and
-                  the 'Last Rites'. Now the Anointing is available not just to
-                  those in imminent danger of death, but to those who are
-                  seriously ill. Please speak to Father Victor about this
-                  sacrament if you are facing any serious illness or surgery.
+                  were dying, hence previous names such as &apos;Extreme
+                  Unction&apos; and the &apos;Last Rites&apos;. Now the
+                  Anointing is available not just to those in imminent danger of
+                  death, but to those who are seriously ill. Please speak to
+                  Father Victor about this sacrament if you are facing any
+                  serious illness or surgery.
                 </p>
                 <p>
                   <strong>Contact</strong> Father Victor
@@ -425,11 +428,11 @@ const SacramentalPage = () => {
 
                 <p>
                   The Catholic Church calls the Sacraments of Matrimony and Holy
-                  Orders "sacraments at the service of communion" because both
-                  of them are (in the words of the Catechism of the Catholic
-                  Church) "directed towards the salvation of others; if they
-                  contribute as well to personal salvation, it is through
-                  service to others that they do so".
+                  Orders &quot;sacraments at the service of communion&quot;
+                  because both of them are (in the words of the Catechism of the
+                  Catholic Church) &quot;directed towards the salvation of
+                  others; if they contribute as well to personal salvation, it
+                  is through service to others that they do so&quot;.
                 </p>
               </li>
               <li
