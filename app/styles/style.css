@@ -1575,3 +1575,10 @@ section.churchsuite-section {
 li.section-content-list p a {
     color: var(--primary-color);
 }
+.stock-loader-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    background: gray;
+}
