@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef } from "react";
 import countries from "../../data/country";
 import { IoMdClose } from "react-icons/io";
 import { FaCamera } from "react-icons/fa";
+import axios from 'axios';
 
 const RegisterFrom = () => {
   const currentYear = new Date().getFullYear();
@@ -209,10 +210,59 @@ const RegisterFrom = () => {
     return undefined;
   }, [showPrivacyModal]);
 
+  const [loading, setLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setErrorMessage(""); // clear old error
+
+    const formData = new FormData(e.target);
+    const selectedMinistries = formData.getAll("custom_fields[field_15][]");
+    formData.delete("custom_fields[field_15][]");
+    selectedMinistries.forEach((m) => formData.append("ministries[]", m));
+
+    const dob = `${formData.get("dob_year")}-${formData.get("dob_month")}-${formData.get("dob_day")}`;
+    formData.append("date_of_birth", dob);
+    formData.delete("dob_day");
+    formData.delete("dob_month");
+    formData.delete("dob_year");
+
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+
+    axios
+      .post(`${baseUrl}/api/registration`, formData, {
+        headers: { "Content-Type": "multipart/form-data" },
+      })
+      .then((res) => {
+        console.log("Response:", res.data);
+        setLoading(false);
+        setSuccessMessage("🎉 Registration successful!");
+        e.target.reset();
+      })
+      .catch((err) => {
+        setLoading(false);
+
+        if (err.response) {
+          const msg =
+            err.response.data.message ||
+            "Something went wrong. Please try again.";
+          setErrorMessage(msg);
+          console.error("Server Error:", err.response.data);
+        } else {
+          // Network or unknown error
+          setErrorMessage("Network error. Please check your connection.");
+        }
+      });
+  };
+  
+
   return (
     <>
       <div className="churchsuite-form">
-        <form action="">
+        <form onSubmit={handleSubmit}>
           <h4>My Details</h4>
           <div className="churchsuite-item">
             <div className="row">
@@ -437,17 +487,17 @@ const RegisterFrom = () => {
                 <input
                   className="form-control mt-2"
                   type="text"
-                  name="address"
+                  name="address_two"
                   placeholder="Your Address 2"
                 />
               </div>
               <div className=" col-md-6 mb-2">
-                <label htmlFor="address3">Address 3 </label>
+                <label htmlFor="address_three">Address 3 </label>
                 <input
                   className="form-control mt-2"
                   type="text"
-                  name="address3"
-                  placeholder="Your Address 2"
+                  name="address_three"
+                  placeholder="Your Address 3"
                 />
               </div>
               <div className=" col-md-6 mb-2">
@@ -545,7 +595,7 @@ const RegisterFrom = () => {
                 <label htmlFor="year">Year Joined Parish</label>
                 <input
                   type="text"
-                  name="year"
+                  name="year_joined_parish"
                   className="form-control mt-2"
                   placeholder=" Year Joined Parish"
                 />
@@ -563,21 +613,21 @@ const RegisterFrom = () => {
             <div className="checkbox-item">
               <label>Gift Aid Scheme</label>
               <div className="checkbox-inner">
-                <input type="checkbox" name="newsletter" />
+                <input type="checkbox" name="gift_aid" />
                 <span>Yes</span>
               </div>
             </div>
             <div className="checkbox-item">
               <label>200 Club Member</label>
               <div className="checkbox-inner">
-                <input type="checkbox" name="newsletter" />
+                <input type="checkbox" name="200_club_member" />
                 <span>Yes</span>
               </div>
             </div>
             <div className="checkbox-item">
               <label>Housebound</label>
               <div className="checkbox-inner">
-                <input type="checkbox" name="newsletter" />
+                <input type="checkbox" name="housebound" />
                 <span>Yes</span>
               </div>
             </div>
@@ -594,7 +644,7 @@ const RegisterFrom = () => {
                         type="checkbox"
                         id={id}
                         name="custom_fields[field_15][]"
-                        value={m.value}
+                        value={m.label}
                       />
                       <span className="checkbox-label">{m.label}</span>
                     </label>
@@ -619,25 +669,25 @@ const RegisterFrom = () => {
             </p>
             <div className="checkbox-item">
               <div className="checkbox-inner">
-                <input type="checkbox" name="newsletter" />
+                <input type="checkbox" name="receive_general_email" />
                 <span>Receive general emails</span>
               </div>
             </div>
             <div className="checkbox-item">
               <div className="checkbox-inner">
-                <input type="checkbox" name="newsletter" />
+                <input type="checkbox" name="receive_general_sms" />
                 <span>Receive general SMS</span>
               </div>
             </div>
             <div className="checkbox-item">
               <div className="checkbox-inner">
-                <input type="checkbox" name="newsletter" />
+                <input type="checkbox" name="receive_general_calls" />
                 <span>Receive phone calls</span>
               </div>
             </div>
             <div className="checkbox-item">
               <div className="checkbox-inner">
-                <input type="checkbox" name="newsletter" />
+                <input type="checkbox" name="receive_general_post" />
                 <span>Receive post</span>
               </div>
             </div>
@@ -646,6 +696,7 @@ const RegisterFrom = () => {
                 type="checkbox"
                 name="accept_privacy"
                 id="accept_privacy"
+                required
               />
               <p className="checkbox-label">
                 I accept your{" "}
@@ -654,8 +705,15 @@ const RegisterFrom = () => {
             </div>
           </div>
           <div className="submit-btn-item">
-            <button className="custom-btn">Submit Details </button>
+            <button className="custom-btn" disabled={loading}> {loading ? "Submitting..." : "Submit Details"} </button>
           </div>
+          {errorMessage && (
+            <div className="alert alert-danger mt-2">{errorMessage}</div>
+          )}
+          {successMessage && (
+            <div className="alert alert-success mt-2">{successMessage}</div>
+          )}
+
         </form>
 
         {showPrivacyModal && (
