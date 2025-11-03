@@ -20,46 +20,15 @@ const AllNoticePage = () => {
               <div className="notice-left">
                 <h2>Parish notice</h2>
                 <div className="parish-content">
-                  <p>Youth Ministry began  9th May 2025 Catholic Bishops of</p>
+                  <p>Youth Ministry began 9th May 2025 Catholic Bishops of</p>
                   <p>
-                    England, Wales, and Scotland: ​Statement concerning the Bill
-                    on assisted suicide here  Zoom meetings   for services,
-                    prayer times and children's rosary here 
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Iste sapiente voluptatem magnam quos aliquam possimus id
+                    deserunt doloremque aperiam earum!
                   </p>
                   <p>
-                    England, Wales, and Scotland: ​Statement concerning the Bill
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-6 col-lg-4 mb-4">
-              <div className="notice-left">
-                <h2>Other notice</h2>
-                <div className="parish-content">
-                  <p>Youth Ministry began  9th May 2025 Catholic Bishops of</p>
-                  <p>
-                    England, Wales, and Scotland: ​Statement concerning the Bill
-                    on assisted suicide here  Zoom meetings   for services,
-                    prayer times and children's rosary here 
-                  </p>
-                  <p>
-                    England, Wales, and Scotland: ​Statement concerning the Bill
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-6 col-lg-4 mb-4">
-              <div className="notice-left">
-                <h2>Parish notice</h2>
-                <div className="parish-content">
-                  <p>Youth Ministry began  9th May 2025 Catholic Bishops of</p>
-                  <p>
-                    England, Wales, and Scotland: ​Statement concerning the Bill
-                    on assisted suicide here  Zoom meetings   for services,
-                    prayer times and children's rosary here 
-                  </p>
-                  <p>
-                    England, Wales, and Scotland: ​Statement concerning the Bill
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Iste sapiente voluptatem
                   </p>
                 </div>
               </div>
@@ -68,30 +37,14 @@ const AllNoticePage = () => {
               <div className="notice-left">
                 <h2>Other notice</h2>
                 <div className="parish-content">
-                  <p>Youth Ministry began  9th May 2025 Catholic Bishops of</p>
+                  <p>Youth Ministry began 9th May 2025 Catholic Bishops of</p>
                   <p>
-                    England, Wales, and Scotland: ​Statement concerning the Bill
-                    on assisted suicide here  Zoom meetings   for services,
-                    prayer times and children's rosary here 
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Iste sapiente voluptatem magnam quos aliquam possimus id
+                    deserunt doloremque aperi
                   </p>
                   <p>
-                    England, Wales, and Scotland: ​Statement concerning the Bill
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-6 col-lg-4 mb-4">
-              <div className="notice-left">
-                <h2>Other notice</h2>
-                <div className="parish-content">
-                  <p>Youth Ministry began  9th May 2025 Catholic Bishops of</p>
-                  <p>
-                    England, Wales, and Scotland: ​Statement concerning the Bill
-                    on assisted suicide here  Zoom meetings   for services,
-                    prayer times and children's rosary here 
-                  </p>
-                  <p>
-                    England, Wales, and Scotland: ​Statement concerning the Bill
+                    England, Wales, and Scotland: tatement concerning the Bill
                   </p>
                 </div>
               </div>
@@ -100,14 +53,64 @@ const AllNoticePage = () => {
               <div className="notice-left">
                 <h2>Other notice</h2>
                 <div className="parish-content">
-                  <p>Youth Ministry began  9th May 2025 Catholic Bishops of</p>
+                  <p>Youth Ministry began 9th May 2025 Catholic Bishops of</p>
                   <p>
-                    England, Wales, and Scotland: ​Statement concerning the Bill
-                    on assisted suicide here  Zoom meetings   for services,
-                    prayer times and children's rosary here 
+                    magnam quos aliquam possimus id deserunt doloremque aperiam
+                    earum!
                   </p>
                   <p>
-                    England, Wales, and Scotland: ​Statement concerning the Bill
+                    magnam quos aliquam possimus id deserunt doloremque aperiam
+                    earum!
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-6 col-lg-4 mb-4">
+              <div className="notice-left">
+                <h2>Other notice</h2>
+                <div className="parish-content">
+                  <p>Youth Ministry began 9th May 2025 Catholic Bishops of</p>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Iste sapiente voluptatem magnam quos aliquam possimus id
+                    deserunt doloremque aperi
+                  </p>
+                  <p>
+                    England, Wales, and Scotland: Statement concerning the Bill
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-6 col-lg-4 mb-4">
+              <div className="notice-left">
+                <h2>Other notice</h2>
+                <div className="parish-content">
+                  <p>Youth Ministry began 9th May 2025 Catholic Bishops of</p>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Iste sapiente voluptatem magnam quos aliquam possimus id
+                    deserunt doloremque aperi
+                  </p>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Iste sapiente voluptatem magnam quos aliquam possimus id
+                    deserunt doloremque aperi
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-6 col-lg-4 mb-4">
+              <div className="notice-left">
+                <h2>Other notice</h2>
+                <div className="parish-content">
+                  <p>Youth Ministry began 9th May 2025 Catholic Bishops of</p>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Iste sapiente voluptatem magnam quos aliquam possimus id
+                    deserunt doloremque aperi
+                  </p>
+                  <p>
+                    England, Wales, and Scotland: Statement concerning the Bill
                   </p>
                 </div>
               </div>
