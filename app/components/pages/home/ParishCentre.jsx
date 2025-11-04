@@ -13,7 +13,7 @@ const ParishCentre = () => {
           <div className="row">
             <div className="col-md-6">
               <div className="parish-contentss">
-                <h2 className="section-title">Father Phelan Parish Centre</h2>
+                <h2 className="section-title">The Father Phelan Centre</h2>
                 <p>
                   A space for gatherings, community events, and parish
                   activities.
