@@ -23,7 +23,7 @@ const AdorationRoom = () => {
             </div>
             <div className="col-md-7">
               <div className="adoration-content">
-                <h2>Visit Our Saint Carlo Acutis’ Adoration Room</h2>
+                <h2> Visit Our St. Carlo Acutis Adoration Room</h2>
                 <h5>
                   A sacred quiet and peaceful place for Prayer, Reflection, and
                   Spiritual Connection

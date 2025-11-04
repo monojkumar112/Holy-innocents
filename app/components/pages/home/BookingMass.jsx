@@ -23,7 +23,7 @@ const BookingMass = () => {
             </div>
             <div className="col-md-6">
               <div className="booking-content">
-                <h2 className="section-title">Booking a Mass Intention</h2>
+                <h2 className="section-title">Want To Offer A Mass?</h2>
                 <p>
                   You can book a Mass intention by contacting the parish office
                   during office hours or by using the form below.
