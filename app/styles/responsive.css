@@ -186,6 +186,9 @@
   section.contact-us {
     width: 100%;
   }
+  .mass-event-right {
+    margin-top: 20px;
+  }
   .mass-event-right iframe {
     width: 100%;
   }
