@@ -68,37 +68,37 @@ const Header = () => {
                               </a>
                             </li>
                             <li>
-                              <a href="/mission" className="dropdown-item">
+                              <a href="/" className="dropdown-item">
                                 Leadership and co-responsibility
                               </a>
                             </li>
                             <li>
-                              <a href="/team" className="dropdown-item">
+                              <a href="/" className="dropdown-item">
                                 Father Victor Vella
                               </a>
                             </li>
                             <li>
-                              <a href="/gallery" className="dropdown-item">
+                              <a href="/" className="dropdown-item">
                                 Deacons
                               </a>
                             </li>
                             <li>
-                              <a href="/policy" className="dropdown-item">
+                              <a href="/" className="dropdown-item">
                                 Sisters of Mercy
                               </a>
                             </li>
                             <li>
-                              <a href="/policy" className="dropdown-item">
+                              <a href="/" className="dropdown-item">
                                 Groups
                               </a>
                             </li>
                             <li>
-                              <a href="/policy" className="dropdown-item">
+                              <a href="/" className="dropdown-item">
                                 Our Parish Vision
                               </a>
                             </li>
                             <li>
-                              <a href="/policy" className="dropdown-item">
+                              <a href="/" className="dropdown-item">
                                 Brief history of our parish
                               </a>
                             </li>

@@ -26,10 +26,10 @@ const MassEvent = () => {
                 look at what&apos;s coming up.
               </p>
               <div className="mass-event-btn-group">
-                <a href="/about.html" className="custom-btn-alt mass-btn">
+                <a href="/#event" className="custom-btn-alt mass-btn">
                   All Events
                 </a>
-                <a href="/#contact" className="custom-btn-alt get-qucte-btn">
+                <a href="/#event" className="custom-btn-alt get-qucte-btn">
                   Mass times
                 </a>
               </div>
@@ -38,7 +38,7 @@ const MassEvent = () => {
 
           {/* Right Content */}
           <div className="col-lg-6">
-            <div className="mass-event-right">
+            <div className="mass-event-right" id="event">
               <iframe
                 src="https://holyinnocents.churchsuite.co.uk/embed/calendar?view=agenda&hide=daynames,navigation&theme=light&accent=%234a90e2&font=Inter&preview=false"
                 width="599"

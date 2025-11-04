@@ -21,7 +21,7 @@ const Community = () => {
                   and make a difference together.
                 </p>
                 <div className="community-btn-group">
-                  <a href="#" className="custom-btn learn-more-btn">
+                  <a href="#contact" className="custom-btn learn-more-btn">
                     Join Us
                   </a>
                 </div>
