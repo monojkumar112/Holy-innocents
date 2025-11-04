@@ -3,25 +3,13 @@
 import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade, Pagination } from "swiper/modules";
-
+import Skeleton from "react-loading-skeleton"; // Import skeleton loader
+import "react-loading-skeleton/dist/skeleton.css"; // CSS for skeleton loader
 import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/pagination";
 import Link from "next/link";
 import Image from "next/image";
-
-// 🔹 Simple Stock Loader (you can style or replace with a library loader)
-const StockLoader = () => (
-  <div className="stock-loader-wrapper">
-    <div className="loader border-t-4 border-blue-500 rounded-full w-12 h-12 animate-spin"></div>
-    <style jsx>{`
-      .loader {
-        border: 4px solid rgba(255, 255, 255, 0.2);
-        border-top-color: #3b82f6; /* blue-500 */
-      }
-    `}</style>
-  </div>
-);
 
 const HeroSlider = () => {
   const [carousels, setCarousels] = useState([]);
@@ -50,7 +38,7 @@ const HeroSlider = () => {
 
   // 🔹 Show loader while fetching data
   if (loading) {
-    return <StockLoader />;
+    return <Skeleton height={768} />;
   }
 
   return (
