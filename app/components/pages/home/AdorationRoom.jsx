@@ -28,11 +28,7 @@ const AdorationRoom = () => {
                   A sacred quiet and peaceful place for Prayer, Reflection, and
                   Spiritual Connection
                 </h5>
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry&apos;s
-                  standard
-                </p>
+
                 <ul className="adoration-url-list">
                   <li>
                     <span>

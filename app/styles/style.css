@@ -556,6 +556,7 @@ section.adoration-room {
 
 .adoration-img img {
   width: 100%;
+  border-radius: 10px;
 }
 
 .adoration-content h2 {
@@ -617,7 +618,7 @@ ul.adoration-url-list li {
   font-weight: 600;
   line-height: 32px;
   text-transform: capitalize;
-  padding-top: 50px;
+  padding-top: 10px;
 }
 
 ul.adoration-url-list li span img {
