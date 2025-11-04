@@ -19,12 +19,12 @@ const ParishCentre = () => {
                   activities.
                 </p>
                 <div className="parish-btn-group">
-                  <a href="/about.html" className="custom-btn learn-more-btn">
+                  <a href="#" className="custom-btn learn-more-btn">
                     Book the Centre
                   </a>
-                  <a href="/#contact" className="custom-btn-alt get-qucte-btn">
+                  {/* <a href="/#contact" className="custom-btn-alt get-qucte-btn">
                     Check Availability
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </div>

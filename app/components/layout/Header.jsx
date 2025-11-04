@@ -109,12 +109,12 @@ const Header = () => {
                         {/* <img
                           src="/assets/images/menu-img.png"
                           alt="menu-img"
-                          className="img-fluid menu-img-item d-none d-md-block"
+                          className="img-fluid d-none d-md-block my-0 ms-auto menu-img-item"
                         /> */}
                         <Image
                           src="/assets/images/menu-img.png"
                           alt="menu-img"
-                          className="img-fluid menu-img-item d-none d-md-block"
+                          className="img-fluid d-none d-md-block my-0 ms-auto menu-img-item"
                           width={557}
                           height={367}
                         />
@@ -190,7 +190,7 @@ const Header = () => {
                         <Image
                           src="/assets/images/menu-img.png"
                           alt="menu-img"
-                          className="img-fluid menu-img-item d-none d-md-block"
+                          className="img-fluid d-none d-md-block my-0 ms-auto menu-img-item"
                           width={557}
                           height={367}
                         />
@@ -292,7 +292,7 @@ const Header = () => {
                         <Image
                           src="/assets/images/menu-img.png"
                           alt="menu-img"
-                          className="img-fluid menu-img-item d-none d-md-block"
+                          className="img-fluid d-none d-md-block my-0 ms-auto menu-img-item"
                           width={557}
                           height={367}
                         />

@@ -43,7 +43,7 @@ const AdorationRoom = () => {
                         height={24}
                       />
                     </span>
-                    <p>Quiet & peaceful prayer space</p>
+                    <p>Quiet and peaceful prayer space</p>
                   </li>
                   <li>
                     <span>
@@ -54,25 +54,25 @@ const AdorationRoom = () => {
                         height={24}
                       />
                     </span>
-                    <p>Quiet & peaceful prayer space</p>
+                    <p>Open on Monday , Tuesday, Thursday , Friday </p>
                   </li>
                   <li>
                     <span>
                       <Image
-                        src={"/assets/images/icon/add-3.svg"}
+                        src={"/assets/images/icon/add-2.svg"}
                         alt="Icon"
                         width={24}
                         height={24}
                       />
                     </span>
-                    <p>Quiet & peaceful prayer space</p>
+                    <p>Open from 8am to 8pm</p>
                   </li>
                 </ul>
-                <div className="adoration-btn-group">
+                {/* <div className="adoration-btn-group">
                   <button className="custom-btn learn-more-btn">Monday</button>
                   <button className="custom-btn get-qucte-btn">Tuesday</button>
                   <button className="custom-btn get-qucte-btn">Friday</button>
-                </div>
+                </div> */}
                 <h4>
                   To always be close to Jesus, that&apos;s my life plan. – Carlo
                   Acutis

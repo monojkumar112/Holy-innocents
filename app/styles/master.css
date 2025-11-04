@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
 * {
   padding: 0;
@@ -11,8 +11,8 @@
 
 :root {
   /*========== Colors ==========*/
-  --primary-color: #B28744;
-  --secoundary-color: #B28744;
+  --primary-color: #b28744;
+  --secoundary-color: #b28744;
   --black-color: #000000;
   --white-color: #ffffff;
   --body-color: #ffffff;
@@ -89,13 +89,11 @@ h3,
 h4,
 h5,
 h6,
-
 ul,
 li,
 span,
 label {
   margin: 0;
-
 }
 
 p {
@@ -135,7 +133,7 @@ table.table {
 .custom-btn:hover {
   color: var(--primary-color);
   border: 1px solid var(--primary-color);
-  background: transparent
+  background: transparent;
 }
 
 .custom-btn-alt {
@@ -158,7 +156,6 @@ table.table {
   color: var(--white-color);
   border-color: var(--primary-color);
   background: var(--secoundary-color);
-
 }
 
 .section-title {
@@ -167,7 +164,6 @@ table.table {
   font-weight: 700;
   line-height: normal;
 }
-
 
 .cpy-5 {
   padding: 50px 0;
@@ -277,4 +273,14 @@ table.table {
   .cpb-7 {
     padding-bottom: 40px;
   }
+}
+
+body#pg_embed_calendar_list table#calendar thead td {
+  display: none !important;
+}
+
+/* Optional: Hide navigation arrows */
+iframe::content .fc-prev-button,
+iframe::content .fc-next-button {
+  display: none !important;
 }
