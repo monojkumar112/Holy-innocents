@@ -1,7 +1,13 @@
-/** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["admin.buytiq.store"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "admin.buytiq.store",
+        port: "",
+        pathname: "/**",
+      },
+    ],
   },
 };
 

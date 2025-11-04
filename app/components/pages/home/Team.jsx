@@ -18,7 +18,7 @@ const Team = () => {
       setTeam(data.data.data);
       setNextPageUrl(data.data.next_page_url);
     } catch (error) {
-      console.error('Error fetching team:', error);
+      console.error("Error fetching team:", error);
     } finally {
       setLoading(false);
     }
@@ -31,10 +31,10 @@ const Team = () => {
     try {
       const response = await fetch(nextPageUrl);
       const data = await response.json();
-      setTeam(prevTeam => [...prevTeam, ...data.data.data]);
+      setTeam((prevTeam) => [...prevTeam, ...data.data.data]);
       setNextPageUrl(data.data.next_page_url);
     } catch (error) {
-      console.error('Error loading more team members:', error);
+      console.error("Error loading more team members:", error);
     } finally {
       setLoadingMore(false);
     }
@@ -75,10 +75,21 @@ const Team = () => {
                     <div className="team-item">
                       <div className="team-img">
                         <Image
-                          src={item.profile_image ? item.profile_image : "/assets/blank-profile.png"}
+                          src={
+                            item.profile_image &&
+                            item.profile_image !== "members/" &&
+                            item.profile_image !== ""
+                              ? item.profile_image.startsWith("http")
+                                ? item.profile_image
+                                : `${baseUrl}/${item.profile_image.replace(
+                                    /^\/+/,
+                                    ""
+                                  )}`
+                              : "/assets/blank-profile.png"
+                          }
                           width={416}
                           height={416}
-                          alt="Team Member"
+                          alt={item.name || "Team Member"}
                         />
                       </div>
                       <div className="team-content">
@@ -110,7 +121,6 @@ const Team = () => {
                     </div>
                   </div>
                 ))}
-
               </div>
             )}
             {nextPageUrl && (
@@ -120,11 +130,11 @@ const Team = () => {
                   disabled={loadingMore}
                   className="custom-btn load-more-btn btn-sm"
                   style={{
-                    cursor: loadingMore ? 'not-allowed' : 'pointer',
-                    opacity: loadingMore ? 0.6 : 1
+                    cursor: loadingMore ? "not-allowed" : "pointer",
+                    opacity: loadingMore ? 0.6 : 1,
                   }}
                 >
-                  {loadingMore ? 'Loading...' : 'See More'}
+                  {loadingMore ? "Loading..." : "See More"}
                 </button>
               </div>
             )}

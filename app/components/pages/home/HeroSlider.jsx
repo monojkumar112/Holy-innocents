@@ -74,11 +74,21 @@ const HeroSlider = () => {
                 <div className="sider-img">
                   {carousel.type === "image" ? (
                     <Image
-                      src={carousel.image_path ?? ""}
-                      alt={carousel.title || "Hero Slide"}
+                      src={
+                        carousel?.image_path
+                          ? carousel.image_path.startsWith("http")
+                            ? carousel.image_path
+                            : `/${carousel.image_path.replace(/^\/+/, "")}`
+                          : "/assets/images/default-slide.jpg" // fallback image in /public/assets/images/
+                      }
+                      alt={carousel?.title || "Hero Slide"}
                       width={1920}
                       height={857}
                       priority
+                      onError={(e) => {
+                        e.currentTarget.src =
+                          "/assets/images/default-slide.jpg"; // fallback if image fails
+                      }}
                     />
                   ) : carousel.video_embed ? (
                     <div
@@ -92,7 +102,8 @@ const HeroSlider = () => {
                     {carousel.title ?? "Welcome Holy Innocents Catholic Church"}
                   </h1>
                   <p className="text-white">
-                    {carousel.description ?? "Join us for worship and community."}
+                    {carousel.description ??
+                      "Join us for worship and community."}
                   </p>
 
                   <div className="slider-item-btn">
