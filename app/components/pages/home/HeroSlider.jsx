@@ -95,10 +95,13 @@ const HeroSlider = () => {
                   </p>
 
                   <div className="slider-item-btn">
-                    <Link href="#" className="custom-btn join-us-btn">
+                    <Link href="/#contact" className="custom-btn join-us-btn">
                       Join Us
                     </Link>
-                    <Link href="#" className="custom-btn-alt mass-times-btn">
+                    <Link
+                      href="/#event"
+                      className="custom-btn-alt mass-times-btn"
+                    >
                       Mass Times
                     </Link>
                   </div>
