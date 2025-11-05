@@ -309,12 +309,12 @@ const Header = () => {
               </li>
               <li className="nav-item">
                 <a className="nav-link active" href="/prayer">
-                  formation
+                  Formation
                 </a>
               </li>
               <li className="nav-item">
                 <a className="nav-link active" href="/sacramental">
-                  sacramental
+                  Sacramental
                 </a>
               </li>
 
