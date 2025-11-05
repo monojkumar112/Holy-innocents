@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const BookingMass = () => {
@@ -29,9 +30,12 @@ const BookingMass = () => {
                   during office hours or by using the form below.
                 </p>
                 <div className="booking-btn-group">
-                  <button className="custom-btn learn-more-btn">
+                  <Link
+                    href={"/mass-offering"}
+                    className="custom-btn learn-more-btn"
+                  >
                     Book Now
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>

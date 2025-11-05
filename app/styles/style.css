@@ -1097,7 +1097,7 @@ h2.about-section-title {
   padding: 40px;
   border-radius: 20px;
   background: var(--white-color);
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 .donate-header {
@@ -1569,4 +1569,28 @@ li.section-content-list p a {
   align-items: center;
   height: 500px;
   background: gray;
+}
+.pay-online-btn-item {
+  margin-top: 30px;
+}
+.pay-online-btn-item .custom-btn-alt {
+  border-radius: 4px;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mass-offering {
+  margin-top: 80px;
+}
+
+.mass-times-btn {
+  color: var(--white-color);
+  border-color: var(--white-color);
+}
+.join-us-btn:hover {
+  color: var(--white-color);
+  border-color: var(--white-color);
 }
