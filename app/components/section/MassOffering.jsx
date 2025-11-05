@@ -1,4 +1,5 @@
 "use client";
+import axios from "axios";
 import React, { useState } from "react";
 
 const MassOffering = () => {
@@ -6,12 +7,14 @@ const MassOffering = () => {
     intention: "",
     date: "",
     time: "",
-    donorName: "",
-    phone: "",
+    name: "",
+    number: "",
     email: "",
-    stipend: "",
+    amount: "",
   });
   const [loading, setLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
+   const [successMessage, setSuccessMessage] = useState("");
   const intentions = [
     "RIP",
     "Well-Being",
@@ -32,9 +35,35 @@ const MassOffering = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setLoading(true);
     // Later: send this to backend or email
     console.log(formData);
-    alert("Your Mass Offering has been submitted successfully!");
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+
+    axios
+      .post(`${baseUrl}/api/mass-offering`, formData)
+      .then((res) => {
+        console.log("Response:", res.data);
+        setLoading(false);
+        setSuccessMessage(res.data.message);
+        e.target.reset();
+      })
+      .catch((err) => {
+        setLoading(false);
+
+        if (err.response) {
+          const msg =
+            err.response.data.message ||
+            "Something went wrong. Please try again.";
+          setErrorMessage(msg);
+          console.error("Server Error:", err.response.data);
+        } else {
+          // Network or unknown error
+          setErrorMessage("Network error. Please check your connection.");
+        }
+      });
+      
+
   };
 
   return (
@@ -98,11 +127,11 @@ const MassOffering = () => {
                   <label className="form-label fw-semibold">Donor Name</label>
                   <input
                     type="text"
-                    name="donorName"
+                    name="name"
                     className="donate-input"
                     placeholder="Enter donor name"
                     required
-                    value={formData.donorName}
+                    value={formData.name}
                     onChange={handleChange}
                   />
                 </div>
@@ -113,10 +142,10 @@ const MassOffering = () => {
                   <input
                     type="text"
                     className="donate-input"
-                    name="phone"
-                    placeholder="Enter phone number"
+                    name="number"
+                    placeholder="Enter number number"
                     required
-                    value={formData.phone}
+                    value={formData.number}
                     onChange={handleChange}
                   />
                 </div>
@@ -139,10 +168,10 @@ const MassOffering = () => {
                   <input
                     type="number"
                     className="form-control donate-input"
-                    name="stipend"
+                    name="amount"
                     placeholder="Enter amount"
                     required
-                    value={formData.stipend}
+                    value={formData.amount}
                     onChange={handleChange}
                   />
                 </div>
@@ -166,6 +195,12 @@ const MassOffering = () => {
                 {loading ? "Processing..." : "Submit"}
               </button>
             </div>
+            {errorMessage && (
+              <div className="alert alert-danger mt-2">{errorMessage}</div>
+            )}
+            {successMessage && (
+              <div className="alert alert-success mt-2">{successMessage}</div>
+            )}
           </form>
         </div>
       </div>
