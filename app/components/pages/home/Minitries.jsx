@@ -12,6 +12,7 @@ const Minitries = () => {
 
   // selected ministry id for the modal form
   const [selectedMinistryId, setSelectedMinistryId] = useState(null);
+  const [selectedMinistry, setSelectedMinistry] = useState(null);
 
   const fetchMinistries = async (url) => {
     const fetchUrl = url ?? `${baseUrl}/api/ministries`;
@@ -82,7 +83,7 @@ const Minitries = () => {
                       <h3>{ministry.name}</h3>
                       <p>{ministry.description}</p>
                       <button
-                        onClick={() => setSelectedMinistryId(ministry.id)}
+                        onClick={() => {setSelectedMinistryId(ministry.id), setSelectedMinistry(ministry)}}
                         data-bs-toggle="modal"
                         data-bs-target="#exampleModal"
                         className="custom-btn learn-more-btn"
@@ -109,7 +110,7 @@ const Minitries = () => {
       </section>
 
       {/* modal  */}
-      <InvolvedForm selectedMinistryId={selectedMinistryId} />
+      <InvolvedForm selectedMinistryId={selectedMinistryId} selectedMinistry={selectedMinistry}/>
     </>
   );
 };
