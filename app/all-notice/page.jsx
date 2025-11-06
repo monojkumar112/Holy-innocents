@@ -13,7 +13,13 @@ const AllNoticePage = () => {
       setLoading(true);
       const response = await fetch(`${baseUrl}/api/notices`);
       const data = await response.json();
-      setNotices(data.data.data);
+
+      console.log("API response:", data); // 👈 Check actual structure in the console
+
+      // Safely extract notices (handles any structure)
+      const fetchedNotices = data?.data?.data || data?.data || data || [];
+
+      setNotices(fetchedNotices);
     } catch (error) {
       console.error("Error loading notices:", error);
     } finally {
@@ -31,8 +37,6 @@ const AllNoticePage = () => {
       "Our Christian communities must become genuine schools of prayer",
   };
 
-  console.log("notices", notices);
-
   return (
     <>
       <Banner data={bannerData} />
@@ -47,9 +51,7 @@ const AllNoticePage = () => {
             <p>Loading all notices...</p>
           ) : (
             <div className="row">
-              {notices.length === 0 ? (
-                <p>No notices available.</p>
-              ) : (
+              {Array.isArray(notices) && notices.length > 0 ? (
                 notices.map((notice) => (
                   <div className="col-md-6 col-lg-4 mb-4" key={notice.id}>
                     <div
@@ -69,6 +71,8 @@ const AllNoticePage = () => {
                     </div>
                   </div>
                 ))
+              ) : (
+                <p>No notices available.</p>
               )}
             </div>
           )}

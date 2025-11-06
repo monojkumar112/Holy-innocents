@@ -2,11 +2,17 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: "https",
-        hostname: "admin.buytiq.store",
-        port: "",
+        protocol: "http",
+        hostname: "localhost",
+        port: "8000",
         pathname: "/**",
       },
+      // {
+      //   protocol: "https",
+      //   hostname: "admin.buytiq.store",
+      //   port: "",
+      //   pathname: "/**",
+      // },
     ],
   },
 };
