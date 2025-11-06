@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const BookingMass = () => {
@@ -23,15 +24,18 @@ const BookingMass = () => {
             </div>
             <div className="col-md-6">
               <div className="booking-content">
-                <h2 className="section-title">Booking a Mass Intention</h2>
+                <h2 className="section-title">Want To Offer A Mass?</h2>
                 <p>
                   You can book a Mass intention by contacting the parish office
                   during office hours or by using the form below.
                 </p>
                 <div className="booking-btn-group">
-                  <button className="custom-btn learn-more-btn">
+                  <Link
+                    href={"/mass-offering"}
+                    className="custom-btn learn-more-btn"
+                  >
                     Book Now
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>

@@ -1,12 +1,10 @@
-'use client';
+"use client";
 import Image from "next/image";
 import React from "react";
 import { useState } from "react";
-import InvolvedForm from './../../section/InvolvedForm';
-
+import InvolvedForm from "./../../section/InvolvedForm";
 
 const Minitries = () => {
-
   //get ministries from api
   const [ministries, setMinistries] = useState([]);
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
@@ -14,6 +12,7 @@ const Minitries = () => {
 
   // selected ministry id for the modal form
   const [selectedMinistryId, setSelectedMinistryId] = useState(null);
+  const [selectedMinistry, setSelectedMinistry] = useState(null);
 
   const fetchMinistries = async (url) => {
     const fetchUrl = url ?? `${baseUrl}/api/ministries`;
@@ -23,15 +22,15 @@ const Minitries = () => {
       const data = await response.json();
 
       const newData = data?.ministries?.data || [];
-      setMinistries(prev => {
+      setMinistries((prev) => {
         const isFirstPage = fetchUrl === `${baseUrl}/api/ministries`;
         if (isFirstPage) {
           // replace on first load to avoid duplicates from double-mounts
           return newData;
         }
         // append but dedupe by id
-        const existingIds = new Set(prev.map(i => i.id));
-        const filtered = newData.filter(i => !existingIds.has(i.id));
+        const existingIds = new Set(prev.map((i) => i.id));
+        const filtered = newData.filter((i) => !existingIds.has(i.id));
         return [...prev, ...filtered];
       });
 
@@ -47,7 +46,6 @@ const Minitries = () => {
     fetchMinistries(); // load page 1
   }, [baseUrl]);
 
-
   return (
     <>
       <section
@@ -57,7 +55,9 @@ const Minitries = () => {
       >
         <div className="container">
           <div className="minitries-header">
-            <h2 className="section-title">Our Ministries – Get Involved</h2>
+            <h2 className="section-title">
+              Get Involved - Our Ministries and Groups
+            </h2>
             <p>
               Explore our diverse ministries and find your place to serve and
               grow in faith.
@@ -65,24 +65,25 @@ const Minitries = () => {
           </div>
           <div className="minitries-wrapper">
             <div className="row">
-
               {ministries.map((ministry) => (
                 <div className="col-md-6 col-lg-4 mb-3" key={ministry.id}>
-                  <div className="minitries-item" style={{ backgroundColor: ministry.color }}>
+                  <div
+                    className="minitries-item"
+                    style={{ backgroundColor: ministry.color }}
+                  >
                     <div className="minitries-img">
                       <Image
-                        src={ministry.image_icon ? ministry.image_icon : ''}
+                        src={ministry.image_icon ? ministry.image_icon : ""}
                         width={60}
                         height={60}
                         alt={ministry.name}
                       />
-
                     </div>
                     <div className="minitries-content">
                       <h3>{ministry.name}</h3>
                       <p>{ministry.description}</p>
                       <button
-                        onClick={() => setSelectedMinistryId(ministry.id)}
+                        onClick={() => {setSelectedMinistryId(ministry.id), setSelectedMinistry(ministry)}}
                         data-bs-toggle="modal"
                         data-bs-target="#exampleModal"
                         className="custom-btn learn-more-btn"
@@ -102,16 +103,14 @@ const Minitries = () => {
                 >
                   {nextPageUrl ? "Load More" : "No More Ministries"}
                 </button>
-
               </div>
-
             </div>
           </div>
         </div>
       </section>
 
       {/* modal  */}
-      <InvolvedForm selectedMinistryId={selectedMinistryId} />
+      <InvolvedForm selectedMinistryId={selectedMinistryId} selectedMinistry={selectedMinistry}/>
     </>
   );
 };

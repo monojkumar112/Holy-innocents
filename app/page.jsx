@@ -16,12 +16,16 @@ import NewHere from "./components/pages/home/NewHere";
 import Evangelisation from "./components/pages/home/Evangelisation";
 
 export const metadata = {
-  title: "Holy Innocents Catholic Church",
+  title: "Holy Innocents' Catholic Church Orpington - Home",
   description:
     "Welcome to Holy Innocents Catholic Church, a vibrant parish community dedicated to faith, worship, and service. Join us for Mass, events, and spiritual growth.",
   keywords:
     "Holy Innocents, Catholic Church, Parish, Mass Times, Community, Worship, Faith, Events, Spiritual Growth, Ministries, Sacraments",
+  icons: {
+    icon: "/assets/favicon.ico", // or your image path like '/assets/favicon.png'
+  },
 };
+
 export default function Home() {
   return (
     <>

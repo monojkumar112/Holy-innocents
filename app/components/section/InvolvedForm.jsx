@@ -1,7 +1,8 @@
 'use client'
 import React, { useState } from 'react'
+import Image from "next/image";
 
-function InvolvedForm({ selectedMinistryId }) {
+function InvolvedForm({ selectedMinistryId, selectedMinistry }) {
     const [status, setStatus] = useState(null)
 
     async function handleSubmit(e) {
@@ -39,7 +40,8 @@ function InvolvedForm({ selectedMinistryId }) {
         }
     }
 
-    console.log('ministryId:', selectedMinistryId)
+    // console.log('ministryId:', selectedMinistryId)
+    console.log('ministry', selectedMinistry);
     return (
         <>
             <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="ministryModalLabel" aria-hidden="true" style={{ zIndex: 9999 }}>
@@ -50,6 +52,27 @@ function InvolvedForm({ selectedMinistryId }) {
                             <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div className="modal-body">
+                            <div className='my-2 mb-2'>
+                                <h2>{selectedMinistry?.name}</h2>
+                                {/* <Image
+                                    src={selectedMinistry?.photo || '/assets/images/ministry_banner_image.jpeg'}
+                                    alt={selectedMinistry?.name || 'Ministry Image'}
+                                    width={600}
+                                    height={300}
+                                    /> */}
+                                    <img
+                                        src={selectedMinistry?.photo || '/assets/images/ministry_banner_image.jpeg'}
+                                        alt=""
+                                        className="mb-3"
+                                         style={{ height: "260px", width: "100%", objectFit: "cover" }}
+                                    />
+
+                                   
+                                <p>Email: {selectedMinistry?.email}</p>
+                                <p>Phone: {selectedMinistry?.phone}</p>
+                                <p>{selectedMinistry?.description}</p>
+                            </div>
+
                             <form onSubmit={handleSubmit} className="row">
                                 <input type="hidden" name="ministry_id" value={selectedMinistryId} />
                                 <div className="mb-md-3 col-md-6">

@@ -1,6 +1,16 @@
 import React from "react";
 import Banner from "../components/section/Banner";
 import PrayerSection from "../components/section/PrayerSection";
+export const metadata = {
+  title: "Holy Innocents' Catholic Church Orpington - Home",
+  description:
+    "Welcome to Holy Innocents Catholic Church, a vibrant parish community dedicated to faith, worship, and service. Join us for Mass, events, and spiritual growth.",
+  keywords:
+    "Holy Innocents, Catholic Church, Parish, Mass Times, Community, Worship, Faith, Events, Spiritual Growth, Ministries, Sacraments",
+  icons: {
+    icon: "/assets/favicon.ico", // or your image path like '/assets/favicon.png'
+  },
+};
 
 const PrayerPage = () => {
   const data = {

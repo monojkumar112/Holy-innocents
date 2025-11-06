@@ -6,10 +6,16 @@
   .mass-event-btn-group .get-qucte-btn::before {
     right: 0;
   }
+  tr.day_name {
+    display: none !important;
+  }
 }
-
+@media only screen and (max-width: 1400px) {
+  body#pg_embed_calendar_list table#calendar thead td {
+    display: none !important;
+  }
+}
 @media (max-width: 1220px) {
-
   section.section-content {
     width: 100%;
   }
@@ -48,7 +54,6 @@
 }
 
 @media (max-width: 992px) {
-
   .slider-content {
     width: 80%;
   }
@@ -59,7 +64,6 @@
 
   .community-wrapper .section-title {
     font-size: 40px;
-
   }
 
   .touch-wrapper {
@@ -135,8 +139,8 @@
 
   .mass-event-item {
     border-radius: 10px;
-    border: 3px solid #3F3F3F;
-    box-shadow: 7px -7px 20px 5px rgba(0, 0, 0, 0.10);
+    border: 3px solid #3f3f3f;
+    box-shadow: 7px -7px 20px 5px rgba(0, 0, 0, 0.1);
     padding: 20px 20px;
     position: relative;
   }
@@ -144,12 +148,10 @@
   .mass-event-contnet-item h4 {
     padding-bottom: 0;
     font-size: 18px;
-
   }
 
   section.adoration-room {
     padding: 70px 0;
-
   }
 
   .touch-content .section-title {
@@ -177,7 +179,6 @@
 
   .footer-quick-title h3 {
     font-size: 25px;
-
   }
 }
 
@@ -185,7 +186,29 @@
   section.contact-us {
     width: 100%;
   }
-
+  .mass-event-right {
+    margin-top: 20px;
+  }
+  .mass-event-right iframe {
+    width: 100%;
+  }
+  .choose-donation-wrap {
+    overflow: auto;
+  }
+  .choose-donation-wrap .select-amount-btn {
+    width: 100px;
+  }
+  .donate-information h4 {
+    font-size: 18px;
+  }
+  .donate-from-wrapper {
+    width: 100%;
+    padding: 30px 20px;
+    border-radius: 10px;
+  }
+  h2.donate-from-title {
+    font-size: 30px;
+  }
   .reflection-content {
     width: 100%;
     padding-bottom: 30px;
@@ -199,6 +222,15 @@
   .reflection-img img {
     max-width: 100%;
     height: 100%;
+  }
+  .mass-offering {
+    margin-top: 50px;
+  }
+  .pay-online-btn-item {
+    margin-top: 10px;
+  }
+  .donate-form .custom-btn {
+    margin-top: 20px;
   }
 
   .reflection-item {
@@ -396,12 +428,10 @@
 
   section.adoration-room {
     padding: 40px 0;
-
   }
 
   .adoration-btn-group .custom-btn {
     border-radius: 10px;
-
   }
 
   .adoration-content {
@@ -423,7 +453,6 @@
   .community-wrapper .section-title {
     font-size: 30px;
   }
-
 
   .community-img {
     margin-top: 30px;

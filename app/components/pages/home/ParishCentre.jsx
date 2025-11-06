@@ -13,18 +13,18 @@ const ParishCentre = () => {
           <div className="row">
             <div className="col-md-6">
               <div className="parish-contentss">
-                <h2 className="section-title">Parish Centre Hire</h2>
+                <h2 className="section-title">The Father Phelan Centre</h2>
                 <p>
                   A space for gatherings, community events, and parish
                   activities.
                 </p>
                 <div className="parish-btn-group">
-                  <a href="/about.html" className="custom-btn learn-more-btn">
+                  <a href="#" className="custom-btn learn-more-btn">
                     Book the Centre
                   </a>
-                  <a href="/#contact" className="custom-btn-alt get-qucte-btn">
+                  {/* <a href="/#contact" className="custom-btn-alt get-qucte-btn">
                     Check Availability
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </div>

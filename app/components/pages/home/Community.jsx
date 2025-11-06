@@ -14,14 +14,14 @@ const Community = () => {
             <div className="col-md-6">
               <div className="community-wrapper">
                 <h2 className="section-title">
-                  Looking to Join a Community and Get Involved?
+                  Looking To join a Community and Get Involved?
                 </h2>
                 <p>
                   Become a part of our vibrant parish community. Connect, grow,
                   and make a difference together.
                 </p>
                 <div className="community-btn-group">
-                  <a href="#" className="custom-btn learn-more-btn">
+                  <a href="#contact" className="custom-btn learn-more-btn">
                     Join Us
                   </a>
                 </div>

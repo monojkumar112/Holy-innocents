@@ -68,37 +68,37 @@ const Header = () => {
                               </a>
                             </li>
                             <li>
-                              <a href="/mission" className="dropdown-item">
+                              <a href="/" className="dropdown-item">
                                 Leadership and co-responsibility
                               </a>
                             </li>
                             <li>
-                              <a href="/team" className="dropdown-item">
+                              <a href="/" className="dropdown-item">
                                 Father Victor Vella
                               </a>
                             </li>
                             <li>
-                              <a href="/gallery" className="dropdown-item">
+                              <a href="/" className="dropdown-item">
                                 Deacons
                               </a>
                             </li>
                             <li>
-                              <a href="/policy" className="dropdown-item">
+                              <a href="/" className="dropdown-item">
                                 Sisters of Mercy
                               </a>
                             </li>
                             <li>
-                              <a href="/policy" className="dropdown-item">
+                              <a href="/" className="dropdown-item">
                                 Groups
                               </a>
                             </li>
                             <li>
-                              <a href="/policy" className="dropdown-item">
+                              <a href="/" className="dropdown-item">
                                 Our Parish Vision
                               </a>
                             </li>
                             <li>
-                              <a href="/policy" className="dropdown-item">
+                              <a href="/" className="dropdown-item">
                                 Brief history of our parish
                               </a>
                             </li>
@@ -109,12 +109,12 @@ const Header = () => {
                         {/* <img
                           src="/assets/images/menu-img.png"
                           alt="menu-img"
-                          className="img-fluid menu-img-item d-none d-md-block"
+                          className="img-fluid d-none d-md-block my-0 ms-auto menu-img-item"
                         /> */}
                         <Image
                           src="/assets/images/menu-img.png"
                           alt="menu-img"
-                          className="img-fluid menu-img-item d-none d-md-block"
+                          className="img-fluid d-none d-md-block my-0 ms-auto menu-img-item"
                           width={557}
                           height={367}
                         />
@@ -190,7 +190,7 @@ const Header = () => {
                         <Image
                           src="/assets/images/menu-img.png"
                           alt="menu-img"
-                          className="img-fluid menu-img-item d-none d-md-block"
+                          className="img-fluid d-none d-md-block my-0 ms-auto menu-img-item"
                           width={557}
                           height={367}
                         />
@@ -292,7 +292,7 @@ const Header = () => {
                         <Image
                           src="/assets/images/menu-img.png"
                           alt="menu-img"
-                          className="img-fluid menu-img-item d-none d-md-block"
+                          className="img-fluid d-none d-md-block my-0 ms-auto menu-img-item"
                           width={557}
                           height={367}
                         />
@@ -309,12 +309,12 @@ const Header = () => {
               </li>
               <li className="nav-item">
                 <a className="nav-link active" href="/prayer">
-                  formation
+                  Formation
                 </a>
               </li>
               <li className="nav-item">
                 <a className="nav-link active" href="/sacramental">
-                  sacramental
+                  Sacramental
                 </a>
               </li>
 
