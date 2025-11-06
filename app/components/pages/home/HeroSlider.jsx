@@ -41,6 +41,8 @@ const HeroSlider = () => {
     return <Skeleton height={768} />;
   }
 
+  console.log("carousels", carousels);
+
   return (
     <section className="hero-section">
       <Swiper
@@ -62,21 +64,10 @@ const HeroSlider = () => {
                 <div className="sider-img">
                   {carousel.type === "image" ? (
                     <Image
-                      src={
-                        carousel?.image_path
-                          ? carousel.image_path.startsWith("http")
-                            ? carousel.image_path
-                            : `/${carousel.image_path.replace(/^\/+/, "")}`
-                          : "/assets/images/default-slide.jpg" // fallback image in /public/assets/images/
-                      }
+                      src={carousel.image_path}
                       alt={carousel?.title || "Hero Slide"}
                       width={1920}
                       height={857}
-                      priority
-                      onError={(e) => {
-                        e.currentTarget.src =
-                          "/assets/images/default-slide.jpg"; // fallback if image fails
-                      }}
                     />
                   ) : carousel.video_embed ? (
                     <div
