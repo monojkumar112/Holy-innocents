@@ -190,7 +190,7 @@ const GiftaidFrom = () => {
             </div>
           </div>
           <h4>
-            Today's Date
+            Today&apos;s Date
             <span className="text-danger">*</span>
           </h4>
           <div className="row">
