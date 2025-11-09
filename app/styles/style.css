@@ -492,6 +492,14 @@ section.new-here {
   line-height: 35px;
 }
 
+.minitries-img img {
+  border-radius: 10px;
+}
+
+.minitries-img {
+  padding-bottom: 20px;
+}
+
 .minitries-content p {
   color: #000;
   text-align: center;
@@ -877,6 +885,15 @@ ul.contact-us-list li p {
   font-size: 24px;
   line-height: 150%;
   font-weight: 600;
+}
+
+.evangelisation-content h5 a {
+  color: var(--primary-color);
+  transition: 0.4s;
+}
+
+.evangelisation-content h5 a:hover {
+  text-decoration: underline !important;
 }
 
 .evangelisation-content p {
@@ -1651,4 +1668,55 @@ li.section-content-list p a {
 .liturgy-item-contents .liader-title-2 {
   font-size: 20px;
   padding-bottom: 10px;
+}
+
+.gift-aid-header {
+  padding-bottom: 15px;
+  border-bottom: #dddddd 1px solid;
+  margin-bottom: 15px;
+  margin-top: 20px;
+}
+
+.gift-aid-header h3 {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--black-color);
+  margin-bottom: 0;
+}
+
+.gift-aid-item h4 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 0;
+  padding-bottom: 15px;
+}
+
+.gift-aid-item {
+  margin-top: 20px;
+}
+
+.row {}
+
+.from-check-box-list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.gift-aid-header p {
+  padding-top: 15px;
+}
+
+.gift-aid-deses {
+  font-size: 18px;
+  border-bottom: 1px solid #dddddd;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  line-height: 28px;
+}
+
+.subscribe-tite-item {
+  font-size: 24px;
 }

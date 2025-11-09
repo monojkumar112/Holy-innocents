@@ -74,8 +74,8 @@ const Minitries = () => {
                     <div className="minitries-img">
                       <Image
                         src={ministry.image_icon ? ministry.image_icon : ""}
-                        width={60}
-                        height={60}
+                        width={150}
+                        height={150}
                         alt={ministry.name}
                       />
                     </div>

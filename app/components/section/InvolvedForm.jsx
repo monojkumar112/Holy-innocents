@@ -69,20 +69,15 @@ function InvolvedForm({ selectedMinistryId, selectedMinistry }) {
                 <h2 className="ministry-name-title">
                   {selectedMinistry?.name}
                 </h2>
-                {/* <Image
-                                    src={selectedMinistry?.photo || '/assets/images/ministry_banner_image.jpeg'}
-                                    alt={selectedMinistry?.name || 'Ministry Image'}
-                                    width={600}
-                                    height={300}
-                                    /> */}
+
                 <img
                   src={
                     selectedMinistry?.photo ||
                     "/assets/images/ministry_banner_image.jpeg"
                   }
                   alt=""
-                  className="mb-3"
-                  style={{ height: "260px", width: "100%", objectFit: "cover" }}
+                  className="mb-3 ministry_banner-img"
+                  style={{ width: "100%", objectFit: "cover" }}
                 />
 
                 <p>Email: {selectedMinistry?.email}</p>

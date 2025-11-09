@@ -47,8 +47,8 @@ const Header = () => {
             <Image
               src={"/assets/images/logo.png"}
               alt="logo"
-              width={186}
-              height={45}
+              width={200}
+              height={60}
             />
           </a>
 
