@@ -75,8 +75,8 @@ const ContactUs = () => {
                       <h5>Call To Us</h5>
                     </div>
                     <p>
-                      Natasha Wheeler, our Parish Secretary, works in the Parish
-                      Office from 10.30 am to 3.30 pm on Mondays, Wednesdays and
+                      Natasha Wheeler, our Parish Secretary, works in the Parish
+                      Office from 10.30 am to 3.30 pm on Mondays, Wednesdays and
                       Fridays.
                     </p>
                     <p>
@@ -92,8 +92,14 @@ const ContactUs = () => {
                       <h5>Write To US</h5>
                     </div>
                     <p>
-                      <span className="address-text">Address:</span> Strickland
+                      <span className="address-text">Address: </span>Strickland
                       Way, Orpington, Kent, BR6 9UE
+                    </p>
+                    <p>
+                      <span className="address-text">Email: </span>
+                      <a href="mailto:orpington@rcaos.org.uk">
+                        orpington@rcaos.org.uk
+                      </a>
                     </p>
                   </li>
                 </ul>

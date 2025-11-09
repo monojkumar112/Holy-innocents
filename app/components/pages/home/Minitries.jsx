@@ -66,7 +66,7 @@ const Minitries = () => {
           <div className="minitries-wrapper">
             <div className="row">
               {ministries.map((ministry) => (
-                <div className="col-md-6 col-lg-4 mb-3" key={ministry.id}>
+                <div className="col-md-6 col-lg-4 mb-4" key={ministry.id}>
                   <div
                     className="minitries-item"
                     style={{ backgroundColor: ministry.color }}
@@ -83,7 +83,10 @@ const Minitries = () => {
                       <h3>{ministry.name}</h3>
                       <p>{ministry.description}</p>
                       <button
-                        onClick={() => {setSelectedMinistryId(ministry.id), setSelectedMinistry(ministry)}}
+                        onClick={() => {
+                          setSelectedMinistryId(ministry.id),
+                            setSelectedMinistry(ministry);
+                        }}
                         data-bs-toggle="modal"
                         data-bs-target="#exampleModal"
                         className="custom-btn learn-more-btn"
@@ -110,7 +113,10 @@ const Minitries = () => {
       </section>
 
       {/* modal  */}
-      <InvolvedForm selectedMinistryId={selectedMinistryId} selectedMinistry={selectedMinistry}/>
+      <InvolvedForm
+        selectedMinistryId={selectedMinistryId}
+        selectedMinistry={selectedMinistry}
+      />
     </>
   );
 };
