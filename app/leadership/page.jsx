@@ -43,7 +43,7 @@ const LeadershipPage = () => {
                       <p>
                         ​The idea that every baptised Catholic shares
                         responsibility for the life and mission of the Catholic
-                        Church. So it's not just the parish priest who is
+                        Church. So it&apos;s not just the parish priest who is
                         responsible for the parish and what it does – every
                         baptised member of the parish has gifts and talents and
                         is called to exercise them and to share that
@@ -155,7 +155,7 @@ const LeadershipPage = () => {
                     Finance Director of a housing association for the last
                     eighteen years. Deacon Barry has the responsibility withing
                     the clergy team for Marriage preparation, Baptism, First
-                    Holy Communion and liaison with Holy Innocents' School.
+                    Holy Communion and liaison with Holy Innocents&apos; School.
                     Since his retirement Barry is now active in the parish
                     during the day and is generally at our church on Tuesday,
                     Wednesday and Thursday.
@@ -288,12 +288,12 @@ const LeadershipPage = () => {
                     alt="leader-ship-1"
                   />
                   <p>
-                    Every baptised member of Holy Innocents' is co-responsible
-                    for the life and mission of the parish. To exemplify this,
-                    the PCRG was established in 2013. Its remit includes acting
-                    as a leadership group for the parish, and developing and
-                    taking forward a pastoral plan aimed at implementing the
-                    Parish Vision.
+                    Every baptised member of Holy Innocents&apos; is
+                    co-responsible for the life and mission of the parish. To
+                    exemplify this, the PCRG was established in 2013. Its remit
+                    includes acting as a leadership group for the parish, and
+                    developing and taking forward a pastoral plan aimed at
+                    implementing the Parish Vision.
                   </p>
                   <p>
                     PCRG members share responsibility for keeping in contact
