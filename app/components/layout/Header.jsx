@@ -100,6 +100,11 @@ const Header = () => {
                                 About Us
                               </a>
                             </li>
+                            <li>
+                              <a href="/leadership" className="dropdown-item">
+                                Leadership and co-responsibility
+                              </a>
+                            </li>
                             {loading ? (
                               <li>
                                 <span className="dropdown-item text-muted">

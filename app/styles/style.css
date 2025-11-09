@@ -1118,6 +1118,7 @@ h2.donate-from-title {
 .donate-information {
   margin-bottom: 10px;
 }
+
 .donate-form .custom-btn {
   margin-top: 30px;
 }
@@ -1563,6 +1564,7 @@ section.churchsuite-section {
 li.section-content-list p a {
   color: var(--primary-color);
 }
+
 .stock-loader-wrapper {
   display: flex;
   justify-content: center;
@@ -1570,9 +1572,11 @@ li.section-content-list p a {
   height: 500px;
   background: gray;
 }
+
 .pay-online-btn-item {
   margin-top: 30px;
 }
+
 .pay-online-btn-item .custom-btn-alt {
   border-radius: 4px;
   width: 100%;
@@ -1582,6 +1586,7 @@ li.section-content-list p a {
   align-items: center;
   justify-content: center;
 }
+
 .mass-offering {
   margin-top: 80px;
 }
@@ -1590,7 +1595,23 @@ li.section-content-list p a {
   color: var(--white-color);
   border-color: var(--white-color);
 }
+
 .join-us-btn:hover {
   color: var(--white-color);
   border-color: var(--white-color);
+}
+
+.leader-ship-content {
+  padding-top: 70px;
+}
+
+.leader-ship-content p {
+  font-size: 18px;
+  line-height: 160%;
+  padding-bottom: 25px;
+}
+
+.liturgy-item-contents .liader-title-2 {
+  font-size: 20px;
+  padding-bottom: 10px;
 }
