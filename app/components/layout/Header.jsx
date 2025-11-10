@@ -1,7 +1,42 @@
+"use client";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import React from "react";
+import Link from "next/link";
 
 const Header = () => {
+  const [categories, setCategories] = useState([]);
+  const [loading, setLoading] = useState(false);
+
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+
+  const fetchCategories = async () => {
+    try {
+      setLoading(true);
+      const response = await fetch(`${baseUrl}/api/category-pages`);
+      const data = await response.json();
+      console.log("Menu data:", data);
+      setCategories(data?.data || []);
+    } catch (error) {
+      console.error("Error fetching menu categories:", error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    fetchCategories();
+  }, []);
+
+  // Helper: find category by slug
+  const getPagesBySlug = (slug) => {
+    const category = categories.find((cat) => cat.slug === slug);
+    return category?.pages || [];
+  };
+
+  const aboutPages = getPagesBySlug("about-us");
+  const fellowshipPages = getPagesBySlug("fellowship");
+  const liturgyPages = getPagesBySlug("liturgy");
+
   return (
     <>
       {/* <!-- ================= HEADER START ================= --> */}
@@ -12,8 +47,8 @@ const Header = () => {
             <Image
               src={"/assets/images/logo.png"}
               alt="logo"
-              width={186}
-              height={45}
+              width={200}
+              height={60}
             />
           </a>
 
@@ -43,8 +78,6 @@ const Header = () => {
                   Home
                 </a>
               </li>
-
-              {/* <!-- About --> */}
               <li className="nav-item dropdown dropdown-mega position-static">
                 <a
                   className="nav-link dropdown-toggle"
@@ -57,9 +90,9 @@ const Header = () => {
                   <div className="mega-content container-fluid">
                     <div className="row">
                       <div className="col-12 col-md-6">
-                        <div className="dropdown-items">
+                        <div className="dropdown-items pt-3 ps-3 ps-md-4">
                           <h6>
-                            <strong>ABOUT US</strong>
+                            <strong>About Us</strong>
                           </h6>
                           <ul className="pt-2 pt-md-3">
                             <li>
@@ -68,49 +101,33 @@ const Header = () => {
                               </a>
                             </li>
                             <li>
-                              <a href="/" className="dropdown-item">
+                              <a href="/leadership" className="dropdown-item">
                                 Leadership and co-responsibility
                               </a>
                             </li>
-                            <li>
-                              <a href="/" className="dropdown-item">
-                                Father Victor Vella
-                              </a>
-                            </li>
-                            <li>
-                              <a href="/" className="dropdown-item">
-                                Deacons
-                              </a>
-                            </li>
-                            <li>
-                              <a href="/" className="dropdown-item">
-                                Sisters of Mercy
-                              </a>
-                            </li>
-                            <li>
-                              <a href="/" className="dropdown-item">
-                                Groups
-                              </a>
-                            </li>
-                            <li>
-                              <a href="/" className="dropdown-item">
-                                Our Parish Vision
-                              </a>
-                            </li>
-                            <li>
-                              <a href="/" className="dropdown-item">
-                                Brief history of our parish
-                              </a>
-                            </li>
+                            {loading ? (
+                              <li>
+                                <span className="dropdown-item text-muted">
+                                  Loading...
+                                </span>
+                              </li>
+                            ) : aboutPages.length > 0 ? (
+                              aboutPages.map((page) => (
+                                <li key={page.id}>
+                                  <Link
+                                    href={`/about-us/${page.slug}`}
+                                    className="dropdown-item"
+                                  >
+                                    {page.page_title}
+                                  </Link>
+                                </li>
+                              ))
+                            ) : null}
                           </ul>
                         </div>
                       </div>
+
                       <div className="col-12 col-md-6 text-end pe-0">
-                        {/* <img
-                          src="/assets/images/menu-img.png"
-                          alt="menu-img"
-                          className="img-fluid d-none d-md-block my-0 ms-auto menu-img-item"
-                        /> */}
                         <Image
                           src="/assets/images/menu-img.png"
                           alt="menu-img"
@@ -124,7 +141,7 @@ const Header = () => {
                 </div>
               </li>
 
-              {/* <!-- Fellowship --> */}
+              {/* Fellowship (Static title, dynamic subpages) */}
               <li className="nav-item dropdown dropdown-mega position-static">
                 <a
                   className="nav-link dropdown-toggle"
@@ -137,7 +154,7 @@ const Header = () => {
                   <div className="mega-content container-fluid">
                     <div className="row">
                       <div className="col-12 col-md-6">
-                        <div className="pt-3 ps-3 ps-md-4">
+                        <div className="dropdown-items pt-3 ps-3 ps-md-4">
                           <h6>
                             <strong>Fellowship</strong>
                           </h6>
@@ -147,45 +164,28 @@ const Header = () => {
                                 Fellowship
                               </a>
                             </li>
-                            <li>
-                              <a
-                                href="#"
-                                className="dropdown-item"
-                                target="_blank"
-                              >
-                                Getting involved
-                              </a>
-                            </li>
-                            <li>
-                              <a
-                                href="#"
-                                className="dropdown-item"
-                                target="_blank"
-                              >
-                                Families and youth
-                              </a>
-                            </li>
-                            <li>
-                              <a
-                                href="#"
-                                className="dropdown-item"
-                                target="_blank"
-                              >
-                                Youth Alpha
-                              </a>
-                            </li>
-                            <li>
-                              <a
-                                href="#"
-                                className="dropdown-item"
-                                target="_blank"
-                              >
-                                Practical and financial
-                              </a>
-                            </li>
+                            {loading ? (
+                              <li>
+                                <span className="dropdown-item text-muted">
+                                  Loading...
+                                </span>
+                              </li>
+                            ) : fellowshipPages.length > 0 ? (
+                              fellowshipPages.map((page) => (
+                                <li key={page.id}>
+                                  <Link
+                                    href={`/fellowship/${page.slug}`}
+                                    className="dropdown-item"
+                                  >
+                                    {page.page_title}
+                                  </Link>
+                                </li>
+                              ))
+                            ) : null}
                           </ul>
                         </div>
                       </div>
+
                       <div className="col-12 col-md-6 text-end pe-0">
                         <Image
                           src="/assets/images/menu-img.png"
@@ -199,6 +199,7 @@ const Header = () => {
                   </div>
                 </div>
               </li>
+
               {/* <!-- Liturgy --> */}
               <li className="nav-item dropdown dropdown-mega position-static">
                 <a
@@ -222,69 +223,24 @@ const Header = () => {
                                 Liturgy
                               </a>
                             </li>
-                            <li>
-                              <a
-                                href="#"
-                                className="dropdown-item"
-                                target="_blank"
-                              >
-                                Recent events
-                              </a>
-                            </li>
-                            <li>
-                              <a
-                                href="#"
-                                className="dropdown-item"
-                                target="_blank"
-                              >
-                                Social and support
-                              </a>
-                            </li>
-                            <li>
-                              <a
-                                href="#"
-                                className="dropdown-item"
-                                target="_blank"
-                              >
-                                Mission
-                              </a>
-                            </li>
-                            <li>
-                              <a
-                                href="#"
-                                className="dropdown-item"
-                                target="_blank"
-                              >
-                                PECS
-                              </a>
-                            </li>
-                            <li>
-                              <a
-                                href="#"
-                                className="dropdown-item"
-                                target="_blank"
-                              >
-                                Alpha at Holy Innocents
-                              </a>
-                            </li>
-                            <li>
-                              <a
-                                href="#"
-                                className="dropdown-item"
-                                target="_blank"
-                              >
-                                Our evangelisation
-                              </a>
-                            </li>
-                            <li>
-                              <a
-                                href="#"
-                                className="dropdown-item"
-                                target="_blank"
-                              >
-                                Our social action
-                              </a>
-                            </li>
+                            {loading ? (
+                              <li>
+                                <span className="dropdown-item text-muted">
+                                  Loading...
+                                </span>
+                              </li>
+                            ) : liturgyPages.length > 0 ? (
+                              liturgyPages.map((page) => (
+                                <li key={page.id}>
+                                  <Link
+                                    href={`/about-us/${page.slug}`}
+                                    className="dropdown-item"
+                                  >
+                                    {page.page_title}
+                                  </Link>
+                                </li>
+                              ))
+                            ) : null}
                           </ul>
                         </div>
                       </div>

@@ -6,15 +6,18 @@
   .mass-event-btn-group .get-qucte-btn::before {
     right: 0;
   }
+
   tr.day_name {
     display: none !important;
   }
 }
+
 @media only screen and (max-width: 1400px) {
   body#pg_embed_calendar_list table#calendar thead td {
     display: none !important;
   }
 }
+
 @media (max-width: 1220px) {
   section.section-content {
     width: 100%;
@@ -58,6 +61,10 @@
     width: 80%;
   }
 
+  .evangelisation-img {
+    margin-top: 30px;
+  }
+
   .minitries-header .section-title {
     font-size: 40px;
   }
@@ -80,7 +87,8 @@
   }
 
   .minitries-item {
-    margin-bottom: 24px;
+    margin-bottom: 10px;
+    height: auto;
   }
 
   .community-img img {
@@ -186,29 +194,37 @@
   section.contact-us {
     width: 100%;
   }
+
   .mass-event-right {
     margin-top: 20px;
   }
+
   .mass-event-right iframe {
     width: 100%;
   }
+
   .choose-donation-wrap {
     overflow: auto;
   }
+
   .choose-donation-wrap .select-amount-btn {
     width: 100px;
   }
+
   .donate-information h4 {
     font-size: 18px;
   }
+
   .donate-from-wrapper {
     width: 100%;
     padding: 30px 20px;
     border-radius: 10px;
   }
+
   h2.donate-from-title {
     font-size: 30px;
   }
+
   .reflection-content {
     width: 100%;
     padding-bottom: 30px;
@@ -223,12 +239,15 @@
     max-width: 100%;
     height: 100%;
   }
+
   .mass-offering {
     margin-top: 50px;
   }
+
   .pay-online-btn-item {
     margin-top: 10px;
   }
+
   .donate-form .custom-btn {
     margin-top: 20px;
   }
@@ -469,7 +488,7 @@
   }
 
   .minitries-img img {
-    width: 50px;
+    width: 80px;
   }
 
   .minitries-content h3 {
@@ -499,8 +518,13 @@
   }
 
   .banner-wrapper .banner-title {
-    font-size: 35px;
+    font-size: 30px;
     padding-bottom: 10px;
+  }
+
+  h1.evangelisation-title {
+    font-size: 30px;
+    font-weight: 700;
   }
 
   .navbar {
@@ -533,6 +557,10 @@
   .banner-wrapper .banner-text {
     font-size: 18px;
     line-height: 150%;
+  }
+
+  .section-content-list img {
+    width: 100%;
   }
 
   h2.about-section-title {

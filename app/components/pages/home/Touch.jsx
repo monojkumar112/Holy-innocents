@@ -21,12 +21,16 @@ const Touch = () => {
                 <a href="/churchsuite" className="custom-btn get-qucte-btn">
                   Register 
                 </a>
-                {/* <a href="/#contact" className="custom-btn-alt get-qucte-btn">
+                <a href="/giftaid" className="custom-btn-alt get-qucte-btn">
                   Gift Aid
                 </a>
-                <a href="/#contact" className="custom-btn-alt get-qucte-btn">
+                <a
+                  href="/assets/files/Gift_Aid_QR_Code.pdf"
+                  download="Gift_Aid_QR_Code.pdf"
+                  className="custom-btn-alt get-qucte-btn"
+                >
                   QR Code
-                </a> */}
+                </a>
               </div>
             </div>
             <div className="touch-img">

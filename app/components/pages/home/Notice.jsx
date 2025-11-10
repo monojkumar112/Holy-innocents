@@ -13,7 +13,13 @@ const Notice = () => {
       setLoading(true);
       const response = await fetch(`${baseUrl}/api/notices`);
       const notice = await response.json();
-      setNotices(notice.data.data);
+
+      console.log("API response:", notice); // 👈 check structure
+
+      // Safely set notices
+      const fetchedNotices = notice?.data?.data || notice?.data || notice || [];
+
+      setNotices(fetchedNotices);
     } catch (error) {
       console.error("Error fetching notices:", error);
     } finally {

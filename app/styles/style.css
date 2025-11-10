@@ -455,6 +455,7 @@ section.new-here {
   justify-content: center;
   flex-direction: column;
   text-align: center;
+  height: 100%;
 }
 
 .minitries-content {
@@ -465,24 +466,55 @@ section.new-here {
   gap: 17px;
 }
 
+.ministry-name-title {
+  font-size: 24px;
+  padding-bottom: 20px;
+  font-weight: 600;
+  margin-bottom: 0;
+  color: var(--black-color);
+}
+
+.ministry-model-content p {
+  padding-bottom: 20px;
+  line-height: 160%;
+  color: #313131;
+}
+
 .minitries-content h3 {
   color: #000;
   text-align: center;
-  font-size: 30px;
+  font-size: 24px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
   line-height: normal;
   text-transform: capitalize;
+  margin-bottom: 0;
+  line-height: 35px;
+}
+
+.minitries-img img {
+  border-radius: 10px;
+}
+
+.minitries-img {
+  padding-bottom: 20px;
 }
 
 .minitries-content p {
   color: #000;
   text-align: center;
-  font-size: 20px;
+  font-size: 18px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 32px;
   /* 160% */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: .4s;
+  height: auto;
   text-transform: capitalize;
 }
 
@@ -613,10 +645,10 @@ ul.adoration-url-list li {
 
 .adoration-content h4 {
   color: #000;
-  font-size: 24px;
+  font-size: 20px;
   font-style: italic;
   font-weight: 600;
-  line-height: 32px;
+  line-height: 28px;
   text-transform: capitalize;
   padding-top: 10px;
 }
@@ -627,6 +659,19 @@ ul.adoration-url-list li span img {
 
 section.parish-centre {
   padding: 100px 0;
+}
+
+ul.contact-us-list li p span {
+  font-weight: 600;
+}
+
+ul.contact-us-list li p a {
+  color: var(--primary-color);
+  transition: 0.4s;
+}
+
+ul.contact-us-list li p a:hover {
+  text-decoration: underline !important;
 }
 
 .parish-contentss .section-title {
@@ -840,6 +885,15 @@ ul.contact-us-list li p {
   font-size: 24px;
   line-height: 150%;
   font-weight: 600;
+}
+
+.evangelisation-content h5 a {
+  color: var(--primary-color);
+  transition: 0.4s;
+}
+
+.evangelisation-content h5 a:hover {
+  text-decoration: underline !important;
 }
 
 .evangelisation-content p {
@@ -1118,6 +1172,7 @@ h2.donate-from-title {
 .donate-information {
   margin-bottom: 10px;
 }
+
 .donate-form .custom-btn {
   margin-top: 30px;
 }
@@ -1563,6 +1618,7 @@ section.churchsuite-section {
 li.section-content-list p a {
   color: var(--primary-color);
 }
+
 .stock-loader-wrapper {
   display: flex;
   justify-content: center;
@@ -1570,9 +1626,11 @@ li.section-content-list p a {
   height: 500px;
   background: gray;
 }
+
 .pay-online-btn-item {
   margin-top: 30px;
 }
+
 .pay-online-btn-item .custom-btn-alt {
   border-radius: 4px;
   width: 100%;
@@ -1582,6 +1640,7 @@ li.section-content-list p a {
   align-items: center;
   justify-content: center;
 }
+
 .mass-offering {
   margin-top: 80px;
 }
@@ -1590,7 +1649,74 @@ li.section-content-list p a {
   color: var(--white-color);
   border-color: var(--white-color);
 }
+
 .join-us-btn:hover {
   color: var(--white-color);
   border-color: var(--white-color);
+}
+
+.leader-ship-content {
+  padding-top: 70px;
+}
+
+.leader-ship-content p {
+  font-size: 18px;
+  line-height: 160%;
+  padding-bottom: 25px;
+}
+
+.liturgy-item-contents .liader-title-2 {
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+
+.gift-aid-header {
+  padding-bottom: 15px;
+  border-bottom: #dddddd 1px solid;
+  margin-bottom: 15px;
+  margin-top: 20px;
+}
+
+.gift-aid-header h3 {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--black-color);
+  margin-bottom: 0;
+}
+
+.gift-aid-item h4 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 0;
+  padding-bottom: 15px;
+}
+
+.gift-aid-item {
+  margin-top: 20px;
+}
+
+.row {}
+
+.from-check-box-list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.gift-aid-header p {
+  padding-top: 15px;
+}
+
+.gift-aid-deses {
+  font-size: 18px;
+  border-bottom: 1px solid #dddddd;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  line-height: 28px;
+}
+
+.subscribe-tite-item {
+  font-size: 24px;
 }

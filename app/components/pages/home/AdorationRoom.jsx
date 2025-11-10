@@ -23,7 +23,7 @@ const AdorationRoom = () => {
             </div>
             <div className="col-md-7">
               <div className="adoration-content">
-                <h2> Visit Our St. Carlo Acutis Adoration Room</h2>
+                <h2> Visit Our Saint Carlo Acutis’ Adoration Room</h2>
                 <h5>
                   A sacred quiet and peaceful place for Prayer, Reflection, and
                   Spiritual Connection
@@ -39,7 +39,7 @@ const AdorationRoom = () => {
                         height={24}
                       />
                     </span>
-                    <p>Quiet and peaceful prayer space</p>
+                    <p>The Eucharist is my highway to Heaven</p>
                   </li>
                   <li>
                     <span>
@@ -50,7 +50,7 @@ const AdorationRoom = () => {
                         height={24}
                       />
                     </span>
-                    <p>Open on Monday , Tuesday, Thursday , Friday </p>
+                    <p>Open: Monday, Tuesday, Thursday and Friday </p>
                   </li>
                   <li>
                     <span>
@@ -61,7 +61,7 @@ const AdorationRoom = () => {
                         height={24}
                       />
                     </span>
-                    <p>Open from 8am to 8pm</p>
+                    <p>Opening and closing times may vary </p>
                   </li>
                 </ul>
                 {/* <div className="adoration-btn-group">
@@ -70,8 +70,8 @@ const AdorationRoom = () => {
                   <button className="custom-btn get-qucte-btn">Friday</button>
                 </div> */}
                 <h4>
-                  To always be close to Jesus, that&apos;s my life plan. – Carlo
-                  Acutis
+                  (please check the times in our Calendar under Mass times and
+                  Events)
                 </h4>
               </div>
             </div>

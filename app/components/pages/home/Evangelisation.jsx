@@ -22,11 +22,12 @@ const Evangelisation = () => {
                   evangelisation known as the Parish Evangelisation Cell System
                   (PECS). &quot;the PECS  System is not about groups but is a
                   way of life.&quot; Learn more about PECS at Holy
-                  Innocents&apos; contact Bob Skudder at robertskudder@sky.com
+                  Innocents&apos; contact Bob Skudder at 
+                  <a href="mailto:robertskudder@sky.com">
+                    robertskudder@sky.com
+                  </a>
                 </h5>
-                <p>
-                  Then after that it could have the remaining text as below: 
-                </p>
+
                 <h5 className="text-color">
                   The parish is the presence of the Church in a given territory,
                   an environment for hearing God’s word, for growth in the
