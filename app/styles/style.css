@@ -76,7 +76,7 @@ section.hero-section {
   justify-content: center;
   flex-direction: column;
   gap: 20px;
-  width: 50%;
+  width: 70%;
 }
 
 .swiper-pagination {
@@ -1719,4 +1719,62 @@ li.section-content-list p a {
 
 .subscribe-tite-item {
   font-size: 24px;
+}
+
+section.event-page {
+  padding-top: 160px;
+}
+
+.event-wrapper h3 {
+  font-size: 24px;
+  line-height: 150%;
+  font-weight: 600;
+  color: var(--primary-color);
+  padding-bottom: 10px;
+  margin-bottom: 0;
+}
+
+.event-content-item {
+  padding-top: 40px;
+}
+
+.event-content-item img {
+  max-width: 100%;
+}
+
+section.event-page {
+  padding-top: 160px;
+}
+
+.event-wrapper h3 {
+  font-size: 24px;
+  line-height: 150%;
+  font-weight: 600;
+  color: var(--primary-color);
+  padding-bottom: 10px;
+  margin-bottom: 0;
+}
+
+.event-right-side h4 {
+  font-size: 24px;
+  line-height: 150%;
+  font-weight: 600;
+  margin-bottom: 0;
+  padding-bottom: 30px;
+}
+
+.event-right-side ul li {
+  padding-bottom: 20px;
+}
+
+.event-right-side ul li a {
+  color: var(--black-color);
+  font-weight: 500;
+  transition: 0.4s;
+  font-size: 17px;
+}
+
+.event-right-side ul li a:hover {
+  color: var(--primary-color);
+  text-decoration: underline !important;
 }
