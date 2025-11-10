@@ -35,7 +35,7 @@ const Header = () => {
 
   const aboutPages = getPagesBySlug("about-us");
   const fellowshipPages = getPagesBySlug("fellowship");
-  const liturgyPages = getPagesBySlug("liturgy");
+  const reflectionPages = getPagesBySlug("reflection");
 
   return (
     <>
@@ -74,9 +74,9 @@ const Header = () => {
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               {/* <!-- Home --> */}
               <li className="nav-item">
-                <a className="nav-link active" href="/">
+                <Link className="nav-link active" href="/">
                   Home
-                </a>
+                </Link>
               </li>
               <li className="nav-item dropdown dropdown-mega position-static">
                 <a
@@ -96,14 +96,17 @@ const Header = () => {
                           </h6>
                           <ul className="pt-2 pt-md-3">
                             <li>
-                              <a href="/about-us" className="dropdown-item">
+                              <Link href="/about-us" className="dropdown-item">
                                 About Us
-                              </a>
+                              </Link>
                             </li>
                             <li>
-                              <a href="/leadership" className="dropdown-item">
+                              <Link
+                                href="/leadership"
+                                className="dropdown-item"
+                              >
                                 Leadership and co-responsibility
-                              </a>
+                              </Link>
                             </li>
                             {loading ? (
                               <li>
@@ -160,14 +163,20 @@ const Header = () => {
                           </h6>
                           <ul className="pt-2 pt-md-3">
                             <li>
-                              <a href="/fellowship" className="dropdown-item">
+                              <Link
+                                href="/fellowship"
+                                className="dropdown-item"
+                              >
                                 Fellowship
-                              </a>
+                              </Link>
                             </li>
                             <li>
-                              <a href="/event/{slug}" className="dropdown-item">
+                              <Link
+                                href="/event/{slug}"
+                                className="dropdown-item"
+                              >
                                 Recent events
-                              </a>
+                              </Link>
                             </li>
                             {loading ? (
                               <li>
@@ -204,7 +213,11 @@ const Header = () => {
                   </div>
                 </div>
               </li>
-
+              <li className="nav-item">
+                <Link className="nav-link active" href="/liturgy">
+                  Liturgy
+                </Link>
+              </li>
               {/* <!-- Liturgy --> */}
               <li className="nav-item dropdown dropdown-mega position-static">
                 <a
@@ -212,7 +225,7 @@ const Header = () => {
                   href="#"
                   data-bs-toggle="dropdown"
                 >
-                  Liturgy
+                  Reflection
                 </a>
                 <div className="dropdown-menu shadow py-0">
                   <div className="mega-content container-fluid">
@@ -224,9 +237,12 @@ const Header = () => {
                           </h6>
                           <ul className="pt-2 pt-md-3">
                             <li>
-                              <a href="/liturgy" className="dropdown-item">
-                                Liturgy
-                              </a>
+                              <Link
+                                href="/reflection"
+                                className="dropdown-item"
+                              >
+                                A parishioner's gospel reflection
+                              </Link>
                             </li>
                             {loading ? (
                               <li>
@@ -234,8 +250,8 @@ const Header = () => {
                                   Loading...
                                 </span>
                               </li>
-                            ) : liturgyPages.length > 0 ? (
-                              liturgyPages.map((page) => (
+                            ) : reflectionPages.length > 0 ? (
+                              reflectionPages.map((page) => (
                                 <li key={page.id}>
                                   <Link
                                     href={`/about-us/${page.slug}`}
@@ -264,30 +280,25 @@ const Header = () => {
               </li>
 
               <li className="nav-item">
-                <a className="nav-link active" href="/reflection">
-                  Reflection
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link active" href="/prayer">
+                <Link className="nav-link active" href="/prayer">
                   Formation
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link active" href="/sacramental">
+                <Link className="nav-link active" href="/sacramental">
                   Sacramental
-                </a>
+                </Link>
               </li>
 
               <li className="nav-item">
-                <a className="nav-link active" href="/#contact">
+                <Link className="nav-link active" href="/#contact">
                   Contact
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="custom-btn" href="/donate">
+                <Link className="custom-btn" href="/donate">
                   Donate{" "}
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
