@@ -164,6 +164,11 @@ const Header = () => {
                                 Fellowship
                               </a>
                             </li>
+                            <li>
+                              <a href="/event/{slug}" className="dropdown-item">
+                                Recent events
+                              </a>
+                            </li>
                             {loading ? (
                               <li>
                                 <span className="dropdown-item text-muted">
