@@ -11,8 +11,12 @@
     color: #fff;
 }
 
+.navbar-brand {
+    padding: 0;
+}
+
 .navbar-brand img {
-    height: 45px;
+    height: 60px;
 }
 
 .navbar-nav {
