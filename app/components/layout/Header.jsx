@@ -241,7 +241,7 @@ const Header = () => {
                                 href="/reflection"
                                 className="dropdown-item"
                               >
-                                A parishioner's gospel reflection
+                                A parishioner&apos;s gospel reflection
                               </Link>
                             </li>
                             {loading ? (
