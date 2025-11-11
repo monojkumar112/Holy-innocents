@@ -28,9 +28,8 @@ const DynamicPage = ({ params }) => {
 
   if (loading) {
     return (
-      <div className="container py-5">
-        <Skeleton height={250} className="mb-4" />
-        <Skeleton height={400} className="mb-4" />
+      <div className="py-5">
+        <Skeleton height={800} className="mb-4" />
       </div>
     );
   }
@@ -47,9 +46,8 @@ const DynamicPage = ({ params }) => {
     <>
       <Banner data={bannerData} />
 
-      <section className="py-5">
+      <section className="dynamic-page">
         <div className="container">
-          <h2 className="mb-3">{page.page_title}</h2>
           <div
             className="dynamic-page-content"
             dangerouslySetInnerHTML={{ __html: page.content }}

@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState } from "react";
 import { CiCalendar } from "react-icons/ci";
 import { IoMdTime } from "react-icons/io";
@@ -26,12 +27,12 @@ const MassEvent = () => {
                 look at what&apos;s coming up.
               </p>
               <div className="mass-event-btn-group">
-                <a href="/#event" className="custom-btn-alt mass-btn">
+                <Link href="/event" className="custom-btn-alt mass-btn">
                   All Events
-                </a>
-                <a href="/#event" className="custom-btn-alt get-qucte-btn">
+                </Link>
+                <Link href="/#event" className="custom-btn-alt get-qucte-btn">
                   Mass times
-                </a>
+                </Link>
               </div>
             </div>
           </div>

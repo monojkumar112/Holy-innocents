@@ -6,6 +6,7 @@ const AdorationRoom = () => {
     <>
       <section
         className="adoration-room"
+        id="adoration-room"
         data-aos="fade-up"
         data-aos-duration="3000"
       >

@@ -16,7 +16,7 @@
 }
 
 .navbar-brand img {
-    width: 200px;
+    width: 180px;
 }
 
 .navbar-nav {
@@ -179,9 +179,7 @@
         display: none !important;
     }
 
-    .navbar-brand img {
-        height: 40px;
-    }
+
 }
 
 @media (min-width: 992px) {

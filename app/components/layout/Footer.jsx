@@ -103,7 +103,11 @@ const Footer = () => {
               <div className="footer-social-media">
                 <ul>
                   <li>
-                    <a href="#" target="_blank" rel="noopener noreferrer">
+                    <a
+                      href="https://www.facebook.com/HolyInnocentsCC"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <FaFacebookF />
                     </a>
                   </li>

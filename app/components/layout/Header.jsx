@@ -171,10 +171,7 @@ const Header = () => {
                               </Link>
                             </li>
                             <li>
-                              <Link
-                                href="/event/{slug}"
-                                className="dropdown-item"
-                              >
+                              <Link href="/event" className="dropdown-item">
                                 Recent events
                               </Link>
                             </li>

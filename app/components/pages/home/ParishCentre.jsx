@@ -19,7 +19,10 @@ const ParishCentre = () => {
                   activities.
                 </p>
                 <div className="parish-btn-group">
-                  <a href="#" className="custom-btn learn-more-btn">
+                  <a
+                    href="mailto:victorvella@rcaos.org.uk"
+                    className="custom-btn learn-more-btn"
+                  >
                     Book the Centre
                   </a>
                   {/* <a href="/#contact" className="custom-btn-alt get-qucte-btn">
