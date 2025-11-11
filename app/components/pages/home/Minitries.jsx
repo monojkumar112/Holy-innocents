@@ -97,16 +97,17 @@ const Minitries = () => {
                   </div>
                 </div>
               ))}
-              <div className="mt-3 d-flex justify-content-center w-100 ">
-                {/* load more button */}
-                <button
-                  className="custom-btn load-more-btn btn-sm"
-                  onClick={() => fetchMinistries(nextPageUrl)}
-                  disabled={!nextPageUrl}
-                >
-                  {nextPageUrl ? "Load More" : "No More Ministries"}
-                </button>
-              </div>
+              {nextPageUrl && (
+                <div className="mt-3 d-flex justify-content-center w-100 ">
+                  {/* load more button */}
+                  <button
+                    className="custom-btn load-more-btn btn-sm"
+                    onClick={() => fetchMinistries(nextPageUrl)}
+                  >
+                    Load More
+                  </button>
+                </div>
+              )}
             </div>
           </div>
         </div>
