@@ -29,6 +29,17 @@ const ParishCentre = () => {
                     Check Availability
                   </a> */}
                 </div>
+                <div className="parish-btn-group">
+                  <a
+                    href="https://lowcosthalls.co.uk/location/holy-innocents-church-hall-orpington/"
+                    className="custom-btn learn-more-btn"
+                  >
+                    Virtual Tour
+                  </a>
+                  {/* <a href="/#contact" className="custom-btn-alt get-qucte-btn">
+                    Check Availability
+                  </a> */}
+                </div>
               </div>
             </div>
             <div className="col-md-6">
