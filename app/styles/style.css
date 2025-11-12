@@ -954,6 +954,15 @@ h2.section-title-2 {
   margin-bottom: 0;
 }
 
+h2.section-title-2 a {
+  color: var(--black-color);
+  transition: 0.4s;
+}
+
+h2.section-title-2 a:hover {
+  color: var(--primary-color);
+}
+
 li.section-content-list {
   padding-bottom: 20px;
   margin-bottom: 20px;
