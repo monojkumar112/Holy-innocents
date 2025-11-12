@@ -108,24 +108,52 @@ const Header = () => {
                                 Leadership and co-responsibility
                               </Link>
                             </li>
-                            {loading ? (
-                              <li>
-                                <span className="dropdown-item text-muted">
-                                  Loading...
-                                </span>
-                              </li>
-                            ) : aboutPages.length > 0 ? (
-                              aboutPages.map((page) => (
-                                <li key={page.id}>
-                                  <Link
-                                    href={`/about-us/${page.slug}`}
-                                    className="dropdown-item"
-                                  >
-                                    {page.page_title}
-                                  </Link>
-                                </li>
-                              ))
-                            ) : null}
+                            <li>
+                              <Link
+                                href="/father-victor-vella"
+                                className="dropdown-item"
+                              >
+                                Father Victor Vella
+                              </Link>
+                            </li>
+                            <li>
+                              <Link
+                                href="/deacon-barry"
+                                className="dropdown-item"
+                              >
+                                Deacons
+                              </Link>
+                            </li>
+                            <li>
+                              <Link
+                                href="/sisters-of-mercy"
+                                className="dropdown-item"
+                              >
+                                Sisters of Mercy
+                              </Link>
+                            </li>
+                            <li>
+                              <Link href="/groups" className="dropdown-item">
+                                Groups
+                              </Link>
+                            </li>
+
+                            <li>
+                              <Link
+                                href="/about-us/our-parish-vision"
+                                className="dropdown-item"
+                              >
+                                Our Parish Vision
+                              </Link>
+                            </li>
+                            <li>
+                              <Link
+                                href="/brief-history"
+                                className="dropdown-item"
+                              >
+                                Brief history of our parish
+                              </Link>
+                            </li>
                           </ul>
                         </div>
                       </div>
@@ -175,7 +203,71 @@ const Header = () => {
                                 Recent events
                               </Link>
                             </li>
-                            {loading ? (
+                            <li>
+                              <Link
+                                href="/families-and-youth"
+                                className="dropdown-item"
+                              >
+                                Families and Youth
+                              </Link>
+                            </li>
+                            <li>
+                              <Link
+                                href="/practical-and-financial"
+                                className="dropdown-item"
+                              >
+                                Practical and financial
+                              </Link>
+                            </li>
+                            <li>
+                              <Link
+                                href="/social-and-support"
+                                className="dropdown-item"
+                              >
+                                Social and support
+                              </Link>
+                            </li>
+                            <li>
+                              <Link
+                                href="/social-and-support"
+                                className="dropdown-item"
+                              >
+                                Social and support
+                              </Link>
+                            </li>
+                            <li>
+                              <Link
+                                href="/fellowship/our-mission"
+                                className="dropdown-item"
+                              >
+                                Our mission
+                              </Link>
+                            </li>
+                            <li>
+                              <Link
+                                href="/fellowship/parish-evangelisation"
+                                className="dropdown-item"
+                              >
+                                PECS
+                              </Link>
+                            </li>
+                            <li>
+                              <Link
+                                href="/fellowship/our-evangelisation"
+                                className="dropdown-item"
+                              >
+                                Our evangelisation
+                              </Link>
+                            </li>
+                            <li>
+                              <Link
+                                href="/fellowship/our-social-action"
+                                className="dropdown-item"
+                              >
+                                Our social action
+                              </Link>
+                            </li>
+                            {/* {loading ? (
                               <li>
                                 <span className="dropdown-item text-muted">
                                   Loading...
@@ -192,7 +284,7 @@ const Header = () => {
                                   </Link>
                                 </li>
                               ))
-                            ) : null}
+                            ) : null} */}
                           </ul>
                         </div>
                       </div>

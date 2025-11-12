@@ -309,8 +309,9 @@ const LiturgyContent = () => {
               className="section-content-list"
               data-aos="fade-up"
               data-aos-duration="3000"
+              id="welcomers"
             >
-              <h2 className="section-title-2">Readers</h2>
+              <h2 className="section-title-2">Welcomers</h2>
               <div className="liturgy-item-list">
                 <div className="liturgy-item-contents">
                   <p>

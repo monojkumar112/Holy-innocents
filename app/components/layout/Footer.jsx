@@ -5,6 +5,7 @@ import { RiTwitterXLine } from "react-icons/ri";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import Image from "next/image";
+import { FiSearch } from "react-icons/fi";
 
 const Footer = () => {
   return (
@@ -33,8 +34,20 @@ const Footer = () => {
               </div>
               <div className="col-lg-9">
                 <div className="footer-quick-link">
-                  <div className="footer-quick-title">
-                    <h3>Quick Links</h3>
+                  <div className="search-item-wrapp">
+                    <div className="footer-quick-title">
+                      <h3>Quick Links</h3>
+                    </div>
+                    <div className="footer-quick-search">
+                      <form action="">
+                        <div className="search-from">
+                          <input type="text" placeholder="Search" />
+                          <button className="search-btn">
+                            <FiSearch />
+                          </button>
+                        </div>
+                      </form>
+                    </div>
                   </div>
                   <div className="row">
                     <div className="col-lg-4">
