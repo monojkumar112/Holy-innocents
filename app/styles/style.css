@@ -966,8 +966,66 @@ li.section-content-list p {
   font-size: 18px;
 }
 
+.groups-content {
+  margin-top: 100px;
+  padding: 50px;
+  background: #b288442a;
+  margin-bottom: 50px;
+}
+
+.groups-content h5 {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 0;
+  padding-bottom: 20px;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.groups-content p {
+  font-size: 23px;
+  font-weight: 500;
+}
+
+.groups-content p span a {
+  color: var(--primary-color);
+  transition: 0.4s;
+}
+
+.groups-content p span a:hover {
+  color: #7d5f30;
+}
+
+.contact-us-team {
+  margin-top: 60px;
+}
+
+.team-item-content {
+  width: 70%;
+  margin: auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+.team-item-content p {
+  font-size: 18px;
+  line-height: 160%;
+  padding-bottom: 25px;
+}
+
+.team-item-content p span a {
+  color: var(--primary-color);
+  transition: 0.4s;
+}
+
+.team-item-content p span a:hover {
+  color: #644c26;
+}
+
 ul.section-content-ul li {
   list-style: disc;
+  font-size: 18px;
   padding-bottom: 25px;
 }
 
@@ -976,8 +1034,12 @@ ul.section-content-ul {
 }
 
 li.section-content-list p span a {
-  color: var(--black-color);
-  text-decoration: underline !important;
+  color: var(--primary-color);
+  transition: 0.4s;
+}
+
+li.section-content-list p span a:hover {
+  color: #7d5f30;
 }
 
 h4.section-text-second {
@@ -1983,4 +2045,14 @@ section.event-section {
 
 .dynamic-page-content hr {
   width: 100% !important;
+}
+
+.father-img {
+  width: 100%;
+  padding-bottom: 40px;
+}
+
+.father-img img {
+  width: 100%;
+  border-radius: 16px;
 }

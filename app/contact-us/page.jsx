@@ -12,7 +12,11 @@ const ContactUsPage = () => {
     <>
       <Banner data={data} />
 
-      <section className="team " data-aos="fade-up" data-aos-duration="3000">
+      <section
+        className="team contact-us-team "
+        data-aos="fade-up"
+        data-aos-duration="3000"
+      >
         <div className="container">
           <div className="team-wrapper">
             <div className="row justify-content-center">
@@ -243,13 +247,13 @@ const ContactUsPage = () => {
                 orpington@rcaos.org.uk
               </p>
               <div>
-                <p>Strickland Way, Orpington, Kent, BR6 9UE</p>
                 <p>
+                  Strickland Way, Orpington, Kent, BR6 9UE
+                  <br />
                   <span>
                     <a href="tel:+01689 817537">01689 817537</a>
                   </span>
-                </p>
-                <p>
+                  <br />
                   <span>
                     <a href="mailto:orpington@rcaos.org.uk">
                       orpington@rcaos.org.uk
