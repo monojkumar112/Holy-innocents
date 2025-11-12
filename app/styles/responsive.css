@@ -235,6 +235,11 @@
     width: 100%;
   }
 
+  .parish-btn-group-wrap {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+
   .mass-event-right {
     margin-top: 20px;
   }

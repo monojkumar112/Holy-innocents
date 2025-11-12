@@ -18,27 +18,23 @@ const ParishCentre = () => {
                   A space for gatherings, community events, and parish
                   activities.
                 </p>
-                <div className="parish-btn-group">
-                  <a
-                    href="mailto:victorvella@rcaos.org.uk"
-                    className="custom-btn learn-more-btn"
-                  >
-                    Book the Centre
-                  </a>
-                  {/* <a href="/#contact" className="custom-btn-alt get-qucte-btn">
-                    Check Availability
-                  </a> */}
-                </div>
-                <div className="parish-btn-group">
-                  <a
-                    href="https://lowcosthalls.co.uk/location/holy-innocents-church-hall-orpington/"
-                    className="custom-btn learn-more-btn"
-                  >
-                    Virtual Tour
-                  </a>
-                  {/* <a href="/#contact" className="custom-btn-alt get-qucte-btn">
-                    Check Availability
-                  </a> */}
+                <div className="parish-btn-group-wrap d-flex align-items-center gap-3">
+                  <div className="parish-btn-group">
+                    <a
+                      href="mailto:victorvella@rcaos.org.uk"
+                      className="custom-btn learn-more-btn"
+                    >
+                      Book the Centre
+                    </a>
+                  </div>
+                  <div className="parish-btn-group">
+                    <a
+                      href="https://lowcosthalls.co.uk/location/holy-innocents-church-hall-orpington/"
+                      className="custom-btn learn-more-btn"
+                    >
+                      Virtual Tour
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
