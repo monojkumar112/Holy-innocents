@@ -106,8 +106,8 @@ const SocialAndSupportPage = () => {
                   </p>
                   <p>
                     Many of our bereaved parishioners have become friends
-                    through the Group's coffee mornings which are advertised in
-                    the Newsletter.
+                    through the Group&apos;s coffee mornings which are
+                    advertised in the Newsletter.
                   </p>
                   <p>
                     ​ <strong>Contact</strong> Helen Dwyer co-ordinator....{" "}
@@ -161,8 +161,8 @@ const SocialAndSupportPage = () => {
                     The Catenians provide a social network for Catholic laymen
                     and their families and offer support to members in times of
                     difficulty or need, with ongoing concern for deceased
-                    members' widows and dependants. There are local Circles in
-                    Bromley and Chislehurst.
+                    members&apos; widows and dependants. There are local Circles
+                    in Bromley and Chislehurst.
                   </p>
                   <p>
                     <strong>Contact</strong>
@@ -183,8 +183,8 @@ const SocialAndSupportPage = () => {
                     The Catenians provide a social network for Catholic laymen
                     and their families and offer support to members in times of
                     difficulty or need, with ongoing concern for deceased
-                    members' widows and dependants. There are local Circles in
-                    Bromley and Chislehurst.
+                    members&apos; widows and dependants. There are local Circles
+                    in Bromley and Chislehurst.
                   </p>
                   <p>
                     <strong>Contact</strong>
@@ -224,7 +224,7 @@ const SocialAndSupportPage = () => {
                   data-aos="fade-up"
                   data-aos-duration="3000"
                 >
-                  <h2 className="section-title-2">Walkers' Group</h2>
+                  <h2 className="section-title-2">Walkers&apos; Group</h2>
                   <p>
                     One of the longest-running social groups in our parish, the
                     Walkers’ Group usually meets in the afternoon on the second

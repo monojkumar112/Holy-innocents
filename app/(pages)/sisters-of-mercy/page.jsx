@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const SistersOfMercypage = () => {
   const data = {
-    title: "Sisters of Mercy at St. Anne's Convent",
+    title: "Sisters of Mercy at St. Anne&apos;s Convent",
   };
   return (
     <>
@@ -20,7 +20,7 @@ const SistersOfMercypage = () => {
                   data-aos-duration="3000"
                 >
                   <h2 className="section-title-2">
-                    Sisters of Mercy at St. Anne's Convent
+                    Sisters of Mercy at St. Anne&apos;s Convent
                   </h2>
 
                   <p>
@@ -57,11 +57,11 @@ const SistersOfMercypage = () => {
                   <p>
                     We are fortunate to have sisters living in the convent in
                     Bishop Butt Close, just around the corner from Holy
-                    Innocents' Catholic Church. They are active in our parish in
-                    many ministries, including visiting the sick and housebound,
-                    working behind the scenes to keep the church tidy,
-                    organising social events and refreshments and helping with
-                    children's activities and at our parish school.
+                    Innocents&apos; Catholic Church. They are active in our
+                    parish in many ministries, including visiting the sick and
+                    housebound, working behind the scenes to keep the church
+                    tidy, organising social events and refreshments and helping
+                    with children&apos;s activities and at our parish school.
                   </p>
                   <p>
                     Their order is active in Kenya, Peru, England and Wales.

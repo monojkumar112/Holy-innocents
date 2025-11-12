@@ -27,18 +27,18 @@ const FamiliesAndYouthPage = () => {
             <p>
               Children are welcome at any of our Masses, including during the
               week. We celebrate our Sunday 10.30 am Mass as a Family Mass each
-              week, with Children's Liturgy for children in Reception class and
-              upwards.
+              week, with Children&apos;s Liturgy for children in Reception class
+              and upwards.
             </p>
             <p>
-              ​We have a monthly "Children's Mass", especially accessible to
-              younger children, normally on the third Sunday.{" "}
+              ​We have a monthly &quot;Children&apos;s Mass&quot;, especially
+              accessible to younger children, normally on the third Sunday.{" "}
             </p>
             <p>
               Parents are the main teachers of faith to their children; so much
-              so that the Catholic Church talks about each family being "a
-              domestic church". That's why we place families at the centre of
-              our work as a parish for children and young people.
+              so that the Catholic Church talks about each family being &quot;a
+              domestic church&quot;. That&apos;s why we place families at the
+              centre of our work as a parish for children and young people.
             </p>
             <p>
               We try to support parents in fostering the faith development of
@@ -125,7 +125,7 @@ const FamiliesAndYouthPage = () => {
                   data-aos="fade-up"
                   data-aos-duration="3000"
                 >
-                  <h2 className="section-title-2">Children's Liturgy</h2>
+                  <h2 className="section-title-2">Children&apos;s Liturgy</h2>
 
                   <p>
                     Our Children’s Liturgy group is available for children in
@@ -155,7 +155,7 @@ const FamiliesAndYouthPage = () => {
                   data-aos-duration="3000"
                 >
                   <h2 className="section-title-2">
-                    Holy Innocents' Catholic Primary School
+                    Holy Innocents&apos; Catholic Primary School
                   </h2>
                   <div className="liturgy-item-list pb-4 align-liader">
                     <div className="liturgy-img-item">
@@ -203,7 +203,7 @@ const FamiliesAndYouthPage = () => {
                   <p>
                     The school prides itself on being a caring and inclusive
                     community with close links to the parishes of Holy
-                    Innocents', St. Michael & All Angels and St. Theresa’s
+                    Innocents&apos;, St. Michael & All Angels and St. Theresa’s
                     Biggin Hill. It is located within an attractive, green field
                     site with playing fields and separate playgrounds for Early
                     Years, Key Stage 1 and Key Stage 2.
@@ -243,8 +243,8 @@ const FamiliesAndYouthPage = () => {
                         We have a very active range of uniformed groups –
                         Rainbows, Brownies and Guides for girls, and Beavers,
                         Cubs and Scouts for boys. The groups meet regularly in
-                        the Scout and Guide Hut on the Holy Innocents' School
-                        site during term time.
+                        the Scout and Guide Hut on the Holy Innocents&apos;
+                        School site during term time.
                       </p>
                     </div>
                     <div className="liturgy-img-item">
@@ -262,8 +262,8 @@ const FamiliesAndYouthPage = () => {
                         We have a very active range of uniformed groups –
                         Rainbows, Brownies and Guides for girls, and Beavers,
                         Cubs and Scouts for boys. The groups meet regularly in
-                        the Scout and Guide Hut on the Holy Innocents' School
-                        site during term time.
+                        the Scout and Guide Hut on the Holy Innocents&apos;
+                        School site during term time.
                       </p>
                       <p>
                         The premises are maintained by the Joint Supporters

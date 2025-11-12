@@ -94,7 +94,7 @@ const fatherVictorVellapage = () => {
                   </p>
                   <p>
                     <strong>Links:</strong> <br />
-                    Deacon Wayne's Ordination
+                    Deacon Wayne&apos;s Ordination
                   </p>
                 </li>
               </ul>

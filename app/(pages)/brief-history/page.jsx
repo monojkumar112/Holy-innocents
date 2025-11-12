@@ -66,8 +66,8 @@ const BriefHistoryPage = () => {
                       <p>
                         In 1907 the wealthy philanthropist, Miss Frances
                         Elizabeth Ellis, provided the funds for a chapel to be
-                        built in Orpington and in 1909 Holy Innocents' chapel
-                        opened on a site between the two orphanages.
+                        built in Orpington and in 1909 Holy Innocents&apos;
+                        chapel opened on a site between the two orphanages.
                       </p>
                       <p>
                         The chapel served the residents of Orpington and with
@@ -126,7 +126,7 @@ const BriefHistoryPage = () => {
                       height={386}
                     />
                     <small className="d-flex justify-content-center pt-2  ">
-                      St Joseph's Orphanage in Sevenoaks Road, Orpington
+                      St Joseph&apos;s Orphanage in Sevenoaks Road, Orpington
                     </small>
                   </div>
                 </li>
@@ -141,9 +141,9 @@ const BriefHistoryPage = () => {
                     In 1978, the land on which the orphanages and the original
                     Holy Innocents Church stood was found to be suffering from
                     serious subsidence and the closure of the buildings became
-                    necessary. The land was redeveloped as St Joseph's Estate
-                    and some of the new roads were named after prominent sisters
-                    and brothers associated with the old orphanages.
+                    necessary. The land was redeveloped as St Joseph&apos;s
+                    Estate and some of the new roads were named after prominent
+                    sisters and brothers associated with the old orphanages.
                   </p>
                   <p>
                     A decision was made to rebuild the church. A competition was
@@ -168,8 +168,8 @@ const BriefHistoryPage = () => {
                       height={800}
                     />
                     <small className="d-flex justify-content-center pt-2  ">
-                      The new church under construction with St Anne's and the
-                      old church behind
+                      The new church under construction with St Anne&apos;s and
+                      the old church behind
                     </small>
                   </div>
                 </li>
@@ -209,11 +209,11 @@ const BriefHistoryPage = () => {
                     church, with a single large memorial.
                   </p>
                   <p>
-                    Holy Innocents' Roman Catholic Church was both consecrated
-                    and opened on the same day, 20 September 1981, with
-                    Archbishop Michael Bowen conducting the ceremony. In his
-                    sermon, the Archbishop remarked that it was the ambition of
-                    every parish priest to build a new church and he
+                    Holy Innocents&apos; Roman Catholic Church was both
+                    consecrated and opened on the same day, 20 September 1981,
+                    with Archbishop Michael Bowen conducting the ceremony. In
+                    his sermon, the Archbishop remarked that it was the ambition
+                    of every parish priest to build a new church and he
                     congratulated Father Michael Phelan on achieving this aim.
                   </p>
                 </li>
@@ -343,11 +343,11 @@ const BriefHistoryPage = () => {
                     assistant to Father Healy at the Rescue Society. After the
                     end of the war Father Phelan was moved to Worthing where he
                     served as curate until 1955 when he was appointed Priest in
-                    Charge at Holy Innocents'. With Mr Bingham Towner as
+                    Charge at Holy Innocents&apos;. With Mr Bingham Towner as
                     architect, he built a new Presbytery at the far side of the
                     car park behind the church which, when the land at Orpington
                     was later sold by the Diocese, was purchased by the Sisters
-                    of Mercy and is now St Anne's Convent.
+                    of Mercy and is now St Anne&apos;s Convent.
                   </p>
                 </li>
                 <li
@@ -361,19 +361,19 @@ const BriefHistoryPage = () => {
 
                   <p>
                     Canon John McNamara was appointed Parish Priest of Holy
-                    Innocents' by Archbishop Michael Bowen in 1984 to succeed
-                    Father Michael Phelan. He wrote about his own time in the
-                    parish: "The first concern was to clear the debt on the
-                    recently built new church. The response from parishioners
-                    was remarkable and it was cleared within about three years.
-                    We soon instituted lay ministers of Holy Communion to be
-                    followed latterly by the ordination of two married Deacons,
-                    the Reverends Austin Martin and James Burleigh. We also
-                    recruited a team of hospital visitors who were most helpful
-                    and popular with patients. There was, and still is, a
-                    vibrant sense of openness and community in the
-                    congregation." Sadly Canon John had to relinquish his role
-                    due to ill health, but he now lives in the parish and
+                    Innocents&apos; by Archbishop Michael Bowen in 1984 to
+                    succeed Father Michael Phelan. He wrote about his own time
+                    in the parish: &quot;The first concern was to clear the debt
+                    on the recently built new church. The response from
+                    parishioners was remarkable and it was cleared within about
+                    three years. We soon instituted lay ministers of Holy
+                    Communion to be followed latterly by the ordination of two
+                    married Deacons, the Reverends Austin Martin and James
+                    Burleigh. We also recruited a team of hospital visitors who
+                    were most helpful and popular with patients. There was, and
+                    still is, a vibrant sense of openness and community in the
+                    congregation.&quot; Sadly Canon John had to relinquish his
+                    role due to ill health, but he now lives in the parish and
                     remains a much-loved and respected member of our parish
                     community. More about Canon John McNamara
                   </p>
@@ -391,15 +391,16 @@ const BriefHistoryPage = () => {
                     Canon John Watts was ordained in the parish of Our Lady of
                     the Annunciation, Addiscombe, in 1972. His first two
                     curacies were at Whitstable and Camberwell. In 1978 he was
-                    appointed to St. John's Seminary, Wonersh where he taught
-                    for the next thirteen years. In 1991 he was appointed Parish
-                    Priest to Holy Innocents’, Orpington. The following year he
-                    became the Director of the Permanent Diaconate Programme for
-                    the Diocese. This is a post he held until June 2004. In
-                    November 2004 Archbishop MacDonald appointed him Dean of the
-                    Bromley Deanery. He also served on the Chapter of Canons, as
-                    Canon Penitentiary; he was the Chairman of the Council of
-                    Priests and an Advocate of the Southwark Tribunal.
+                    appointed to St. John&apos;s Seminary, Wonersh where he
+                    taught for the next thirteen years. In 1991 he was appointed
+                    Parish Priest to Holy Innocents’, Orpington. The following
+                    year he became the Director of the Permanent Diaconate
+                    Programme for the Diocese. This is a post he held until June
+                    2004. In November 2004 Archbishop MacDonald appointed him
+                    Dean of the Bromley Deanery. He also served on the Chapter
+                    of Canons, as Canon Penitentiary; he was the Chairman of the
+                    Council of Priests and an Advocate of the Southwark
+                    Tribunal.
                   </p>
                 </li>
               </ul>

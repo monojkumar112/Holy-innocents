@@ -14,8 +14,8 @@ const GettingInvolvedPage = () => {
                 Many the gifts, many the works, one in the Lord of all. One
                 bread, one body, one Lord of all. One cup of blessing which we
                 bless. And we, though many, throughout the earth. We are one
-                body in this one Lord - extract from the hymn "One bread, one
-                body" by John Foley, Jesuit priest
+                body in this one Lord - extract from the hymn &quot;One bread,
+                one body&quot; by John Foley, Jesuit priest
               </p>
             </div>
 
@@ -44,10 +44,11 @@ const GettingInvolvedPage = () => {
                       <h2 className="section-title-2">What is ministry?</h2>
                       <p>
                         Any form of work or service for the Church or in its
-                        life and mission. It isn't just things we do related to
-                        our liturgy (eucharistic ministry, reading at Mass,
-                        music ministry and so on), important though they are,
-                        that are "ministries"; rather, all service is ministry
+                        life and mission. It isn&apos;t just things we do
+                        related to our liturgy (eucharistic ministry, reading at
+                        Mass, music ministry and so on), important though they
+                        are, that are &quot;ministries&quot;; rather, all
+                        service is ministry
                       </p>
                     </div>
                   </div>

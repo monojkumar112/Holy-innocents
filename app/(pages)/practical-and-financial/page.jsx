@@ -20,14 +20,15 @@ const PracticalAndFinancialPage = () => {
             </div>
             <p>
               ​A parish, like any other organisation, needs people to deal with
-              practicalities – which is why Saint Paul includes 'administration'
-              in his list of gifts with which God blesses His Church.
+              practicalities – which is why Saint Paul includes
+              &apos;administration&apos; in his list of gifts with which God
+              blesses His Church.
             </p>
             <p>
               In this section, we introduce some of the groups of people who
               deal with a myriad of important practical and financial matters
-              here at Holy Innocents'. You would be very welcome if you would
-              like to help.
+              here at Holy Innocents&apos;. You would be very welcome if you
+              would like to help.
             </p>
 
             <div>
@@ -202,9 +203,9 @@ const PracticalAndFinancialPage = () => {
                       <p>
                         As with every charitable organisation, an important
                         element of our income as a parish is provided through
-                        the government's Gift Aid scheme. This allows the church
-                        to reclaim 25p on every £1 donated by a UK taxpayer who
-                        has signed the relevant form.
+                        the government&apos;s Gift Aid scheme. This allows the
+                        church to reclaim 25p on every £1 donated by a UK
+                        taxpayer who has signed the relevant form.
                       </p>
                     </div>
                   </div>

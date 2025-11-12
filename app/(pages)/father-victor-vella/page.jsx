@@ -67,9 +67,9 @@ const fatherVictorVellapage = () => {
             </p>
             <p>
               It was during his sojourn there that he was appointed parish
-              priest to Holy Innocents', Orpington. On 7th November 2008, Father
-              Victor was inducted by the Right Reverend Patrick Lynch, Auxiliary
-              Bishop of Southwark.
+              priest to Holy Innocents&apos;, Orpington. On 7th November 2008,
+              Father Victor was inducted by the Right Reverend Patrick Lynch,
+              Auxiliary Bishop of Southwark.
             </p>
             <p>
               Father Victor remains very keen on Judaism and Biblical Hebrew.{" "}
