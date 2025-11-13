@@ -2146,9 +2146,13 @@ section.event-banner {
   gap: 20px;
 }
 
+
 .event-header-content h1 {
   margin-bottom: 0;
   font-size: 35px;
+  line-height: 150%;
+
+  text-align: center;
   font-weight: 700;
   color: var(--white-color);
 }
@@ -2227,6 +2231,7 @@ section.event-section {
   font-weight: 500;
   display: inline-block;
   margin-top: 5px;
+  font-size: 14px;
   transition: color 0.3s;
 }
 

@@ -2,8 +2,8 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { GoArrowRight, GoArrowLeft } from "react-icons/go";
-
-
+import Skeleton from "react-loading-skeleton"; // Import skeleton loader
+import "react-loading-skeleton/dist/skeleton.css";
 const EventsPage = ({ params }) => {
   // Example event data (replace with your API later)
   const allEvents = [
@@ -141,7 +141,8 @@ const EventsPage = ({ params }) => {
   const currentEvent = allEvents[currentPage];
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
   const [blog, setBlog] = useState(null);
-  //get slug 
+  const [loading, setLoading] = useState(true);
+  //get slug
   const { slug } = params;
   // fetch blog by slug
   useEffect(() => {
@@ -156,19 +157,20 @@ const EventsPage = ({ params }) => {
       const response = await fetch(`${baseUrl}/api/blog/${slug}`);
       const data = await response.json();
       setBlog(data);
-      console.log('blog', data);
     } catch (error) {
       console.error("Error fetching event by slug:", error);
+    } finally {
+      setLoading(false); // ✅ stop loader after data fetched
     }
   };
-  //recent post 
+  //recent post
   const [recentPosts, setRecentPosts] = useState([]);
   const fetchRecentPosts = async () => {
     try {
       const response = await fetch(`${baseUrl}/api/recent-blog-posts`);
       const data = await response.json();
       setRecentPosts(data);
-      console.log('recentPosts', data);
+      console.log("recentPosts", data);
     } catch (error) {
       console.error("Error fetching recent posts:", error);
     }
@@ -188,14 +190,25 @@ const EventsPage = ({ params }) => {
   const formatEventDate = (dateString) => {
     if (!dateString) return "";
     const [yearStr, monthStr, dayStr] = dateString.split("-");
-    const dateObj = new Date(Number(yearStr), Number(monthStr) - 1, Number(dayStr));
+    const dateObj = new Date(
+      Number(yearStr),
+      Number(monthStr) - 1,
+      Number(dayStr)
+    );
 
-    const weekday = new Intl.DateTimeFormat("en-US", { weekday: "long" }).format(dateObj);
-    const month = new Intl.DateTimeFormat("en-US", { month: "long" }).format(dateObj);
+    const weekday = new Intl.DateTimeFormat("en-US", {
+      weekday: "long",
+    }).format(dateObj);
+    const month = new Intl.DateTimeFormat("en-US", { month: "long" }).format(
+      dateObj
+    );
     const suffix = getOrdinalSuffix(Number(dayStr));
 
     return `${weekday}, ${dayStr}${suffix} of ${month} ${yearStr}`;
   };
+  if (loading) {
+    return <Skeleton height={768} />;
+  }
 
   return (
     <>
@@ -255,7 +268,6 @@ const EventsPage = ({ params }) => {
                     </span>
                   </button>
                 </div>
-
               </div>
             </div>
 
@@ -273,7 +285,9 @@ const EventsPage = ({ params }) => {
                           </div>
                           <div className="event-card-title">
                             <h5>{event?.title}</h5>
-                            <p className="event-card-date">{formatEventDate(event?.event_date)}</p>
+                            <p className="event-card-date">
+                              {formatEventDate(event?.event_date)}
+                            </p>
                           </div>
                         </div>
                       </Link>
