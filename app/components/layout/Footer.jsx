@@ -53,54 +53,67 @@ const Footer = () => {
                     <div className="col-lg-4">
                       <ul className="footer-link-list">
                         <li>
-                          <Link href="#"> Diocese of Southwark </Link>
+                          <Link href="/https://www.rcsouthwark.co.uk">
+                            Diocese of Southwark{" "}
+                          </Link>
                         </li>
                         <li>
-                          <Link href="#"> Get Involved </Link>
+                          <Link href="/getting-involved"> Get Involved </Link>
                         </li>
                         <li>
-                          <Link href="#"> ​Our Leadership </Link>
+                          <Link href="/leadership"> ​Our Leadership </Link>
                         </li>
                         <li>
-                          <Link href="#"> Our Liturgy </Link>
+                          <Link href="/liturgy"> Our Liturgy </Link>
                         </li>
                         <li>
-                          <Link href="#"> ​Our Mission </Link>
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="col-lg-4">
-                      <ul className="footer-link-list">
-                        <li>
-                          <Link href="#"> Our Sacraments </Link>
-                        </li>
-                        <li>
-                          <Link href="#"> Our Youth </Link>
-                        </li>
-                        <li>
-                          <Link href="#"> ​Parishioner Gospel Reflection </Link>
-                        </li>
-                        <li>
-                          <Link href="#"> Parish Groups </Link>
-                        </li>
-                        <li>
-                          <Link href="#"> Parish History </Link>
+                          <Link href="/mission"> ​Our Mission </Link>
                         </li>
                       </ul>
                     </div>
                     <div className="col-lg-4">
                       <ul className="footer-link-list">
                         <li>
-                          <Link href="#"> Parish Vision </Link>
+                          <Link href="/sacramental"> Our Sacraments </Link>
                         </li>
                         <li>
-                          <Link href="#"> Parish Evangelisation Cells </Link>
+                          <Link href="/families-and-youth"> Our Youth </Link>
                         </li>
                         <li>
-                          <Link href="#"> Prayer Intentions </Link>
+                          <Link href="/reflection">
+                            {" "}
+                            ​Parishioner Gospel Reflection{" "}
+                          </Link>
                         </li>
                         <li>
-                          <Link href="#"> Streaming Masses </Link>
+                          <Link href="/groups"> Parish Groups </Link>
+                        </li>
+                        <li>
+                          <Link href="/brief-history"> Parish History </Link>
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="col-lg-4">
+                      <ul className="footer-link-list">
+                        <li>
+                          <Link href="/our-parish-vision"> Parish Vision </Link>
+                        </li>
+                        <li>
+                          <Link href="/evangelisation">
+                            Parish Evangelisation Cells{" "}
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="/prayer-intentions">
+                            {" "}
+                            Prayer Intentions{" "}
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="https://www.churchservices.tv/">
+                            {" "}
+                            Streaming Masses{" "}
+                          </Link>
                         </li>
                       </ul>
                     </div>

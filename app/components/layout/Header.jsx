@@ -331,7 +331,15 @@ const Header = () => {
                                 A parishioner&apos;s gospel reflection
                               </Link>
                             </li>
-                            {loading ? (
+                            <li>
+                              <Link
+                                href="/prayer-intentions"
+                                className="dropdown-item"
+                              >
+                                Prayer intentions
+                              </Link>
+                            </li>
+                            {/* {loading ? (
                               <li>
                                 <span className="dropdown-item text-muted">
                                   Loading...
@@ -348,7 +356,7 @@ const Header = () => {
                                   </Link>
                                 </li>
                               ))
-                            ) : null}
+                            ) : null} */}
                           </ul>
                         </div>
                       </div>
