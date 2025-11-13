@@ -20,7 +20,7 @@ const ReflectionPage = () => {
     <>
       <BannerImage />
 
-      <section className="cpt-6">
+      <section className="cpt-6" data-aos="fade-up" data-aos-duration="3000">
         <div className="container">
           <h2 className="about-section-title reflection-title text-center">
             A parishioner&apos;s gospel reflection

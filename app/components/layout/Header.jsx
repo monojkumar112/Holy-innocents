@@ -140,7 +140,7 @@ const Header = () => {
 
                             <li>
                               <Link
-                                href="/about-us/our-parish-vision"
+                                href="/our-parish-vision"
                                 className="dropdown-item"
                               >
                                 Our Parish Vision
@@ -199,10 +199,14 @@ const Header = () => {
                               </Link>
                             </li>
                             <li>
-                              <Link href="/event" className="dropdown-item">
-                                Recent events
+                              <Link
+                                href="/getting-involved"
+                                className="dropdown-item"
+                              >
+                                Getting involved
                               </Link>
                             </li>
+
                             <li>
                               <Link
                                 href="/families-and-youth"
@@ -220,6 +224,11 @@ const Header = () => {
                               </Link>
                             </li>
                             <li>
+                              <Link href="/event" className="dropdown-item">
+                                Recent events
+                              </Link>
+                            </li>
+                            <li>
                               <Link
                                 href="/social-and-support"
                                 className="dropdown-item"
@@ -228,10 +237,7 @@ const Header = () => {
                               </Link>
                             </li>
                             <li>
-                              <Link
-                                href="/fellowship/our-mission"
-                                className="dropdown-item"
-                              >
+                              <Link href="/mission" className="dropdown-item">
                                 Our mission
                               </Link>
                             </li>
@@ -245,7 +251,7 @@ const Header = () => {
                             </li>
                             <li>
                               <Link
-                                href="/fellowship/our-evangelisation"
+                                href="/our-evangelisation"
                                 className="dropdown-item"
                               >
                                 Our evangelisation
@@ -253,7 +259,7 @@ const Header = () => {
                             </li>
                             <li>
                               <Link
-                                href="/fellowship/our-social-action"
+                                href="/our-social-action"
                                 className="dropdown-item"
                               >
                                 Our social action

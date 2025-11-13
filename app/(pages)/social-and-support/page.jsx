@@ -7,7 +7,11 @@ const SocialAndSupportPage = () => {
     <>
       <section className="leader-ship">
         <div className="container">
-          <div className="leader-ship-content">
+          <div
+            className="leader-ship-content"
+            data-aos="fade-up"
+            data-aos-duration="3000"
+          >
             <div className="groups-content">
               <h5>Social and support groups and activities</h5>
               <p>

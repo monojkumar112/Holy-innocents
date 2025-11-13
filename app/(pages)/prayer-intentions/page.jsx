@@ -71,7 +71,7 @@ const PrayerIntentionsPage = () => {
                   data-aos-duration="3000"
                 >
                   <h2 className="section-title-2">
-                    The Holy Father's prayer intentions for this month
+                    The Holy Father&apos;s prayer intentions for this month
                   </h2>
 
                   <p>
@@ -211,7 +211,7 @@ const PrayerIntentionsPage = () => {
                   data-aos-duration="3000"
                 >
                   <h2 className="section-title-2">
-                    Parishioner's Personal Intentions
+                    Parishioner&apos;s Personal Intentions
                   </h2>
                   <p>
                     6th November 2025 <br />
@@ -320,10 +320,10 @@ const PrayerIntentionsPage = () => {
                     reconciliation for me and him. God if you deign, please God
                     soften and touch the heart of the person to whom I refer. I
                     can’t touch his heart, but Lord you can. Please bless those
-                    who hate me, don't let their hatred make them proud. God You
-                    are able to do all things. You are God my Saviour, and my
-                    hope is in You all day long. Please make this miracle happen
-                    for me. Amen.{" "}
+                    who hate me, don&apos;t let their hatred make them proud.
+                    God You are able to do all things. You are God my Saviour,
+                    and my hope is in You all day long. Please make this miracle
+                    happen for me. Amen.{" "}
                   </p>
                   <p>
                     30th October 2025 <br /> We pray for the people of the
@@ -341,7 +341,7 @@ const PrayerIntentionsPage = () => {
                   <p>
                     30th October 2025 <br /> We pray for more vocations to the
                     Priesthood, that men who are being called will respond to
-                    the Lord's invitation. Amen.{" "}
+                    the Lord&apos;s invitation. Amen.{" "}
                   </p>
                   <p>
                     30th October 2025 <br /> We pray for our politicians that
@@ -398,7 +398,7 @@ const PrayerIntentionsPage = () => {
                   <p>
                     23rd October 2025 <br /> We pray for a lady who would like
                     to have faith. May the Holy Spirit find a way to grant this
-                    lady's wish. Amen.
+                    lady&apos;s wish. Amen.
                   </p>
                   <p>
                     23rd October 2025 <br /> We pray for a parishioner, that he
@@ -478,9 +478,9 @@ const PrayerIntentionsPage = () => {
                   <p>
                     9th October 2025 <br /> We pray for peace particularly
                     between Palestine and Israel, that forgiveness, true
-                    penitence and Justice will reign and God's love will touch
-                    every heart to bring about reconciliation of differences.
-                    Amen{" "}
+                    penitence and Justice will reign and God&apos;s love will
+                    touch every heart to bring about reconciliation of
+                    differences. Amen{" "}
                   </p>
                   <p>
                     9th October 2025 <br /> ​We pray for those who are suffering
@@ -541,9 +541,9 @@ const PrayerIntentionsPage = () => {
                   </p>
                   <p>
                     2nd October 2025 <br /> We pray that all will be able to
-                    trust in God's love and mercy, keep the faith and continue
-                    to pray when things in their lives are stressful and hard to
-                    understand. Amen.
+                    trust in God&apos;s love and mercy, keep the faith and
+                    continue to pray when things in their lives are stressful
+                    and hard to understand. Amen.
                   </p>
                   <p>
                     2nd October 2025 <br /> We pray for those suffering from
@@ -575,7 +575,7 @@ const PrayerIntentionsPage = () => {
                   </p>
                   <p>
                     2nd October 2025 <br /> We pray for unborn babies that they
-                    remain safe in their mother's womb and that all will
+                    remain safe in their mother&apos;s womb and that all will
                     acknowledge the wonderful gift for God that they are and
                     life is sacred from conception to natural death. Amen
                   </p>

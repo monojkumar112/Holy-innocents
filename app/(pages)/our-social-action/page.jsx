@@ -102,7 +102,7 @@ const LeadershipPage = () => {
                     such as at Easter and Christmas.
                   </p>
                   <p>
-                    Contact Donal O'Sullivan or via the{" "}
+                    Contact Donal O&apos;Sullivan or via the{" "}
                     <span>
                       <Link href={"/contact-us"}>Parish Office </Link>
                     </span>{" "}
@@ -169,7 +169,7 @@ const LeadershipPage = () => {
                   data-aos-duration="3000"
                 >
                   <h2 className="section-title-2">
-                    Catholic Women's League (CWL)
+                    Catholic Women&apos;s League (CWL)
                   </h2>
                   <p>
                     The CWL unites Catholic women in friendship and encourages
@@ -256,9 +256,9 @@ const LeadershipPage = () => {
                     increase awareness of these important aspects of Christian
                     theology and how they should impact on our daily lives. It
                     aims to act as a catalyst within the parish for encouraging
-                    projects centring on the idea of "Living Simply", building
-                    on the themes developed by Pope Francis in his encyclical
-                    Laudato Si.
+                    projects centring on the idea of &quot;Living Simply&quot;,
+                    building on the themes developed by Pope Francis in his
+                    encyclical Laudato Si.
                   </p>
                   <p>
                     ​The Group also works towards enhancing the support we
@@ -390,11 +390,12 @@ const LeadershipPage = () => {
                     at 7.30 pm in the Parish Centre.
                   </p>
                   <p>
-                    Holy Innocents' is ‘twinned’ with St. Augustine’s & Infant
-                    Jesus Conferences, both in Kerala, India. We have supported
-                    several projects there, such as providing sewing machines,
-                    goats, education and interest-free loans to families to set
-                    them up in business. See our St Augustine's Housing project.
+                    Holy Innocents&apos; is ‘twinned’ with St. Augustine’s &
+                    Infant Jesus Conferences, both in Kerala, India. We have
+                    supported several projects there, such as providing sewing
+                    machines, goats, education and interest-free loans to
+                    families to set them up in business. See our St
+                    Augustine&apos;s Housing project.
                   </p>
                   <p>
                     ‘Friends of the SVP’ has been launched by the SVP for those

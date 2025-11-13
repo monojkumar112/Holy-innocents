@@ -38,9 +38,9 @@ const MissionPage = () => {
               <p>
                 ​As ​Christians, we are called to communicate and spread the
                 Gospel, the good news of Jesus Christ. That’s what
-                'evangelisation' means. It’s a task not just for priests and
-                deacons, but for all of us in the Church. It’s what the Church
-                is for.
+                &apos;evangelisation&apos; means. It’s a task not just for
+                priests and deacons, but for all of us in the Church. It’s what
+                the Church is for.
               </p>
               <p>
                 We communicate the Gospel in all sorts of ways. By how we live
