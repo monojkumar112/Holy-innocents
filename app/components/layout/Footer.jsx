@@ -1,13 +1,24 @@
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import { FaFacebookF } from "react-icons/fa";
 import { RiTwitterXLine } from "react-icons/ri";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import Image from "next/image";
 import { FiSearch } from "react-icons/fi";
+import { useRouter } from "next/navigation";
 
 const Footer = () => {
+  const router = useRouter();
+  const [searchInput, setSearchInput] = useState("");
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    if (searchInput.trim()) {
+      router.push(`/search?q=${encodeURIComponent(searchInput)}`);
+    }
+  };
+
   return (
     <>
       <footer className="footer">
@@ -39,10 +50,15 @@ const Footer = () => {
                       <h3>Quick Links</h3>
                     </div>
                     <div className="footer-quick-search">
-                      <form action="">
+                      <form onSubmit={handleSearch}>
                         <div className="search-from">
-                          <input type="text" placeholder="Search" />
-                          <button className="search-btn">
+                          <input
+                            type="text"
+                            placeholder="Search"
+                            value={searchInput}
+                            onChange={(e) => setSearchInput(e.target.value)}
+                          />
+                          <button type="submit" className="search-btn">
                             <FiSearch />
                           </button>
                         </div>
