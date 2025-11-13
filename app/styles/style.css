@@ -945,8 +945,26 @@ section.section-content {
   margin: auto;
 }
 
+.leader-ship-content p strong a {
+  color: var(--black-color);
+  transition: 0.4s;
+}
+
+.leader-ship-content p strong a:hover {
+  color: var(--primary-color);
+}
+
 h2.section-title-2 {
   font-size: 30px;
+  font-weight: 700;
+  padding-bottom: 15px;
+  line-height: 150%;
+  color: var(--primary-color);
+  margin-bottom: 0;
+}
+
+h5.section-title-3 {
+  font-size: 24px;
   font-weight: 700;
   padding-bottom: 15px;
   line-height: 150%;
@@ -963,7 +981,7 @@ h2.section-title-2 a:hover {
   color: var(--primary-color);
 }
 
-li.section-content-list {
+.section-content-list {
   padding-bottom: 20px;
   margin-bottom: 20px;
   border-bottom: 1px solid var(--primary-color);
@@ -2064,4 +2082,15 @@ section.event-section {
 .father-img img {
   width: 100%;
   border-radius: 16px;
+}
+
+.groups-content-pryer {
+  margin-top: 80px;
+  padding-bottom: 30px;
+}
+
+.groups-content-pryer .section-title-2 {
+  text-align: center;
+  font-size: 35px;
+  padding-bottom: 35px;
 }

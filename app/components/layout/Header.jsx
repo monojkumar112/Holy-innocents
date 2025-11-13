@@ -229,14 +229,6 @@ const Header = () => {
                             </li>
                             <li>
                               <Link
-                                href="/social-and-support"
-                                className="dropdown-item"
-                              >
-                                Social and support
-                              </Link>
-                            </li>
-                            <li>
-                              <Link
                                 href="/fellowship/our-mission"
                                 className="dropdown-item"
                               >
@@ -245,7 +237,7 @@ const Header = () => {
                             </li>
                             <li>
                               <Link
-                                href="/fellowship/parish-evangelisation"
+                                href="/evangelisation"
                                 className="dropdown-item"
                               >
                                 PECS
