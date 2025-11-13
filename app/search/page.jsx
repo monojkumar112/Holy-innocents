@@ -44,7 +44,7 @@ const SearchPage = ({ searchParams }) => {
         <div className="container">
           <div className="search-banner-wrapper">
             <h1>Search Results</h1>
-            <p>Find what you're looking for across our website</p>
+            <p>Find what your&apos;e looking for across our website</p>
           </div>
         </div>
       </section>
@@ -78,8 +78,8 @@ const SearchPage = ({ searchParams }) => {
                 <>
                   <div className="results-count">
                     Found <strong>{results.length}</strong> result
-                    {results.length !== 1 ? "s" : ""} for "
-                    <strong>{searchQuery}</strong>"
+                    {results.length !== 1 ? "s" : ""} for &quot;
+                    <strong>{searchQuery}</strong>&quot;
                   </div>
                   <div className="results-list">
                     {results.map((result) => (
@@ -100,7 +100,8 @@ const SearchPage = ({ searchParams }) => {
               ) : searchQuery ? (
                 <div className="no-results">
                   <p>
-                    No results found for "<strong>{searchQuery}</strong>"
+                    No results found for &quot;<strong>{searchQuery}</strong>
+                    &quot;
                   </p>
                   <p className="no-results-hint">
                     Try searching with different keywords or browse our site

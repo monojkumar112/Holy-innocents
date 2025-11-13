@@ -316,7 +316,7 @@ const Header = () => {
                     href="#"
                     data-bs-toggle="dropdown"
                   >
-                    A parishioner's gospel reflection
+                    A parishioner&apos;s gospel reflection
                   </a>
                   <div className="dropdown-menu shadow py-0">
                     <div className="mega-content container-fluid">
