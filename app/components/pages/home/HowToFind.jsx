@@ -11,7 +11,7 @@ const HowToFind = () => {
       >
         <div className="container">
           <div className="row">
-            <div className="col-md-5">
+            <div className="col-lg-5">
               <div className="how-to-find-img">
                 <Image
                   src={"/assets/images/map.png"}
@@ -22,7 +22,7 @@ const HowToFind = () => {
               </div>
             </div>
 
-            <div className="col-md-7">
+            <div className="col-lg-7">
               <div className="how-to-find-wrapper">
                 <h2 className="section-title">How to find us </h2>
                 <p>Strickland Way, Orpington BR6 9UE</p>

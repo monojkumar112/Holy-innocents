@@ -20,7 +20,7 @@
 }
 
 .navbar-nav {
-    gap: 8px;
+    gap: 0px;
 }
 
 .navbar-nav li a {
@@ -29,6 +29,11 @@
     letter-spacing: 2px;
     color: #fff !important;
     transition: 0.3s;
+}
+
+.navbar-nav li .custom-btn {
+    font-size: 13px;
+    padding: 7px 15px;
 }
 
 .navbar-nav li a:hover,
@@ -43,6 +48,10 @@
     left: 17%;
     animation: fadeIn 0.3s ease-in-out;
     border: none;
+}
+
+.nav-item .nav-link {
+    font-size: 12px;
 }
 
 .menu-img-item {
@@ -179,12 +188,15 @@
         display: none !important;
     }
 
+    .dropdown-item {
+        white-space: inherit !important;
+    }
 
 }
 
 @media (min-width: 992px) {
     .navbar-nav {
-        gap: 8px;
+        gap: 0px;
     }
 
 }

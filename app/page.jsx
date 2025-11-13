@@ -22,7 +22,7 @@ export const metadata = {
   keywords:
     "Holy Innocents, Catholic Church, Parish, Mass Times, Community, Worship, Faith, Events, Spiritual Growth, Ministries, Sacraments",
   icons: {
-    icon: "/assets/favicon.ico", // or your image path like '/assets/favicon.png'
+    icon: "/assets/favicon.png",
   },
 };
 

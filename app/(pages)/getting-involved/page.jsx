@@ -1,7 +1,17 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-
+export const metadata = {
+  title:
+    "Holy Innocents Catholic Church - Getting Involved - Holy Innocents' Catholic Church Orpington",
+  description:
+    "Welcome to Holy Innocents Catholic Church, a vibrant parish community dedicated to faith, worship, and service. Join us for Mass, events, and spiritual growth.",
+  keywords:
+    "Holy Innocents, Catholic Church, Parish, Mass Times, Community, Worship, Faith, Events, Spiritual Growth, Ministries, Sacraments",
+  icons: {
+    icon: "/assets/favicon.png",
+  },
+};
 const GettingInvolvedPage = () => {
   return (
     <>

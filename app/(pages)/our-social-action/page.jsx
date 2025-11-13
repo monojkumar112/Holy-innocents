@@ -469,7 +469,7 @@ const LeadershipPage = () => {
                   </p>
                 </li>
               </ul>
-              <div className="pt-5 d-flex align-items-center justify-content-center">
+              <div className="pt-3 d-flex align-items-center justify-content-center">
                 <Link href={"/mission"} className="custom-btn">
                   Back to Our mission
                 </Link>

@@ -11,7 +11,7 @@ const ParishCentre = () => {
       >
         <div className="container">
           <div className="row">
-            <div className="col-md-6">
+            <div className="col-lg-6">
               <div className="parish-contentss">
                 <h2 className="section-title">The Father Phelan Centre</h2>
                 <p>
@@ -38,7 +38,7 @@ const ParishCentre = () => {
                 </div>
               </div>
             </div>
-            <div className="col-md-6">
+            <div className="col-lg-6">
               <div className="parish-img">
                 <Image
                   src={"/assets/images/parish.png"}

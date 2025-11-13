@@ -998,6 +998,7 @@ li.section-content-list p {
   padding: 50px;
   background: #b288442a;
   margin-bottom: 50px;
+  border-radius: 10px;
 }
 
 .groups-content h5 {
@@ -2311,4 +2312,17 @@ section.event-section {
   text-align: center;
   font-size: 35px;
   padding-bottom: 35px;
+}
+
+.team-item-name h2 {
+  margin-bottom: 0;
+  text-align: center;
+  padding-bottom: 45px;
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.team-item-name {
+  padding-bottom: 30px;
 }

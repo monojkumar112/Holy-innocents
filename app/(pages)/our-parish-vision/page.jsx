@@ -1,18 +1,19 @@
-"use client";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { FaRegFileAlt } from "react-icons/fa";
-
+import ParishVisionDowload from "../../components/Download/ParishVisionDowload";
+export const metadata = {
+  title:
+    "Holy Innocents' Catholic Church - Vision - Holy Innocents' Catholic Church Orpington",
+  description:
+    "Welcome to Holy Innocents Catholic Church, a vibrant parish community dedicated to faith, worship, and service. Join us for Mass, events, and spiritual growth.",
+  keywords:
+    "Holy Innocents, Catholic Church, Parish, Mass Times, Community, Worship, Faith, Events, Spiritual Growth, Ministries, Sacraments",
+  icons: {
+    icon: "/assets/favicon.png",
+  },
+};
 const OurParishVisionPage = () => {
-  const handleDownload = () => {
-    const fileUrl =
-      "/assets/files/message_re_foodbank_donal_osullivan_march_2020.pdf"; // path inside your public/ folder
-    const link = document.createElement("a");
-    link.href = fileUrl;
-    link.download = "message_re_foodbank_donal_osullivan_march_2020.pdf"; // name shown when downloading
-    link.click();
-  };
   return (
     <>
       <section className="leader-ship">
@@ -81,15 +82,10 @@ const OurParishVisionPage = () => {
                   <p>
                     Parish Co Responsibility Group (PCRG) New framework May 2023
                   </p>
-                  <div className="d-flex align-items-center gap-2 mt-3 mb-4">
-                    <FaRegFileAlt size={30} />
-                    <button onClick={handleDownload} className="custom-btn">
-                      Download File
-                    </button>
-                  </div>
+                  <ParishVisionDowload />
                 </li>
               </ul>
-              <div className="pt-5 d-flex align-items-center justify-content-center">
+              <div className="pt-3 d-flex align-items-center justify-content-center">
                 <Link href={"/about-us"} className="custom-btn">
                   ​ Return to About Us
                 </Link>

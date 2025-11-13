@@ -1,7 +1,17 @@
 import Link from "next/link";
 import React from "react";
-
-const MissionPage = () => {
+export const metadata = {
+  title:
+    "Holy Innocents' Catholic Church - Our Evangelisation - Holy Innocents' Catholic Church Orpington",
+  description:
+    "Welcome to Holy Innocents Catholic Church, a vibrant parish community dedicated to faith, worship, and service. Join us for Mass, events, and spiritual growth.",
+  keywords:
+    "Holy Innocents, Catholic Church, Parish, Mass Times, Community, Worship, Faith, Events, Spiritual Growth, Ministries, Sacraments",
+  icons: {
+    icon: "/assets/favicon.png",
+  },
+};
+const OurEvangelisationPage = () => {
   return (
     <>
       <section className="leader-ship">
@@ -123,7 +133,7 @@ const MissionPage = () => {
                 </p>
               </li>
             </ul>
-            <div className="pt-5 d-flex align-items-center justify-content-center">
+            <div className="pt-3 d-flex align-items-center justify-content-center">
               <Link href={"/mission"} className="custom-btn">
                 Back to Our Mission
               </Link>
@@ -135,4 +145,4 @@ const MissionPage = () => {
   );
 };
 
-export default MissionPage;
+export default OurEvangelisationPage;

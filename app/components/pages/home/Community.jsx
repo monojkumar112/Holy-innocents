@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const Community = () => {
@@ -21,9 +22,9 @@ const Community = () => {
                   and make a difference together.
                 </p>
                 <div className="community-btn-group">
-                  <a href="#contact" className="custom-btn learn-more-btn">
+                  <Link href="/#contact" className="custom-btn learn-more-btn">
                     Join Us
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

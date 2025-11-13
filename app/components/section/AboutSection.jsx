@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const AboutSection = () => {
@@ -35,13 +36,16 @@ const AboutSection = () => {
               <p>
                 We hope that you will get a good sense of that from this
                 website, arranged as it is around the different aspects of our
-                parish life; and that if you&apos;ve not already done so, you will
-                have the opportunity to come and experience our life and our
-                welcome in person. 
+                parish life; and that if you&apos;ve not already done so, you
+                will have the opportunity to come and experience our life and
+                our welcome in person. 
               </p>
-              <a href="#" className="custom-btn learn-more-btn">
+              <Link
+                href="/our-parish-vision"
+                className="custom-btn learn-more-btn"
+              >
                 Our Parish Vision
-              </a>
+              </Link>
             </div>
           </div>
           <div className="col-lg-6">

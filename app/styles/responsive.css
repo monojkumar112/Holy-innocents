@@ -41,7 +41,7 @@
 
   .newsletter-wrapper {
     flex-direction: column;
-    gap: 20px;
+    gap: 40px;
     padding: 30px 20px;
   }
 
@@ -115,11 +115,25 @@
 
   .touch-wrapper {
     width: 100%;
+    gap: 40px;
     grid-template-columns: 1fr;
+  }
+
+  .touch-img img {
+    border-radius: 10px;
+  }
+
+  .custom-btn {
+    font-size: 17px;
   }
 
   .minitries-header {
     width: 80%;
+  }
+
+  .how-to-find-wrapper {
+    padding-left: 0px;
+    padding-top: 50px;
   }
 
   .adoration-content h2 {
@@ -214,7 +228,7 @@
   }
 
   .team-item {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
   }
 
   .footer-quick-link {
@@ -228,11 +242,38 @@
   .footer-quick-title h3 {
     font-size: 25px;
   }
+
+  .team-item-content {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+
+  .parish-contentss {
+    margin-bottom: 50px;
+  }
 }
 
 @media (max-width: 768px) {
   section.contact-us {
     width: 100%;
+  }
+
+  .evangelisation-content h5 {
+    font-size: 18px;
+  }
+
+  .team-item {
+    height: fit-content;
+  }
+
+  .team-item-name {
+    padding-bottom: 10px;
+  }
+
+  .team-item-name h2 {
+    padding-bottom: 30px;
+    font-size: 25px;
   }
 
   .parish-btn-group-wrap {
@@ -308,10 +349,36 @@
   .liturgy-img-item {
     max-width: 100%;
     height: auto;
+    padding-bottom: 20px;
+  }
+
+  .father-img {
+    padding-bottom: 19px;
+  }
+
+  .groups-content-pryer {
+    margin-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .groups-content p {
+    padding-bottom: 10px;
+  }
+
+  .groups-content h5 {
+    font-size: 28px;
+    line-height: 150%;
   }
 
   .liturgy-item-list {
     flex-direction: column;
+  }
+
+  .groups-content {
+    margin-top: 60px;
+    padding: 30px 20px;
+    background: #b288442a;
+    margin-bottom: 50px;
   }
 
   .liturgy-header-item {
@@ -370,9 +437,17 @@
   }
 
   .slider-item-btn a {
-    width: 120px;
-    font-size: 16px;
-    padding: 8px 0;
+    width: 110px;
+    font-size: 13px;
+    padding: 7px 0;
+  }
+
+  section.notice {
+    padding-bottom: 10px !important;
+  }
+
+  section.parish-centre {
+    padding: 60px 0;
   }
 
   .slider-content h1 {
@@ -402,9 +477,13 @@
   }
 
   .slider-content {
-    width: 90%;
+    width: 100%;
     bottom: 50px;
     gap: 10px;
+  }
+
+  .swiper-pagination {
+    bottom: 15px !important;
   }
 
   .new-here-right {
@@ -433,10 +512,6 @@
 
   .team-section-title {
     width: 100%;
-  }
-
-  .parish-contentss {
-    margin-bottom: 30px;
   }
 
   .parish-btn-group {
@@ -479,7 +554,7 @@
   }
 
   .slider-content h1 {
-    font-size: 30px;
+    font-size: 20px;
   }
 
   .adoration-btn-group {

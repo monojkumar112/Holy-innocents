@@ -1,7 +1,17 @@
 import React from "react";
 import Banner from "../../components/section/Banner";
 import Link from "next/link";
-
+export const metadata = {
+  title:
+    "Sisters of Mercy at St. Anne&apos;s Convent - Holy Innocents' Catholic Church Orpington",
+  description:
+    "Welcome to Holy Innocents Catholic Church, a vibrant parish community dedicated to faith, worship, and service. Join us for Mass, events, and spiritual growth.",
+  keywords:
+    "Holy Innocents, Catholic Church, Parish, Mass Times, Community, Worship, Faith, Events, Spiritual Growth, Ministries, Sacraments",
+  icons: {
+    icon: "/assets/favicon.png",
+  },
+};
 const SistersOfMercypage = () => {
   const data = {
     title: "Sisters of Mercy at St. Anne&apos;s Convent",
@@ -78,7 +88,7 @@ const SistersOfMercypage = () => {
                   </p>
                 </li>
               </ul>
-              <div className="pt-5 d-flex align-items-center justify-content-center">
+              <div className="pt-3 d-flex align-items-center justify-content-center">
                 <Link href={"/about-us"} className="custom-btn">
                   Return to About Us
                 </Link>
