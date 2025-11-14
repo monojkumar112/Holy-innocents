@@ -55,7 +55,7 @@ const Team = () => {
       >
         <div className="container">
           <div className="team-section-title">
-            <h2 className="section-title">Our Parish Team</h2>
+            <h2 className="section-title">Our Clergy Team</h2>
             <p>
               Our leadership team is dedicated to serving our community and
               fostering a welcoming environment for all.
