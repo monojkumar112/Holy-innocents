@@ -559,9 +559,11 @@
   }
 
   .slider-content h1 {
-    font-size: 20px;
+    font-size: 24px;
   }
-
+  .slider-content .text-white {
+    font-size: 18px;
+  }
   .adoration-btn-group {
     display: flex;
     align-items: flex-start;

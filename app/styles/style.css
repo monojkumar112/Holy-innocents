@@ -78,6 +78,9 @@ section.hero-section {
   gap: 20px;
   width: 70%;
 }
+.slider-content .text-white {
+  font-size: 23px;
+}
 
 .swiper-pagination {
   bottom: 25px !important;
@@ -2010,7 +2013,8 @@ li.section-content-list p a {
   margin-top: 20px;
 }
 
-.row {}
+.row {
+}
 
 .from-check-box-list {
   display: flex;
@@ -2407,12 +2411,10 @@ section.event-section {
   object-fit: cover;
   display: block;
   border-radius: 6px;
-
 }
 
 .event-gallery-image .mySwiper .swiper-slide-thumb-active {
   opacity: 1;
-
 }
 
 .event-gallery-image-item .event-gallery-img {
