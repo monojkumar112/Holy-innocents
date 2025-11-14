@@ -144,7 +144,7 @@ function InvolvedForm({ selectedMinistryId, selectedMinistry }) {
                 </div>
                 <div className="mb-md-3 col-md-6">
                   <label htmlFor="address" className="form-label">
-                    Address <span className="text-danger">*</span>
+                    Address 
                   </label>
                   <textarea
                     className="form-control"
