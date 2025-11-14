@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { GoArrowRight, GoArrowLeft } from "react-icons/go";
 import Skeleton from "react-loading-skeleton"; // Import skeleton loader
 import "react-loading-skeleton/dist/skeleton.css";
+import EventGallery from "../../components/section/EventGallery";
 const EventsPage = ({ params }) => {
   // Example event data (replace with your API later)
   const allEvents = [
@@ -241,6 +242,8 @@ const EventsPage = ({ params }) => {
                     dangerouslySetInnerHTML={{ __html: blog?.content }}
                   />
                 </div>
+
+                <EventGallery allEvents={allEvents} />
 
                 {/* Pagination Buttons */}
                 <div className="d-flex event-pagination-item justify-content-between align-items-center mt-4 d-none">

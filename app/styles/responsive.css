@@ -248,7 +248,9 @@
     padding-top: 20px;
     padding-bottom: 30px;
   }
-
+  .modal-gallery-content {
+    width: 90%;
+  }
   .parish-contentss {
     margin-bottom: 50px;
   }
@@ -258,7 +260,10 @@
   section.contact-us {
     width: 100%;
   }
-
+  .event-gallery-image {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
   .evangelisation-content h5 {
     font-size: 18px;
   }

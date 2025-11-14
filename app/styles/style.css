@@ -514,7 +514,7 @@ section.new-here {
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  transition: .4s;
+  transition: 0.4s;
   height: auto;
   text-transform: capitalize;
 }
@@ -1693,7 +1693,7 @@ section.churchsuite-section {
 
 /* Search Results Page Styles */
 .search-banner-section {
-  background: linear-gradient(257deg, #B28744 0%, #4C3A1D 111.05%);
+  background: linear-gradient(257deg, #b28744 0%, #4c3a1d 111.05%);
   padding: 120px 0 60px 0;
 }
 
@@ -1750,14 +1750,14 @@ section.churchsuite-section {
 
 .search-input:focus {
   outline: none;
-  border-color: var(--primary-color, #5F56A7);
+  border-color: var(--primary-color, #5f56a7);
 }
 
 .search-form-wrapper .search-btn {
   padding: 14px 24px;
-  background: var(--primary-color, #5F56A7);
+  background: var(--primary-color, #5f56a7);
   color: #fff;
-  border: 2px solid var(--primary-color, #5F56A7);
+  border: 2px solid var(--primary-color, #5f56a7);
   border-radius: 8px;
   cursor: pointer;
   font-size: 16px;
@@ -1770,7 +1770,7 @@ section.churchsuite-section {
 
 .search-form-wrapper .search-btn:hover {
   background: transparent;
-  color: var(--primary-color, #5F56A7);
+  color: var(--primary-color, #5f56a7);
 }
 
 .search-results {
@@ -1786,7 +1786,7 @@ section.churchsuite-section {
 }
 
 .results-count strong {
-  color: var(--primary-color, #5F56A7);
+  color: var(--primary-color, #5f56a7);
   font-weight: 700;
 }
 
@@ -1817,7 +1817,7 @@ section.churchsuite-section {
 }
 
 .result-item h3 a {
-  color: var(--primary-color, #5F56A7);
+  color: var(--primary-color, #5f56a7);
   text-decoration: none;
   transition: 0.2s ease;
 }
@@ -1840,7 +1840,7 @@ section.churchsuite-section {
 }
 
 .result-link {
-  color: var(--primary-color, #5F56A7);
+  color: var(--primary-color, #5f56a7);
   text-decoration: none;
   font-size: 14px;
   font-weight: 600;
@@ -1869,7 +1869,7 @@ section.churchsuite-section {
 .no-results p strong,
 .no-query p strong {
   font-weight: 700;
-  color: var(--primary-color, #5F56A7);
+  color: var(--primary-color, #5f56a7);
 }
 
 .no-results-hint {
@@ -1882,7 +1882,7 @@ section.churchsuite-section {
   text-align: center;
   padding: 40px 20px;
   font-size: 16px;
-  color: var(--primary-color, #5F56A7);
+  color: var(--primary-color, #5f56a7);
   font-weight: 600;
 }
 
@@ -2006,7 +2006,8 @@ li.section-content-list p a {
   margin-top: 20px;
 }
 
-.row {}
+.row {
+}
 
 .from-check-box-list {
   display: flex;
@@ -2038,7 +2039,6 @@ section.event-page {
 
 .event-content-item {
   padding-top: 40px;
-
 }
 
 .event-content-item img {
@@ -2061,7 +2061,6 @@ section.event-page {
 }
 
 .event-right-side {
-
   width: 100%;
 }
 
@@ -2113,7 +2112,7 @@ section.event-page {
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  transition: .4s;
+  transition: 0.4s;
   height: auto;
   color: var(--black-color);
   text-transform: capitalize;
@@ -2145,7 +2144,6 @@ section.event-banner {
   flex-direction: column;
   gap: 20px;
 }
-
 
 .event-header-content h1 {
   margin-bottom: 0;
@@ -2199,7 +2197,7 @@ section.event-section {
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  transition: .4s;
+  transition: 0.4s;
   height: auto;
   color: var(--black-color);
   font-weight: 600;
@@ -2210,7 +2208,6 @@ section.event-section {
   color: var(--primary-color);
 }
 
-
 .event-info .event-description {
   font-size: 16px;
   padding-top: 12px;
@@ -2220,7 +2217,7 @@ section.event-section {
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  transition: .4s;
+  transition: 0.4s;
   height: auto;
   color: var(--black-color);
   text-transform: capitalize;
@@ -2253,12 +2250,11 @@ section.event-section {
   overflow: hidden;
   position: relative;
   cursor: pointer;
-
 }
 
 .event-image img {
   width: 100%;
-  transition: transform .8s ease, filter .5s ease;
+  transition: transform 0.8s ease, filter 0.5s ease;
 }
 
 .event-card:hover img {
@@ -2330,4 +2326,24 @@ section.event-section {
 
 .team-item-name {
   padding-bottom: 30px;
+}
+
+.event-gallery-image {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 50px;
+}
+.modal-gallery-image {
+  width: 100%;
+  border-radius: 12px;
+}
+.modal-gallery-content {
+  width: 900px;
+}
+.event-gallery-img-item img {
+  width: 100%;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
