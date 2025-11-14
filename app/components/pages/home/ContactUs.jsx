@@ -72,7 +72,7 @@ const ContactUs = () => {
                       <span>
                         <IoIosCall />
                       </span>
-                      <h5>Call To Us</h5>
+                      <h5>Call Us</h5>
                     </div>
                     <p>
                       Natasha Wheeler, our Parish Secretary, works in the Parish

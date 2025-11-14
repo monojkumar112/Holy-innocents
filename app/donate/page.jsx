@@ -19,9 +19,9 @@ export const metadata = {
 const DonatePage = () => {
   return (
     <>
-      <BannerImage />
+      {/* <BannerImage /> */}
 
-      <DonateUs />
+      {/* <DonateUs /> */}
 
       <DonateFrom />
 

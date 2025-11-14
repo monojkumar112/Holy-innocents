@@ -318,7 +318,7 @@ const LeadershipPage = () => {
                     worship Jackie — fellowship Mike — communication.
                   </p>
                 </li>
-                <li
+                {/* <li
                   className="section-content-list"
                   data-aos="fade-up"
                   data-aos-duration="3000"
@@ -336,7 +336,7 @@ const LeadershipPage = () => {
                     height={468}
                     alt="leader-ship-1"
                   />
-                </li>
+                </li> */}
               </ul>
               <div>
                 <Link href={"/about-us"} className="custom-btn">

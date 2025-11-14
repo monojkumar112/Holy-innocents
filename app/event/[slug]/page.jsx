@@ -143,6 +143,9 @@ const EventsPage = ({ params }) => {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
   const [blog, setBlog] = useState(null);
   const [loading, setLoading] = useState(true);
+
+  console.log("blog", blog);
+
   //get slug
   const { slug } = params;
   // fetch blog by slug
@@ -243,7 +246,7 @@ const EventsPage = ({ params }) => {
                   />
                 </div>
 
-                <EventGallery allEvents={allEvents} />
+                <EventGallery blogImage={blog.images} />
 
                 {/* Pagination Buttons */}
                 <div className="d-flex event-pagination-item justify-content-between align-items-center mt-4 d-none">

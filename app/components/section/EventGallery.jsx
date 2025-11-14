@@ -2,92 +2,78 @@
 import React, { useState } from "react";
 import { IoMdClose } from "react-icons/io";
 
-const EventGallery = ({ allEvents }) => {
-  const [selectedImage, setSelectedImage] = useState(null);
+// Swiper Import
+import { Swiper, SwiperSlide } from "swiper/react";
+import { FreeMode, Navigation, Thumbs } from "swiper/modules";
+
+// Swiper Styles
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/navigation";
+import "swiper/css/thumbs";
+
+const EventGallery = ({ blogImage }) => {
+  const [selectedImage, setSelectedImage] = useState(null); // modal on/off
+  const [thumbsSwiper, setThumbsSwiper] = useState(null); // thumbs slider control
 
   return (
-    <div>
-      {/* Image Gallery */}
+    <>
+      {/* Image Grid */}
       <div className="event-gallery-image">
-        {allEvents &&
-          allEvents.map((item, index) => (
-            <div
-              className="event-gallery-img-item"
-              key={index}
-              onClick={() => setSelectedImage(item.image)} // 👉 click করলে modal খুলবে
-              style={{ cursor: "pointer" }}
-            >
-              <img
-                src={item.image}
-                alt={`Gallery Image ${index + 1}`}
-                style={{ width: "100%", borderRadius: "8px" }}
-              />
-            </div>
-          ))}
-      </div>
-
-      {/* Modal */}
-      {selectedImage && (
-        <div
-          className="modal-overlay"
-          onClick={() => setSelectedImage(null)} // background এ click করলে বন্ধ হবে
-          style={{
-            position: "fixed",
-            top: 0,
-            left: 0,
-            width: "100vw",
-            height: "100vh",
-            background: "rgba(0,0,0,0.7)",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            zIndex: 9999,
-          }}
-        >
-          <div
-            className="modal-gallery-content"
+        <div className="event-gallery-image-item">
+          <Swiper
             style={{
-              position: "relative",
-              padding: "10px",
-              borderRadius: "8px",
+              "--swiper-navigation-color": "#fff",
+              "--swiper-pagination-color": "#fff",
             }}
-            onClick={(e) => e.stopPropagation()} // modal content এ click করলে বন্ধ হবে না
+            spaceBetween={10}
+            navigation={true}
+            thumbs={{ swiper: thumbsSwiper }}
+            modules={[FreeMode, Navigation, Thumbs]}
+            className="mySwiper2"
           >
-            {/* Close Button */}
-            <button
-              onClick={() => setSelectedImage(null)}
-              style={{
-                position: "absolute",
-                top: "-5px",
-                right: "-5px",
-                background: "#b28744",
-                color: "#fff",
-                border: "none",
-                borderRadius: "50%",
-                width: "40px",
-                height: "40px",
-                cursor: "pointer",
-                fontSize: "24px",
-                lineHeight: "24px",
-              }}
-            >
-              <IoMdClose />
-            </button>
-            <div className="modal-gallery-image">
-              <img
-                src={selectedImage}
-                alt="Selected"
-                className=""
-                style={{
-                  maxWidth: "100%",
-                  borderRadius: "8px",
-                }}
-              />
-            </div>
-          </div>
+            {blogImage.map((item, index) => (
+              <SwiperSlide key={index}>
+                <div className="event-gallery-img">
+                  <img
+                    src={item.image}
+                    alt={`Slide ${index + 1}`}
+                    style={{ width: "100%", borderRadius: "10px" }}
+                  />
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
-      )}
-    </div>
+        <div className="event-gallery-image-item-2">
+          {/* Thumbnail Slider */}
+          <Swiper
+            onSwiper={setThumbsSwiper}
+            spaceBetween={10}
+            slidesPerView={6}
+            freeMode={true}
+            watchSlidesProgress={true}
+            modules={[FreeMode, Navigation, Thumbs]}
+            className="mySwiper"
+            style={{ marginTop: "15px" }}
+          >
+            {blogImage.map((item, index) => (
+              <SwiperSlide key={index}>
+                <img
+                  src={item.image}
+                  alt={`Thumb ${index + 1}`}
+                  style={{
+                    width: "100%",
+                    borderRadius: "6px",
+                    opacity: item.image === selectedImage ? 1 : 0.8,
+                  }}
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+      </div>
+    </>
   );
 };
 

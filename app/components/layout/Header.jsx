@@ -122,10 +122,18 @@ const Header = () => {
                               </li>
                               <li>
                                 <Link
-                                  href="/deacon-barry"
+                                  href="/deacon-barry-chalkley"
                                   className="dropdown-item"
                                 >
-                                  Deacons
+                                  Deacon Barry Chalkley
+                                </Link>
+                              </li>
+                              <li>
+                                <Link
+                                  href="/deacon-dayne-du-preez"
+                                  className="dropdown-item"
+                                >
+                                  Deacon Wayne du Preez
                                 </Link>
                               </li>
                               <li>

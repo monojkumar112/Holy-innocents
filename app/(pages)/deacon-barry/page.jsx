@@ -2,8 +2,7 @@ import React from "react";
 import Banner from "../../components/section/Banner";
 import Link from "next/link";
 export const metadata = {
-  title:
-    "Deacons at Holy Innocents'  - Holy Innocents' Catholic Church Orpington",
+  title: "Deacon Wayne du Preez'  - Holy Innocents' Catholic Church Orpington",
   description:
     "Welcome to Holy Innocents Catholic Church, a vibrant parish community dedicated to faith, worship, and service. Join us for Mass, events, and spiritual growth.",
   keywords:
@@ -14,7 +13,7 @@ export const metadata = {
 };
 const DeaconBarryPage = () => {
   const data = {
-    title: "Deacon Barry Chalkley",
+    title: "Deacon Wayne du Preez",
   };
   return (
     <>

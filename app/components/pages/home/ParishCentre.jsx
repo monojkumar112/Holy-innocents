@@ -19,14 +19,14 @@ const ParishCentre = () => {
                   activities.
                 </p>
                 <div className="parish-btn-group-wrap d-flex align-items-center gap-3">
-                  <div className="parish-btn-group">
+                  {/* <div className="parish-btn-group">
                     <a
                       href="mailto:victorvella@rcaos.org.uk"
                       className="custom-btn learn-more-btn"
                     >
                       Book the Centre
                     </a>
-                  </div>
+                  </div> */}
                   <div className="parish-btn-group">
                     <a
                       href="https://lowcosthalls.co.uk/location/holy-innocents-church-hall-orpington/"

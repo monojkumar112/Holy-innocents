@@ -58,7 +58,7 @@ const HeroSlider = () => {
         className="mySwiper"
       >
         {carousels.length > 0 ? (
-          carousels.map((carousel) => (
+          carousels.map((carousel, index) => (
             <SwiperSlide key={carousel.id}>
               <div className="slider-item-con">
                 <div className="sider-img">
@@ -85,16 +85,14 @@ const HeroSlider = () => {
                       "Join us for worship and community."}
                   </p>
 
+                  {/* 🔹 Client Feedback অনুযায়ী Button Logic */}
                   <div className="slider-item-btn">
-                    <Link href="/#contact" className="custom-btn join-us-btn">
-                      Join Us
-                    </Link>
-                    <Link
-                      href="/#event"
-                      className="custom-btn-alt mass-times-btn"
-                    >
-                      Mass Times
-                    </Link>
+                    {index === carousels.length - 1 ? (
+                      // 🔸 শেষ স্লাইডে শুধু "Join Us"
+                      <Link href="/#contact" className="custom-btn join-us-btn">
+                        Join Us
+                      </Link>
+                    ) : null}
                   </div>
                 </div>
               </div>

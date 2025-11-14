@@ -1,16 +1,15 @@
-'use client';
-import Image from 'next/image';
-import React, { useState } from 'react';
-
+"use client";
+import Image from "next/image";
+import React, { useState } from "react";
 
 const DonateFrom = () => {
   const [form, setForm] = useState({
-    first_name: '',
-    last_name: '',
-    email: '',
-    phone: '',
-    address: '',
-    amount: '',
+    first_name: "",
+    last_name: "",
+    email: "",
+    phone: "",
+    address: "",
+    amount: "",
   });
   const [loading, setLoading] = useState(false);
 
@@ -24,47 +23,53 @@ const DonateFrom = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!form.amount) return alert('Please enter or select an amount');
+    if (!form.amount) return alert("Please enter or select an amount");
     setLoading(true);
 
     try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/donate/checkout`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          first_name: form.first_name,
-          email: form.email,
-          phone: form.phone,
-          address: form.address,
-          amount: form.amount,
-        }),
-      });
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_BASE_URL}/api/donate/checkout`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            first_name: form.first_name,
+            email: form.email,
+            phone: form.phone,
+            address: form.address,
+            amount: form.amount,
+          }),
+        }
+      );
 
       const data = await res.json();
 
       if (data?.url) {
         window.location.href = data.url; // redirect to Stripe Checkout
       } else {
-        alert('Something went wrong!');
+        alert("Something went wrong!");
       }
     } catch (err) {
       console.error(err);
-      alert('Something went wrong!');
+      alert("Something went wrong!");
     } finally {
       setLoading(false);
     }
   };
 
-
   return (
-    <section className="donate-from cpb-6" data-aos="fade-up" data-aos-duration="3000">
+    <section
+      className="donate-from cpb-6"
+      data-aos="fade-up"
+      data-aos-duration="3000"
+    >
       <div className="container">
         <div className="donate-from-wrapper">
           <div className="donate-header">
             <h2 className="donate-from-title">Donate</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            {/* <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p> */}
           </div>
           <form onSubmit={handleSubmit} className="donate-form">
             <div className="donate-information">
@@ -109,14 +114,13 @@ const DonateFrom = () => {
                     required
                   />
                 </div>
-                <div className="col-md-6">
+                <div className="col-md-12">
                   <input
                     type="text"
                     name="address"
-                    placeholder="Your Address * "
+                    placeholder="Your Address (optional)"
                     className="donate-input"
                     onChange={handleChange}
-                    required
                   />
                 </div>
               </div>
@@ -130,7 +134,7 @@ const DonateFrom = () => {
                     type="text"
                     name="amount"
                     value={form.amount}
-                    placeholder="$20"
+                    placeholder="Enter Custom Amount (£)"
                     className="donate-input"
                     onChange={handleChange}
                   />
@@ -141,9 +145,11 @@ const DonateFrom = () => {
                       key={amt}
                       type="button"
                       onClick={() => handleAmountClick(amt)}
-                      className={`select-amount-btn ${form.amount == amt ? 'active' : ''}`}
+                      className={`select-amount-btn ${
+                        form.amount == amt ? "active" : ""
+                      }`}
                     >
-                      ${amt}
+                      £{amt}
                     </button>
                   ))}
                 </div>
@@ -151,7 +157,7 @@ const DonateFrom = () => {
             </div>
 
             <button className="custom-btn" type="submit" disabled={loading}>
-              {loading ? 'Processing...' : 'Donate Now'}
+              {loading ? "Processing..." : "Donate Now"}
             </button>
           </form>
         </div>

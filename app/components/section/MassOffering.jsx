@@ -1,5 +1,6 @@
 "use client";
 import axios from "axios";
+import Link from "next/link";
 import React, { useState } from "react";
 
 const MassOffering = () => {
@@ -14,7 +15,7 @@ const MassOffering = () => {
   });
   const [loading, setLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
-   const [successMessage, setSuccessMessage] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
   const intentions = [
     "RIP",
     "Well-Being",
@@ -62,8 +63,6 @@ const MassOffering = () => {
           setErrorMessage("Network error. Please check your connection.");
         }
       });
-      
-
   };
 
   return (
@@ -72,10 +71,6 @@ const MassOffering = () => {
         <div className="donate-from-wrapper">
           <div className="donate-header">
             <h2 className="donate-from-title">Mass Offering </h2>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry.
-            </p>
           </div>
           <form onSubmit={handleSubmit} className="donate-form">
             <div className="donate-information">
@@ -177,14 +172,14 @@ const MassOffering = () => {
                 </div>
                 <div className="col-md-6">
                   <div className="pay-online-btn-item">
-                    <a
-                      href="https://yourpaymentlink.com"
+                    <Link
+                      href="/donate"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="custom-btn-alt"
                     >
                       Pay Stipend Online
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>

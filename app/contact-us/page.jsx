@@ -347,7 +347,7 @@ const ContactUsPage = () => {
                       />
                     </div>
                     <div className="team-content">
-                      <h3>Jackie Low </h3>
+                      <h3> Aidan Twomey </h3>
                       <p>Parish </p>
                       <ul className="team-social-list">
                         <li>
@@ -385,7 +385,7 @@ const ContactUsPage = () => {
                       />
                     </div>
                     <div className="team-content">
-                      <h3>Aidan Twomey </h3>
+                      <h3>Jackie Low </h3>
                       <p>Parish </p>
                       <ul className="team-social-list">
                         <li>
