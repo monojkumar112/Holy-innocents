@@ -97,7 +97,7 @@ const NewsLetter = () => {
                 dangerouslySetInnerHTML={{
                   __html: newsletter?.description
                     ? newsletter.description
-                    : "Stay updated with the latest news and events from our parish community.",
+                    : null,
                 }}
               />
 
