@@ -40,7 +40,7 @@ const AdorationRoom = () => {
                         height={24}
                       />
                     </span>
-                    <p>The Eucharist is my highway to Heaven</p>
+                    <p>“The Eucharist is my highway to Heaven”</p>
                   </li>
                   <li>
                     <span>
