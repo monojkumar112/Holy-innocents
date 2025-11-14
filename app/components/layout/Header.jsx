@@ -324,7 +324,7 @@ const Header = () => {
                     href="#"
                     data-bs-toggle="dropdown"
                   >
-                    A parishioner&apos;s gospel reflection
+                    Prayer intentions
                   </a>
                   <div className="dropdown-menu shadow py-0">
                     <div className="mega-content container-fluid">
@@ -348,7 +348,7 @@ const Header = () => {
                                   href="/prayer-intentions"
                                   className="dropdown-item"
                                 >
-                                  Prayer intentions
+                                  Prayer and formation
                                 </Link>
                               </li>
                               {/* {loading ? (
@@ -386,11 +386,11 @@ const Header = () => {
                   </div>
                 </li>
 
-                <li className="nav-item">
+                {/* <li className="nav-item">
                   <Link className="nav-link active" href="/prayer">
                     Prayer and formation
                   </Link>
-                </li>
+                </li> */}
                 <li className="nav-item">
                   <Link className="nav-link active" href="/sacramental">
                     Sacramental life
