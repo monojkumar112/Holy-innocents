@@ -22,8 +22,8 @@ const NewHere = () => {
                 <h2 className="section-title">New Here?</h2>
                 <p>
                   We’re so glad you found us! Whether you’re new to the area,
-                  looking for a new church home, or just exploring faith, we
-                  welcome you with open arms.
+                  looking for a new parish to belong, or just exploring faith,
+                  we welcome you with open arms.
                 </p>
               </div>
             </div>
