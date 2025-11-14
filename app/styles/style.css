@@ -616,13 +616,12 @@ section.adoration-room {
   text-transform: capitalize;
 }
 
-.adoration-content p {
+.adoration-content .adoration-url-list p {
   color: #000;
   font-size: 18px;
   font-style: normal;
   font-weight: 600;
   line-height: 32px;
-  text-transform: capitalize;
 }
 
 ul.adoration-url-list {
