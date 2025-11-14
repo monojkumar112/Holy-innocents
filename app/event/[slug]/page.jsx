@@ -245,9 +245,9 @@ const EventsPage = ({ params }) => {
                     dangerouslySetInnerHTML={{ __html: blog?.content }}
                   />
                 </div>
-
-                <EventGallery blogImage={blog.images} />
-
+                {blog?.images?.length > 0 && (
+                  <EventGallery blogImage={blog.images} />
+                )}
                 {/* Pagination Buttons */}
                 <div className="d-flex event-pagination-item justify-content-between align-items-center mt-4 d-none">
                   <button
