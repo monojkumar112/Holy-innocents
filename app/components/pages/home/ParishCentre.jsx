@@ -18,6 +18,7 @@ const ParishCentre = () => {
                   A space for gatherings, community events, and parish
                   activities.
                 </p>
+                <p>Take a virtual tour for booking details</p>
                 <div className="parish-btn-group-wrap d-flex align-items-center gap-3">
                   {/* <div className="parish-btn-group">
                     <a

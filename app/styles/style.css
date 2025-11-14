@@ -689,8 +689,9 @@ ul.contact-us-list li p a:hover {
   font-style: normal;
   font-weight: 600;
   line-height: 32px;
-  text-transform: capitalize;
   padding-bottom: 20px;
+}
+.parish-btn-group-wrap {
 }
 
 .parish-btn-group {
