@@ -70,7 +70,7 @@ function InvolvedForm({ selectedMinistryId, selectedMinistry }) {
                   {selectedMinistry?.name}
                 </h2>
 
-                {/* <img
+                <img
                   src={
                     selectedMinistry?.photo ||
                     "/assets/images/ministry_banner_image.jpeg"
@@ -78,7 +78,7 @@ function InvolvedForm({ selectedMinistryId, selectedMinistry }) {
                   alt=""
                   className="mb-3 ministry_banner-img"
                   style={{ width: "100%", objectFit: "cover" }}
-                /> */}
+                />
 
                 <p>Email: {selectedMinistry?.email}</p>
                 <p>Phone: {selectedMinistry?.phone}</p>
@@ -144,7 +144,7 @@ function InvolvedForm({ selectedMinistryId, selectedMinistry }) {
                 </div>
                 <div className="mb-md-3 col-md-6">
                   <label htmlFor="address" className="form-label">
-                    Address 
+                    Address
                   </label>
                   <textarea
                     className="form-control"
