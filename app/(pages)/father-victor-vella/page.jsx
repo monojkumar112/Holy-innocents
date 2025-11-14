@@ -28,7 +28,7 @@ const fatherVictorVellapage = () => {
           >
             <div className="father-img">
               <Image
-                src={"/assets/images/new-here.png"}
+                src={"/assets/images/leader-ship/father.png"}
                 alt="Father Victor Vella"
                 width={1250}
                 height={743}
