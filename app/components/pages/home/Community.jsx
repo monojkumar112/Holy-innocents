@@ -15,7 +15,7 @@ const Community = () => {
             <div className="col-md-6">
               <div className="community-wrapper">
                 <h2 className="section-title">
-                  Looking To join a Community and Get Involved?
+                  Looking To join Our Community and Get Involved?
                 </h2>
                 <p>
                   Become a part of our vibrant parish community. Connect, grow,
