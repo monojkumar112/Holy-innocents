@@ -21,7 +21,7 @@ const MassEvent = () => {
           {/* Left Content */}
           <div className=" col-lg-6">
             <div className="mass-event-left">
-              <h1>Mass Times and Upcoming Events</h1>
+              <h1>Mass Times and Events</h1>
               <p>
                 Join us for Mass, socials, events, courses, and more. Take a
                 look at what&apos;s coming up.

@@ -402,12 +402,12 @@ const Header = () => {
                     Contact
                   </Link>
                 </li>
-                <li className="nav-item">
-                  <Link className="custom-btn" href="/donate">
-                    Donate{" "}
-                  </Link>
-                </li>
               </ul>
+              <div className="donate-btn-item">
+                <Link className="custom-btn" href="/donate">
+                  Donate{" "}
+                </Link>
+              </div>
             </div>
           </div>
         </nav>
