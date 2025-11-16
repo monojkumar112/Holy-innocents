@@ -13,16 +13,6 @@ const BookingMass = () => {
         <div className="container">
           <div className="row align-items-center">
             <div className="col-md-6">
-              <div className="booking-img">
-                <Image
-                  src={"/assets/images/mass.png"}
-                  width={636}
-                  height={636}
-                  alt="Mass"
-                />
-              </div>
-            </div>
-            <div className="col-md-6">
               <div className="booking-content">
                 <h2 className="section-title">Want To Offer A Mass?</h2>
                 <p>
@@ -37,6 +27,16 @@ const BookingMass = () => {
                     Book Now
                   </Link>
                 </div>
+              </div>
+            </div>
+            <div className="col-md-6">
+              <div className="booking-img">
+                <Image
+                  src={"/assets/images/mass.png"}
+                  width={636}
+                  height={636}
+                  alt="Mass"
+                />
               </div>
             </div>
           </div>
