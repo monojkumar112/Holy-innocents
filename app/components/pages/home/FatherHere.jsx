@@ -28,11 +28,11 @@ const FatherHere = () => {
                   Welcome to Our Parish
                 </h2>
                 <p>
-                  Thank you for visiting our website. We hope you enjoy
-                  exploring and discovering more about our vibrant, welcoming,
-                  and outward-looking parish community. We look forward to
+                  Thank you for visiting our website. I hope you enjoy exploring
+                  and discovering more about our vibrant, welcoming, and
+                  outward-looking parish community. I am looking forward to
                   meeting you in person and sharing in faith, fellowship, and
-                  community life together.
+                  community life together.
                 </p>
                 <p>
                   Father Victor Vella <br /> Parish Priest
