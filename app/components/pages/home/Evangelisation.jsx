@@ -15,7 +15,7 @@ const Evangelisation = () => {
             <div className="col-md-9">
               <div className="evangelisation-content">
                 <h2 className="section-title">
-                  Get Involved - Parish Evangelising Cells (PECs)
+                  Get Involved - Parish Evangelisation Cells (PECs)
                 </h2>
                 <h5>
                   At Holy Innocents’ we have embraced a specific form of
