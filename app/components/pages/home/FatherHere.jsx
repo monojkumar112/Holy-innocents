@@ -13,6 +13,16 @@ const FatherHere = () => {
         <div className="container">
           <div className="row align-items-center">
             <div className="col-md-6">
+              <div className="booking-img">
+                <Image
+                  src={"/assets/images/father.png"}
+                  width={636}
+                  height={636}
+                  alt="Mass"
+                />
+              </div>
+            </div>
+            <div className="col-md-6">
               <div className="booking-content">
                 <h2 className="section-title father-title-name">
                   Welcome to Our Parish
@@ -27,16 +37,6 @@ const FatherHere = () => {
                 <p>
                   Father Victor Vella <br /> Parish Priest
                 </p>
-              </div>
-            </div>
-            <div className="col-md-6">
-              <div className="booking-img">
-                <Image
-                  src={"/assets/images/father.png"}
-                  width={636}
-                  height={636}
-                  alt="Mass"
-                />
               </div>
             </div>
           </div>
