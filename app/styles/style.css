@@ -78,6 +78,7 @@ section.hero-section {
   gap: 20px;
   width: 70%;
 }
+
 .slider-content .text-white {
   font-size: 23px;
 }
@@ -691,8 +692,8 @@ ul.contact-us-list li p a:hover {
   line-height: 32px;
   padding-bottom: 20px;
 }
-.parish-btn-group-wrap {
-}
+
+.parish-btn-group-wrap {}
 
 .parish-btn-group {
   display: flex;
@@ -2013,8 +2014,7 @@ li.section-content-list p a {
   margin-top: 20px;
 }
 
-.row {
-}
+.row {}
 
 .from-check-box-list {
   display: flex;
@@ -2430,4 +2430,8 @@ section.event-section {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.father-title-name {
+  font-family: "Playball", cursive;
 }

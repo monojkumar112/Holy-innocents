@@ -12,8 +12,10 @@ import ParishCentre from "./components/pages/home/ParishCentre";
 import HowToFind from "./components/pages/home/HowToFind";
 import Touch from "./components/pages/home/Touch";
 import ContactUs from "./components/pages/home/ContactUs";
-import NewHere from "./components/pages/home/NewHere";
+
 import Evangelisation from "./components/pages/home/Evangelisation";
+import NewHere from "./components/pages/home/NewHere";
+import FatherHere from "./components/pages/home/FatherHere";
 
 export const metadata = {
   title: "Holy Innocents' Catholic Church Orpington - Home",
@@ -30,6 +32,7 @@ export default function Home() {
   return (
     <>
       <HeroSlider />
+      <FatherHere />
       <MassEvent />
       <BookingMass />
       <NewsLetter />
