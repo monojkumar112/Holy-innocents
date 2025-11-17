@@ -5,6 +5,7 @@ import { IoMdClose } from "react-icons/io";
 import axios from "axios";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
+import Link from "next/link";
 const NewsLetter = () => {
   const [newsletter, setNewsletter] = useState(null);
   const [showModal, setShowModal] = useState(false);
@@ -141,6 +142,17 @@ const NewsLetter = () => {
                   >
                     Subscribe
                   </button>
+                )}
+
+                {loadingData ? (
+                  <Skeleton width={120} height={40} />
+                ) : (
+                  <Link
+                    href={"/all-newsletter"}
+                    className="custom-btn download-btn"
+                  >
+                    Archived
+                  </Link>
                 )}
               </div>
             </div>
