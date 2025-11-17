@@ -98,7 +98,7 @@ const EventSection = () => {
       <div className="container">
         <div className="row">
           {blogs.map((item) => (
-            <div className="col-lg-4 col-md-6" key={item.id}>
+            <div className="col-lg-4 col-md-6 mb-4" key={item.id}>
               <div className="event-card">
                 <div className="event-image">
                   <img src={item.image} alt={item.title} />
