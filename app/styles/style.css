@@ -2127,6 +2127,7 @@ section.event-page {
   font-weight: 600;
 }
 
+
 .event-right-side h4 {
   font-size: 24px;
   line-height: 150%;
@@ -2514,4 +2515,12 @@ section.event-section {
 .up-coming-img:hover img {
   transform: scale(1.08);
   filter: brightness(0.95);
+}
+
+.news-event-card {
+  height: 100%;
+}
+
+.news-event-card .mass-event-btn-group {
+  justify-content: flex-start;
 }

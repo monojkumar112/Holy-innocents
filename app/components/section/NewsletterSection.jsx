@@ -1,31 +1,32 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState, useEffect } from "react";
-import { IoMdClose } from "react-icons/io";
-import axios from "axios";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
-const NewsLetter = () => {
-  const [newsletter, setNewsletter] = useState(null);
-  const [showModal, setShowModal] = useState(false);
-  const [formData, setFormData] = useState({
-    email: "",
-  });
+import axios from "axios";
+import { IoMdClose } from "react-icons/io";
+
+const NewsletterSection = () => {
+  const [newsletter, setNewsletter] = useState([]);
+  const [formData, setFormData] = useState({ email: "" });
   const [message, setMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [loading, setLoading] = useState(false);
-  const [loadingData, setLoadingData] = useState(true);
+  const [isLoading, setIsLoading] = useState(true); // <-- default true
+  const [showModal, setShowModal] = useState(false);
+
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
   const fetchNewsletter = async () => {
     try {
-      const response = await fetch(`${baseUrl}/api/newsletter`);
+      const response = await fetch(`${baseUrl}/api/newsletter/all`);
       const data = await response.json();
       setNewsletter(data.data);
     } catch (error) {
-      console.error("Fetch Error:", error);
+      console.error("Error fetching:", error);
     } finally {
-      setLoadingData(false);
+      setIsLoading(false); // <-- data loaded
     }
   };
 
@@ -36,10 +37,7 @@ const NewsLetter = () => {
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
-    // Clear error message when user starts typing
-    if (errorMessage) {
-      setErrorMessage("");
-    }
+    setErrorMessage("");
   };
 
   const handleSubmit = async (e) => {
@@ -61,111 +59,102 @@ const NewsLetter = () => {
       }
     } catch (err) {
       if (err.response) {
-        // Server responded with error status
         const errorData = err.response.data;
 
-        // Handle validation errors (Laravel format)
         if (err.response.status === 422 && errorData.errors) {
           const validationErrors = Object.values(errorData.errors).flat();
           setErrorMessage(validationErrors.join(" "));
         } else {
-          // Other server errors
           setErrorMessage(
-            errorData.message || "Something went wrong. Please try again."
+            errorData.message || "Something went wrong. Try again."
           );
         }
       } else if (err.request) {
-        // Request made but no response received
-        setErrorMessage("Network error. Please check your connection.");
+        setErrorMessage("Network error. Check your connection.");
       } else {
-        // Something else happened
-        setErrorMessage("An unexpected error occurred. Please try again.");
+        setErrorMessage("Unexpected error occurred.");
       }
     } finally {
       setLoading(false);
     }
   };
 
-  return (
-    <>
-      <section
-        className="newsletter"
-        data-aos="fade-up"
-        data-aos-duration="3000"
-      >
+  // -------------------------------------------
+  // SKELETON LOADER SECTION
+  // -------------------------------------------
+  if (isLoading) {
+    return (
+      <section className="event-section">
         <div className="container">
-          <div className="newsletter-wrapper">
-            <div className="newsletter-left">
-              {/* Title */}
-              <h2 className="section-title">
-                {loadingData ? (
-                  <Skeleton width={250} height={30} />
-                ) : (
-                  newsletter?.title || "Current Newsletter"
-                )}
-              </h2>
-
-              {/* Description */}
-              {loadingData ? (
-                <div>
-                  <Skeleton count={5} />
-                </div>
-              ) : (
-                <div
-                  dangerouslySetInnerHTML={{
-                    __html: newsletter?.description || "",
-                  }}
-                />
-              )}
-
-              {/* Buttons */}
-              <div className="mass-event-btn-group">
-                {loadingData ? (
-                  <Skeleton width={120} height={40} />
-                ) : (
-                  <a
-                    target="_blank"
-                    href={newsletter?.file_link || "#"}
-                    className="custom-btn download-btn"
-                  >
-                    Download
-                  </a>
-                )}
-
-                {loadingData ? (
-                  <Skeleton width={120} height={40} />
-                ) : (
-                  <button
-                    className="custom-btn-alt subscribe-btn"
-                    onClick={() => setShowModal(true)}
-                  >
-                    Subscribe
-                  </button>
-                )}
+          <div className="row">
+            {[1, 2, 3, 4, 5, 6].map((n) => (
+              <div className="col-lg-4 col-md-6 mb-4" key={n}>
+                <Skeleton height={350} borderRadius={12} />
               </div>
-            </div>
-
-            {/* Right Side Image */}
-            <div className="newsletter-right">
-              {loadingData ? (
-                <Skeleton width={290} height={270} />
-              ) : (
-                <Image
-                  src={
-                    newsletter?.image
-                      ? newsletter.image
-                      : "/assets/images/news.png"
-                  }
-                  width={290}
-                  height={270}
-                  alt="Newsletter"
-                />
-              )}
-            </div>
+            ))}
           </div>
         </div>
       </section>
+    );
+  }
 
+  return (
+    <>
+      <section className="event-section">
+        <div className="container">
+          <div className="row">
+            {newsletter.map((item) => (
+              <div className="col-lg-4 col-md-6 mb-4" key={item.id}>
+                <div className="event-card news-event-card">
+                  {/* Image */}
+                  <div className="event-image">
+                    <Image
+                      src={item.image ? item.image : "/assets/images/news.png"}
+                      width={350}
+                      height={250}
+                      alt={item.title}
+                    />
+                  </div>
+
+                  {/* Info */}
+                  <div className="event-info">
+                    <Link
+                      href={`/newsletter/${item.slug}`}
+                      className="event-title"
+                    >
+                      {item.title ?? "No title"}
+                    </Link>
+
+                    <div
+                      dangerouslySetInnerHTML={{
+                        __html: item.description ? item.description : "",
+                      }}
+                    />
+
+                    {/* Buttons */}
+                    <div className="mass-event-btn-group">
+                      <a
+                        target="_blank"
+                        href={item.file_link ? item.file_link : "#"}
+                        className="custom-btn"
+                      >
+                        Download
+                      </a>
+
+                      <button
+                        className="custom-btn-alt subscribe-btn"
+                        onClick={() => setShowModal(true)}
+                      >
+                        Subscribe
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
       {/* Modal */}
       {showModal && (
         <div className="modal-overlay">
@@ -286,4 +275,4 @@ const NewsLetter = () => {
   );
 };
 
-export default NewsLetter;
+export default NewsletterSection;
