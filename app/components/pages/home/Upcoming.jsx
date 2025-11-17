@@ -4,20 +4,29 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
+
 const Upcoming = () => {
+  const [event, setEvent] = useState(null);
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
   const [recentPosts, setRecentPosts] = useState([]);
   const [loading, setLoading] = useState(true);
-  // Format date function
-  const formatEventDate = (dateString) => {
-    if (!dateString) return "";
-    const date = new Date(dateString);
-    return date.toLocaleDateString("en-GB", {
-      day: "numeric",
-      month: "long",
-      year: "numeric",
-    });
-  };
+  const [imageLoaded, setImageLoaded] = useState(false);
+  // Fetch upcoming event
+  useEffect(() => {
+    fetch(`${baseUrl}/api/events`)
+      .then((res) => res.json())
+      .then((data) => {
+        const events = data.events;
+        const latestEvent = events[events.length - 1];
+        setEvent(latestEvent);
+      })
+      .catch((err) => console.log(err));
+  }, []);
+
+  // Fetch recent posts
+  useEffect(() => {
+    fetchRecentPosts();
+  }, []);
 
   const fetchRecentPosts = async () => {
     try {
@@ -31,13 +40,22 @@ const Upcoming = () => {
     }
   };
 
-  // Fetch data when component loads
-  useEffect(() => {
-    fetchRecentPosts();
-  }, []);
+  const formatEventDate = (dateString) => {
+    if (!dateString) return "";
+    const date = new Date(dateString);
+    return date.toLocaleDateString("en-GB", {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+    });
+  };
+
+  if (!event) {
+    return <p></p>;
+  }
 
   return (
-    <section className="up-coming ">
+    <section className="up-coming">
       <div className="container">
         <div className="row">
           <div className="col-lg-6">
@@ -47,8 +65,8 @@ const Upcoming = () => {
                 <Image
                   height={525}
                   width={657}
-                  src={"/assets/images/up-coming-img.png"}
-                  alt="up coming img"
+                  src={event.banner_image}
+                  alt={event.title}
                 />
               </div>
             </div>
@@ -58,8 +76,7 @@ const Upcoming = () => {
             <div className="event-right-side up-coming-right">
               <ul>
                 {loading
-                  ? //  Skeleton Loader (4 items)
-                    [...Array(4)].map((_, index) => (
+                  ? [...Array(4)].map((_, index) => (
                       <li key={index}>
                         <div className="event-card-list">
                           <div className="event-card-img">
@@ -76,8 +93,7 @@ const Upcoming = () => {
                         </div>
                       </li>
                     ))
-                  : // Actual Data
-                    recentPosts.map((event) => (
+                  : recentPosts.map((event) => (
                       <li key={event.id}>
                         <Link href={`/event/${event?.slug}`}>
                           <div className="event-card-list">

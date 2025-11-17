@@ -2117,6 +2117,11 @@ section.event-page {
   overflow-y: auto;
 }
 
+.up-coming-right ul {
+  max-height: 453px;
+  padding-bottom: 10px;
+}
+
 .event-right-side {
   width: 100%;
 }
