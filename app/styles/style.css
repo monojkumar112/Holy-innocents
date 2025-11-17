@@ -148,11 +148,21 @@ section.hero-section {
 
 .team-img {
   width: 100%;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  border-radius: 20px 20px 0 0;
 }
 
 .team-img img {
   width: 100%;
   border-radius: 20px 20px 0 0;
+  transition: transform 0.8s ease, filter 0.5s ease;
+}
+
+.team-item:hover img {
+  transform: scale(1.08);
+  filter: brightness(0.95)
 }
 
 .team-content {
@@ -351,7 +361,7 @@ ul.team-social-list li a {
 
 .notice-left h2 {
   color: var(--white-color);
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 700;
   line-height: 150%;
   /* 240% */
@@ -365,7 +375,7 @@ ul.team-social-list li a {
 }
 
 .parish-content p {
-  font-size: 19px;
+  font-size: 16px;
   font-weight: 600;
   line-height: 25px;
   text-transform: capitalize;
@@ -379,6 +389,7 @@ ul.team-social-list li a {
 section.new-here {
   background: linear-gradient(257deg, #b28744 0%, #4c3a1d 111.05%);
   padding: 80px 0;
+  margin-top: 100px;
 }
 
 .new-image-left img {
@@ -556,6 +567,7 @@ section.new-here {
 
 .booking-img {
   width: 100%;
+
 }
 
 .booking-img img {
@@ -563,7 +575,9 @@ section.new-here {
   border-radius: 50%;
   padding: 25px;
   border: 5px solid var(--primary-color);
+  transition: transform 0.8s ease, filter 0.5s ease;
 }
+
 
 .booking-content .section-title {
   color: var(--black-color);
@@ -589,11 +603,21 @@ section.adoration-room {
 
 .adoration-img {
   width: 100%;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  border-radius: 10px;
 }
 
 .adoration-img img {
   width: 100%;
   border-radius: 10px;
+  transition: transform 0.8s ease, filter 0.5s ease;
+}
+
+.adoration-img:hover img {
+  transform: scale(1.08);
+  filter: brightness(0.95);
 }
 
 .adoration-content h2 {
@@ -716,10 +740,21 @@ section.how-to-find {
 
 .how-to-find-img {
   width: 100%;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  border-radius: 20px;
 }
 
 .how-to-find-img img {
+  transition: transform 0.8s ease,
+    filter 0.5s ease;
   width: 100%;
+}
+
+.how-to-find-img:hover img {
+  transform: scale(1.08);
+  filter: brightness(0.95);
 }
 
 .how-to-find-wrapper .section-title {
@@ -873,9 +908,24 @@ ul.contact-us-list li p {
   padding-bottom: 20px;
 }
 
+.parish-img {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
 .parish-img img {
   width: 100%;
+  transition: transform 0.8s ease,
+    filter 0.5s ease;
   border-radius: 20px;
+}
+
+.parish-img:hover img {
+  transform: scale(1.08);
+  filter: brightness(0.95);
 }
 
 /* evangelisation  */
@@ -2121,6 +2171,7 @@ section.event-page {
   text-overflow: ellipsis;
   transition: 0.4s;
   height: auto;
+  margin-bottom: 0px;
   color: var(--black-color);
   text-transform: capitalize;
 }
@@ -2434,4 +2485,33 @@ section.event-section {
 
 .father-title-name {
   font-family: "Playball", cursive;
+}
+
+.up-coming {
+  padding: 80px 0;
+  background: #f5f5f5;
+  margin-bottom: 100px;
+}
+
+.up-coming-img {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.up-coming-img img {
+  width: 100%;
+  border-radius: 20px;
+  transition: transform 0.8s ease, filter 0.5s ease;
+}
+
+.up-coming-right {
+  margin-top: 100px;
+}
+
+.up-coming-img:hover img {
+  transform: scale(1.08);
+  filter: brightness(0.95);
 }

@@ -248,9 +248,11 @@
     padding-top: 20px;
     padding-bottom: 30px;
   }
+
   .modal-gallery-content {
     width: 90%;
   }
+
   .parish-contentss {
     margin-bottom: 50px;
   }
@@ -260,10 +262,12 @@
   section.contact-us {
     width: 100%;
   }
+
   .event-gallery-image {
     grid-template-columns: 1fr;
     gap: 15px;
   }
+
   .evangelisation-content h5 {
     font-size: 18px;
   }
@@ -292,6 +296,7 @@
 
   .mass-event-right iframe {
     width: 100%;
+    height: 500px;
   }
 
   .choose-donation-wrap {
@@ -561,9 +566,11 @@
   .slider-content h1 {
     font-size: 24px;
   }
+
   .slider-content .text-white {
     font-size: 18px;
   }
+
   .adoration-btn-group {
     display: flex;
     align-items: flex-start;
