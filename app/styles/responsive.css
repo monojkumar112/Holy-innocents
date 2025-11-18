@@ -102,7 +102,7 @@
   }
 
   .evangelisation-img {
-    margin-top: 30px;
+    margin-top: 50px;
   }
 
   .minitries-header .section-title {
@@ -164,6 +164,10 @@
 
   .section-title {
     font-size: 40px;
+  }
+
+  .booking-img {
+    padding-top: 50px;
   }
 
   .booking-img img {
@@ -255,6 +259,10 @@
 
   .parish-contentss {
     margin-bottom: 50px;
+  }
+
+  .mass-event-left {
+    padding-bottom: 50px;
   }
 }
 
@@ -497,7 +505,7 @@
   }
 
   .new-here-right {
-    margin-top: 30px;
+    margin-top: 40px;
   }
 
   .parish-content p {
@@ -561,6 +569,30 @@
   .notice-left {
     margin-bottom: 30px;
     height: fit-content;
+    padding: 16px;
+    border-radius: 8px;
+  }
+
+  .notice-left h2 {
+    font-size: 23px;
+  }
+
+  section.mass-event {
+    padding-bottom: 10px;
+  }
+
+  .up-coming-right {
+    margin-top: 0px;
+  }
+
+  .up-coming {
+    padding: 35px 0 50px 0;
+    margin-bottom: 60px;
+  }
+
+  .parish-content {
+    padding: 15px;
+    border-radius: 8px;
   }
 
   .slider-content h1 {
@@ -587,6 +619,14 @@
     border-radius: 10px;
   }
 
+  .how-to-find-wrapper p {
+    font-size: 18px;
+  }
+
+  .how-to-find-wrapper h6 {
+    font-size: 18px;
+  }
+
   .adoration-content {
     margin-top: 40px;
   }
@@ -608,7 +648,7 @@
   }
 
   .community-img {
-    margin-top: 30px;
+    margin-top: 50px;
     width: 100%;
     height: auto;
   }
