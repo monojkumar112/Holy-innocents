@@ -6,7 +6,7 @@ const FatherHere = () => {
   return (
     <>
       <section
-        className="booking-mass cpt-6"
+        className="booking-mass cpt-6 cpb-6"
         data-aos="fade-up"
         data-aos-duration="3000"
       >
