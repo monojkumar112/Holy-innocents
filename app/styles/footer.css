@@ -59,6 +59,10 @@ ul.footer-link-list li a:hover {
     width: 90%;
 }
 
+.footer-bottom p span a {
+    color: var(--primary-color);
+}
+
 .footer-social h3 {
     color: #FFF;
     text-align: center;

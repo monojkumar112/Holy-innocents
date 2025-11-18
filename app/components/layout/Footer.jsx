@@ -139,7 +139,32 @@ const Footer = () => {
             </div>
           </div>
           <div className="footer-bottom">
-            <p>© 2025 All Rights Reserved</p>
+            <div>
+              <p>© 2025 All Rights Reserved</p>
+              <p className="pt-2">
+                Design And Developed By{" "}
+                <span>
+                  <a
+                    href="https://www.womenindigital.net"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Women In Digital
+                  </a>
+                </span>{" "}
+                |{" "}
+                <span>
+                  <a
+                    href="https://luminadev.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Lumina Dev
+                  </a>
+                </span>{" "}
+              </p>
+            </div>
+
             <div className="footer-social">
               <h3>Follow Link</h3>
               <div className="footer-social-media">

@@ -34,9 +34,9 @@ export default function Home() {
     <>
       <HeroSlider />
       <FatherHere />
-      <NewsLetter />
       <MassEvent />
       <Upcoming />
+      <NewsLetter />
       <BookingMass />
       <NewHere />
       <Team />
