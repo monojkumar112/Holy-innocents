@@ -331,10 +331,15 @@ const Header = () => {
                       <div className="row">
                         <div className="col-12 col-md-6">
                           <div className="pt-3 ps-3 ps-md-4">
-                            <h6>
-                              <strong>Prayer Intentions</strong>
-                            </h6>
                             <ul className="pt-2 pt-md-3">
+                              <li>
+                                <Link
+                                  href="/prayer-intentions"
+                                  className="dropdown-item"
+                                >
+                                  Prayer Intentions
+                                </Link>
+                              </li>
                               <li>
                                 <Link
                                   href="/reflection"
@@ -344,10 +349,7 @@ const Header = () => {
                                 </Link>
                               </li>
                               <li>
-                                <Link
-                                  href="/prayer-intentions"
-                                  className="dropdown-item"
-                                >
+                                <Link href="/prayer" className="dropdown-item">
                                   Prayer and Formation
                                 </Link>
                               </li>
