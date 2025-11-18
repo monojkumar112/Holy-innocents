@@ -9,7 +9,7 @@ const nextConfig = {
       // },
       {
         protocol: "https",
-        hostname: "holyinnocentsorpington.com",
+        hostname: "admin.holyinnocentsorpington.com",
         port: "",
         pathname: "/**",
       },
