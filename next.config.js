@@ -9,7 +9,7 @@ const nextConfig = {
       // },
       {
         protocol: "https",
-        hostname: "admin.buytiq.store",
+        hostname: "holyinnocentsorpington.com",
         port: "",
         pathname: "/**",
       },
