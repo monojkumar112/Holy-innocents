@@ -35,10 +35,10 @@ export default function Home() {
       <HeroSlider />
       <FatherHere />
       <MassEvent />
-      <BookingMass />
+
       <Upcoming />
       <NewsLetter />
-
+      <BookingMass />
       <NewHere />
       <Team />
       <Community />
