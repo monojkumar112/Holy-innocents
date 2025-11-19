@@ -44,7 +44,39 @@ const Team = () => {
     fetchTeam();
   }, [baseUrl, fetchTeam]);
 
+  //call Our Clergy Team
+  const [teamContent, setTeamContent] = useState({
+    title: "Our Clergy Team",
+    description:
+      "Our leadership team is dedicated to serving our community and fostering a welcoming environment for all.",
+  });
+
+  const fetchTeamContent = useCallback(async () => {
+    if (!baseUrl) return;
+    try {
+      const res = await fetch(`${baseUrl}/api/team-content`);
+      const json = await res.json();
+
+      // Support both { data: { title, description } } and direct { title, description }
+      const payload = json?.data ?? json;
+      setTeamContent({
+        title: payload?.title ?? teamContent.title,
+        description: payload?.description ?? teamContent.description,
+      });
+    } catch (err) {
+      console.error("Error fetching team content:", err);
+    }
+  }, [baseUrl, teamContent.title, teamContent.description]);
+
+  React.useEffect(() => {
+    if (!baseUrl) return;
+    fetchTeamContent();
+  }, [baseUrl, fetchTeamContent]);
+
+
+
   console.log("Team", team);
+  console.log("team content", teamContent);
   return (
     <>
       {/* <!-- ================== Our Team ================ --> */}
@@ -55,10 +87,9 @@ const Team = () => {
       >
         <div className="container">
           <div className="team-section-title">
-            <h2 className="section-title">Our Clergy Team</h2>
+            <h2 className="section-title">{teamContent?.title}</h2>
             <p>
-              Our leadership team is dedicated to serving our community and
-              fostering a welcoming environment for all.
+              {teamContent?.description}
             </p>
           </div>
           <div className="team-wrapper">
