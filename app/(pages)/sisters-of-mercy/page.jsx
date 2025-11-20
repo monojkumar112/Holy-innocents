@@ -14,7 +14,7 @@ export const metadata = {
 };
 const SistersOfMercypage = () => {
   const data = {
-    title: "Sisters of Mercy at St. Anne&apos;s Convent",
+    title: "Sisters of Mercy at St. Anne's Convent",
   };
   return (
     <>
