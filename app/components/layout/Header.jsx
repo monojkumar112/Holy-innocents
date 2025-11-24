@@ -112,7 +112,26 @@ const Header = () => {
                                   Leadership and co-responsibility
                                 </Link>
                               </li>
-                              <li>
+
+                              {loading ? (
+                                <li>
+                                  <span className="dropdown-item text-muted">
+                                    Loading...
+                                  </span>
+                                </li>
+                              ) : aboutPages.length > 0 ? (
+                                aboutPages.map((page) => (
+                                  <li key={page.id}>
+                                    <Link
+                                      href={`/about-us/${page.slug}`}
+                                      className="dropdown-item"
+                                    >
+                                      {page.page_title}
+                                    </Link>
+                                  </li>
+                                ))
+                              ) : null}
+                              {/* <li>
                                 <Link
                                   href="/father-victor-vella"
                                   className="dropdown-item"
@@ -165,7 +184,7 @@ const Header = () => {
                                 >
                                   Brief history of our parish
                                 </Link>
-                              </li>
+                              </li> */}
                             </ul>
                           </div>
                         </div>
@@ -211,6 +230,29 @@ const Header = () => {
                                 </Link>
                               </li>
                               <li>
+                                <Link href="/event" className="dropdown-item">
+                                  Recent events
+                                </Link>
+                              </li>
+                              {loading ? (
+                                <li>
+                                  <span className="dropdown-item text-muted">
+                                    Loading...
+                                  </span>
+                                </li>
+                              ) : fellowshipPages.length > 0 ? (
+                                fellowshipPages.map((page) => (
+                                  <li key={page.id}>
+                                    <Link
+                                      href={`/fellowship/${page.slug}`}
+                                      className="dropdown-item"
+                                    >
+                                      {page.page_title}
+                                    </Link>
+                                  </li>
+                                ))
+                              ) : null}
+                              {/* <li>
                                 <Link
                                   href="/getting-involved"
                                   className="dropdown-item"
@@ -276,7 +318,7 @@ const Header = () => {
                                 >
                                   Our social action
                                 </Link>
-                              </li>
+                              </li> */}
                               {/* {loading ? (
                               <li>
                                 <span className="dropdown-item text-muted">
@@ -332,14 +374,24 @@ const Header = () => {
                         <div className="col-12 col-md-6">
                           <div className="pt-3 ps-3 ps-md-4">
                             <ul className="pt-2 pt-md-3">
-                              <li>
-                                <Link
-                                  href="/prayer-intentions"
-                                  className="dropdown-item"
-                                >
-                                  Prayer Intentions
-                                </Link>
-                              </li>
+                              {loading ? (
+                                <li>
+                                  <span className="dropdown-item text-muted">
+                                    Loading...
+                                  </span>
+                                </li>
+                              ) : reflectionPages.length > 0 ? (
+                                reflectionPages.map((page) => (
+                                  <li key={page.id}>
+                                    <Link
+                                      href={`/intentions/${page.slug}`}
+                                      className="dropdown-item"
+                                    >
+                                      {page.page_title}
+                                    </Link>
+                                  </li>
+                                ))
+                              ) : null}
                               <li>
                                 <Link
                                   href="/reflection"
@@ -353,24 +405,14 @@ const Header = () => {
                                   Prayer and Formation
                                 </Link>
                               </li>
-                              {/* {loading ? (
-                              <li>
-                                <span className="dropdown-item text-muted">
-                                  Loading...
-                                </span>
-                              </li>
-                            ) : reflectionPages.length > 0 ? (
-                              reflectionPages.map((page) => (
-                                <li key={page.id}>
-                                  <Link
-                                    href={`/about-us/${page.slug}`}
-                                    className="dropdown-item"
-                                  >
-                                    {page.page_title}
-                                  </Link>
-                                </li>
-                              ))
-                            ) : null} */}
+                              {/* <li>
+                                <Link
+                                  href="/prayer-intentions"
+                                  className="dropdown-item"
+                                >
+                                  Prayer Intentions
+                                </Link>
+                              </li> */}
                             </ul>
                           </div>
                         </div>
