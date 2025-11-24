@@ -264,6 +264,12 @@
   .mass-event-left {
     padding-bottom: 50px;
   }
+  .mass-event-right-iframe {
+    height:auto;
+  }
+  .mass-event{
+    padding-top: 20px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -271,6 +277,9 @@
     width: 100%;
   }
 
+  .mass-event-left p{
+    font-size: 18px;
+  }
   .event-gallery-image {
     grid-template-columns: 1fr;
     gap: 15px;

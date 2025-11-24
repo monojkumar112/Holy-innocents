@@ -1,124 +1,303 @@
 "use client";
 import Image from "next/image";
-import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
+import { CiCalendar } from "react-icons/ci";
+import { IoMdTime } from "react-icons/io";
+import { LuMapPin } from "react-icons/lu";
+import Link from "next/link";
 
 const Upcoming = () => {
-  const [event, setEvent] = useState(null);
+  const [allEvents, setAllEvents] = useState([]);
+  const [latestEvent, setLatestEvent] = useState(null);
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
-  const [recentPosts, setRecentPosts] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [imageLoaded, setImageLoaded] = useState(false);
-  // Fetch upcoming event
-  useEffect(() => {
-    fetch(`${baseUrl}/api/events`)
-      .then((res) => res.json())
-      .then((data) => {
-        const events = data.events;
-        const latestEvent = events[events.length - 1];
-        setEvent(latestEvent);
-      })
-      .catch((err) => console.log(err));
-  }, []);
+  const scrollContainerRef = useRef(null);
 
-  // Fetch recent posts
+  // Fetch all events
   useEffect(() => {
-    fetchRecentPosts();
-  }, []);
+    const fetchEvents = async () => {
+      try {
+        setLoading(true);
+        const response = await fetch(`${baseUrl}/api/events`);
+        const data = await response.json();
+        
+        // Handle different API response structures
+        // Paginated: { data: [...], next_page_url: ... }
+        // Non-paginated: { events: [...] }
+        const events = data?.data || data?.events || [];
+        
+        console.log("Upcoming - API Response:", data);
+        console.log("Upcoming - Events Data:", events);
+        console.log("Upcoming - Events Count:", events.length);
+        
+        // Sort events by start_date (most recent first)
+        const sortedEvents = events.sort((a, b) => {
+          const dateA = new Date(a.start_date || 0);
+          const dateB = new Date(b.start_date || 0);
+          return dateB - dateA;
+        });
+        
+        setAllEvents(sortedEvents);
+        
+        // Get the latest event (first one after sorting)
+        if (sortedEvents.length > 0) {
+          setLatestEvent(sortedEvents[0]);
+        }
+      } catch (err) {
+        console.error("Error fetching events:", err);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-  const fetchRecentPosts = async () => {
-    try {
-      const response = await fetch(`${baseUrl}/api/recent-blog-posts`);
-      const data = await response.json();
-      setRecentPosts(data);
-    } catch (error) {
-      console.error("Error fetching recent posts:", error);
-    } finally {
-      setLoading(false);
+    if (baseUrl) {
+      fetchEvents();
     }
-  };
+  }, [baseUrl]);
 
-  const formatEventDate = (dateString) => {
-    if (!dateString) return "";
-    const date = new Date(dateString);
-    return date.toLocaleDateString("en-GB", {
-      day: "numeric",
-      month: "long",
-      year: "numeric",
-    });
-  };
+  // Marquee animation will be handled by CSS
 
-  if (!event) {
-    return <p></p>;
+  if (loading) {
+    return (
+      <section className="up-coming">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-6">
+              <Skeleton height={525} />
+            </div>
+            <div className="col-md-6 col-lg-6">
+              <Skeleton count={5} height={100} />
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  if (!latestEvent && allEvents.length === 0) {
+    return null;
   }
 
   return (
     <section className="up-coming">
       <div className="container">
         <div className="row">
+          {/* Left Side - Latest Event Banner Image */}
           <div className="col-lg-6">
             <div className="up-coming-left mass-event-left">
               <h1>Upcoming Events</h1>
-              <div className="up-coming-img">
-                <Image
-                  height={525}
-                  width={657}
-                  src={event.banner_image}
-                  alt={event.title}
-                />
-              </div>
+              {latestEvent && (
+                <div className="up-coming-img">
+                  <Image
+                    height={525}
+                    width={657}
+                    src={
+                      latestEvent.banner_image || "/assets/images/event-1.png"
+                    }
+                    alt={latestEvent.title || "Latest Event"}
+                  />
+                </div>
+              )}
             </div>
           </div>
 
-          <div className="col-lg-6">
-            <div className="event-right-side up-coming-right">
-              <ul>
-                {loading
-                  ? [...Array(4)].map((_, index) => (
-                      <li key={index}>
-                        <div className="event-card-list">
-                          <div className="event-card-img">
-                            <Skeleton height={60} width={100} />
-                          </div>
-                          <div className="event-card-title">
-                            <h5>
-                              <Skeleton width={180} />
-                            </h5>
-                            <p className="event-card-date">
-                              <Skeleton width={120} />
-                            </p>
-                          </div>
-                        </div>
-                      </li>
-                    ))
-                  : recentPosts.map((event) => (
-                      <li key={event.id}>
-                        <Link href={`/event/${event?.slug}`}>
-                          <div className="event-card-list">
-                            <div className="event-card-img">
-                              <img src={event?.image} alt={event?.title} />
+          {/* Right Side - All Events List */}
+          <div className="col-md-6 col-lg-6">
+            <div className="mass-event-right">
+              <div className="marquee-container">
+                <ul
+                  ref={scrollContainerRef}
+                  className={` ${allEvents.length >= 3 ? "marquee-track" : ""}`}
+                  style={{
+                    animationDuration:
+                      allEvents.length >= 3
+                        ? `${Math.max(allEvents.length, 5) * 3}s`
+                        : "none",
+                  }}
+                >
+                  {allEvents.length > 0 ? (
+                    <>
+                      {/* First set of events */}
+                      {allEvents.map((event) => (
+                        <li key={event.id}>
+                          <div className="mass-event-item">
+                            <div className="mass-event-contnet-item">
+                              <h4>{event.title ? event.title : "N/A"}</h4>
+                              <div className="mass-event-date pb-2">
+                                <CiCalendar fontSize={24} />
+                                <p>
+                                  {event.start_date
+                                    ? new Date(
+                                        event.start_date
+                                      ).toLocaleDateString("en-US", {
+                                        weekday: "long",
+                                        day: "2-digit",
+                                        month: "short",
+                                        year: "numeric",
+                                      })
+                                    : "N/A"}{" "}
+                                  {event.end_date &&
+                                    event.end_date !== event.start_date && (
+                                      <>
+                                        -{" "}
+                                        {new Date(
+                                          event.end_date
+                                        ).toLocaleDateString("en-US", {
+                                          weekday: "long",
+                                          day: "2-digit",
+                                          month: "short",
+                                          year: "numeric",
+                                        })}
+                                      </>
+                                    )}
+                                </p>
+                              </div>
+                              <div className="mass-event-date pb-2">
+                                <IoMdTime fontSize={24} />
+                                <p>
+                                  {event.start_date && event.end_date
+                                    ? `${new Date(
+                                        event.start_date
+                                      ).toLocaleTimeString("en-US", {
+                                        hour: "2-digit",
+                                        minute: "2-digit",
+                                        hour12: true,
+                                      })} - ${new Date(
+                                        event.end_date
+                                      ).toLocaleTimeString("en-US", {
+                                        hour: "2-digit",
+                                        minute: "2-digit",
+                                        hour12: true,
+                                      })}`
+                                    : event.start_date
+                                    ? new Date(
+                                        event.start_date
+                                      ).toLocaleTimeString("en-US", {
+                                        hour: "2-digit",
+                                        minute: "2-digit",
+                                        hour12: true,
+                                      })
+                                    : "N/A"}
+                                </p>
+                              </div>
+                              <div className="mass-event-date pb-2">
+                                <LuMapPin fontSize={24} />
+                                <p>{event.location ? event.location : "N/A"}</p>
+                              </div>
                             </div>
-                            <div className="event-card-title">
-                              <h5>{event?.title}</h5>
-                              <p className="event-card-date">
-                                {formatEventDate(event?.event_date)}
-                              </p>
+                            <div className="mass-event-img">
+                              <Image
+                                src={
+                                  event.banner_image
+                                    ? event.banner_image
+                                    : "/assets/images/event-1.png"
+                                }
+                                width={135}
+                                height={135}
+                                alt={event.title || "Event"}
+                              />
                             </div>
                           </div>
-                        </Link>
-                      </li>
-                    ))}
-
-                {!loading && recentPosts.length === 0 && (
-                  <p>No upcoming events found.</p>
-                )}
-              </ul>
-
+                        </li>
+                      ))}
+                      {/* Duplicate for seamless loop */}
+                      {allEvents.map((event) => (
+                        <li key={`duplicate-${event.id}`}>
+                          <div className="mass-event-item">
+                            <div className="mass-event-contnet-item">
+                              <h4>{event.title ? event.title : "N/A"}</h4>
+                              <div className="mass-event-date pb-2">
+                                <CiCalendar fontSize={24} />
+                                <p>
+                                  {event.start_date
+                                    ? new Date(
+                                        event.start_date
+                                      ).toLocaleDateString("en-US", {
+                                        weekday: "long",
+                                        day: "2-digit",
+                                        month: "short",
+                                        year: "numeric",
+                                      })
+                                    : "N/A"}{" "}
+                                  {event.end_date &&
+                                    event.end_date !== event.start_date && (
+                                      <>
+                                        -{" "}
+                                        {new Date(
+                                          event.end_date
+                                        ).toLocaleDateString("en-US", {
+                                          weekday: "long",
+                                          day: "2-digit",
+                                          month: "short",
+                                          year: "numeric",
+                                        })}
+                                      </>
+                                    )}
+                                </p>
+                              </div>
+                              <div className="mass-event-date pb-2">
+                                <IoMdTime fontSize={24} />
+                                <p>
+                                  {event.start_date && event.end_date
+                                    ? `${new Date(
+                                        event.start_date
+                                      ).toLocaleTimeString("en-US", {
+                                        hour: "2-digit",
+                                        minute: "2-digit",
+                                        hour12: true,
+                                      })} - ${new Date(
+                                        event.end_date
+                                      ).toLocaleTimeString("en-US", {
+                                        hour: "2-digit",
+                                        minute: "2-digit",
+                                        hour12: true,
+                                      })}`
+                                    : event.start_date
+                                    ? new Date(
+                                        event.start_date
+                                      ).toLocaleTimeString("en-US", {
+                                        hour: "2-digit",
+                                        minute: "2-digit",
+                                        hour12: true,
+                                      })
+                                    : "N/A"}
+                                </p>
+                              </div>
+                              <div className="mass-event-date pb-2">
+                                <LuMapPin fontSize={24} />
+                                <p>{event.location ? event.location : "N/A"}</p>
+                              </div>
+                            </div>
+                            <div className="mass-event-img">
+                              <Image
+                                src={
+                                  event.banner_image
+                                    ? event.banner_image
+                                    : "/assets/images/event-1.png"
+                                }
+                                width={135}
+                                height={135}
+                                alt={event.title || "Event"}
+                              />
+                            </div>
+                          </div>
+                        </li>
+                      ))}
+                    </>
+                  ) : (
+                    <li style={{ padding: "40px 20px", textAlign: "center" }}>
+                      <p style={{ color: "#666", fontSize: "16px" }}>
+                        No upcoming events found.
+                      </p>
+                    </li>
+                  )}
+                </ul>
+              </div>
               <div className="d-flex justify-content-center">
-                <Link href={"/event"} className="custom-btn learn-more-btn">
-                  Recent Events
+                <Link href="/all-events" className="custom-btn">
+                  View All Events
                 </Link>
               </div>
             </div>

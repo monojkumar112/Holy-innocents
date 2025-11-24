@@ -49,7 +49,7 @@ const MassEvent = () => {
                 Join us for Mass, socials, events, courses, and more. Take a
                 look at what&apos;s coming up.
               </p>
-              <div className="mass-event-right" id="event">
+              <div className="mass-event-right mass-event-right-iframe" id="event">
                 <iframe
                   src="https://holyinnocents.churchsuite.co.uk/embed/calendar?view=agenda&hide=daynames,navigation&theme=light&accent=%234a90e2&font=Inter&preview=false"
                   width="599"
