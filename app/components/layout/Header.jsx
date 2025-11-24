@@ -96,22 +96,22 @@ const Header = () => {
                               <strong>About Us</strong>
                             </h6>
                             <ul className="pt-2 pt-md-3">
-                              <li>
+                              {/* <li>
                                 <Link
                                   href="/about-us"
                                   className="dropdown-item"
                                 >
                                   About Us
                                 </Link>
-                              </li>
-                              <li>
+                              </li> */}
+                              {/* <li>
                                 <Link
                                   href="/leadership"
                                   className="dropdown-item"
                                 >
                                   Leadership and co-responsibility
                                 </Link>
-                              </li>
+                              </li> */}
 
                               {loading ? (
                                 <li>
@@ -221,14 +221,14 @@ const Header = () => {
                               <strong>Fellowship</strong>
                             </h6>
                             <ul className="pt-2 pt-md-3">
-                              <li>
+                              {/* <li>
                                 <Link
                                   href="/fellowship"
                                   className="dropdown-item"
                                 >
                                   Fellowship
                                 </Link>
-                              </li>
+                              </li> */}
                               <li>
                                 <Link href="/event" className="dropdown-item">
                                   Recent events
@@ -392,7 +392,7 @@ const Header = () => {
                                   </li>
                                 ))
                               ) : null}
-                              <li>
+                              {/* <li>
                                 <Link
                                   href="/reflection"
                                   className="dropdown-item"
@@ -404,7 +404,7 @@ const Header = () => {
                                 <Link href="/prayer" className="dropdown-item">
                                   Prayer and Formation
                                 </Link>
-                              </li>
+                              </li> */}
                               {/* <li>
                                 <Link
                                   href="/prayer-intentions"
