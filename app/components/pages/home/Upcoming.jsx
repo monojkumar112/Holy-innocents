@@ -94,7 +94,8 @@ const Upcoming = () => {
                     height={525}
                     width={657}
                     src={
-                      latestEvent.banner_image || "/assets/images/event-1.png"
+                      latestEvent.banner_image ||
+                      "/assets/images/event-1.png"
                     }
                     alt={latestEvent.title || "Latest Event"}
                   />
@@ -109,12 +110,13 @@ const Upcoming = () => {
               <div className="marquee-container">
                 <ul
                   ref={scrollContainerRef}
-                  className={` ${allEvents.length >= 3 ? "marquee-track" : ""}`}
+                  className={` ${
+                    allEvents.length >= 3 ? "marquee-track" : ""
+                  }`}
                   style={{
-                    animationDuration:
-                      allEvents.length >= 3
-                        ? `${Math.max(allEvents.length, 5) * 3}s`
-                        : "none",
+                    animationDuration: allEvents.length >= 3
+                      ? `${Math.max(allEvents.length, 5) * 3}s`
+                      : "none",
                   }}
                 >
                   {allEvents.length > 0 ? (
@@ -125,8 +127,8 @@ const Upcoming = () => {
                           <div className="mass-event-item">
                             <div className="mass-event-contnet-item">
                               <h4>{event.title ? event.title : "N/A"}</h4>
-                              <div className="mass-event-date pb-2">
-                                <CiCalendar fontSize={24} />
+                              <div className="mass-event-date">
+                                <CiCalendar />
                                 <p>
                                   {event.start_date
                                     ? new Date(
@@ -154,8 +156,8 @@ const Upcoming = () => {
                                     )}
                                 </p>
                               </div>
-                              <div className="mass-event-date pb-2">
-                                <IoMdTime fontSize={24} />
+                              <div className="mass-event-date">
+                                <IoMdTime />
                                 <p>
                                   {event.start_date && event.end_date
                                     ? `${new Date(
@@ -182,8 +184,8 @@ const Upcoming = () => {
                                     : "N/A"}
                                 </p>
                               </div>
-                              <div className="mass-event-date pb-2">
-                                <LuMapPin fontSize={24} />
+                              <div className="mass-event-date">
+                                <LuMapPin />
                                 <p>{event.location ? event.location : "N/A"}</p>
                               </div>
                             </div>
@@ -208,8 +210,8 @@ const Upcoming = () => {
                           <div className="mass-event-item">
                             <div className="mass-event-contnet-item">
                               <h4>{event.title ? event.title : "N/A"}</h4>
-                              <div className="mass-event-date pb-2">
-                                <CiCalendar fontSize={24} />
+                              <div className="mass-event-date">
+                                <CiCalendar />
                                 <p>
                                   {event.start_date
                                     ? new Date(
@@ -237,8 +239,8 @@ const Upcoming = () => {
                                     )}
                                 </p>
                               </div>
-                              <div className="mass-event-date pb-2">
-                                <IoMdTime fontSize={24} />
+                              <div className="mass-event-date">
+                                <IoMdTime />
                                 <p>
                                   {event.start_date && event.end_date
                                     ? `${new Date(
@@ -265,8 +267,8 @@ const Upcoming = () => {
                                     : "N/A"}
                                 </p>
                               </div>
-                              <div className="mass-event-date pb-2">
-                                <LuMapPin fontSize={24} />
+                              <div className="mass-event-date">
+                                <LuMapPin />
                                 <p>{event.location ? event.location : "N/A"}</p>
                               </div>
                             </div>
@@ -295,10 +297,8 @@ const Upcoming = () => {
                   )}
                 </ul>
               </div>
-              <div className="d-flex justify-content-center">
-                <Link href="/all-events" className="custom-btn">
-                  View All Events
-                </Link>
+              <div className="">
+                <Link href="/all-events" className="custom-btn">View All Events</Link>
               </div>
             </div>
           </div>
