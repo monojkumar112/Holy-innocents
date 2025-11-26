@@ -68,7 +68,9 @@ const DonateFrom = () => {
       <div className="container">
         <div className="donate-from-wrapper">
           <div className="donate-header">
-            <h2 className="donate-from-title">Donate</h2>
+            <h2 className="donate-from-title">
+              Donation is under construction
+            </h2>
             {/* <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p> */}
           </div>
           <form onSubmit={handleSubmit} className="donate-form">

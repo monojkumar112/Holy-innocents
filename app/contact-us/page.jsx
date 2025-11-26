@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import React, { useState, useEffect } from "react";
 import Banner from "../components/section/Banner";
 import Image from "next/image";
@@ -34,7 +34,7 @@ const ContactUsPage = () => {
         <div className="container">
           <div className="team-wrapper">
             <div className="team-item-name">
-              <h2>Our Parish Team</h2>
+              <h2> Our Clergy Team</h2>
               <div className="row justify-content-center">
                 <div className="col-md-4 col-lg-3 mb-4">
                   <div className="team-item">
@@ -153,7 +153,7 @@ const ContactUsPage = () => {
               </div>
             </div>
             <div className="team-item-name">
-              <h2>Our Clergy Team</h2>
+              <h2>Our Parish Team</h2>
               <div className="row justify-content-center">
                 <div className="col-md-4 col-lg-3 mb-4">
                   <div className="team-item">
@@ -446,9 +446,7 @@ const ContactUsPage = () => {
         </div>
       </section>
 
-      <HowToFind
-        data={homeData}
-      />
+      <HowToFind data={homeData} />
     </>
   );
 };
