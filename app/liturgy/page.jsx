@@ -31,7 +31,13 @@ const FellowshipPage = () => {
       <LiturgySection />
       <LiturgyContent />
       <Team />
-      <Community />
+      <Community
+        data={{
+          join_our_community_title: "",
+          join_our_community_description: "",
+          join_our_community_photo: "/assets/images/joidn.png",
+        }}
+      />
       <NewsLetter />
     </>
   );

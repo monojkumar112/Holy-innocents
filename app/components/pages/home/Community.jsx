@@ -2,7 +2,14 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const Community = ({ data }) => {
+const Community = ({ data = {} }) => {
+  const hasHtmlDescription =
+    typeof data.join_our_community_description === "string" &&
+    data.join_our_community_description.trim() !== "";
+
+  const title = data.join_our_community_title || "";
+  const photo = data.join_our_community_photo || "/assets/images/joidn.png";
+
   return (
     <>
       <section
@@ -14,12 +21,15 @@ const Community = ({ data }) => {
           <div className="row align-items-center">
             <div className="col-md-6">
               <div className="community-wrapper">
-                <h2 className="section-title">
-                  {data?.join_our_community_title}
-                </h2>
+                <h2 className="section-title">{title}</h2>
 
-                {/* {data?.join_our_community_description} */}
-                <div dangerouslySetInnerHTML={{ __html: data?.join_our_community_description }} />
+                {hasHtmlDescription && (
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: data.join_our_community_description,
+                    }}
+                  />
+                )}
 
                 <div className="community-btn-group">
                   <Link href="/#contact" className="custom-btn learn-more-btn">
@@ -30,9 +40,8 @@ const Community = ({ data }) => {
             </div>
             <div className="col-md-6">
               <div className="community-img">
-                {/* {"/assets/images/joidn.png"} */}
                 <Image
-                  src={data?.join_our_community_photo}
+                  src={photo}
                   width={636}
                   height={636}
                   alt="Join"

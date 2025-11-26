@@ -386,10 +386,22 @@ const EvangelisationPage = () => {
         </div>
       </section>
       <div className="cpt-6">
-        <HowToFind />
+        <HowToFind
+          data={{
+            find_us_title: "",
+            find_us_description: "",
+            find_us_photo: "/assets/images/map.png",
+          }}
+        />
       </div>
       <div className="cpt-6">
-        <Community />
+        <Community
+          data={{
+            join_our_community_title: "",
+            join_our_community_description: "",
+            join_our_community_photo: "/assets/images/joidn.png",
+          }}
+        />
       </div>
       <NewsLetter />
     </>

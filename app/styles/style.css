@@ -273,6 +273,7 @@ ul.team-social-list li a {
 .marquee-container {
   height: 100%;
   overflow: hidden;
+  padding-top: 20px;
   position: relative;
 }
 
@@ -319,10 +320,6 @@ ul.team-social-list li a {
   display: none;
 }
 
-.mass-event-right > div {
-  margin-top: 20px;
-  text-align: center;
-}
 
 .mass-event-date {
   display: flex;

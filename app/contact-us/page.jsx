@@ -442,7 +442,13 @@ const ContactUsPage = () => {
         </div>
       </section>
 
-      <HowToFind />
+      <HowToFind
+        data={{
+          find_us_title: "",
+          find_us_description: "",
+          find_us_photo: "/assets/images/map.png",
+        }}
+      />
     </>
   );
 };

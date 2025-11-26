@@ -24,12 +24,19 @@ const AboutPage = () => {
     btnText1: "Our parish history",
     btnText2: "Mass Times",
   };
+
+  const communityData = {
+    join_our_community_title: "",
+    join_our_community_description: "",
+    join_our_community_photo: "/assets/images/joidn.png",
+  };
+
   return (
     <>
       <Banner data={data} />
       <AboutSection />
       <Team />
-      <Community />
+      <Community data={communityData} />
       <NewsLetter />
     </>
   );

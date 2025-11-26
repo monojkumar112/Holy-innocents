@@ -116,10 +116,6 @@ const ReflectionPage = () => {
           </div>
         </div>
       </section>
-
-      <HowToFind />
-      <Community />
-      <NewsLetter />
     </>
   );
 };
