@@ -16,10 +16,9 @@ const BookingMass = ({ data }) => {
               <div className="booking-content">
                 <h2 className="section-title">{data?.mass_offer_title}</h2>
 
-                <p>
-                  {/* <div dangerouslySetInnerHTML={{ __html: data?.mass_offer_description }} /> */}
-                  {data?.mass_offer_description}
-                </p>
+
+                <div dangerouslySetInnerHTML={{ __html: data?.mass_offer_description }} />
+
 
                 <div className="booking-btn-group">
                   <Link

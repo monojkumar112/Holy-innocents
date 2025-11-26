@@ -21,9 +21,7 @@ const NewHere = ({ data }) => {
             <div className="col-md-6">
               <div className="new-here-right">
                 <h2 className="section-title">{data?.new_here_title}</h2>
-                <p>
-                  {data?.new_here_description}
-                </p>
+                <div dangerouslySetInnerHTML={{ __html: data?.new_here_description }} />
               </div>
             </div>
           </div>

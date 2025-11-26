@@ -26,10 +26,9 @@ const FatherHere = ({ data }) => {
                     }}
                   ></div>
                 ) : (
-                  <Image
+                  <img
                     src={data?.welcome_photo}
-                    width={636}
-                    height={636}
+
                     alt="Mass"
                   />
                 )}

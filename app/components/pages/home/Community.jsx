@@ -17,9 +17,10 @@ const Community = ({ data }) => {
                 <h2 className="section-title">
                   {data?.join_our_community_title}
                 </h2>
-                <p>
-                  {data?.join_our_community_description}
-                </p>
+
+                {/* {data?.join_our_community_description} */}
+                <div dangerouslySetInnerHTML={{ __html: data?.join_our_community_description }} />
+
                 <div className="community-btn-group">
                   <Link href="/#contact" className="custom-btn learn-more-btn">
                     Join Us

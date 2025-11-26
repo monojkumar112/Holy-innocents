@@ -17,9 +17,10 @@ const Evangelisation = ({ data }) => {
                 <h2 className="section-title">
                   {data?.pecs_title}
                 </h2>
-                <h5>
+                {/* <h5>
                   {data?.pecs_description}
-                </h5>
+                </h5> */}
+                <div dangerouslySetInnerHTML={{ __html: data?.pecs_description }} />
                 <Link
                   href={"/evangelisation"}
                   className="custom-btn learn-more-btn"
@@ -30,10 +31,9 @@ const Evangelisation = ({ data }) => {
             </div>
             <div className="col-md-3">
               <div className="evangelisation-img">
-                <Image
+                <img
                   src={data?.pecs_photo}
-                  width={308}
-                  height={708}
+
                   alt="Evangelisation"
                 />
               </div>

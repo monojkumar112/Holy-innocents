@@ -58,9 +58,10 @@ const ContactUs = ({ data }) => {
             <h2 className="section-title" id="contact">
               {data?.contact_title}
             </h2>
-            <p>
-              {data?.contact_description}
-            </p>
+
+            {/* {data?.contact_description} */}
+            <div dangerouslySetInnerHTML={{ __html: data?.contact_description }} />
+
           </div>
           <div className="contact-us-content">
             <div className="row">

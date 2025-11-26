@@ -13,11 +13,10 @@ const HowToFind = ({ data }) => {
           <div className="row">
             <div className="col-lg-5">
               <div className="how-to-find-img">
-                <Image
+                <img
                   // {"/assets/images/map.png"}
                   src={data?.find_us_photo}
-                  width={526}
-                  height={559}
+
                   alt="Map"
                 />
               </div>
@@ -26,9 +25,10 @@ const HowToFind = ({ data }) => {
             <div className="col-lg-7">
               <div className="how-to-find-wrapper">
                 <h2 className="section-title">{data?.find_us_title}</h2>
-                <p>
-                  {data?.find_us_description}
-                </p>
+
+                {/* {data?.find_us_description} */}
+                <div dangerouslySetInnerHTML={{ __html: data?.find_us_description }} />
+
                 <div className="how-to-find-btn-group">
                   <a href="/#contact" className="custom-btn get-qucte-btn">
                     Contact Us

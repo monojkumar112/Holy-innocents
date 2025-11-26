@@ -45,9 +45,7 @@ const MassEvent = ({ data }) => {
           <div className=" col-lg-6">
             <div className="mass-event-left">
               <h1>{data?.mass_time_title}</h1>
-              <p>
-                {data?.mass_time_description}
-              </p>
+              <div dangerouslySetInnerHTML={{ __html: data?.mass_time_description }} />
               <div className="mass-event-right mass-event-right-iframe" id="event">
                 <iframe
                   src="https://holyinnocents.churchsuite.co.uk/embed/calendar?view=agenda&hide=daynames,navigation&theme=light&accent=%234a90e2&font=Inter&preview=false"
@@ -107,7 +105,7 @@ const MassEvent = ({ data }) => {
           </div>
         </div>
       </div>
-    </section>
+    </section >
   );
 };
 
