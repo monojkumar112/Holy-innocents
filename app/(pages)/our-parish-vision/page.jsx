@@ -19,7 +19,6 @@ const OurParishVisionPage = () => {
       <section className="leader-ship">
         <div className="container">
           <div className="leader-ship-content">
-            <h2 className="section-title-2"> </h2>
             <div className="groups-content-pryer">
               <h2 className="section-title-2">Our Parish Vision</h2>
               <div className="father-img">

@@ -1,0 +1,213 @@
+[
+  {
+    "name": "mainTitle",
+    "type": "text",
+    "label": "Main Title",
+    "placeholder": "Enter main title"
+  },
+  {
+    "name": "image1Src",
+    "type": "image",
+    "label": "Image 1 Source",
+    "placeholder": "Enter image URL"
+  },
+  {
+    "name": "image1Alt",
+    "type": "text",
+    "label": "Image 1 Alt Text",
+    "placeholder": "Enter image alt text"
+  },
+  {
+    "name": "image1Title",
+    "type": "text",
+    "label": "Image 1 Title",
+    "placeholder": "Enter image title"
+  },
+  {
+    "name": "image2Src",
+    "type": "image",
+    "label": "Image 2 Source",
+    "placeholder": "Enter image URL"
+  },
+  {
+    "name": "image2Alt",
+    "type": "text",
+    "label": "Image 2 Alt Text",
+    "placeholder": "Enter image alt text"
+  },
+  {
+    "name": "image2Title",
+    "type": "text",
+    "label": "Image 2 Title",
+    "placeholder": "Enter image title"
+  },
+  {
+    "name": "section1Title",
+    "type": "text",
+    "label": "Section 1 Title",
+    "placeholder": "Enter section title"
+  },
+  {
+    "name": "section1Content",
+    "type": "textarea",
+    "label": "Section 1 Content",
+    "placeholder": "Enter section content"
+  },
+  {
+    "name": "section2Title",
+    "type": "text",
+    "label": "Section 2 Title",
+    "placeholder": "Enter section title"
+  },
+  {
+    "name": "section2Content1",
+    "type": "textarea",
+    "label": "Section 2 Content 1",
+    "placeholder": "Enter content"
+  },
+  {
+    "name": "section2Content2",
+    "type": "textarea",
+    "label": "Section 2 Content 2",
+    "placeholder": "Enter content"
+  },
+  {
+    "name": "section2Content3",
+    "type": "textarea",
+    "label": "Section 2 Content 3",
+    "placeholder": "Enter content"
+  },
+  {
+    "name": "section2Content4",
+    "type": "textarea",
+    "label": "Section 2 Content 4",
+    "placeholder": "Enter content"
+  },
+  {
+    "name": "section2Content5",
+    "type": "textarea",
+    "label": "Section 2 Content 5",
+    "placeholder": "Enter content"
+  },
+  {
+    "name": "section2Content6",
+    "type": "textarea",
+    "label": "Section 2 Content 6",
+    "placeholder": "Enter content"
+  },
+  {
+    "name": "section2Content7",
+    "type": "textarea",
+    "label": "Section 2 Content 7",
+    "placeholder": "Enter content"
+  },
+  {
+    "name": "section3Title",
+    "type": "text",
+    "label": "Section 3 Title",
+    "placeholder": "Enter section title"
+  },
+  {
+    "name": "downloadFile1Url",
+    "type": "text",
+    "label": "Download File 1 URL",
+    "placeholder": "Enter file URL"
+  },
+  {
+    "name": "downloadFile1Name",
+    "type": "text",
+    "label": "Download File 1 Name",
+    "placeholder": "Enter file name"
+  },
+  {
+    "name": "downloadFile1Text",
+    "type": "text",
+    "label": "Download File 1 Button Text",
+    "placeholder": "Enter button text"
+  },
+  {
+    "name": "section4Title",
+    "type": "text",
+    "label": "Section 4 Title",
+    "placeholder": "Enter section title"
+  },
+  {
+    "name": "downloadFile2Url",
+    "type": "text",
+    "label": "Download File 2 URL",
+    "placeholder": "Enter file URL"
+  },
+  {
+    "name": "downloadFile2Name",
+    "type": "text",
+    "label": "Download File 2 Name",
+    "placeholder": "Enter file name"
+  },
+  {
+    "name": "downloadFile2Text",
+    "type": "text",
+    "label": "Download File 2 Button Text",
+    "placeholder": "Enter button text"
+  },
+  {
+    "name": "section5Title",
+    "type": "text",
+    "label": "Section 5 Title",
+    "placeholder": "Enter section title"
+  },
+  {
+    "name": "section5Content1",
+    "type": "textarea",
+    "label": "Section 5 Content 1",
+    "placeholder": "Enter content"
+  },
+  {
+    "name": "section5Content2",
+    "type": "textarea",
+    "label": "Section 5 Content 2",
+    "placeholder": "Enter content"
+  },
+  {
+    "name": "section5Content3",
+    "type": "textarea",
+    "label": "Section 5 Content 3",
+    "placeholder": "Enter content"
+  },
+  {
+    "name": "section6Title",
+    "type": "text",
+    "label": "Section 6 Title",
+    "placeholder": "Enter section title"
+  },
+  {
+    "name": "section6Content",
+    "type": "textarea",
+    "label": "Section 6 Content",
+    "placeholder": "Enter content"
+  },
+  {
+    "name": "section7Title",
+    "type": "text",
+    "label": "Section 7 Title",
+    "placeholder": "Enter section title"
+  },
+  {
+    "name": "section7Content",
+    "type": "textarea",
+    "label": "Section 7 Content",
+    "placeholder": "Enter content"
+  },
+  {
+    "name": "section8Title",
+    "type": "text",
+    "label": "Section 8 Title",
+    "placeholder": "Enter section title"
+  },
+  {
+    "name": "section8Content",
+    "type": "textarea",
+    "label": "Section 8 Content (Personal Intentions)",
+    "placeholder": "Enter personal intentions content (supports HTML formatting)"
+  }
+]
+

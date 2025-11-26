@@ -113,7 +113,7 @@ const Header = () => {
                                 </Link>
                               </li> */}
 
-                              {/* {loading ? (
+                              {loading ? (
                                 <li>
                                   <span className="dropdown-item text-muted">
                                     Loading...
@@ -130,8 +130,8 @@ const Header = () => {
                                     </Link>
                                   </li>
                                 ))
-                              ) : null} */}
-                              <li>
+                              ) : null}
+                              {/* <li>
                                 <Link
                                   href="/father-victor-vella"
                                   className="dropdown-item"
@@ -184,7 +184,7 @@ const Header = () => {
                                 >
                                   Brief history of our parish
                                 </Link>
-                              </li>
+                              </li> */}
                             </ul>
                           </div>
                         </div>
