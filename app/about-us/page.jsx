@@ -1,19 +1,11 @@
-import React from "react";
+'use client';
+import React, { useState, useEffect } from "react";
 import Banner from "../components/section/Banner";
 import AboutSection from "../components/section/AboutSection";
 import Team from "../components/pages/home/Team";
 import Community from "../components/pages/home/Community";
 import NewsLetter from "../components/pages/home/NewsLetter";
-export const metadata = {
-  title: "About us - Holy Innocents' Catholic Church Orpington",
-  description:
-    "Welcome to Holy Innocents Catholic Church, a vibrant parish community dedicated to faith, worship, and service. Join us for Mass, events, and spiritual growth.",
-  keywords:
-    "Holy Innocents, Catholic Church, Parish, Mass Times, Community, Worship, Faith, Events, Spiritual Growth, Ministries, Sacraments",
-  icons: {
-    icon: "/assets/favicon.png", // or your image path like '/assets/favicon.png'
-  },
-};
+
 
 const AboutPage = () => {
   const data = {
@@ -25,18 +17,26 @@ const AboutPage = () => {
     btnText2: "Mass Times",
   };
 
-  const communityData = {
-    join_our_community_title: "",
-    join_our_community_description: "",
-    join_our_community_photo: "/assets/images/joidn.png",
-  };
+
+  const [homeData, setHomeData] = useState();
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+
+  useEffect(() => {
+    const load = async () => {
+      const res = await fetch(`${baseUrl}/api/home-settings`);
+      const json = await res.json();
+      const payload = res?.data ?? json;
+      setHomeData(payload[0]);
+    };
+    load();
+  }, [baseUrl]);
 
   return (
     <>
       <Banner data={data} />
       <AboutSection />
       <Team />
-      <Community data={communityData} />
+      <Community data={homeData} />
       <NewsLetter />
     </>
   );

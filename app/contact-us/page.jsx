@@ -1,23 +1,27 @@
-import React from "react";
+'use client';
+import React, { useState, useEffect } from "react";
 import Banner from "../components/section/Banner";
 import Image from "next/image";
 import { FaPhoneAlt, FaRegEnvelope } from "react-icons/fa";
 import HowToFind from "../components/pages/home/HowToFind";
-export const metadata = {
-  title:
-    "Contact Holy Innocents' Catholic Church  - Holy Innocents' Catholic Church Orpington",
-  description:
-    "Welcome to Holy Innocents Catholic Church, a vibrant parish community dedicated to faith, worship, and service. Join us for Mass, events, and spiritual growth.",
-  keywords:
-    "Holy Innocents, Catholic Church, Parish, Mass Times, Community, Worship, Faith, Events, Spiritual Growth, Ministries, Sacraments",
-  icons: {
-    icon: "/assets/favicon.png",
-  },
-};
+
 const ContactUsPage = () => {
   const data = {
     title: "Parish Contacts",
   };
+  // get  home data from api
+  const [homeData, setHomeData] = useState();
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+
+  useEffect(() => {
+    const load = async () => {
+      const res = await fetch(`${baseUrl}/api/home-settings`);
+      const json = await res.json();
+      const payload = res?.data ?? json;
+      setHomeData(payload[0]);
+    };
+    load();
+  }, [baseUrl]);
   return (
     <>
       <Banner data={data} />
@@ -443,11 +447,7 @@ const ContactUsPage = () => {
       </section>
 
       <HowToFind
-        data={{
-          find_us_title: "",
-          find_us_description: "",
-          find_us_photo: "/assets/images/map.png",
-        }}
+        data={homeData}
       />
     </>
   );
