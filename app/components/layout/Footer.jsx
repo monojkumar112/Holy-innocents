@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React, { useState } from "react";
-import { FaFacebookF } from "react-icons/fa";
+import { FaFacebookF, FaYoutube } from "react-icons/fa";
 import { RiTwitterXLine } from "react-icons/ri";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
@@ -179,8 +179,12 @@ const Footer = () => {
                     </a>
                   </li>
                   <li>
-                    <a href="#" target="_blank" rel="noopener noreferrer">
-                      <RiTwitterXLine />
+                    <a
+                      href="https://www.youtube.com/@frvictorvellapecsteachings6138"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaYoutube />
                     </a>
                   </li>
                   <li>

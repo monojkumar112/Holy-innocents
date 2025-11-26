@@ -48,14 +48,14 @@ const DynamicPage = ({ params }) => {
     <>
       <Banner data={bannerData} />
 
-      <section className="dynamic-page">
+      <section className="leader-ship">
         <div className="container">
+          <div className="leader-ship-content">
           {page.use_page_builder && page.sections ? (
             // Render page builder sections
             page.sections.map((section, index) => (
               <div
                 key={section.id || index}
-                className={`page-section ${section.css_class || ""}`}
                 data-section-type={section.section_type}
                 dangerouslySetInnerHTML={{ __html: section.html }}
               />
@@ -67,6 +67,7 @@ const DynamicPage = ({ params }) => {
               dangerouslySetInnerHTML={{ __html: page.content || "" }}
             />
           )}
+          </div>
         </div>
       </section>
     </>

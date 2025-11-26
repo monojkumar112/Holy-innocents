@@ -262,13 +262,12 @@ ul.team-social-list li a {
   /* 150% */
   text-transform: capitalize;
   font-weight: 700;
+  text-align: start;
   padding-bottom: 10px;
 }
 
 .mass-event-right {
   position: relative;
-  height: 391px;
-  overflow: hidden;
 }
 
 .marquee-container {
