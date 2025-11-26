@@ -15,7 +15,9 @@ const DynamicPage = ({ params }) => {
       try {
         const response = await fetch(`${baseUrl}/api/page/${slug}`);
         const data = await response.json();
-        setPage(data.data);
+        if (data.success) {
+          setPage(data.data);
+        }
       } catch (error) {
         console.error("Error fetching page:", error);
       } finally {
@@ -48,10 +50,23 @@ const DynamicPage = ({ params }) => {
 
       <section className="dynamic-page">
         <div className="container">
-          <div
-            className="dynamic-page-content"
-            dangerouslySetInnerHTML={{ __html: page.content }}
-          />
+          {page.use_page_builder && page.sections ? (
+            // Render page builder sections
+            page.sections.map((section, index) => (
+              <div
+                key={section.id || index}
+                className={`page-section ${section.css_class || ""}`}
+                data-section-type={section.section_type}
+                dangerouslySetInnerHTML={{ __html: section.html }}
+              />
+            ))
+          ) : (
+            // Render traditional content
+            <div
+              className="dynamic-page-content"
+              dangerouslySetInnerHTML={{ __html: page.content || "" }}
+            />
+          )}
         </div>
       </section>
     </>

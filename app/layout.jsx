@@ -3,6 +3,7 @@ import "aos/dist/aos.css";
 import AOS from "aos";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./globals.css";
+import "./styles/page-builder-sections.css";
 import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
 import { useEffect } from "react";
