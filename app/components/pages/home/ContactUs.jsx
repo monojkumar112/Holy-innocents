@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { IoIosCall } from "react-icons/io";
 import { MdOutlineMail } from "react-icons/md";
 
-const ContactUs = () => {
+const ContactUs = ({ data }) => {
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
 
@@ -56,11 +56,10 @@ const ContactUs = () => {
         <div className="container">
           <div className="contact-us-header">
             <h2 className="section-title" id="contact">
-              Contact Us
+              {data?.contact_title}
             </h2>
             <p>
-              We would love to hear from you! Whether you have questions, need
-              assistance, or want to get involved, feel free to reach out to us.
+              {data?.contact_description}
             </p>
           </div>
           <div className="contact-us-content">
@@ -75,13 +74,7 @@ const ContactUs = () => {
                       <h5>Call Us</h5>
                     </div>
                     <p>
-                      Natasha Wheeler, our Parish Secretary, works in the Parish
-                      Office from 10.30 am to 3.30 pm on Mondays, Wednesdays and
-                      Fridays.
-                    </p>
-                    <p>
-                      <span className="address-text">Phone: </span> +01689
-                      817537
+                      {data?.call_us_description}
                     </p>
                   </li>
                   <li>
@@ -92,14 +85,7 @@ const ContactUs = () => {
                       <h5>Write To US</h5>
                     </div>
                     <p>
-                      <span className="address-text">Address: </span>Strickland
-                      Way, Orpington, Kent, BR6 9UE
-                    </p>
-                    <p>
-                      <span className="address-text">Email: </span>
-                      <a href="mailto:orpington@rcaos.org.uk">
-                        orpington@rcaos.org.uk
-                      </a>
+                      {data?.write_us_address}
                     </p>
                   </li>
                 </ul>

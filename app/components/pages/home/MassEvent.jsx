@@ -2,7 +2,7 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
-const MassEvent = () => {
+const MassEvent = ({ data }) => {
   const [notices, setNotices] = useState([]);
   const [showAll, setShowAll] = useState(false);
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
@@ -44,10 +44,9 @@ const MassEvent = () => {
           {/* Left Content */}
           <div className=" col-lg-6">
             <div className="mass-event-left">
-              <h1>Mass Times</h1>
+              <h1>{data?.mass_time_title}</h1>
               <p>
-                Join us for Mass, socials, events, courses, and more. Take a
-                look at what&apos;s coming up.
+                {data?.mass_time_description}
               </p>
               <div className="mass-event-right mass-event-right-iframe" id="event">
                 <iframe

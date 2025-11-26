@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-const ParishCentre = () => {
+const ParishCentre = ({ data }) => {
   return (
     <>
       <section
@@ -13,12 +13,10 @@ const ParishCentre = () => {
           <div className="row">
             <div className="col-lg-6">
               <div className="parish-contentss">
-                <h2 className="section-title">The Father Phelan Centre</h2>
+                <h2 className="section-title">{data?.father_phelan_title}</h2>
                 <p>
-                  A space for gatherings, community events, and parish
-                  activities.
+                  {data?.father_phelan_description}
                 </p>
-                <p>Take a virtual tour for booking details</p>
                 <div className="parish-btn-group-wrap d-flex align-items-center gap-3">
                   {/* <div className="parish-btn-group">
                     <a
@@ -42,7 +40,8 @@ const ParishCentre = () => {
             <div className="col-lg-6">
               <div className="parish-img">
                 <Image
-                  src={"/assets/images/parish.png"}
+                  // "/assets/images/parish.png"
+                  src={data?.father_phelan_photo}
                   width={636}
                   height={404}
                   alt="Parish"

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-const AdorationRoom = () => {
+const AdorationRoom = ({ data }) => {
   return (
     <>
       <section
@@ -15,7 +15,8 @@ const AdorationRoom = () => {
             <div className="col-md-5">
               <div className="adoration-img">
                 <Image
-                  src={"/assets/images/charis.png"}
+                  // {"/assets/images/charis.png"}
+                  src={data?.adoration_room_photo}
                   alt="Adoration Room"
                   width={405}
                   height={608}
@@ -24,7 +25,7 @@ const AdorationRoom = () => {
             </div>
             <div className="col-md-7">
               <div className="adoration-content">
-                <h2> Visit Our Saint Carlo Acutis’ Adoration Room</h2>
+                <h2> {data?.adoration_room_title} </h2>
                 <h5>
                   A sacred quiet and peaceful place for Prayer, Reflection, and
                   Spiritual Connection
