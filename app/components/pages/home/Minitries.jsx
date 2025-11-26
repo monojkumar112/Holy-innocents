@@ -4,7 +4,7 @@ import React from "react";
 import { useState } from "react";
 import InvolvedForm from "./../../section/InvolvedForm";
 
-const Minitries = () => {
+const Minitries = ({ data }) => {
   //get ministries from api
   const [ministries, setMinistries] = useState([]);
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
@@ -56,11 +56,10 @@ const Minitries = () => {
         <div className="container">
           <div className="minitries-header">
             <h2 className="section-title">
-              Get Involved - Our Ministries and Groups
+              {data?.ministries_title}
             </h2>
             <p>
-              Explore our diverse ministries and find your place to serve and
-              grow in faith.
+              {data?.ministries_description}
             </p>
           </div>
           <div className="minitries-wrapper">

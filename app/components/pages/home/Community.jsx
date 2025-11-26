@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const Community = () => {
+const Community = ({ data }) => {
   return (
     <>
       <section
@@ -15,12 +15,12 @@ const Community = () => {
             <div className="col-md-6">
               <div className="community-wrapper">
                 <h2 className="section-title">
-                  Looking To join Our Community and Get Involved?
+                  {data?.join_our_community_title}
                 </h2>
-                <p>
-                  Become a part of our vibrant parish community. Connect, grow,
-                  and make a difference together.
-                </p>
+
+                {/* {data?.join_our_community_description} */}
+                <div dangerouslySetInnerHTML={{ __html: data?.join_our_community_description }} />
+
                 <div className="community-btn-group">
                   <Link href="/#contact" className="custom-btn learn-more-btn">
                     Join Us
@@ -30,8 +30,9 @@ const Community = () => {
             </div>
             <div className="col-md-6">
               <div className="community-img">
+                {/* {"/assets/images/joidn.png"} */}
                 <Image
-                  src={"/assets/images/joidn.png"}
+                  src={data?.join_our_community_photo}
                   width={636}
                   height={636}
                   alt="Join"

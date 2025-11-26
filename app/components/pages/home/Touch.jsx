@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-const Touch = () => {
+const Touch = ({ data }) => {
   return (
     <>
       <section
@@ -12,14 +12,13 @@ const Touch = () => {
         <div className="container">
           <div className="touch-wrapper">
             <div className="touch-content">
-              <h2 className="section-title">Stay in Touch</h2>
+              <h2 className="section-title">{data?.stay_touch_title}</h2>
               <p>
-                Please register/update your contact details on our parish
-                database ChurchSuite.
+                {data?.stay_touch_description}
               </p>
               <div className="how-to-find-btn-group">
                 <a href="/churchsuite" className="custom-btn get-qucte-btn">
-                  Register 
+                  Register
                 </a>
                 <a href="/giftaid" className="custom-btn-alt get-qucte-btn">
                   Gift Aid
@@ -35,7 +34,8 @@ const Touch = () => {
             </div>
             <div className="touch-img">
               <Image
-                src={"/assets/images/tach.png"}
+                // {"/assets/images/tach.png"}
+                src={data?.stay_touch_photo}
                 width={287}
                 height={215}
                 alt="Touch"
