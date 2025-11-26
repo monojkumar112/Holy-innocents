@@ -2,7 +2,7 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
-const MassEvent = () => {
+const MassEvent = ({ data }) => {
   const [notices, setNotices] = useState([]);
   const [showAll, setShowAll] = useState(false);
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
@@ -44,11 +44,8 @@ const MassEvent = () => {
           {/* Left Content */}
           <div className=" col-lg-6">
             <div className="mass-event-left">
-              <h1>Mass Times</h1>
-              <p>
-                Join us for Mass, socials, events, courses, and more. Take a
-                look at what&apos;s coming up.
-              </p>
+              <h1>{data?.mass_time_title}</h1>
+              <div dangerouslySetInnerHTML={{ __html: data?.mass_time_description }} />
               <div className="mass-event-right mass-event-right-iframe" id="event">
                 <iframe
                   src="https://holyinnocents.churchsuite.co.uk/embed/calendar?view=agenda&hide=daynames,navigation&theme=light&accent=%234a90e2&font=Inter&preview=false"
@@ -108,7 +105,7 @@ const MassEvent = () => {
           </div>
         </div>
       </div>
-    </section>
+    </section >
   );
 };
 

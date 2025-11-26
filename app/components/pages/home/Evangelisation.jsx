@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const Evangelisation = () => {
+const Evangelisation = ({ data }) => {
   return (
     <>
       <section
@@ -15,27 +15,12 @@ const Evangelisation = () => {
             <div className="col-md-9">
               <div className="evangelisation-content">
                 <h2 className="section-title">
-                  Get Involved - Parish Evangelisation Cells (PECs)
+                  {data?.pecs_title}
                 </h2>
-                <h5>
-                  At Holy Innocents’ we have embraced a specific form of
-                  evangelisation known as the Parish Evangelisation Cell System
-                  (PECS). &quot;the PECS  System is not about groups but is a
-                  way of life.&quot; Learn more about PECS at Holy
-                  Innocents&apos; contact Bob Skudder at 
-                  <a href="mailto:robertskudder@sky.com">
-                    robertskudder@sky.com
-                  </a>
-                </h5>
-
-                <h5 className="text-color">
-                  The parish is the presence of the Church in a given territory,
-                  an environment for hearing God’s word, for growth in the
-                  Christian life, for dialogue, proclamation, charitable
-                  outreach, worship and celebration. In all its activities the
-                  Parish encourages and trains its members to be evangelisers…
-                  It is a centre of constant missionary outreach – Pope Francis
-                </h5>
+                {/* <h5>
+                  {data?.pecs_description}
+                </h5> */}
+                <div dangerouslySetInnerHTML={{ __html: data?.pecs_description }} />
                 <Link
                   href={"/evangelisation"}
                   className="custom-btn learn-more-btn"
@@ -46,10 +31,9 @@ const Evangelisation = () => {
             </div>
             <div className="col-md-3">
               <div className="evangelisation-img">
-                <Image
-                  src={"/assets/images/evangelisation.png"}
-                  width={308}
-                  height={708}
+                <img
+                  src={data?.pecs_photo}
+
                   alt="Evangelisation"
                 />
               </div>

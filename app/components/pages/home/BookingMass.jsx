@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const BookingMass = () => {
+const BookingMass = ({ data }) => {
   return (
     <>
       <section
@@ -14,11 +14,12 @@ const BookingMass = () => {
           <div className="row align-items-center">
             <div className="col-md-6">
               <div className="booking-content">
-                <h2 className="section-title">Want To Offer A Mass?</h2>
-                <p>
-                  You can book a Mass intention by contacting the parish office
-                  during office hours or by using the form below.
-                </p>
+                <h2 className="section-title">{data?.mass_offer_title}</h2>
+
+
+                <div dangerouslySetInnerHTML={{ __html: data?.mass_offer_description }} />
+
+
                 <div className="booking-btn-group">
                   <Link
                     href={"/mass-offering"}
@@ -31,8 +32,9 @@ const BookingMass = () => {
             </div>
             <div className="col-md-6">
               <div className="booking-img">
+                {/* {"/assets/images/mass.png"} */}
                 <Image
-                  src={"/assets/images/mass.png"}
+                  src={data?.mass_offer_photo}
                   width={636}
                   height={636}
                   alt="Mass"
