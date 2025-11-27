@@ -1090,7 +1090,7 @@ li.section-content-list p {
 }
 
 .groups-content {
-  margin-top: 100px;
+  margin-top: 0px;
   padding: 50px;
   background: #b288442a;
   margin-bottom: 50px;
@@ -2065,8 +2065,8 @@ li.section-content-list p a {
 }
 
 .leader-ship-content {
-  padding-top: 70px;
-  width: 80%;
+  padding-top: 100px;
+  width: 100%;
   margin: auto;
 }
 

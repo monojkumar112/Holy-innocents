@@ -11,7 +11,7 @@ const FellowshipSection = () => {
     >
       <div className="container">
         <div className="row">
-          <div className="col-lg-7">
+          <div className="col-lg-6">
             <div className="about-content">
               <h2 className="about-section-title">Fellowship </h2>
               <p>
@@ -62,7 +62,7 @@ const FellowshipSection = () => {
               </p>
             </div>
           </div>
-          <div className="col-lg-5">
+          <div className="col-lg-6">
             <div className="about-img">
               <Image
                 src="/assets/images/fellowship.png"

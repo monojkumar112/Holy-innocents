@@ -35,7 +35,7 @@ const Header = () => {
 
   const aboutPages = getPagesBySlug("about-us");
   const fellowshipPages = getPagesBySlug("fellowship");
-  const reflectionPages = getPagesBySlug("reflection");
+  const prayerIntentionsPages = getPagesBySlug("prayer-intentions");
 
   return (
     <>
@@ -96,14 +96,14 @@ const Header = () => {
                               <strong>About Us</strong>
                             </h6>
                             <ul className="pt-2 pt-md-3">
-                              <li>
+                              {/* <li>
                                 <Link
                                   href="/about-us"
                                   className="dropdown-item"
                                 >
                                   About Us
                                 </Link>
-                              </li>
+                              </li> */}
                               {/* <li>
                                 <Link
                                   href="/leadership"
@@ -131,7 +131,7 @@ const Header = () => {
                                   </li>
                                 ))
                               ) : null}
-                              <li>
+                              {/* <li>
                                 <Link
                                   href="/father-victor-vella"
                                   className="dropdown-item"
@@ -176,7 +176,7 @@ const Header = () => {
                                 >
                                   Our Parish Vision
                                 </Link>
-                              </li>
+                              </li> */}
                               <li>
                                 <Link
                                   href="/brief-history"
@@ -380,8 +380,8 @@ const Header = () => {
                                     Loading...
                                   </span>
                                 </li>
-                              ) : reflectionPages.length > 0 ? (
-                                reflectionPages.map((page) => (
+                                ) : prayerIntentionsPages.length > 0 ? (
+                                prayerIntentionsPages.map((page) => (
                                   <li key={page.id}>
                                     <Link
                                       href={`/intentions/${page.slug}`}

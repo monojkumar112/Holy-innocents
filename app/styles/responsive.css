@@ -270,6 +270,11 @@
   .mass-event{
     padding-top: 20px;
   }
+  .evangelisation-btn-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
 }
 
 @media (max-width: 768px) {
