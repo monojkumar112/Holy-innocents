@@ -35,7 +35,7 @@ const Header = () => {
 
   const aboutPages = getPagesBySlug("about-us");
   const fellowshipPages = getPagesBySlug("fellowship");
-  const reflectionPages = getPagesBySlug("reflection");
+  const prayerIntentionsPages = getPagesBySlug("prayer-intentions");
 
   return (
     <>
@@ -380,8 +380,8 @@ const Header = () => {
                                     Loading...
                                   </span>
                                 </li>
-                              ) : reflectionPages.length > 0 ? (
-                                reflectionPages.map((page) => (
+                                ) : prayerIntentionsPages.length > 0 ? (
+                                prayerIntentionsPages.map((page) => (
                                   <li key={page.id}>
                                     <Link
                                       href={`/intentions/${page.slug}`}

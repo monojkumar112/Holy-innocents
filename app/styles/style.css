@@ -1092,7 +1092,7 @@ li.section-content-list p {
 }
 
 .groups-content {
-  margin-top: 100px;
+  margin-top: 0px;
   padding: 50px;
   background: #b288442a;
   margin-bottom: 50px;
@@ -2067,7 +2067,7 @@ li.section-content-list p a {
 }
 
 .leader-ship-content {
-  padding-top: 70px;
+  padding-top: 100px;
   width: 80%;
   margin: auto;
 }
@@ -2590,3 +2590,11 @@ linear 10s  infinite;
     transform: translateY(-50%);
   }
 }
+
+.evangelisation-btn-group {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-top: 20px;
+}
+
