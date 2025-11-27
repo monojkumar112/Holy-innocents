@@ -23,12 +23,21 @@ const Evangelisation = ({ data }) => {
                 />
                 <div className="evangelisation-btn-group">
                   <div className="evangelisation-btn-group-item">
-                    <Link href={"/evangelisation"} className="custom-btn learn-more-btn">
+                    <Link
+                      href={"/evangelisation"}
+                      className="custom-btn learn-more-btn"
+                    >
                       Read More
                     </Link>
                   </div>
                   <div className="evangelisation-btn-group-item">
-                    <Link href={"#"} className="custom-btn learn-more-btn">
+                    <Link
+                      href={
+                        "https://www.youtube.com/@frvictorvellapecsteachings6138"
+                      }
+                      className="custom-btn learn-more-btn"
+                      target="_blank"
+                    >
                       Father Victor Vella PECS Teaching
                     </Link>
                   </div>

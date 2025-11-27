@@ -96,14 +96,14 @@ const Header = () => {
                               <strong>About Us</strong>
                             </h6>
                             <ul className="pt-2 pt-md-3">
-                              <li>
+                              {/* <li>
                                 <Link
                                   href="/about-us"
                                   className="dropdown-item"
                                 >
                                   About Us
                                 </Link>
-                              </li>
+                              </li> */}
                               {/* <li>
                                 <Link
                                   href="/leadership"
