@@ -1,21 +1,30 @@
-import React from "react";
+'use client';
+import React, { useState, useEffect } from "react";
 import Banner from "../components/section/Banner";
 import Team from "../components/pages/home/Team";
 import Community from "../components/pages/home/Community";
 import NewsLetter from "../components/pages/home/NewsLetter";
 import FellowshipSection from "../components/section/FellowshipSection";
-export const metadata = {
-  title: "Holy Innocents' Catholic Church Orpington - Home",
-  description:
-    "Welcome to Holy Innocents Catholic Church, a vibrant parish community dedicated to faith, worship, and service. Join us for Mass, events, and spiritual growth.",
-  keywords:
-    "Holy Innocents, Catholic Church, Parish, Mass Times, Community, Worship, Faith, Events, Spiritual Growth, Ministries, Sacraments",
-  icons: {
-    icon: "/assets/favicon.ico", // or your image path like '/assets/favicon.png'
-  },
-};
+
+
+
 
 const FellowshipPage = () => {
+
+  // get home data 
+  const [homeData, setHomeData] = useState();
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+
+  useEffect(() => {
+    const load = async () => {
+      const res = await fetch(`${baseUrl}/api/home-settings`);
+      const json = await res.json();
+      const payload = res?.data ?? json;
+      setHomeData(payload[0]);
+    };
+    load();
+  }, [baseUrl]);
+
   const data = {
     title: "Our fellowship ",
     description: `They devoted themselves to the teaching of the apostles and to the communal life, to the breaking of the bread and to the prayers - Acts 2:42`,
@@ -30,13 +39,9 @@ const FellowshipPage = () => {
       <FellowshipSection />
       <Team />
       <Community
-        data={{
-          join_our_community_title: "",
-          join_our_community_description: "",
-          join_our_community_photo: "/assets/images/joidn.png",
-        }}
+        data={homeData}
       />
-      <NewsLetter />
+      <NewsLetter  />
     </>
   );
 };

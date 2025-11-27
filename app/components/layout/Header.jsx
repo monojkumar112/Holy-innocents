@@ -191,7 +191,7 @@ const Header = () => {
 
                         <div className="col-12 col-md-6 text-end pe-0">
                           <Image
-                            src="/assets/images/menu-img.png"
+                            src="/assets/images/menu-img.jpeg"
                             alt="menu-img"
                             className="img-fluid d-none d-md-block my-0 ms-auto menu-img-item"
                             width={557}
@@ -343,7 +343,7 @@ const Header = () => {
 
                         <div className="col-12 col-md-6 text-end pe-0">
                           <Image
-                            src="/assets/images/menu-img.png"
+                            src="/assets/images/menu-img.jpeg"
                             alt="menu-img"
                             className="img-fluid d-none d-md-block my-0 ms-auto menu-img-item"
                             width={557}
@@ -418,7 +418,7 @@ const Header = () => {
                         </div>
                         <div className="col-12 col-md-6 text-end pe-0">
                           <Image
-                            src="/assets/images/menu-img.png"
+                            src="/assets/images/menu-img.jpeg"
                             alt="menu-img"
                             className="img-fluid d-none d-md-block my-0 ms-auto menu-img-item"
                             width={557}
