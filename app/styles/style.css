@@ -162,7 +162,7 @@ section.hero-section {
 
 .team-item:hover img {
   transform: scale(1.08);
-  filter: brightness(0.95)
+  filter: brightness(0.95);
 }
 
 .team-content {
@@ -279,7 +279,6 @@ ul.team-social-list li a {
 
 .mass-event-right ul {
   height: 391px;
-  overflow-y: scroll;
   padding-top: 20px;
   padding-bottom: 20px;
   scroll-behavior: smooth;
@@ -289,7 +288,9 @@ ul.team-social-list li a {
   min-height: 391px;
   position: relative;
 }
-
+.events-btn {
+  margin-top: 20px;
+}
 .mass-event-right ul::-webkit-scrollbar {
   width: 6px;
 }
@@ -319,7 +320,6 @@ ul.team-social-list li a {
 .mass-event-right ul li:empty {
   display: none;
 }
-
 
 .mass-event-date {
   display: flex;
@@ -401,6 +401,7 @@ ul.team-social-list li a {
   padding: 25px 40px 40px 40px;
   border-radius: 20px;
   height: 100%;
+  margin-top: 20px;
 }
 
 .notice-left h2 {
@@ -611,7 +612,6 @@ section.new-here {
 
 .booking-img {
   width: 100%;
-
 }
 
 .booking-img img {
@@ -621,7 +621,6 @@ section.new-here {
   border: 5px solid var(--primary-color);
   transition: transform 0.8s ease, filter 0.5s ease;
 }
-
 
 .booking-content .section-title {
   color: var(--black-color);
@@ -761,7 +760,8 @@ ul.contact-us-list li p a:hover {
   padding-bottom: 20px;
 }
 
-.parish-btn-group-wrap {}
+.parish-btn-group-wrap {
+}
 
 .parish-btn-group {
   display: flex;
@@ -791,8 +791,7 @@ section.how-to-find {
 }
 
 .how-to-find-img img {
-  transition: transform 0.8s ease,
-    filter 0.5s ease;
+  transition: transform 0.8s ease, filter 0.5s ease;
   width: 100%;
 }
 
@@ -962,8 +961,7 @@ ul.contact-us-list li p {
 
 .parish-img img {
   width: 100%;
-  transition: transform 0.8s ease,
-    filter 0.5s ease;
+  transition: transform 0.8s ease, filter 0.5s ease;
   border-radius: 20px;
 }
 
@@ -2108,7 +2106,8 @@ li.section-content-list p a {
   margin-top: 20px;
 }
 
-.row {}
+.row {
+}
 
 .from-check-box-list {
   display: flex;
@@ -2175,7 +2174,6 @@ section.event-page {
   color: #838383;
   font-weight: 600;
 }
-
 
 .event-right-side h4 {
   font-size: 24px;
@@ -2575,15 +2573,13 @@ section.event-section {
   justify-content: flex-start;
 }
 
-.marquee-track{
-      display: flex;
-    flex-direction: column;
-    animation: marquee-vertical 
-linear 10s  infinite;
-
+.marquee-track {
+  display: flex;
+  flex-direction: column;
+  animation: marquee-vertical linear 4s infinite;
 }
 @keyframes marquee-vertical {
-    0% {
+  0% {
     transform: translateY(0);
   }
   100% {

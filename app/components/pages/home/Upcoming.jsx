@@ -22,26 +22,14 @@ const Upcoming = () => {
         setLoading(true);
         const response = await fetch(`${baseUrl}/api/events`);
         const data = await response.json();
-        
-        // Handle different API response structures
-        // Paginated: { data: [...], next_page_url: ... }
-        // Non-paginated: { events: [...] }
+
         const events = data?.data || data?.events || [];
-        
-        console.log("Upcoming - API Response:", data);
-        console.log("Upcoming - Events Data:", events);
-        console.log("Upcoming - Events Count:", events.length);
-        
-        // Sort events by start_date (most recent first)
-        const sortedEvents = events.sort((a, b) => {
-          const dateA = new Date(a.start_date || 0);
-          const dateB = new Date(b.start_date || 0);
-          return dateB - dateA;
-        });
-        
+        const sortedEvents = events
+          .filter((event) => new Date(event.start_date) >= new Date()) // Only upcoming
+          .sort((a, b) => new Date(a.start_date) - new Date(b.start_date)); // earliest first
+
         setAllEvents(sortedEvents);
-        
-        // Get the latest event (first one after sorting)
+
         if (sortedEvents.length > 0) {
           setLatestEvent(sortedEvents[0]);
         }
@@ -110,12 +98,6 @@ const Upcoming = () => {
                 <ul
                   ref={scrollContainerRef}
                   className={` ${allEvents.length >= 3 ? "marquee-track" : ""}`}
-                  style={{
-                    animationDuration:
-                      allEvents.length >= 3
-                        ? `${Math.max(allEvents.length, 5) * 3}s`
-                        : "none",
-                  }}
                 >
                   {allEvents.length > 0 ? (
                     <>
@@ -202,92 +184,6 @@ const Upcoming = () => {
                           </div>
                         </li>
                       ))}
-                      {/* Duplicate set for seamless loop only when enough events */}
-                      {allEvents.length >= 3 &&
-                        allEvents.map((event) => (
-                          <li key={`duplicate-${event.id}`}>
-                            <div className="mass-event-item">
-                              <div className="mass-event-contnet-item">
-                                <h4>{event.title ? event.title : "N/A"}</h4>
-                                <div className="mass-event-date">
-                                  <CiCalendar />
-                                  <p>
-                                    {event.start_date
-                                      ? new Date(
-                                          event.start_date
-                                        ).toLocaleDateString("en-US", {
-                                          weekday: "long",
-                                          day: "2-digit",
-                                          month: "short",
-                                          year: "numeric",
-                                        })
-                                      : "N/A"}{" "}
-                                    {event.end_date &&
-                                      event.end_date !== event.start_date && (
-                                        <>
-                                          -{" "}
-                                          {new Date(
-                                            event.end_date
-                                          ).toLocaleDateString("en-US", {
-                                            weekday: "long",
-                                            day: "2-digit",
-                                            month: "short",
-                                            year: "numeric",
-                                          })}
-                                        </>
-                                      )}
-                                  </p>
-                                </div>
-                                <div className="mass-event-date">
-                                  <IoMdTime />
-                                  <p>
-                                    {event.start_date && event.end_date
-                                      ? `${new Date(
-                                          event.start_date
-                                        ).toLocaleTimeString("en-US", {
-                                          hour: "2-digit",
-                                          minute: "2-digit",
-                                          hour12: true,
-                                        })} - ${new Date(
-                                          event.end_date
-                                        ).toLocaleTimeString("en-US", {
-                                          hour: "2-digit",
-                                          minute: "2-digit",
-                                          hour12: true,
-                                        })}`
-                                      : event.start_date
-                                      ? new Date(
-                                          event.start_date
-                                        ).toLocaleTimeString("en-US", {
-                                          hour: "2-digit",
-                                          minute: "2-digit",
-                                          hour12: true,
-                                        })
-                                      : "N/A"}
-                                  </p>
-                                </div>
-                                <div className="mass-event-date">
-                                  <LuMapPin />
-                                  <p>
-                                    {event.location ? event.location : "N/A"}
-                                  </p>
-                                </div>
-                              </div>
-                              <div className="mass-event-img">
-                                <Image
-                                  src={
-                                    event.banner_image
-                                      ? event.banner_image
-                                      : "/assets/images/event-1.png"
-                                  }
-                                  width={135}
-                                  height={135}
-                                  alt={event.title || "Event"}
-                                />
-                              </div>
-                            </div>
-                          </li>
-                        ))}
                     </>
                   ) : (
                     <li style={{ padding: "40px 20px", textAlign: "center" }}>
@@ -300,7 +196,7 @@ const Upcoming = () => {
               </div>
               <div className="events-btn d-flex justify-content-center">
                 <Link href="/event" className="custom-btn">
-                 Recent Events
+                  Recent Events
                 </Link>
               </div>
             </div>
