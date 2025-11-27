@@ -153,6 +153,230 @@ const ContactUsPage = () => {
               </div>
             </div>
             <div className="team-item-name">
+              <h2>Our Finance Team</h2>
+              <div className="row justify-content-center">
+              
+                <div className="col-md-4 col-lg-3 mb-4">
+                  <div className="team-item">
+                    <div className="team-img">
+                      <Image
+                        src={"/assets/images/team-6.png"}
+                        width={416}
+                        height={416}
+                        alt={"Team Member"}
+                      />
+                    </div>
+                    <div className="team-content">
+                      <h3>Maria Nethercot</h3>
+                      <p>Chair Finance Committee</p>
+                      <ul className="team-social-list">
+                        <li>
+                          <a
+                            href={"mailto:orpingtonfinance@rcaos.org.uk "}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <FaRegEnvelope />
+                            <span>orpingtonfinance@rcaos.org.uk </span>
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="tel:+01689 817537"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <FaPhoneAlt />
+                            <span>01689 817537</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-md-4 col-lg-3 mb-4">
+                  <div className="team-item">
+                    <div className="team-img">
+                      <Image
+                        src={"/assets/images/team-6.png"}
+                        width={416}
+                        height={416}
+                        alt={"Team Member"}
+                      />
+                    </div>
+                    <div className="team-content">
+                      <h3>Dominica Winter</h3>
+                      <p>Secretary Finance Team</p>
+                      <ul className="team-social-list">
+                        <li>
+                          <a
+                            href={"mailto:orpingtonfinance@rcaos.org.uk "}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <FaRegEnvelope />
+                            <span>orpingtonfinance@rcaos.org.uk </span>
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="tel:+01689 817537"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <FaPhoneAlt />
+                            <span>01689 817537</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-md-4 col-lg-3 mb-4">
+                  <div className="team-item">
+                    <div className="team-img">
+                      <Image
+                        src={"/assets/images/team-6.png"}
+                        width={416}
+                        height={416}
+                        alt={"Team Member"}
+                      />
+                    </div>
+                    <div className="team-content">
+                      <h3>Sophia Cavadias</h3>
+                      <p> Finance Team</p>
+                      <ul className="team-social-list">
+                        <li>
+                          <a
+                            href={"mailto:orpingtonfinance@rcaos.org.uk "}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <FaRegEnvelope />
+                            <span>orpingtonfinance@rcaos.org.uk </span>
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="tel:+01689 817537"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <FaPhoneAlt />
+                            <span>01689 817537</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-md-4 col-lg-3 mb-4">
+                  <div className="team-item">
+                    <div className="team-img">
+                      <Image
+                        src={"/assets/images/team-6.png"}
+                        width={416}
+                        height={416}
+                        alt={"Team Member"}
+                      />
+                    </div>
+                    <div className="team-content">
+                      <h3>Michael</h3>
+                      <p>Finance Team</p>
+                      <ul className="team-social-list">
+                        <li>
+                          <a
+                            href={"mailto:orpingtonfinance@rcaos.org.uk "}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <FaRegEnvelope />
+                            <span>orpingtonfinance@rcaos.org.uk </span>
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="tel:+01689 817537"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <FaPhoneAlt />
+                            <span>01689 817537</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-md-4 col-lg-3 mb-4">
+                  <div className="team-item">
+                    <div className="team-img">
+                      <Image
+                        src={"/assets/images/team-6.png"}
+                        width={416}
+                        height={416}
+                        alt={"Team Member"}
+                      />
+                    </div>
+                    <div className="team-content">
+                      <h3>Ojes Paul</h3>
+                      <p>Finance Team</p>
+                      <ul className="team-social-list">
+                        <li>
+                          <a
+                            href={"mailto:orpingtonfinance@rcaos.org.uk "}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <FaRegEnvelope />
+                            <span>orpingtonfinance@rcaos.org.uk </span>
+                          </a>
+                        </li>   
+                         <li>
+                          <a
+                            href="tel:+01689 817537"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <FaPhoneAlt />
+                            <span>01689 817537</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-md-4 col-lg-3 mb-4">
+                  <div className="team-item">
+                    <div className="team-img">
+                      <Image
+                        src={"/assets/images/team-6.png"}
+                        width={416}
+                        height={416}
+                        alt={"Team Member"}
+                      />
+                    </div>
+                    <div className="team-content">
+                      <h3>Paul Simmers</h3>
+                      <p>Finance Team</p>
+                      <ul className="team-social-list">
+                        <li>
+                          <a
+                            href={"mailto:orpingtonfinance@rcaos.org.uk "}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <FaRegEnvelope />
+                            <span>orpingtonfinance@rcaos.org.uk </span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="team-item-name">
               <h2>Our Parish Team</h2>
               <div className="row justify-content-center">
                 <div className="col-md-4 col-lg-3 mb-4">
@@ -423,8 +647,15 @@ const ContactUsPage = () => {
               <p>
                 ​Natasha Wheeler, our Parish Secretary, works in the Parish
                 Office from 10.30 am to 3.30 pm on Mondays, Wednesdays and
-                Fridays. ​ Strickland Way, Orpington, Kent, BR6 9UE 01689 817537
-                orpington@rcaos.org.uk
+                Fridays. ​ Strickland Way, Orpington, Kent, BR6 9UE , <span>
+                    <a href="tel:+01689 817537">01689 817537</a>
+                  </span> , 
+{" "}
+                  <span>
+                    <a href="mailto:orpington@rcaos.org.uk">
+                      orpington@rcaos.org.uk
+                    </a>
+                  </span>
               </p>
               <div>
                 <p>
