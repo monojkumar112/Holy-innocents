@@ -131,7 +131,7 @@ const Header = () => {
                                   </li>
                                 ))
                               ) : null}
-                              <li>
+                              {/* <li>
                                 <Link
                                   href="/father-victor-vella"
                                   className="dropdown-item"
@@ -176,7 +176,7 @@ const Header = () => {
                                 >
                                   Our Parish Vision
                                 </Link>
-                              </li>
+                              </li> */}
                               <li>
                                 <Link
                                   href="/brief-history"
