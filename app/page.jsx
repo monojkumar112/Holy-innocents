@@ -59,8 +59,9 @@ export default function Home() {
     <>
       <HeroSlider />
       <FatherHere data={data} />
-      <NewsLetter />
       <MassEvent data={data} />
+      <NewsLetter />
+
       <Upcoming />
       <BookingMass data={data} />
       <NewHere data={data} />

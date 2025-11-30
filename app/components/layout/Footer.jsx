@@ -98,7 +98,7 @@ const Footer = () => {
                         <li>
                           <Link href="/reflection">
                             {" "}
-                            ​Parishioner Gospel Reflection{" "}
+                            Parishioner Gospel Reflection{" "}
                           </Link>
                         </li>
                         <li>
@@ -175,7 +175,7 @@ const Footer = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <FaFacebookF />
+                      <FaFacebookF size={23} style={{ display: 'block' }} />
                     </a>
                   </li>
                   <li>
@@ -184,17 +184,17 @@ const Footer = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <FaYoutube />
+                      <FaYoutube size={23} style={{ display: 'block' }} />
                     </a>
                   </li>
                   <li>
                     <a href="#" target="_blank" rel="noopener noreferrer">
-                      <FaLinkedinIn />
+                      <FaLinkedinIn size={23} style={{ display: 'block' }} />
                     </a>
                   </li>
                   <li>
                     <a href="#" target="_blank" rel="noopener noreferrer">
-                      <FaInstagram />
+                      <FaInstagram size={23} style={{ display: 'block' }} />
                     </a>
                   </li>
                 </ul>

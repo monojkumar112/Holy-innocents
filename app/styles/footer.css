@@ -82,22 +82,33 @@ ul.footer-link-list li a:hover {
     margin-bottom: 0;
 }
 
+.footer-social-media ul li {
+    list-style: none;
+}
+
 .footer-social-media ul li a {
     font-size: 23px;
-    color: var(--white-color);
+    color: var(--white-color) !important;
     transition: 0.4s;
-    display: inline-flex;
+    display: inline-flex !important;
     align-items: center;
     justify-content: center;
     width: 30px;
     height: 30px;
+    vertical-align: middle;
+    opacity: 1 !important;
+    visibility: visible !important;
 }
 
 .footer-social-media ul li a svg {
-    width: 100%;
-    height: 100%;
-    display: block;
-    fill: currentColor;
+    width: 23px !important;
+    height: 23px !important;
+    display: block !important;
+    fill: currentColor !important;
+    color: inherit !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    flex-shrink: 0;
 }
 
 .footer-social-media ul li a:hover {
