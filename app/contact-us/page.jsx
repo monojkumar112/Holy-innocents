@@ -152,7 +152,7 @@ const ContactUsPage = () => {
                 </div>
               </div>
             </div>
-            <div className="team-item-name">
+            {/* <div className="team-item-name">
               <h2>Our Finance Team</h2>
               <div className="row justify-content-center">
               
@@ -375,7 +375,7 @@ const ContactUsPage = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
             <div className="team-item-name">
               <h2>Our Parish Team</h2>
               <div className="row justify-content-center">

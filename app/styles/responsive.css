@@ -206,7 +206,6 @@
   .mass-event-item {
     border-radius: 10px;
     border: 3px solid #3f3f3f;
-    box-shadow: 7px -7px 20px 5px rgba(0, 0, 0, 0.1);
     padding: 20px 20px;
     position: relative;
   }
@@ -273,6 +272,8 @@
   .evangelisation-btn-group {
     flex-direction: column;
     align-items: flex-start;
+    display: flex;
+    gap: 20px;
   }
 
 }
@@ -445,6 +446,9 @@
     padding: 30px 15px 30px 15px;
     box-shadow: 0px 0px 10px #0000003d;
     border-radius: 10px;
+  }
+  .mass-event-right ul{
+    height: 430px;
   }
 
   .checkbox-item {
@@ -818,7 +822,9 @@
   .navbar-brand img {
     width: 129px;
   }
-
+  .mass-event-right ul{
+    height: 450px;
+  }
   .colored-box-content blockquote {
     padding: 1px 0px 0px !important;
   }

@@ -278,15 +278,19 @@ ul.team-social-list li a {
 }
 
 .mass-event-right ul {
-  height: 391px;
   padding-top: 20px;
   padding-bottom: 20px;
+  height: 400px;
+  overflow-y: auto;
   scroll-behavior: smooth;
-  /* Hide scrollbar for Chrome, Safari and Opera */
   scrollbar-width: thin;
   scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
-  min-height: 391px;
   position: relative;
+}
+.evangelisation-btn-group{
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 .events-btn {
   margin-top: 20px;

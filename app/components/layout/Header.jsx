@@ -277,11 +277,11 @@ const Header = () => {
                                   Practical and financial
                                 </Link>
                               </li>
-                              <li>
+                              {/* <li>
                                 <Link href="/event" className="dropdown-item">
                                   Recent events
                                 </Link>
-                              </li>
+                              </li> */}
                               <li>
                                 <Link
                                   href="/social-and-support"
