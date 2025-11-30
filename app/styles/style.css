@@ -2590,3 +2590,16 @@ section.event-section {
     transform: translateY(-50%);
   }
 }
+.leader-ship-content ul{
+      margin-left: 20px;
+
+}
+.leader-ship-content ul li{
+    list-style: disc;
+    font-size: 18px;
+    padding-bottom: 25px;
+}
+.leader-ship-content p span a {
+    color: var(--primary-color);
+    transition: 0.4s;
+}

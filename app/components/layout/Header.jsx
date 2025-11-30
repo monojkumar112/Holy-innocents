@@ -177,14 +177,14 @@ const Header = () => {
                                   Our Parish Vision
                                 </Link>
                               </li> */}
-                              <li>
+                              {/* <li>
                                 <Link
                                   href="/brief-history"
                                   className="dropdown-item"
                                 >
                                   Brief history of our parish
                                 </Link>
-                              </li>
+                              </li> */}
                             </ul>
                           </div>
                         </div>
@@ -221,20 +221,20 @@ const Header = () => {
                               <strong>Fellowship</strong>
                             </h6>
                             <ul className="pt-2 pt-md-3">
-                              <li>
+                              {/* <li>
                                 <Link
                                   href="/fellowship"
                                   className="dropdown-item"
                                 >
                                   Fellowship
                                 </Link>
-                              </li>
+                              </li> */}
                               <li>
                                 <Link href="/event" className="dropdown-item">
                                   Recent events
                                 </Link>
                               </li>
-                              {/* {loading ? (
+                              {loading ? (
                                 <li>
                                   <span className="dropdown-item text-muted">
                                     Loading...
@@ -251,8 +251,8 @@ const Header = () => {
                                     </Link>
                                   </li>
                                 ))
-                              ) : null} */}
-                              <li>
+                              ) : null}
+                              {/* <li>
                                 <Link
                                   href="/getting-involved"
                                   className="dropdown-item"
@@ -276,13 +276,13 @@ const Header = () => {
                                 >
                                   Practical and financial
                                 </Link>
-                              </li>
+                              </li> */}
                               {/* <li>
                                 <Link href="/event" className="dropdown-item">
                                   Recent events
                                 </Link>
                               </li> */}
-                              <li>
+                              {/* <li>
                                 <Link
                                   href="/social-and-support"
                                   className="dropdown-item"
@@ -318,7 +318,7 @@ const Header = () => {
                                 >
                                   Our social action
                                 </Link>
-                              </li>
+                              </li> */}
                               {/* {loading ? (
                               <li>
                                 <span className="dropdown-item text-muted">
@@ -374,7 +374,7 @@ const Header = () => {
                         <div className="col-12 col-md-6">
                           <div className="pt-3 ps-3 ps-md-4">
                             <ul className="pt-2 pt-md-3">
-                              {/* {loading ? (
+                              {loading ? (
                                 <li>
                                   <span className="dropdown-item text-muted">
                                     Loading...
@@ -391,8 +391,8 @@ const Header = () => {
                                     </Link>
                                   </li>
                                 ))
-                              ) : null} */}
-                              <li>
+                              ) : null}
+                              {/* <li>
                                 <Link
                                   href="/prayer-intentions"
                                   className="dropdown-item"
@@ -412,7 +412,7 @@ const Header = () => {
                                 <Link href="/prayer" className="dropdown-item">
                                   Prayer and Formation
                                 </Link>
-                              </li>
+                              </li> */}
                             </ul>
                           </div>
                         </div>
