@@ -74,16 +74,24 @@ const Footer = () => {
                           </Link>
                         </li>
                         <li>
-                          <Link href="/getting-involved"> Get Involved </Link>
+                          <Link href="/fellowship/getting-involved">
+                            {" "}
+                            Get Involved{" "}
+                          </Link>
                         </li>
                         <li>
-                          <Link href="/leadership"> ​Our Leadership </Link>
+                          <Link href="/about-us/leadership-and-co-responsibility">
+                            {" "}
+                            ​Our Leadership{" "}
+                          </Link>
                         </li>
                         <li>
                           <Link href="/liturgy"> Our Liturgy </Link>
                         </li>
                         <li>
-                          <Link href="/mission"> ​Our Mission </Link>
+                          <Link href="/fellowship/our-mission">
+                            ​Our Mission{" "}
+                          </Link>
                         </li>
                       </ul>
                     </div>
@@ -102,25 +110,31 @@ const Footer = () => {
                           </Link>
                         </li>
                         <li>
-                          <Link href="/groups"> Parish Groups </Link>
+                          <Link href="/about-us/groups"> Parish Groups </Link>
                         </li>
                         <li>
-                          <Link href="/brief-history"> Parish History </Link>
+                          <Link href="/about-us/brief-history-of-our-parish">
+                            {" "}
+                            Parish History{" "}
+                          </Link>
                         </li>
                       </ul>
                     </div>
                     <div className="col-lg-4">
                       <ul className="footer-link-list">
                         <li>
-                          <Link href="/our-parish-vision"> Parish Vision </Link>
+                          <Link href="/about-us/our-parish-vision">
+                            {" "}
+                            Parish Vision{" "}
+                          </Link>
                         </li>
                         <li>
-                          <Link href="/evangelisation">
+                          <Link href="/fellowship/parish-evangelisation-cells-pecs">
                             Parish Evangelisation Cells{" "}
                           </Link>
                         </li>
                         <li>
-                          <Link href="/prayer-intentions">
+                          <Link href="/intentions/prayer-intentions">
                             {" "}
                             Prayer Intentions{" "}
                           </Link>
@@ -175,7 +189,7 @@ const Footer = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <FaFacebookF size={23} style={{ display: 'block' }} />
+                      <img src="/assets/images/icon/facebook.png" alt="" />
                     </a>
                   </li>
                   <li>
@@ -184,17 +198,7 @@ const Footer = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <FaYoutube size={23} style={{ display: 'block' }} />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" target="_blank" rel="noopener noreferrer">
-                      <FaLinkedinIn size={23} style={{ display: 'block' }} />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" target="_blank" rel="noopener noreferrer">
-                      <FaInstagram size={23} style={{ display: 'block' }} />
+                      <img src="/assets/images/icon/youtube.png" alt="" />
                     </a>
                   </li>
                 </ul>

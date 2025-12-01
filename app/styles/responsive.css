@@ -263,12 +263,15 @@
   .mass-event-left {
     padding-bottom: 50px;
   }
+
   .mass-event-right-iframe {
-    height:auto;
+    height: auto;
   }
-  .mass-event{
+
+  .mass-event {
     padding-top: 20px;
   }
+
   .evangelisation-btn-group {
     flex-direction: column;
     align-items: flex-start;
@@ -283,17 +286,18 @@
     width: 100%;
   }
 
-  .event-gallery-image-item{
+  .event-gallery-image-item {
     height: 350px;
   }
 
   .event-gallery-image-item-2 {
     height: 85px;
-}
+  }
 
-  .mass-event-left p{
+  .mass-event-left p {
     font-size: 18px;
   }
+
   .event-gallery-image {
     grid-template-columns: 1fr;
     gap: 15px;
@@ -455,7 +459,8 @@
     box-shadow: 0px 0px 10px #0000003d;
     border-radius: 10px;
   }
-  .mass-event-right ul{
+
+  .mass-event-right ul {
     height: 430px;
   }
 
@@ -830,20 +835,41 @@
   .navbar-brand img {
     width: 129px;
   }
-  .mass-event-right ul{
+
+  .mass-event-right ul {
     height: 450px;
   }
+
   .colored-box-content blockquote {
     padding: 1px 0px 0px !important;
   }
 }
 
 @media (max-width: 576px) {
-    .event-gallery-image-item-2 {
-      height: 70px;
+  .event-gallery-image-item-2 {
+    height: 70px;
+  }
+
+  .footer-bottom {
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+
+  .footer-social-media ul {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 6px;
+    padding-top: 8px;
+    margin-bottom: 0;
+  }
+
+  .footer-social-media ul li a img {
+    width: 35px;
+    height: 35px;
   }
 
   .event-gallery-image-item {
     height: 240px;
-}
+  }
 }

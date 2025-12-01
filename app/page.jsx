@@ -6,15 +6,14 @@ export const metadata = {
   keywords:
     "Holy Innocents, Catholic Church, Parish, Mass Times, Community, Worship, Faith, Events, Spiritual Growth, Ministries, Sacraments",
   icons: {
-    icon: "/favicon.png", 
+    icon: "/icon.png",
   },
 };
 
 export default function HomePage() {
-
   return (
     <>
-  <Home/>
+      <Home />
     </>
   );
 }

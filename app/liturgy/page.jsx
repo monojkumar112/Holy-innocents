@@ -1,51 +1,20 @@
-'use client';
-import React, { useState, useEffect } from "react";
-import Banner from "../components/section/Banner";
-import Team from "../components/pages/home/Team";
-import Community from "../components/pages/home/Community";
-import NewsLetter from "../components/pages/home/NewsLetter";
-import LiturgySection from "../components/section/LiturgySection";
-import LiturgyContent from "../components/section/LiturgyContent";
-
-
-const FellowshipPage = () => {
-
-  
-  // get home data 
-  const [homeData, setHomeData] = useState();
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
-
-  useEffect(() => {
-    const load = async () => {
-      const res = await fetch(`${baseUrl}/api/home-settings`);
-      const json = await res.json();
-      const payload = res?.data ?? json;
-      setHomeData(payload[0]);
-    };
-    load();
-  }, [baseUrl]);
-
-  const data = {
-    title: "Our liturgy",
-    description: `The Eucharist is the source and summit of the whole Christian life.  It is the vital centre of all that the Church is and does -  ​One Bread, One Body, Catholic bishops of Britain and Ireland, 1998`,
-    urlLink1: "#",
-    urlLink2: "#",
-    btnText1: "Get Involved",
-    btnText2: "Mass Times",
-  }; 
-
+import LiturgyPage from "../components/pages/LiturgyPage";
+export const metadata = {
+  title: "Holy Innocents' Catholic Church Orpington - Liturgy",
+  description:
+    "Welcome to Holy Innocents Catholic Church, a vibrant parish community dedicated to faith, worship, and service. Join us for Mass, events, and spiritual growth.",
+  keywords:
+    "Holy Innocents, Catholic Church, Parish, Mass Times, Community, Worship, Faith, Events, Spiritual Growth, Ministries, Sacraments",
+  icons: {
+    icon: "/icon.png",
+  },
+};
+const LiturgyPages = () => {
   return (
     <>
-      <Banner data={data} />
-      <LiturgySection />
-      <LiturgyContent />
-      <Team />
-      <Community
-        data={homeData}
-      />
-      <NewsLetter  data={homeData} />
+      <LiturgyPage />
     </>
   );
 };
 
-export default FellowshipPage;
+export default LiturgyPages;

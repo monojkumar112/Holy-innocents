@@ -24,7 +24,7 @@ const Evangelisation = ({ data }) => {
                 <div className="evangelisation-btn-group">
                   <div className="evangelisation-btn-group-item">
                     <Link
-                      href={"/evangelisation"}
+                      href={"/fellowship/parish-evangelisation-cells-pecs"}
                       className="custom-btn learn-more-btn"
                     >
                       Read More

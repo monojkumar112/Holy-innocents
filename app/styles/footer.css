@@ -87,33 +87,25 @@ ul.footer-link-list li a:hover {
 }
 
 .footer-social-media ul li a {
-    font-size: 23px;
-    color: var(--white-color) !important;
     transition: 0.4s;
     display: inline-flex !important;
     align-items: center;
     justify-content: center;
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     vertical-align: middle;
     opacity: 1 !important;
     visibility: visible !important;
 }
 
-.footer-social-media ul li a svg {
-    width: 23px !important;
-    height: 23px !important;
-    display: block !important;
-    fill: currentColor !important;
-    color: inherit !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    flex-shrink: 0;
+.footer-social-media ul li a img {
+    width: 35px;
+    height: 35px;
 }
 
 .footer-social-media ul li a:hover {
     color: var(--primary-color);
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 .search-item-wrapp {

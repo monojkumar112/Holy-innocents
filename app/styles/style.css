@@ -287,14 +287,17 @@ ul.team-social-list li a {
   scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
   position: relative;
 }
-.evangelisation-btn-group{
+
+.evangelisation-btn-group {
   display: flex;
   align-items: center;
   gap: 20px;
 }
+
 .events-btn {
   margin-top: 20px;
 }
+
 .mass-event-right ul::-webkit-scrollbar {
   width: 6px;
 }
@@ -764,8 +767,7 @@ ul.contact-us-list li p a:hover {
   padding-bottom: 20px;
 }
 
-.parish-btn-group-wrap {
-}
+.parish-btn-group-wrap {}
 
 .parish-btn-group {
   display: flex;
@@ -2110,8 +2112,7 @@ li.section-content-list p a {
   margin-top: 20px;
 }
 
-.row {
-}
+.row {}
 
 .from-check-box-list {
   display: flex;
@@ -2582,14 +2583,17 @@ section.event-section {
   flex-direction: column;
   animation: marquee-vertical linear 4s infinite;
 }
+
 @keyframes marquee-vertical {
   0% {
     transform: translateY(0);
   }
+
   100% {
     transform: translateY(-50%);
   }
 }
+
 /* .leader-ship-content ul{
       margin-left: 20px;
 
@@ -2604,3 +2608,10 @@ section.event-section {
     transition: 0.4s;
 } */
 
+.leader-ship-content p {
+  line-height: 35px;
+}
+
+.leader-ship-content span {
+  line-height: 35px;
+}

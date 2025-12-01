@@ -1,45 +1,18 @@
-'use client';
-import React, { useState, useEffect } from "react";
-import BannerImage from "../components/pages/donate/BannerImage";
-import DonateFrom from "../components/pages/donate/DonateFrom";
-import DonateUs from "../components/pages/donate/DonateUs";
-import HowToFind from "../components/pages/home/HowToFind";
-import Community from "../components/pages/home/Community";
-import NewsLetter from "../components/pages/home/NewsLetter";
-
+import DonateSection from "../components/section/DonateSection";
+export const metadata = {
+  title: "Holy Innocents' Catholic Church Orpington - Donate",
+  description:
+    "Welcome to Holy Innocents Catholic Church, a vibrant parish community dedicated to faith, worship, and service. Join us for Mass, events, and spiritual growth.",
+  keywords:
+    "Holy Innocents, Catholic Church, Parish, Mass Times, Community, Worship, Faith, Events, Spiritual Growth, Ministries, Sacraments",
+  icons: {
+    icon: "/icon.png",
+  },
+};
 const DonatePage = () => {
-
-  // get data 
-  const [homeData, setHomeData] = useState();
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
-
-  useEffect(() => {
-    const load = async () => {
-      const res = await fetch(`${baseUrl}/api/home-settings`);
-      const json = await res.json();
-      const payload = res?.data ?? json;
-      setHomeData(payload[0]);
-    };
-    load();
-  }, [baseUrl]);
-
   return (
     <>
-      {/* <BannerImage /> */}
-
-      {/* <DonateUs /> */}
-
-      <DonateFrom />
-
-      <HowToFind
-        data={homeData}
-      />
-      <div className="cpt-6">
-        <Community
-          data={homeData}
-        />
-      </div>
-      <NewsLetter data={homeData} />
+      <DonateSection />
     </>
   );
 };
