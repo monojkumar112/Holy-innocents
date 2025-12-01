@@ -7,7 +7,7 @@ const allNewsletterPage = () => {
       <section className="event-banner">
         <div className="container">
           <div className="event-header-content">
-            <h1>All Newsletter</h1>
+            <h1>All Newsletters</h1>
           </div>
         </div>
       </section>
