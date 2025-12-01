@@ -90,7 +90,7 @@ const NewsLetter = () => {
   return (
     <>
       <section
-        className="newsletter cpt-6"
+        className="newsletter cpb-6"
         data-aos="fade-up"
         data-aos-duration="3000"
       >

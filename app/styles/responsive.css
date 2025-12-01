@@ -283,6 +283,14 @@
     width: 100%;
   }
 
+  .event-gallery-image-item{
+    height: 350px;
+  }
+
+  .event-gallery-image-item-2 {
+    height: 85px;
+}
+
   .mass-event-left p{
     font-size: 18px;
   }
@@ -828,4 +836,14 @@
   .colored-box-content blockquote {
     padding: 1px 0px 0px !important;
   }
+}
+
+@media (max-width: 576px) {
+    .event-gallery-image-item-2 {
+      height: 70px;
+  }
+
+  .event-gallery-image-item {
+    height: 240px;
+}
 }
