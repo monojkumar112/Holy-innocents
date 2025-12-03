@@ -22,6 +22,20 @@ const ContactUs = () => {
     };
     load();
   }, [baseUrl]);
+  //fetch teams data from api if needed
+  const [teamsData, setTeamsData] = useState();
+
+  useEffect(() => {
+    const loadTeams = async () => {
+      const res = await fetch(`${baseUrl}/api/teams`);
+      const json = await res.json();
+      const payload = res?.data ?? json;
+      setTeamsData(payload.teams);
+    };
+    loadTeams();
+  }, [baseUrl]);
+  console.log('Teams Data:', teamsData);
+
   return (
     <>
       <Banner data={data} />
@@ -33,350 +47,58 @@ const ContactUs = () => {
       >
         <div className="container">
           <div className="team-wrapper">
-            <div className="team-item-name">
-              <h2> Our Clergy Team</h2>
-              <div className="row justify-content-center">
-                <div className="col-md-4 col-lg-3 mb-4">
-                  <div className="team-item">
-                    <div className="team-img">
-                      <Image
-                        src={"/assets/images/team-1.png"}
-                        width={416}
-                        height={416}
-                        alt={"Team Member"}
-                      />
+
+
+            {teamsData?.length > 0 && teamsData?.map((team, index) => (
+              <div className="team-item-name" key={index}>
+                <h2>{team?.name}</h2>
+                <div className="row justify-content-center">
+                  {team?.members?.map((member, i) => (
+                    <div className="col-md-4 col-lg-3 mb-4" key={i}>
+                      <div className="team-item">
+                        <div className="team-img">
+                          <Image
+                            src={member?.profile_image}
+                            width={416}
+                            height={416}
+                            alt={member?.name}
+                          />
+                        </div>
+                        <div className="team-content">
+                          <h3>{member?.name}</h3>
+                          <p>{member?.role}</p>
+                          <ul className="team-social-list">
+                            <li>
+                              <a
+                                href={"mailto:victorvella@rcaos.org.uk"}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                <FaRegEnvelope />
+                                <span>victorvella@rcaos.org.uk</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                href="tel:+07802721306"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                <FaPhoneAlt />
+                                <span>07802721306</span>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
                     </div>
-                    <div className="team-content">
-                      <h3>Fr Victor Vella</h3>
-                      <p>Parish Priest</p>
-                      <ul className="team-social-list">
-                        <li>
-                          <a
-                            href={"mailto:victorvella@rcaos.org.uk"}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <FaRegEnvelope />
-                            <span>victorvella@rcaos.org.uk</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="tel:+07802721306"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <FaPhoneAlt />
-                            <span>07802721306</span>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-4 col-lg-3 mb-4">
-                  <div className="team-item">
-                    <div className="team-img">
-                      <Image
-                        src={"/assets/images/team-3.png"}
-                        width={416}
-                        height={416}
-                        alt={"Team Member"}
-                      />
-                    </div>
-                    <div className="team-content">
-                      <h3>Deacon Wayne</h3>
-                      <p>DuPreez</p>
-                      <ul className="team-social-list">
-                        <li>
-                          <a
-                            href={"mailto:waynedupreez@rcaos.org.uk"}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <FaRegEnvelope />
-                            <span>waynedupreez@rcaos.org.uk</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="tel:+07500009281"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <FaPhoneAlt />
-                            <span>07500009281</span>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-4 col-lg-3 mb-4">
-                  <div className="team-item">
-                    <div className="team-img">
-                      <Image
-                        src={"/assets/images/team-2.png"}
-                        width={416}
-                        height={416}
-                        alt={"Team Member"}
-                      />
-                    </div>
-                    <div className="team-content">
-                      <h3>Deacon Barry</h3>
-                      <p>Chalkley</p>
-                      <ul className="team-social-list">
-                        <li>
-                          <a
-                            href={"mailto:barrychalkley@rcaos.org.uk"}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <FaRegEnvelope />
-                            <span>barrychalkley@rcaos.org.uk</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="tel:+07917132472"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <FaPhoneAlt />
-                            <span>07917132472</span>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
+                  ))}
+
                 </div>
               </div>
-            </div>
-            {/* <div className="team-item-name">
-              <h2>Our Finance Team</h2>
-              <div className="row justify-content-center">
-              
-                <div className="col-md-4 col-lg-3 mb-4">
-                  <div className="team-item">
-                    <div className="team-img">
-                      <Image
-                        src={"/assets/images/team-6.png"}
-                        width={416}
-                        height={416}
-                        alt={"Team Member"}
-                      />
-                    </div>
-                    <div className="team-content">
-                      <h3>Maria Nethercot</h3>
-                      <p>Chair Finance Committee</p>
-                      <ul className="team-social-list">
-                        <li>
-                          <a
-                            href={"mailto:orpingtonfinance@rcaos.org.uk "}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <FaRegEnvelope />
-                            <span>orpingtonfinance@rcaos.org.uk </span>
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="tel:+01689 817537"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <FaPhoneAlt />
-                            <span>01689 817537</span>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-4 col-lg-3 mb-4">
-                  <div className="team-item">
-                    <div className="team-img">
-                      <Image
-                        src={"/assets/images/team-6.png"}
-                        width={416}
-                        height={416}
-                        alt={"Team Member"}
-                      />
-                    </div>
-                    <div className="team-content">
-                      <h3>Dominica Winter</h3>
-                      <p>Secretary Finance Team</p>
-                      <ul className="team-social-list">
-                        <li>
-                          <a
-                            href={"mailto:orpingtonfinance@rcaos.org.uk "}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <FaRegEnvelope />
-                            <span>orpingtonfinance@rcaos.org.uk </span>
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="tel:+01689 817537"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <FaPhoneAlt />
-                            <span>01689 817537</span>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-4 col-lg-3 mb-4">
-                  <div className="team-item">
-                    <div className="team-img">
-                      <Image
-                        src={"/assets/images/team-6.png"}
-                        width={416}
-                        height={416}
-                        alt={"Team Member"}
-                      />
-                    </div>
-                    <div className="team-content">
-                      <h3>Sophia Cavadias</h3>
-                      <p> Finance Team</p>
-                      <ul className="team-social-list">
-                        <li>
-                          <a
-                            href={"mailto:orpingtonfinance@rcaos.org.uk "}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <FaRegEnvelope />
-                            <span>orpingtonfinance@rcaos.org.uk </span>
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="tel:+01689 817537"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <FaPhoneAlt />
-                            <span>01689 817537</span>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-4 col-lg-3 mb-4">
-                  <div className="team-item">
-                    <div className="team-img">
-                      <Image
-                        src={"/assets/images/team-6.png"}
-                        width={416}
-                        height={416}
-                        alt={"Team Member"}
-                      />
-                    </div>
-                    <div className="team-content">
-                      <h3>Michael</h3>
-                      <p>Finance Team</p>
-                      <ul className="team-social-list">
-                        <li>
-                          <a
-                            href={"mailto:orpingtonfinance@rcaos.org.uk "}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <FaRegEnvelope />
-                            <span>orpingtonfinance@rcaos.org.uk </span>
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="tel:+01689 817537"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <FaPhoneAlt />
-                            <span>01689 817537</span>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-4 col-lg-3 mb-4">
-                  <div className="team-item">
-                    <div className="team-img">
-                      <Image
-                        src={"/assets/images/team-6.png"}
-                        width={416}
-                        height={416}
-                        alt={"Team Member"}
-                      />
-                    </div>
-                    <div className="team-content">
-                      <h3>Ojes Paul</h3>
-                      <p>Finance Team</p>
-                      <ul className="team-social-list">
-                        <li>
-                          <a
-                            href={"mailto:orpingtonfinance@rcaos.org.uk "}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <FaRegEnvelope />
-                            <span>orpingtonfinance@rcaos.org.uk </span>
-                          </a>
-                        </li>   
-                         <li>
-                          <a
-                            href="tel:+01689 817537"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <FaPhoneAlt />
-                            <span>01689 817537</span>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-4 col-lg-3 mb-4">
-                  <div className="team-item">
-                    <div className="team-img">
-                      <Image
-                        src={"/assets/images/team-6.png"}
-                        width={416}
-                        height={416}
-                        alt={"Team Member"}
-                      />
-                    </div>
-                    <div className="team-content">
-                      <h3>Paul Simmers</h3>
-                      <p>Finance Team</p>
-                      <ul className="team-social-list">
-                        <li>
-                          <a
-                            href={"mailto:orpingtonfinance@rcaos.org.uk "}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <FaRegEnvelope />
-                            <span>orpingtonfinance@rcaos.org.uk </span>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div> */}
-            <div className="team-item-name">
+            ))}
+
+            <div className="team-item-name d-none">
               <h2>Our Parish Team</h2>
               <div className="row justify-content-center">
                 <div className="col-md-4 col-lg-3 mb-4">
@@ -485,7 +207,8 @@ const ContactUs = () => {
                 </div>
               </div>
             </div>
-            <div className="team-item-name">
+
+            <div className="team-item-name d-none">
               <h2>Parish Co-Responsibility Team</h2>
               <div className="row justify-content-center">
                 <div className="col-md-4 col-lg-3 mb-4">
@@ -645,7 +368,7 @@ const ContactUs = () => {
 
             <div className="team-item-content">
               <p>
-                ​Natasha Wheeler, our Parish Secretary, works in the Parish
+                Natasha Wheeler, our Parish Secretary, works in the Parish
                 Office from 10.30 am to 3.30 pm on Mondays, Wednesdays and
                 Fridays. ​ Strickland Way, Orpington, Kent, BR6 9UE ,{" "}
                 <span>
