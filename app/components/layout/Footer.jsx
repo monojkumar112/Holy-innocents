@@ -37,10 +37,7 @@ const Footer = () => {
                       />
                     </a>
                   </div>
-                  <p>
-                    Once you have provided all necessary information and
-                    completed
-                  </p>
+                  <p>Strickland Way, Orpington, Kent, BR6 9UE</p>
                 </div>
               </div>
               <div className="col-lg-9">

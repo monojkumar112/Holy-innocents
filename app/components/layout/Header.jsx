@@ -355,7 +355,7 @@ const Header = () => {
                   </div>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link active" href="/liturgy">
+                  <Link className="nav-link active" href="/page/our-liturgy">
                     Liturgy
                   </Link>
                 </li>
@@ -380,7 +380,7 @@ const Header = () => {
                                     Loading...
                                   </span>
                                 </li>
-                                ) : prayerIntentionsPages.length > 0 ? (
+                              ) : prayerIntentionsPages.length > 0 ? (
                                 prayerIntentionsPages.map((page) => (
                                   <li key={page.id}>
                                     <Link
@@ -436,7 +436,10 @@ const Header = () => {
                   </Link>
                 </li> */}
                 <li className="nav-item">
-                  <Link className="nav-link active" href="/sacramental">
+                  <Link
+                    className="nav-link active"
+                    href="/page/our-sacramental-life"
+                  >
                     Sacramental life
                   </Link>
                 </li>
