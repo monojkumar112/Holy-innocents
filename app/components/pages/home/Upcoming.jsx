@@ -109,7 +109,7 @@ const Upcoming = () => {
                               <h4>{event.title ? event.title : "N/A"}</h4>
                               <div className="mass-event-date">
                                 <CiCalendar />
-                                <p>
+                                {/* <p>
                                   {event.start_date
                                     ? new Date(
                                         event.start_date
@@ -134,34 +134,60 @@ const Upcoming = () => {
                                         })}
                                       </>
                                     )}
+                                </p> */}
+                                <p>
+                                  {event.start_date
+                                    ? new Date(event.start_date).toLocaleDateString("en-US", {
+                                      weekday: "long",
+                                      day: "2-digit",
+                                      month: "short",
+                                      year: "numeric",
+                                    })
+                                    : "N/A"}
+
+                                  {event.end_date &&
+                                    new Date(event.end_date).toDateString() !==
+                                    new Date(event.start_date).toDateString() && (
+                                      <>
+                                        {" - "}
+                                        {new Date(event.end_date).toLocaleDateString("en-US", {
+                                          weekday: "long",
+                                          day: "2-digit",
+                                          month: "short",
+                                          year: "numeric",
+                                        })}
+                                      </>
+                                    )}
                                 </p>
+
+
                               </div>
                               <div className="mass-event-date">
                                 <IoMdTime />
                                 <p>
                                   {event.start_date && event.end_date
                                     ? `${new Date(
-                                        event.start_date
-                                      ).toLocaleTimeString("en-US", {
-                                        hour: "2-digit",
-                                        minute: "2-digit",
-                                        hour12: true,
-                                      })} - ${new Date(
-                                        event.end_date
-                                      ).toLocaleTimeString("en-US", {
-                                        hour: "2-digit",
-                                        minute: "2-digit",
-                                        hour12: true,
-                                      })}`
+                                      event.start_date
+                                    ).toLocaleTimeString("en-US", {
+                                      hour: "2-digit",
+                                      minute: "2-digit",
+                                      hour12: true,
+                                    })} - ${new Date(
+                                      event.end_date
+                                    ).toLocaleTimeString("en-US", {
+                                      hour: "2-digit",
+                                      minute: "2-digit",
+                                      hour12: true,
+                                    })}`
                                     : event.start_date
-                                    ? new Date(
+                                      ? new Date(
                                         event.start_date
                                       ).toLocaleTimeString("en-US", {
                                         hour: "2-digit",
                                         minute: "2-digit",
                                         hour12: true,
                                       })
-                                    : "N/A"}
+                                      : "N/A"}
                                 </p>
                               </div>
                               <div className="mass-event-date">
