@@ -2618,3 +2618,14 @@ section.event-section {
 .leader-ship-content p a {
   color: var(--primary-color);
 }
+
+.leader-ship-content p,
+.leader-ship-content span {
+  font-size: 18px !important;
+  font-family: "Open Sans", sans-serif !important;
+}
+
+li.section-content-list p {
+  font-size: 18px !important;
+  font-family: "Open Sans", sans-serif !important;
+}
