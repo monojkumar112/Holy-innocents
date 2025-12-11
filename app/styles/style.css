@@ -2608,21 +2608,28 @@ section.event-section {
 } */
 
 .leader-ship-content p {
-  line-height: 35px;
+  line-height: 35px !important;
+  font-family: "Open Sans", sans-serif !important;
+  line-height: 35px !important;
 }
 
 .leader-ship-content span {
-  line-height: 35px;
+  line-height: 35px !important;
+  font-family: "Open Sans", sans-serif !important;
+  line-height: 35px !important;
 }
 
 .leader-ship-content p a {
   color: var(--primary-color);
+  font-family: "Open Sans", sans-serif !important;
+  line-height: 35px !important;
 }
 
 .leader-ship-content p,
 .leader-ship-content span {
   font-size: 18px !important;
   font-family: "Open Sans", sans-serif !important;
+  line-height: 35px !important;
 }
 
 li.section-content-list p {
