@@ -451,7 +451,7 @@ const Header = () => {
                 </li>
               </ul>
               <div className="donate-btn-item">
-                <Link className="custom-btn" href="/donate">
+                <Link className="custom-btn" href="https://donate.mydona.com/holy-innocents-orpington">
                   Donate{" "}
                 </Link>
               </div>
