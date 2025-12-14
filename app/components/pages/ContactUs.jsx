@@ -70,22 +70,22 @@ const ContactUs = () => {
                           <ul className="team-social-list">
                             <li>
                               <a
-                                href={"mailto:victorvella@rcaos.org.uk"}
+                                href={`mailto:${member?.email}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
                               >
                                 <FaRegEnvelope />
-                                <span>victorvella@rcaos.org.uk</span>
+                                <span>{member?.email ?? "N/A"}</span>
                               </a>
                             </li>
                             <li>
                               <a
-                                href="tel:+07802721306"
+                                href={`tel:${member?.phone ?? "N/A"}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
                               >
                                 <FaPhoneAlt />
-                                <span>07802721306</span>
+                                <span>{member?.phone ?? "N/A"}</span>
                               </a>
                             </li>
                           </ul>
