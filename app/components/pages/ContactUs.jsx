@@ -36,6 +36,20 @@ const ContactUs = () => {
   }, [baseUrl]);
   console.log('Teams Data:', teamsData);
 
+  //get contact us data from api
+  const [contactInfoData, setContactInfoData] = useState();
+
+  useEffect(() => {
+    const loadContactInfo = async () => {
+      const res = await fetch(`${baseUrl}/api/contact-info`);
+      const json = await res.json();
+      const payload = res?.data ?? json;
+      setContactInfoData(payload);
+    };
+    loadContactInfo();
+  }, [baseUrl]);
+  
+
   return (
     <>
       <Banner data={data} />
@@ -98,304 +112,12 @@ const ContactUs = () => {
               </div>
             ))}
 
-            <div className="team-item-name d-none">
-              <h2>Our Parish Team</h2>
-              <div className="row justify-content-center">
-                <div className="col-md-4 col-lg-3 mb-4">
-                  <div className="team-item">
-                    <div className="team-img">
-                      <Image
-                        src={"/assets/images/team-4.png"}
-                        width={419}
-                        height={419}
-                        alt={"Team Member"}
-                      />
-                    </div>
-                    <div className="team-content">
-                      <h3>Natasha Wheeler</h3>
-                      <p>Parish Secretary</p>
-                      <ul className="team-social-list">
-                        <li>
-                          <a
-                            href={"mailto:orpington@rcaos.org.uk "}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <FaRegEnvelope />
-                            <span>orpington@rcaos.org.uk </span>
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="tel:+01689 817537"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <FaPhoneAlt />
-                            <span>01689 817537</span>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-4 col-lg-3 mb-4">
-                  <div className="team-item">
-                    <div className="team-img">
-                      <Image
-                        src={"/assets/images/team-5.png"}
-                        width={416}
-                        height={416}
-                        alt={"Team Member"}
-                      />
-                    </div>
-                    <div className="team-content">
-                      <h3>Cecilia Skudder</h3>
-                      <p>Website Editor</p>
-                      <ul className="team-social-list">
-                        <li>
-                          <a
-                            href={"mailto:orpington@rcaos.org.uk "}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <FaRegEnvelope />
-                            <span>orpingtoncc@rcaos.org.uk </span>
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="tel:+07956452571"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <FaPhoneAlt />
-                            <span>07956452571</span>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-4 col-lg-3 mb-4">
-                  <div className="team-item">
-                    <div className="team-img">
-                      <Image
-                        src={"/assets/images/team-6.png"}
-                        width={416}
-                        height={416}
-                        alt={"Team Member"}
-                      />
-                    </div>
-                    <div className="team-content">
-                      <h3>Maria Nethercot</h3>
-                      <p>Chair Finance Committee</p>
-                      <ul className="team-social-list">
-                        <li>
-                          <a
-                            href={"mailto:orpingtonfinance@rcaos.org.uk "}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <FaRegEnvelope />
-                            <span>orpingtonfinance@rcaos.org.uk </span>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="team-item-name d-none">
-              <h2>Parish Co-Responsibility Team</h2>
-              <div className="row justify-content-center">
-                <div className="col-md-4 col-lg-3 mb-4">
-                  <div className="team-item">
-                    <div className="team-img">
-                      <Image
-                        src={"/assets/images/team-7.png"}
-                        width={419}
-                        height={419}
-                        alt={"Team Member"}
-                      />
-                    </div>
-                    <div className="team-content">
-                      <h3>Mike Delaney </h3>
-                      <p>Parish </p>
-                      <ul className="team-social-list">
-                        <li>
-                          <a
-                            href={"mailto:orpington@rcaos.org.uk "}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <FaRegEnvelope />
-                            <span>orpington@rcaos.org.uk </span>
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="tel:+01689 817537"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <FaPhoneAlt />
-                            <span>01689 817537</span>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-4 col-lg-3 mb-4">
-                  <div className="team-item">
-                    <div className="team-img">
-                      <Image
-                        src={"/assets/images/team-8.png"}
-                        width={419}
-                        height={419}
-                        alt={"Team Member"}
-                      />
-                    </div>
-                    <div className="team-content">
-                      <h3>Andrea Tutt</h3>
-                      <p>Parish </p>
-                      <ul className="team-social-list">
-                        <li>
-                          <a
-                            href={"mailto:orpington@rcaos.org.uk "}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <FaRegEnvelope />
-                            <span>orpington@rcaos.org.uk </span>
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="tel:+01689 817537"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <FaPhoneAlt />
-                            <span>01689 817537</span>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-4 col-lg-3 mb-4">
-                  <div className="team-item">
-                    <div className="team-img">
-                      <Image
-                        src={"/assets/images/team-9.png"}
-                        width={419}
-                        height={419}
-                        alt={"Team Member"}
-                      />
-                    </div>
-                    <div className="team-content">
-                      <h3> Aidan Twomey </h3>
-                      <p>Parish </p>
-                      <ul className="team-social-list">
-                        <li>
-                          <a
-                            href={"mailto:orpington@rcaos.org.uk "}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <FaRegEnvelope />
-                            <span>orpington@rcaos.org.uk </span>
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="tel:+01689 817537"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <FaPhoneAlt />
-                            <span>01689 817537</span>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-4 col-lg-3 mb-4">
-                  <div className="team-item">
-                    <div className="team-img">
-                      <Image
-                        src={"/assets/images/team-10.png"}
-                        width={419}
-                        height={419}
-                        alt={"Team Member"}
-                      />
-                    </div>
-                    <div className="team-content">
-                      <h3>Jackie Low </h3>
-                      <p>Parish </p>
-                      <ul className="team-social-list">
-                        <li>
-                          <a
-                            href={"mailto:orpington@rcaos.org.uk "}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <FaRegEnvelope />
-                            <span>orpington@rcaos.org.uk </span>
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="tel:+01689 817537"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <FaPhoneAlt />
-                            <span>01689 817537</span>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
 
             <div className="team-item-content">
-              <p>
-                Natasha Wheeler, our Parish Secretary, works in the Parish
-                Office from 10.30 am to 3.30 pm on Mondays, Wednesdays and
-                Fridays. ​ Strickland Way, Orpington, Kent, BR6 9UE ,{" "}
-                <span>
-                  <a href="tel:+01689 817537">01689 817537</a>
-                </span>{" "}
-                ,{" "}
-                <span>
-                  <a href="mailto:orpington@rcaos.org.uk">
-                    orpington@rcaos.org.uk
-                  </a>
-                </span>
-              </p>
-              <div>
-                <p>
-                  Strickland Way, Orpington, Kent, BR6 9UE
-                  <br />
-                  <span>
-                    <a href="tel:+01689 817537">01689 817537</a>
-                  </span>
-                  <br />
-                  <span>
-                    <a href="mailto:orpington@rcaos.org.uk">
-                      orpington@rcaos.org.uk
-                    </a>
-                  </span>
-                </p>
-              </div>
+              {contactInfoData?.contact_info && (
+                <div dangerouslySetInnerHTML={{ __html: contactInfoData.contact_info }} />
+              )}
+
             </div>
           </div>
         </div>
