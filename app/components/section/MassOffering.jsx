@@ -173,7 +173,7 @@ const MassOffering = () => {
                 <div className="col-md-6">
                   <div className="pay-online-btn-item">
                     <Link
-                      href="/donate"
+                      href="https://donate.mydona.com/holy-innocents-orpington"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="custom-btn-alt"
