@@ -6,6 +6,7 @@ import React, { useState } from "react";
 const MassOffering = () => {
   const [formData, setFormData] = useState({
     intention: "",
+    mass_for_name: "",
     date: "",
     time: "",
     name: "",
@@ -91,6 +92,18 @@ const MassOffering = () => {
                       </option>
                     ))}
                   </select>
+                </div>
+                <div className="col-md-6">
+                  <label className="form-label fw-semibold">Mass Intention is for (Name)</label>
+                  <input
+                    type="text"
+                    name="mass_for_name"
+                    className="donate-input"
+                    placeholder="Mass Intention is for (Name)"
+                    required
+                    value={formData.mass_for_name}
+                    onChange={handleChange}
+                  />
                 </div>
                 <div className="col-md-6">
                   <label className="form-label fw-semibold">
