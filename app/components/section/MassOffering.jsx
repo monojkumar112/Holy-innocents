@@ -183,26 +183,29 @@ const MassOffering = () => {
                     onChange={handleChange}
                   />
                 </div>
-                <div className="col-md-6">
-                  <div className="pay-online-btn-item">
-                    <Link
-                      href="https://donate.mydona.com/holy-innocents-orpington"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="custom-btn-alt"
-                    >
-                      Pay Stipend Online
-                    </Link>
-                  </div>
-                </div>
+
               </div>
             </div>
 
             <div className="d-flex justify-content-center">
-              <button className="custom-btn" type="submit" disabled={loading}>
+              <button className="custom-btn w-100 justify-content-center mt-0" type="submit" disabled={loading}>
                 {loading ? "Processing..." : "Submit"}
               </button>
             </div>
+            <div className="col-md-12 mt-4">
+              <strong className="text-success">If you wish to make your stipend or donation online, please click the button below.</strong>
+              <div className="pay-online-btn-item mt-2">
+                <Link
+                  href="https://donate.mydona.com/holy-innocents-orpington"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="custom-btn-alt"
+                >
+                  Pay Stipend Online
+                </Link>
+              </div>
+            </div>
+
             {errorMessage && (
               <div className="alert alert-danger mt-2">{errorMessage}</div>
             )}
