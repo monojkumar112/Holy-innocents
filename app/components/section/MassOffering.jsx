@@ -193,7 +193,7 @@ const MassOffering = () => {
               </button>
             </div>
             <div className="col-md-12 mt-4">
-              <strong className="text-success">If you wish to make your stipend or donation online, please click the button below.</strong>
+              <p className="text-muted">If you wish to make your stipend or donation online, please click the button below.</p>
               <div className="pay-online-btn-item mt-2">
                 <Link
                   href="https://donate.mydona.com/holy-innocents-orpington"
