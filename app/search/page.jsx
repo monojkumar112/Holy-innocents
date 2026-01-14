@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { FiSearch } from "react-icons/fi";
+import { FiSearch, FiX } from "react-icons/fi";
 
 const SearchPage = ({ searchParams }) => {
   const [results, setResults] = useState({
@@ -84,6 +84,21 @@ const SearchPage = ({ searchParams }) => {
     }
   };
 
+  // Reset search form and results
+  const handleReset = (e) => {
+    e.preventDefault();
+    setSearchQuery("");
+    setError(null);
+    setResults({
+      members: [],
+      pages: [],
+      events: [],
+      calendarEvents: [],
+      notices: [],
+      newsletters: [],
+    });
+  };
+
   // Check if any results exist
   const hasResults = () => {
     return (
@@ -139,7 +154,6 @@ const SearchPage = ({ searchParams }) => {
     }
   };
 
-  console.log("Search Results:", results);
 
   return (
     <>
@@ -166,9 +180,24 @@ const SearchPage = ({ searchParams }) => {
                     placeholder="Search the website..."
                     className="search-input"
                   />
-                  <button type="submit" className="search-btn">
-                    <FiSearch /> Search
-                  </button>
+                  <div className="d-flex gap-2">
+                    <button type="submit" className="search-btn">
+                      <FiSearch /> Search
+                    </button>
+                    {(searchQuery || hasResults()) && (
+                      <button
+                        type="button"
+                        onClick={handleReset}
+                        className="search-btn"
+                        style={{
+                          backgroundColor: "#6c757d",
+                          borderColor: "#6c757d",
+                        }}
+                      >
+                        <FiX /> Reset
+                      </button>
+                    )}
+                  </div>
                 </div>
               </form>
             </div>
