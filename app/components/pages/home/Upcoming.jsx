@@ -28,7 +28,8 @@ const Upcoming = () => {
           .filter((event) => new Date(event.start_date) >= new Date()) // Only upcoming
           .sort((a, b) => new Date(a.start_date) - new Date(b.start_date)); // earliest first
 
-        setAllEvents(sortedEvents);
+        // setAllEvents(sortedEvents);
+        setAllEvents(events);
 
         if (sortedEvents.length > 0) {
           setLatestEvent(sortedEvents[0]);
