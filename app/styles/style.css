@@ -274,13 +274,14 @@ ul.team-social-list li a {
   height: 100%;
   overflow: hidden;
   padding-top: 20px;
+  height: 400px;
   position: relative;
 }
 
 .mass-event-right ul {
   padding-top: 20px;
   padding-bottom: 20px;
-  height: 400px;
+
   overflow-y: auto;
   scroll-behavior: smooth;
   scrollbar-width: thin;
@@ -2580,7 +2581,7 @@ section.event-section {
 .marquee-track {
   display: flex;
   flex-direction: column;
-  animation: marquee-vertical linear 4s infinite;
+  animation: marquee-vertical linear 10s infinite;
 }
 
 @keyframes marquee-vertical {

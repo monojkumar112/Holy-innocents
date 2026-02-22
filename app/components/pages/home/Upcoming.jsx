@@ -98,35 +98,40 @@ const Upcoming = () => {
               <div className="marquee-container">
                 <ul
                   ref={scrollContainerRef}
-                  className={` ${allEvents.length >= 3 ? "marquee-track" : ""}`}
+                  className={`${allEvents.length >= 2 ? "marquee-track" : ""}`}
                 >
                   {allEvents.length > 0 ? (
                     <>
-                      {/* Primary set of events */}
+                      {/* First Set */}
                       {allEvents.map((event) => (
-                        <li key={event.id}>
+                        <li key={`first-${event.id}`}>
                           <div className="mass-event-item">
                             <div className="mass-event-contnet-item">
                               <h4>{event.title ? event.title : "N/A"}</h4>
+
                               <div className="mass-event-date">
                                 <CiCalendar />
-                                {/* <p>
+                                <p>
                                   {event.start_date
                                     ? new Date(
-                                        event.start_date
+                                        event.start_date,
                                       ).toLocaleDateString("en-US", {
                                         weekday: "long",
                                         day: "2-digit",
                                         month: "short",
                                         year: "numeric",
                                       })
-                                    : "N/A"}{" "}
+                                    : "N/A"}
+
                                   {event.end_date &&
-                                    event.end_date !== event.start_date && (
+                                    new Date(event.end_date).toDateString() !==
+                                      new Date(
+                                        event.start_date,
+                                      ).toDateString() && (
                                       <>
-                                        -{" "}
+                                        {" - "}
                                         {new Date(
-                                          event.end_date
+                                          event.end_date,
                                         ).toLocaleDateString("en-US", {
                                           weekday: "long",
                                           day: "2-digit",
@@ -135,67 +140,44 @@ const Upcoming = () => {
                                         })}
                                       </>
                                     )}
-                                </p> */}
-                                <p>
-                                  {event.start_date
-                                    ? new Date(event.start_date).toLocaleDateString("en-US", {
-                                      weekday: "long",
-                                      day: "2-digit",
-                                      month: "short",
-                                      year: "numeric",
-                                    })
-                                    : "N/A"}
-
-                                  {event.end_date &&
-                                    new Date(event.end_date).toDateString() !==
-                                    new Date(event.start_date).toDateString() && (
-                                      <>
-                                        {" - "}
-                                        {new Date(event.end_date).toLocaleDateString("en-US", {
-                                          weekday: "long",
-                                          day: "2-digit",
-                                          month: "short",
-                                          year: "numeric",
-                                        })}
-                                      </>
-                                    )}
                                 </p>
-
-
                               </div>
+
                               <div className="mass-event-date">
                                 <IoMdTime />
                                 <p>
                                   {event.start_date && event.end_date
                                     ? `${new Date(
-                                      event.start_date
-                                    ).toLocaleTimeString("en-US", {
-                                      hour: "2-digit",
-                                      minute: "2-digit",
-                                      hour12: true,
-                                    })} - ${new Date(
-                                      event.end_date
-                                    ).toLocaleTimeString("en-US", {
-                                      hour: "2-digit",
-                                      minute: "2-digit",
-                                      hour12: true,
-                                    })}`
-                                    : event.start_date
-                                      ? new Date(
-                                        event.start_date
+                                        event.start_date,
                                       ).toLocaleTimeString("en-US", {
                                         hour: "2-digit",
                                         minute: "2-digit",
                                         hour12: true,
-                                      })
+                                      })} - ${new Date(
+                                        event.end_date,
+                                      ).toLocaleTimeString("en-US", {
+                                        hour: "2-digit",
+                                        minute: "2-digit",
+                                        hour12: true,
+                                      })}`
+                                    : event.start_date
+                                      ? new Date(
+                                          event.start_date,
+                                        ).toLocaleTimeString("en-US", {
+                                          hour: "2-digit",
+                                          minute: "2-digit",
+                                          hour12: true,
+                                        })
                                       : "N/A"}
                                 </p>
                               </div>
+
                               <div className="mass-event-date">
                                 <LuMapPin />
                                 <p>{event.location ? event.location : "N/A"}</p>
                               </div>
                             </div>
+
                             <div className="mass-event-img">
                               <Image
                                 src={
@@ -211,6 +193,69 @@ const Upcoming = () => {
                           </div>
                         </li>
                       ))}
+
+                      {/* Duplicate Set For Smooth Loop */}
+                      {allEvents.length >= 2 &&
+                        allEvents.map((event) => (
+                          <li key={`second-${event.id}`}>
+                            <div className="mass-event-item">
+                              <div className="mass-event-contnet-item">
+                                <h4>{event.title ? event.title : "N/A"}</h4>
+
+                                <div className="mass-event-date">
+                                  <CiCalendar />
+                                  <p>
+                                    {event.start_date
+                                      ? new Date(
+                                          event.start_date,
+                                        ).toLocaleDateString("en-US", {
+                                          weekday: "long",
+                                          day: "2-digit",
+                                          month: "short",
+                                          year: "numeric",
+                                        })
+                                      : "N/A"}
+                                  </p>
+                                </div>
+
+                                <div className="mass-event-date">
+                                  <IoMdTime />
+                                  <p>
+                                    {event.start_date
+                                      ? new Date(
+                                          event.start_date,
+                                        ).toLocaleTimeString("en-US", {
+                                          hour: "2-digit",
+                                          minute: "2-digit",
+                                          hour12: true,
+                                        })
+                                      : "N/A"}
+                                  </p>
+                                </div>
+
+                                <div className="mass-event-date">
+                                  <LuMapPin />
+                                  <p>
+                                    {event.location ? event.location : "N/A"}
+                                  </p>
+                                </div>
+                              </div>
+
+                              <div className="mass-event-img">
+                                <Image
+                                  src={
+                                    event.banner_image
+                                      ? event.banner_image
+                                      : "/assets/images/event-1.png"
+                                  }
+                                  width={135}
+                                  height={135}
+                                  alt={event.title || "Event"}
+                                />
+                              </div>
+                            </div>
+                          </li>
+                        ))}
                     </>
                   ) : (
                     <li style={{ padding: "40px 20px", textAlign: "center" }}>
