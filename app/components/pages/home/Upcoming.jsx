@@ -114,20 +114,20 @@ const Upcoming = () => {
                                 <p>
                                   {event.start_date
                                     ? new Date(
-                                        event.start_date,
-                                      ).toLocaleDateString("en-US", {
-                                        weekday: "long",
-                                        day: "2-digit",
-                                        month: "short",
-                                        year: "numeric",
-                                      })
+                                      event.start_date,
+                                    ).toLocaleDateString("en-US", {
+                                      weekday: "long",
+                                      day: "2-digit",
+                                      month: "short",
+                                      year: "numeric",
+                                    })
                                     : "N/A"}
 
                                   {event.end_date &&
                                     new Date(event.end_date).toDateString() !==
-                                      new Date(
-                                        event.start_date,
-                                      ).toDateString() && (
+                                    new Date(
+                                      event.start_date,
+                                    ).toDateString() && (
                                       <>
                                         {" - "}
                                         {new Date(
@@ -148,26 +148,26 @@ const Upcoming = () => {
                                 <p>
                                   {event.start_date && event.end_date
                                     ? `${new Date(
-                                        event.start_date,
-                                      ).toLocaleTimeString("en-US", {
-                                        hour: "2-digit",
-                                        minute: "2-digit",
-                                        hour12: true,
-                                      })} - ${new Date(
-                                        event.end_date,
-                                      ).toLocaleTimeString("en-US", {
-                                        hour: "2-digit",
-                                        minute: "2-digit",
-                                        hour12: true,
-                                      })}`
+                                      event.start_date,
+                                    ).toLocaleTimeString("en-US", {
+                                      hour: "numeric",
+                                      minute: "2-digit",
+                                      hour12: true,
+                                    })} - ${new Date(
+                                      event.end_date,
+                                    ).toLocaleTimeString("en-GB", {
+                                      hour: "numeric",
+                                      minute: "2-digit",
+                                      hour12: true,
+                                    })}`
                                     : event.start_date
                                       ? new Date(
-                                          event.start_date,
-                                        ).toLocaleTimeString("en-US", {
-                                          hour: "2-digit",
-                                          minute: "2-digit",
-                                          hour12: true,
-                                        })
+                                        event.start_date,
+                                      ).toLocaleTimeString("en-US", {
+                                        hour: "numeric",
+                                        minute: "2-digit",
+                                        hour12: true,
+                                      })
                                       : "N/A"}
                                 </p>
                               </div>
@@ -207,13 +207,13 @@ const Upcoming = () => {
                                   <p>
                                     {event.start_date
                                       ? new Date(
-                                          event.start_date,
-                                        ).toLocaleDateString("en-US", {
-                                          weekday: "long",
-                                          day: "2-digit",
-                                          month: "short",
-                                          year: "numeric",
-                                        })
+                                        event.start_date,
+                                      ).toLocaleDateString("en-US", {
+                                        weekday: "long",
+                                        day: "2-digit",
+                                        month: "short",
+                                        year: "numeric",
+                                      })
                                       : "N/A"}
                                   </p>
                                 </div>
@@ -223,12 +223,12 @@ const Upcoming = () => {
                                   <p>
                                     {event.start_date
                                       ? new Date(
-                                          event.start_date,
-                                        ).toLocaleTimeString("en-US", {
-                                          hour: "2-digit",
-                                          minute: "2-digit",
-                                          hour12: true,
-                                        })
+                                        event.start_date,
+                                      ).toLocaleTimeString("en-US", {
+                                        hour: "2-digit",
+                                        minute: "2-digit",
+                                        hour12: true,
+                                      })
                                       : "N/A"}
                                   </p>
                                 </div>

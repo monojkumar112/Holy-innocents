@@ -128,7 +128,7 @@ const AllEventSection = () => {
                       <p>
                         {item.start_date
                           ? new Date(item.start_date).toLocaleDateString(
-                              "en-US",
+                              "en-GB",
                               {
                                 weekday: "long",
                                 day: "2-digit",
@@ -142,7 +142,7 @@ const AllEventSection = () => {
                             <>
                               -{" "}
                               {new Date(item.end_date).toLocaleDateString(
-                                "en-US",
+                                "en-GB",
                                 {
                                   weekday: "long",
                                   day: "2-digit",
@@ -161,14 +161,14 @@ const AllEventSection = () => {
                           ? `${new Date(item.start_date).toLocaleTimeString(
                               "en-US",
                               {
-                                hour: "2-digit",
+                                hour: "numeric",
                                 minute: "2-digit",
                                 hour12: true,
                               }
                             )} - ${new Date(item.end_date).toLocaleTimeString(
                               "en-US",
                               {
-                                hour: "2-digit",
+                                hour: "numeric",
                                 minute: "2-digit",
                                 hour12: true,
                               }
@@ -177,7 +177,7 @@ const AllEventSection = () => {
                           ? new Date(item.start_date).toLocaleTimeString(
                               "en-US",
                               {
-                                hour: "2-digit",
+                                hour: "numeric",
                                 minute: "2-digit",
                                 hour12: true,
                               }
