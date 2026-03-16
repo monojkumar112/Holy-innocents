@@ -77,7 +77,7 @@ const Upcoming = () => {
           <div className="col-lg-6">
             <div className="up-coming-left mass-event-left">
               <h1>Upcoming Events</h1>
-              {latestEvent && (
+              {/* {latestEvent && (
                 <div className="up-coming-img">
                   <Image
                     height={525}
@@ -88,7 +88,17 @@ const Upcoming = () => {
                     alt={latestEvent.title || "Latest Event"}
                   />
                 </div>
-              )}
+              )} */}
+              <div className="up-coming-img">
+                  <Image
+                    height={525}
+                    width={657}
+                    src={
+                      allEvents[0]?.banner_image || "/assets/images/event-1.png"
+                    }
+                    alt={allEvents[0]?.title || "Latest Event"}
+                  />
+                </div>
             </div>
           </div>
 

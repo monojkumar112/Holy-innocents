@@ -274,7 +274,8 @@ ul.team-social-list li a {
   height: 100%;
   overflow: hidden;
   padding-top: 20px;
-  height: 400px;
+  max-height: 600px;
+  min-height: 400px;
   position: relative;
 }
 
