@@ -35,11 +35,25 @@ const EventGallery = ({ blogImage }) => {
             {blogImage.map((item, index) => (
               <SwiperSlide key={index}>
                 <div className="event-gallery-img">
-                  <img
+                  {/* <img
                     src={item.image}
                     alt={`Slide ${index + 1}`}
                     style={{ width: "100%", borderRadius: "10px" }}
-                  />
+                  /> */}
+                  {item.image ? (
+                    <img
+                      src={item.image}
+                      alt={`Slide ${index + 1}`}
+                      style={{ width: "100%", borderRadius: "10px" }}
+                    />
+                  ) : item.video ? (
+                    <video
+                      src={item.video}
+                      autoplay
+                      style={{ width: "100%", borderRadius: "10px" }}
+                      controls
+                    />
+                  ) : null}
                 </div>
               </SwiperSlide>
             ))}
@@ -57,7 +71,7 @@ const EventGallery = ({ blogImage }) => {
             className="mySwiper"
             style={{ marginTop: "15px" }}
           >
-            {blogImage.map((item, index) => (
+            {/* {blogImage.map((item, index) => (
               <SwiperSlide key={index}>
                 <img
                   src={item.image}
@@ -69,7 +83,32 @@ const EventGallery = ({ blogImage }) => {
                   }}
                 />
               </SwiperSlide>
-            ))}
+            ))} */}
+
+            {blogImage.map((item, index) => (
+            <SwiperSlide key={index}>
+              {item.image ? (
+                <img
+                  src={item.image}
+                  alt={`Thumb ${index + 1}`}
+                  style={{
+                    width: "100%",
+                    borderRadius: "6px",
+                    opacity: item.image === selectedImage ? 1 : 0.8,
+                  }}
+                />
+              ) : item.video ? (
+                <video
+                  src={item.video}
+                  style={{
+                    width: "100%",
+                    borderRadius: "6px",
+                    opacity: item.video === selectedImage ? 1 : 0.8,
+                  }}
+                />
+              ) : null}
+            </SwiperSlide>
+          ))}
           </Swiper>
         </div>
       </div>

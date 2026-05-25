@@ -83,7 +83,7 @@ const Footer = () => {
                           </Link>
                         </li>
                         <li>
-                          <Link href="/liturgy"> Our Liturgy </Link>
+                          <Link href="/page/our-liturgy"> Our Liturgy </Link>
                         </li>
                         <li>
                           <Link href="/fellowship/our-mission">
@@ -95,13 +95,19 @@ const Footer = () => {
                     <div className="col-lg-4">
                       <ul className="footer-link-list">
                         <li>
-                          <Link href="/sacramental"> Our Sacraments </Link>
+                          <Link href="/page/our-sacramental-life">
+                            {" "}
+                            Our Sacraments{" "}
+                          </Link>
                         </li>
                         <li>
-                          <Link href="/families-and-youth"> Our Youth </Link>
+                          <Link href="/fellowship/families-and-youth">
+                            {" "}
+                            Our Youth{" "}
+                          </Link>
                         </li>
                         <li>
-                          <Link href="/reflection">
+                          <Link href="/intentions/a-parishioners-gospel-reflection">
                             {" "}
                             Parishioner Gospel Reflection{" "}
                           </Link>

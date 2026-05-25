@@ -108,14 +108,14 @@ const Team = () => {
                         <Image
                           src={
                             item.profile_image &&
-                            item.profile_image !== "members/" &&
-                            item.profile_image !== ""
+                              item.profile_image !== "members/" &&
+                              item.profile_image !== ""
                               ? item.profile_image.startsWith("http")
                                 ? item.profile_image
                                 : `${baseUrl}/${item.profile_image.replace(
-                                    /^\/+/,
-                                    ""
-                                  )}`
+                                  /^\/+/,
+                                  ""
+                                )}`
                               : "/assets/blank-profile.png"
                           }
                           width={416}
@@ -128,14 +128,19 @@ const Team = () => {
                         <p>{item.role ? item.role : "N/A"}</p>
                         <ul className="team-social-list">
                           <li>
-                            <a
-                              href={item.email ? item.email : "#"}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              <FaRegEnvelope />
-                              <span>{item.email ? item.email : "N/A"}</span>
-                            </a>
+                            {item.email ? (
+                              <a
+                                href={`mailto:${item.email}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                <FaRegEnvelope />
+                                <span style={{ marginLeft: "6px" }}>{item.email}</span>
+                              </a>
+                            ) : (
+                              <span>N/A</span>
+                            )}
+
                           </li>
                           <li>
                             <a
@@ -144,7 +149,14 @@ const Team = () => {
                               rel="noopener noreferrer"
                             >
                               <FaPhoneAlt />
-                              <span>{item.phone ? item.phone : "N/A"}</span>
+                              {/* <span>{item.phone ? item.phone : "N/A"}</span> */}
+                              {item.phone ? (
+                                <a href={`tel:${item.phone}`} style={{ marginRight: "10px" }}>{item.phone}</a>
+                              ) : (
+                                <span>N/A</span>
+                              )}
+
+
                             </a>
                           </li>
                         </ul>

@@ -6,6 +6,7 @@ import React, { useState } from "react";
 const MassOffering = () => {
   const [formData, setFormData] = useState({
     intention: "",
+    mass_for_name: "",
     date: "",
     time: "",
     name: "",
@@ -93,6 +94,18 @@ const MassOffering = () => {
                   </select>
                 </div>
                 <div className="col-md-6">
+                  <label className="form-label fw-semibold">Mass Intention is for (Name)</label>
+                  <input
+                    type="text"
+                    name="mass_for_name"
+                    className="donate-input"
+                    placeholder="Mass Intention is for (Name)"
+                    required
+                    value={formData.mass_for_name}
+                    onChange={handleChange}
+                  />
+                </div>
+                <div className="col-md-6">
                   <label className="form-label fw-semibold">
                     Day or Date of Preferred Mass
                   </label>
@@ -170,26 +183,29 @@ const MassOffering = () => {
                     onChange={handleChange}
                   />
                 </div>
-                <div className="col-md-6">
-                  <div className="pay-online-btn-item">
-                    <Link
-                      href="/donate"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="custom-btn-alt"
-                    >
-                      Pay Stipend Online
-                    </Link>
-                  </div>
-                </div>
+
               </div>
             </div>
 
             <div className="d-flex justify-content-center">
-              <button className="custom-btn" type="submit" disabled={loading}>
+              <button className="custom-btn w-100 justify-content-center mt-0" type="submit" disabled={loading}>
                 {loading ? "Processing..." : "Submit"}
               </button>
             </div>
+            <div className="col-md-12 mt-4">
+              <p className="text-muted">If you wish to make your stipend or donation online, please click the button below.</p>
+              <div className="pay-online-btn-item mt-2">
+                <Link
+                  href="https://donate.mydona.com/holy-innocents-orpington"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="custom-btn-alt"
+                >
+                  Pay Stipend Online
+                </Link>
+              </div>
+            </div>
+
             {errorMessage && (
               <div className="alert alert-danger mt-2">{errorMessage}</div>
             )}
