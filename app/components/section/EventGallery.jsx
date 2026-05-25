@@ -16,11 +16,16 @@ const EventGallery = ({ blogImage }) => {
   const [selectedImage, setSelectedImage] = useState(null); // modal on/off
   const [thumbsSwiper, setThumbsSwiper] = useState(null); // thumbs slider control
 
+  // Check if there's any video in the blogImage array
+  const hasVideo = blogImage.some((item) => item.video);
+
   return (
     <>
       {/* Image Grid */}
       <div className="event-gallery-image">
-        <div className="event-gallery-image-item">
+        <div
+          className={`event-gallery-image-item ${hasVideo ? "has-video" : ""}`}
+        >
           <Swiper
             style={{
               "--swiper-navigation-color": "#fff",
@@ -86,29 +91,29 @@ const EventGallery = ({ blogImage }) => {
             ))} */}
 
             {blogImage.map((item, index) => (
-            <SwiperSlide key={index}>
-              {item.image ? (
-                <img
-                  src={item.image}
-                  alt={`Thumb ${index + 1}`}
-                  style={{
-                    width: "100%",
-                    borderRadius: "6px",
-                    opacity: item.image === selectedImage ? 1 : 0.8,
-                  }}
-                />
-              ) : item.video ? (
-                <video
-                  src={item.video}
-                  style={{
-                    width: "100%",
-                    borderRadius: "6px",
-                    opacity: item.video === selectedImage ? 1 : 0.8,
-                  }}
-                />
-              ) : null}
-            </SwiperSlide>
-          ))}
+              <SwiperSlide key={index}>
+                {item.image ? (
+                  <img
+                    src={item.image}
+                    alt={`Thumb ${index + 1}`}
+                    style={{
+                      width: "100%",
+                      borderRadius: "6px",
+                      opacity: item.image === selectedImage ? 1 : 0.8,
+                    }}
+                  />
+                ) : item.video ? (
+                  <video
+                    src={item.video}
+                    style={{
+                      width: "100%",
+                      borderRadius: "6px",
+                      opacity: item.video === selectedImage ? 1 : 0.8,
+                    }}
+                  />
+                ) : null}
+              </SwiperSlide>
+            ))}
           </Swiper>
         </div>
       </div>
