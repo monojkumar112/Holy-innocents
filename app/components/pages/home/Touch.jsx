@@ -17,7 +17,10 @@ const Touch = ({ data }) => {
                 {data?.stay_touch_description}
               </p>
               <div className="how-to-find-btn-group">
-                <a href="/churchsuite" className="custom-btn get-qucte-btn">
+                {/* <a href="/churchsuite" className="custom-btn get-qucte-btn">
+                  Register
+                </a> */}
+                <a  href="https://holyinnocents.churchsuite.com/-/forms/4mhwb4wg" target="_blank" className="custom-btn get-qucte-btn">
                   Register
                 </a>
                 <a href="/giftaid" className="custom-btn-alt get-qucte-btn">
