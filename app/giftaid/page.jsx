@@ -11,22 +11,33 @@ export const metadata = {
   },
 };
 function GiftAidPage() {
+  const disabled = true;
   return (
     <>
-      <section className="churchsuite-section">
-        <div className="container">
-          <div className="churchsuite-wrapper">
-            <div className="churchsuite-header">
-              <h3>Parish Gift Aid Declaration</h3>
-              <h5>
-                Parish Gift Aid Declaration – Roman Catholic Archdiocese of
-                Southwark
-              </h5>
+      {!disabled ? (
+        <section className="churchsuite-section">
+          <div className="container">
+            <div className="churchsuite-wrapper">
+              <div className="churchsuite-header">
+                <h3>Parish Gift Aid Declaration</h3>
+                <h5>
+                  Parish Gift Aid Declaration – Roman Catholic Archdiocese of
+                  Southwark
+                </h5>
+              </div>
+              <GiftaidFrom />
             </div>
-            <GiftaidFrom />
           </div>
-        </div>
-      </section>
+        </section>
+      ) : (
+        <section className="churchsuite-section">
+          <div className="container">
+            <div className="churchsuite-wrapper">
+              <h2 className="text-center">Gift Aid Form Temporary Closed</h2>
+            </div>
+          </div>
+        </section>
+      )}
     </>
   );
 }
