@@ -11,7 +11,7 @@ export const metadata = {
   },
 };
 function GiftAidPage() {
-  const disabled = true;
+  const disabled = false;
   return (
     <>
       {!disabled ? (
