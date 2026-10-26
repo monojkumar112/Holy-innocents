@@ -129,7 +129,7 @@ const GiftaidFrom = () => {
     if (!formData.agree_privacy_policy) {
       clientErrors.agree_privacy_policy = "The consent field is required.";
     }
-    if (event?.target?.elements?.parish_id?.required && !formData.parish_id) {
+    if (!formData.parish_id) {
       clientErrors.parish_id = "The parish field is required.";
     }
     if (Object.keys(clientErrors).length > 0) {
@@ -402,23 +402,18 @@ const GiftaidFrom = () => {
           </h4>
           <div className="row">
             <div className="col-lg-4 col-md-6 ">
-              <select
-                name="parish_id"
-                value={formData.parish_id}
-                onChange={handleChange}
-                className={selectInputClass("parish_id")}
-                aria-label="Large select example"
-                required
-              >
-                <option value="">
-                  {parishLoading ? "Loading parishes..." : "Parish Name"}
-                </option>
-                {parishes.map((p) => (
-                  <option key={p.id} value={p.id}>
-                    {p.parish_name}
-                  </option>
-                ))}
-              </select>
+              <input type="hidden" name="parish_id" value={formData.parish_id} />
+              <input
+                type="text"
+                className={textInputClass("parish_id")}
+                value={
+                  parishLoading
+                    ? "Loading parishes..."
+                    : parishes[parishes.length - 1]?.parish_name || ""
+                }
+                placeholder="Parish Name"
+                readOnly
+              />
               {getFieldError("parish_id") ? (
                 <div className="invalid-feedback d-block">
                   {getFieldError("parish_id")}
