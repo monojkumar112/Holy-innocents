@@ -42,7 +42,18 @@ const GiftaidFrom = () => {
     []
   );
 
-  // Load parish details
+  const selectLastParish = (list) => {
+    if (!Array.isArray(list) || list.length === 0) return;
+    const last = list[list.length - 1];
+    setFormData((prev) => ({
+      ...prev,
+      parish_id: String(last.id),
+      parish_email: last?.parish_email || "",
+      parish_coordinator: last?.gift_aid_coordinator || "",
+    }));
+  };
+
+  // Load parish details — always select last option
   useEffect(() => {
     if (!baseUrl) return;
     const fetchParishes = async () => {
@@ -53,6 +64,7 @@ const GiftaidFrom = () => {
         });
         const list = Array.isArray(res?.data?.data) ? res.data.data : [];
         setParishes(list);
+        selectLastParish(list);
       } catch (err) {
         // Non-blocking error; keep form usable
         // Optionally expose a small message
@@ -148,6 +160,7 @@ const GiftaidFrom = () => {
         response?.data?.message || "Gift Aid form submitted successfully.";
       setSuccessMessage(message);
       setFormData(initialFormState);
+      selectLastParish(parishes);
     } catch (error) {
       if (error.response) {
         const status = error.response.status;
