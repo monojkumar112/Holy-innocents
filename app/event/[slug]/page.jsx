@@ -245,7 +245,7 @@ const EventsPage = ({ params }) => {
                     dangerouslySetInnerHTML={{ __html: blog?.content }}
                   />
                 </div>
-                {blog?.images?.length > 0 && (
+                {blog?.images?.some((item) => item?.image || item?.video) && (
                   <EventGallery blogImage={blog.images} />
                 )}
                 {/* Pagination Buttons */}
