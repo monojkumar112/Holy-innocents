@@ -448,10 +448,10 @@ const GiftaidFrom = () => {
               />
             </div>
           </div>
-          <p>
+          {/* <p>
             Please select the name of the Parish you attend, and your Parishes
             email address from the drop-down list.
-          </p>
+          </p> */}
         </div>
         <div className="gift-aid-item">
           <div className="gift-aid-header">
