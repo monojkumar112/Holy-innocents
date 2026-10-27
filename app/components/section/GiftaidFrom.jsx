@@ -395,7 +395,7 @@ const GiftaidFrom = () => {
         <div className="gift-aid-item">
           <div className="gift-aid-header">
             <h3>Your Parish</h3>
-            <p>Please let us know which Parish you attend.</p>
+            {/* <p>Please let us know which Parish you attend.</p> */}
           </div>
           <h4>
             Parish Details <span className="text-danger">*</span>
