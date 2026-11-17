@@ -48,7 +48,7 @@ const EventGallery = ({ blogImage = [] }) => {
           <div className="event-gallery-image-item">
             <Swiper
               style={{
-                "--swiper-navigation-color": "#fff",
+                "--swiper-navigation-color": "#000",
                 "--swiper-pagination-color": "#fff",
               }}
               spaceBetween={10}
