@@ -1,22 +1,27 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { IoIosCall } from "react-icons/io";
 import { MdOutlineMail } from "react-icons/md";
+import { Turnstile } from "@marsidev/react-turnstile";
 
 const ContactUs = ({ data }) => {
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
+  const [token, setToken] = useState(null);
+  const turnstileRef = useRef(null);
+  const loadedAt = useRef(Date.now());
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData.entries());
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "";
+    data.turnstile_token = token;
+    data.form_loaded_at = loadedAt.current;
     setLoading(true);
     setMessage("");
 
-    fetch(`${baseUrl}/api/contact`, {
+    fetch(`/api/contact`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
@@ -42,6 +47,8 @@ const ContactUs = ({ data }) => {
       })
       .finally(() => {
         setLoading(false);
+        turnstileRef.current?.reset();
+        setToken(null);
       });
   };
 
@@ -94,6 +101,14 @@ const ContactUs = ({ data }) => {
               <div className="col-lg-9">
                 <div className="contact-us-form">
                   <form action="#" onSubmit={handleSubmit}>
+                    <input
+                      type="text"
+                      name="website"
+                      tabIndex={-1}
+                      autoComplete="off"
+                      aria-hidden="true"
+                      style={{ position: "absolute", left: "-9999px" }}
+                    />
                     <div className="row">
                       <div className="col-md-6">
                         <input
@@ -142,11 +157,19 @@ const ContactUs = ({ data }) => {
                           required
                         ></textarea>
                       </div>
+                      <div className="col-md-12 my-3">
+                        <Turnstile
+                          siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY}
+                          onSuccess={setToken}
+                          onExpire={() => setToken(null)}
+                          ref={turnstileRef}
+                        />
+                      </div>
                       <div className="col-md-12">
                         <button
                           className="custom-btn learn-more-btn"
                           type="submit"
-                          disabled={loading}
+                          disabled={loading || !token}
                         >
                           {loading ? (
                             <>

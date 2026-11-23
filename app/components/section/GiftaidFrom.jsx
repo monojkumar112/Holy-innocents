@@ -1,6 +1,7 @@
 'use client';
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState, useRef } from "react";
 import axios from "axios";
+import { Turnstile } from "@marsidev/react-turnstile";
 import countries from "../../data/country";
 
 const initialFormState = {
@@ -26,6 +27,7 @@ const initialFormState = {
   interested_volunteering_not_this_time: false,
   interested_volunteering_already_involved: false,
   agree_privacy_policy: false,
+  website: "",
 };
 
 const GiftaidFrom = () => {
@@ -36,6 +38,9 @@ const GiftaidFrom = () => {
   const [successMessage, setSuccessMessage] = useState("");
   const [parishes, setParishes] = useState([]);
   const [parishLoading, setParishLoading] = useState(false);
+  const [token, setToken] = useState(null);
+  const turnstileRef = useRef(null);
+  const loadedAt = useRef(Date.now());
 
   const baseUrl = useMemo(
     () => process?.env?.NEXT_PUBLIC_BASE_URL || "",
@@ -148,9 +153,12 @@ const GiftaidFrom = () => {
       const payload = {
         ...rest,
         parish_id: rest.parish_id ? Number(rest.parish_id) : rest.parish_id,
+        turnstile_token: token,
+        form_loaded_at: loadedAt.current,
+        website: formData.website || "",
       };
 
-      const response = await axios.post(`${baseUrl}/api/giftaid`, payload, {
+      const response = await axios.post(`/api/giftaid`, payload, {
         headers: {
           Accept: "application/json",
         },
@@ -180,13 +188,25 @@ const GiftaidFrom = () => {
       }
     } finally {
       setLoading(false);
+      turnstileRef.current?.reset();
+      setToken(null);
     }
   };
 
-  const disableSubmit = loading;
+  const disableSubmit = loading || !token;
   return (
     <div className="gift-aid-form-content">
       <form onSubmit={handleSubmit} noValidate>
+        <input
+          type="text"
+          name="website"
+          value={formData.website || ""}
+          onChange={handleChange}
+          tabIndex={-1}
+          autoComplete="off"
+          aria-hidden="true"
+          style={{ position: "absolute", left: "-9999px" }}
+        />
         <div className="gift-aid-header">
           <h3>Your Details</h3>
         </div>
@@ -640,6 +660,14 @@ const GiftaidFrom = () => {
             Roman Catholic Archdiocese of Southwark – A Charitable Incorporated
             Organisation – Registered Incorporated Charity Number 1173050
           </h5>
+        </div>
+        <div className="my-3">
+          <Turnstile
+            siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY}
+            onSuccess={setToken}
+            onExpire={() => setToken(null)}
+            ref={turnstileRef}
+          />
         </div>
         <div>
           <button
