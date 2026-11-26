@@ -1,7 +1,8 @@
 "use client";
 import axios from "axios";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import { Turnstile } from "@marsidev/react-turnstile";
 
 const MassOffering = () => {
   const [formData, setFormData] = useState({
@@ -13,10 +14,14 @@ const MassOffering = () => {
     number: "",
     email: "",
     amount: "",
+    additional_information: "",
   });
   const [loading, setLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
+  const [token, setToken] = useState(null);
+  const turnstileRef = useRef(null);
+  const loadedAt = useRef(Date.now());
   const intentions = [
     "RIP",
     "Well-Being",
@@ -37,32 +42,61 @@ const MassOffering = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!token) {
+      setErrorMessage("Please complete the verification check.");
+      return;
+    }
+
     setLoading(true);
-    // Later: send this to backend or email
-    console.log(formData);
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+    setErrorMessage("");
+    setSuccessMessage("");
+
+    const payload = {
+      ...formData,
+      turnstile_token: token,
+      form_loaded_at: loadedAt.current,
+    };
 
     axios
-      .post(`${baseUrl}/api/mass-offering`, formData)
+      .post(`/api/mass-offering`, payload)
       .then((res) => {
-        console.log("Response:", res.data);
-        setLoading(false);
-        setSuccessMessage(res.data.message);
+        setSuccessMessage(
+          res.data.message || "Mass offering submitted successfully."
+        );
+        setFormData({
+          intention: "",
+          mass_for_name: "",
+          date: "",
+          time: "",
+          name: "",
+          number: "",
+          email: "",
+          amount: "",
+          additional_information: "",
+        });
         e.target.reset();
       })
       .catch((err) => {
-        setLoading(false);
-
         if (err.response) {
-          const msg =
-            err.response.data.message ||
+          let msg =
+            err.response.data?.message ||
             "Something went wrong. Please try again.";
+          if (err.response.data?.errors) {
+            const errorMessages = Object.values(err.response.data.errors)
+              .flat()
+              .join(" ");
+            if (errorMessages) msg = errorMessages;
+          }
           setErrorMessage(msg);
           console.error("Server Error:", err.response.data);
         } else {
-          // Network or unknown error
           setErrorMessage("Network error. Please check your connection.");
         }
+      })
+      .finally(() => {
+        setLoading(false);
+        turnstileRef.current?.reset();
+        setToken(null);
       });
   };
 
@@ -74,6 +108,14 @@ const MassOffering = () => {
             <h2 className="donate-from-title">Mass Offering </h2>
           </div>
           <form onSubmit={handleSubmit} className="donate-form">
+            <input
+              type="text"
+              name="website"
+              tabIndex={-1}
+              autoComplete="off"
+              aria-hidden="true"
+              style={{ position: "absolute", left: "-9999px" }}
+            />
             <div className="donate-information">
               <div className="row">
                 <div className="col-md-6">
@@ -107,7 +149,7 @@ const MassOffering = () => {
                 </div>
                 <div className="col-md-6">
                   <label className="form-label fw-semibold">
-                    Day or Date of Preferred Mass
+                    Date of Preferred Mass
                   </label>
                   <input
                     type="date"
@@ -145,13 +187,13 @@ const MassOffering = () => {
                 </div>
                 <div className="col-md-6">
                   <label className="form-label fw-semibold">
-                    Telephone Number
+                    Telephone
                   </label>
                   <input
                     type="text"
                     className="donate-input"
                     name="number"
-                    placeholder="Enter number number"
+                    placeholder="Enter telephone number"
                     required
                     value={formData.number}
                     onChange={handleChange}
@@ -183,13 +225,49 @@ const MassOffering = () => {
                     onChange={handleChange}
                   />
                 </div>
+                <div className="col-md-12">
+                  <label className="form-label fw-semibold">
+                    Additional Information
+                  </label>
+                  <textarea
+                    rows={2}
+                    className="form-control donate-input"
+                    name="additional_information"
+                    placeholder="Enter additional information"
+                    value={formData.additional_information}
+                    onChange={handleChange}
+                  ></textarea>
+                </div>
 
               </div>
             </div>
 
+            <div className="my-3">
+              <Turnstile
+                siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY}
+                onSuccess={setToken}
+                onExpire={() => setToken(null)}
+                ref={turnstileRef}
+              />
+            </div>
+
             <div className="d-flex justify-content-center">
-              <button className="custom-btn w-100 justify-content-center mt-0" type="submit" disabled={loading}>
-                {loading ? "Processing..." : "Submit"}
+              <button
+                className="custom-btn w-100 justify-content-center mt-0"
+                type="submit"
+                disabled={loading || !token}
+              >
+                {loading ? (
+                  <>
+                    Processing...
+                    <div
+                      className="spinner-border spinner-border-sm ms-2"
+                      role="status"
+                    ></div>
+                  </>
+                ) : (
+                  "Submit"
+                )}
               </button>
             </div>
             <div className="col-md-12 mt-4">
